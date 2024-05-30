@@ -1,2012 +1,2609 @@
 {
-    "week 1": {
-        "day 1": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+    "Week 1": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 48, Focus : A",
+            "Creative Corner": [
+                "CC 12, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 2": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 77, Focus : A",
+            "Creative Corner": [
+                "CC 83, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 3": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 89, Focus : A",
+            "Creative Corner": [
+                "CC 30, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 4": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 16, Focus : A",
+            "Creative Corner": [
+                "CC 83, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 5": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 55, Focus : A",
+            "Creative Corner": [
+                "CC 26, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 6": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 0, Focus : A",
+            "Creative Corner": [
+                "CC 79, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         },
-        "day 7": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 78, Focus : A",
+            "Creative Corner": [
+                "CC 4, Focus : A"
+            ],
             "Learning Through Exploring": [
-                "EXP 74, Focus : A",
-                "EXP 20, Focus : B"
+                "EXP 82, Focus : A",
+                "EXP 11, Focus : B"
             ]
         }
     },
-    "week 5": {
-        "day 1": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
+    "Week 2": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 9, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 2": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 82, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 3": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 24, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 4": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 32, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 5": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 9, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 6": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 42, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        },
-        "day 7": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act3",
-                "rnt act4"
-            ],
-            "Creative Corner": "CC 72, Focus : C",
-            "Learning Through Exploring": [
-                "EXP 23, Focus : C",
-                "EXP 74, Focus : D"
-            ]
-        }
-    },
-    "week 9": {
-        "day 1": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 72, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 2": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 84, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 3": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 68, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 4": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 18, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 5": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 22, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 6": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 12, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        },
-        "day 7": {
-            "Fortnightly": "Fort 1",
-            "Weekly": "week 1",
-            "Habit Up": [
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "5517092532",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "2",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 15:57:24.956",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
-            ],
-            "Roots And Tradition": [
-                "rnt act5",
-                "rnt act6"
-            ],
-            "Creative Corner": "CC 30, Focus : E",
-            "Learning Through Exploring": [
-                "EXP 7, Focus : E",
-                "EXP 61, Focus : F"
-            ]
-        }
-    },
-    "week 13": {
-        "day 7": {
-            "Fortnightly": null,
-            "Weekly": null,
-            "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 80, Focus : A",
+            "Creative Corner": [
+                "CC 62, Focus : B"
+            ],
             "Learning Through Exploring": [
-                "EXP 39, Focus : A",
-                "EXP 89, Focus : B"
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
             ]
-        }
-    },
-    "week 14": {
-        "day 1": {
-            "Fortnightly": null,
-            "Weekly": null,
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
             "Habit Up": [
-                {
-                    "activity_id": "2225389951",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:18.631",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                },
-                {
-                    "activity_id": "9142571154",
-                    "title": "Prepare the dining table",
-                    "reference": "Brain Lobe Development Right Parietal Lobe",
-                    "standard_id": "1",
-                    "gender_id": "1",
-                    "difficulty_level_id": "3",
-                    "priority_id": "2",
-                    "act_category_id": "1",
-                    "parent_desc": "Involve your child to help you set the dining table. Teach them about where everything is kept in the kitchen. (Give child non breakable crockery to begin with. you can give glass plates once they master this)You can ask child to add any decorative pieces to the table like artificial plants, flowers, napkins etc.encourage child to make a special arrangement when you have guests",
-                    "child_desc": "",
-                    "purpose_outcome": "Responsibility",
-                    "act_frequency_id": "4",
-                    "points": "40",
-                    "is_foundational": "True",
-                    "min_time_minutes": "5",
-                    "max_time_minutes": "15",
-                    "is_safety_risk": "False",
-                    "is_festival": "False",
-                    "festival_id": "1",
-                    "is_discrematory": "False",
-                    "is_external_dependency": "False",
-                    "is_parent_supervision": "True",
-                    "is_parent_involment": "True",
-                    "parent_involment_level_id": "3",
-                    "is_screen_time": "True",
-                    "screen_time_category_id": "1",
-                    "is_negative_effects": "False",
-                    "is_free": "True",
-                    "is_archived": "False",
-                    "created_by": "admin",
-                    "updated_by": "NULL",
-                    "created_date": "2024-05-28 14:58:24.094",
-                    "updated_date": "NULL",
-                    "revision": "0"
-                }
+                "2225389951",
+                "9142571154"
             ],
             "Roots And Tradition": [
                 "rnt act1",
                 "rnt act2"
             ],
-            "Creative Corner": "CC 13, Focus : C",
+            "Creative Corner": [
+                "CC 64, Focus : B"
+            ],
             "Learning Through Exploring": [
-                "EXP 26, Focus : C",
-                "EXP 3, Focus : D"
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 64, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 87, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 41, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 68, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 84, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 17, Focus : A",
+                "EXP 43, Focus : B"
+            ]
+        }
+    },
+    "Week 3": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 19, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 57, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 19, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 44, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 73, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 53, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 70, Focus : A"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : A",
+                "EXP 11, Focus : B"
+            ]
+        }
+    },
+    "Week 4": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 85, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 65, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 88, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 68, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 38, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 49, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "2225389951",
+                "9142571154"
+            ],
+            "Roots And Tradition": [
+                "rnt act1",
+                "rnt act2"
+            ],
+            "Creative Corner": [
+                "CC 36, Focus : B"
+            ],
+            "Learning Through Exploring": [
+                "EXP 67, Focus : A",
+                "EXP 61, Focus : B"
+            ]
+        }
+    },
+    "Week 5": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 43, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 84, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 62, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 24, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 32, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 0, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 80, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 57, Focus : C",
+                "EXP 77, Focus : D"
+            ]
+        }
+    },
+    "Week 6": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 60, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 63, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 40, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 76, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 44, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 26, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 11, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 80, Focus : C",
+                "EXP 67, Focus : D"
+            ]
+        }
+    },
+    "Week 7": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 73, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 50, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 11, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 18, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 85, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 86, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 69, Focus : C"
+            ],
+            "Learning Through Exploring": [
+                "EXP 18, Focus : C",
+                "EXP 50, Focus : D"
+            ]
+        }
+    },
+    "Week 8": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 34, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 63, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 73, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 21, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 67, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 58, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act3",
+                "rnt act4"
+            ],
+            "Creative Corner": [
+                "CC 4, Focus : D"
+            ],
+            "Learning Through Exploring": [
+                "EXP 33, Focus : C",
+                "EXP 0, Focus : D"
+            ]
+        }
+    },
+    "Week 9": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 39, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 12, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 37, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 76, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 49, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 5, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 23, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 71, Focus : E",
+                "EXP 27, Focus : F"
+            ]
+        }
+    },
+    "Week 10": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 4, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 86, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 39, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 73, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 40, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 76, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 11, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 79, Focus : E",
+                "EXP 52, Focus : F"
+            ]
+        }
+    },
+    "Week 11": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 27, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 13, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 18, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 76, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 3, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 72, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 65, Focus : E"
+            ],
+            "Learning Through Exploring": [
+                "EXP 9, Focus : E",
+                "EXP 30, Focus : F"
+            ]
+        }
+    },
+    "Week 12": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 30, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 90, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 16, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 55, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 89, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 76, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act5",
+                "rnt act6"
+            ],
+            "Creative Corner": [
+                "CC 31, Focus : F"
+            ],
+            "Learning Through Exploring": [
+                "EXP 11, Focus : E",
+                "EXP 69, Focus : F"
+            ]
+        }
+    },
+    "Week 13": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 55, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 4, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 12, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 33, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 7, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 56, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 1"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 20, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 26, Focus : H"
+            ]
+        }
+    },
+    "Week 14": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 27, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 40, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 18, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 74, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 84, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 22, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 1"
+            ],
+            "Weekly": [
+                "week 2"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 78, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 14, Focus : G",
+                "EXP 23, Focus : H"
+            ]
+        }
+    },
+    "Week 15": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 48, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 39, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 40, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 52, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 62, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 80, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 3"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 57, Focus : G"
+            ],
+            "Learning Through Exploring": [
+                "EXP 41, Focus : G",
+                "EXP 12, Focus : H"
+            ]
+        }
+    },
+    "Week 16": {
+        "Day 1": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 73, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 2": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 12, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 3": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 38, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 4": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 17, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 5": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 60, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 6": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 60, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
+            ]
+        },
+        "Day 7": {
+            "Fortnightly": [
+                "Fort 2"
+            ],
+            "Weekly": [
+                "week 4"
+            ],
+            "Habit Up": [
+                "5517092532",
+                "5517092532"
+            ],
+            "Roots And Tradition": [
+                "rnt act7",
+                "rnt act8"
+            ],
+            "Creative Corner": [
+                "CC 44, Focus : H"
+            ],
+            "Learning Through Exploring": [
+                "EXP 66, Focus : G",
+                "EXP 39, Focus : H"
             ]
         }
     }
