@@ -1,4 +1,4 @@
-import random               # MAKE THIS CODE BETTER (use oops, refactor a little, etc)
+import random
 import json
 import datetime
 import csv
@@ -28,7 +28,7 @@ class ActivityData:
 
 act_data = ActivityData()
 
-class ActivityGenerator:
+class ActivityGeneratorNToSr:
     def __init__(self, focus_areas, start_date) -> None:
         self.FullActList = {}
         self.WeekActList = {}
@@ -50,8 +50,9 @@ class ActivityGenerator:
         self.FortnightAct = {}
         self.WeeklyAct = {}
 
-        self.TempExpAct1 = {}
-        self.TempExpAct2 = {}
+        self.TempExpAct = {}
+
+        self.index = 1
 
     def GenerateWeekActivities(self):
         for i in range(1, 8): # 7 DAYS
@@ -73,7 +74,13 @@ class ActivityGenerator:
 
             self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus_areas[self.focus_num])] # creative corner
 
-            self.DayActList["Learning Through Exploring"] = [(self.TempExpAct1 + ", Focus : " + self.focus), (self.TempExpAct2 + ", Focus : " + self.focus_next)] # Learning through exploring
+            temparr = []
+            for _ in range(self.index):
+                b = 0
+                temparr.append((self.TempExpAct[b] + ", Focus : " + self.focus))
+                temparr.append((self.TempExpAct[b + 1] + ", Focus : " + self.focus_next))
+                b += 2
+            self.DayActList["Learning Through Exploring"] = temparr #[(self.TempExpAct[0] + ", Focus : " + self.focus), (self.TempExpAct[1] + ", Focus : " + self.focus_next)] # Learning through exploring
 
             day = "Day " + str(i)
 
@@ -91,19 +98,25 @@ class ActivityGenerator:
             elif (i-1) % 2 == 1:
                 self.focus_num = self.focus_index + 1
 
-            #print(self.focus_index)
             self.focus = self.focus_areas[self.focus_index]
             self.focus_next = self.focus_areas[self.focus_index + 1]
 
-            self.TempExpAct1 = random.choice(act_data.ExpActList)
-            self.TempExpAct2 = random.choice(act_data.ExpActList)
-            for _ in range(len(act_data.ExpActList)):
-                if self.TempExpAct1 in act_data.ExpActList:
-                    self.TempExpAct1 = random.choice(act_data.ExpActList)
-                elif self.TempExpAct2 in act_data.ExpActList and self.TempExpAct2 != self.TempExpAct1:
-                    self.TempExpAct2 = random.choice(act_data.ExpActList)
-                else:
-                    break
+            self.index = 1
+            if grade in ("1", "2"):
+                self.index = 2
+            
+            for _ in range(self.index):
+                b = 0
+                self.TempExpAct[b] = random.choice(act_data.ExpActList)
+                self.TempExpAct[b + 1] = random.choice(act_data.ExpActList)
+                for _ in range(len(act_data.ExpActList)):
+                    if self.TempExpAct[b] in act_data.ExpActList:
+                        self.TempExpAct[b] = random.choice(act_data.ExpActList)
+                    elif self.TempExpAct[b + 1] in act_data.ExpActList and self.TempExpAct[1] != self.TempExpAct[0]:
+                        self.TempExpAct[b + 1] = random.choice(act_data.ExpActList)
+                    else:
+                        break
+                b += 2
             
             self.GenerateWeekActivities()
 
@@ -115,91 +128,91 @@ class ActivityGenerator:
         self.focus_index += 2
         self.CurrMonth += 1
     
-    def GenerateRemainingActivities(self):
-        self.focus = self.focus_areas[0]
-        self.focus_next = self.focus_areas[1]
-        #print(self.difference)
-        for d in range(min(self.difference, 7)):
-            self.FortnightAct = None
-            self.WeeklyAct = None
+    # def GenerateRemainingActivities(self):
+    #     self.focus = self.focus_areas[0]
+    #     self.focus_next = self.focus_areas[1]
+    #     #print(self.difference)
+    #     for d in range(min(self.difference, 7)):
+    #         self.FortnightAct = None
+    #         self.WeeklyAct = None
 
-            self.DayActList["Fortnightly"] = [self.FortnightAct]
-            self.DayActList["Weekly"] = [self.WeeklyAct]
+    #         self.DayActList["Fortnightly"] = [self.FortnightAct]
+    #         self.DayActList["Weekly"] = [self.WeeklyAct]
 
-            self.DayActList["Habit Up"] = [act_data.HUActList[0]["activity_id"], act_data.HUActList[1]["activity_id"]]
-            self.DayActList["Roots And Tradition"] = [act_data.RNTActList[0], act_data.RNTActList[1]]
+    #         self.DayActList["Habit Up"] = [act_data.HUActList[0]["activity_id"], act_data.HUActList[1]["activity_id"]]
+    #         self.DayActList["Roots And Tradition"] = [act_data.RNTActList[0], act_data.RNTActList[1]]
 
-            tempCCAct = random.choice(act_data.CCActList)
-            for _ in range(len(act_data.CCActList)):
-                if tempCCAct in act_data.CCActList:
-                    tempCCAct = random.choice(act_data.CCActList)
-                else:
-                    break
+    #         tempCCAct = random.choice(act_data.CCActList)
+    #         for _ in range(len(act_data.CCActList)):
+    #             if tempCCAct in act_data.CCActList:
+    #                 tempCCAct = random.choice(act_data.CCActList)
+    #             else:
+    #                 break
 
-            self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus)] # creative corner
+    #         self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus)] # creative corner
 
-            self.TempExpAct1 = random.choice(act_data.ExpActList)
-            self.TempExpAct2 = random.choice(act_data.ExpActList)
-            for _ in range(len(act_data.ExpActList)):
-                if self.TempExpAct1 in act_data.ExpActList:
-                    self.TempExpAct1 = random.choice(act_data.ExpActList)
-                elif self.TempExpAct2 in ExpActList and self.TempExpAct2 != self.TempExpAct1:
-                    self.TempExpAct2 = random.choice(act_data.ExpActList)
-                else:
-                    break
+    #         self.TempExpAct1 = random.choice(act_data.ExpActList)
+    #         self.TempExpAct2 = random.choice(act_data.ExpActList)
+    #         for _ in range(len(act_data.ExpActList)):
+    #             if self.TempExpAct1 in act_data.ExpActList:
+    #                 self.TempExpAct1 = random.choice(act_data.ExpActList)
+    #             elif self.TempExpAct2 in ExpActList and self.TempExpAct2 != self.TempExpAct1:
+    #                 self.TempExpAct2 = random.choice(act_data.ExpActList)
+    #             else:
+    #                 break
 
-            self.DayActList["Learning Through Exploring"] = [(self.TempExpAct1 + ", Focus : " + self.focus), (self.TempExpAct2 + ", Focus : " + self.focus_next)] # Learning through exploring
+    #         self.DayActList["Learning Through Exploring"] = [(self.TempExpAct1 + ", Focus : " + self.focus), (self.TempExpAct2 + ", Focus : " + self.focus_next)] # Learning through exploring
 
-            day = "Day " + str(d + 1)
+    #         day = "Day " + str(d + 1)
 
-            week = "Week " + str(self.CurrWeek)
+    #         week = "Week " + str(self.CurrWeek)
 
-            self.WeekActList[day] = self.DayActList.copy()
-            self.DayActList.clear()
+    #         self.WeekActList[day] = self.DayActList.copy()
+    #         self.DayActList.clear()
 
-        self.FullActList[week] = self.WeekActList.copy()
-        self.WeekActList.clear()
+    #     self.FullActList[week] = self.WeekActList.copy()
+    #     self.WeekActList.clear()
 
-        self.CurrWeek += 1
+    #     self.CurrWeek += 1
         
         
-        if difference > 7:
-            self.DayActList["Fortnightly"] = [self.FortnightAct]
-            self.DayActList["Weekly"] = [self.WeeklyAct]
+    #     if difference > 7:
+    #         self.DayActList["Fortnightly"] = [self.FortnightAct]
+    #         self.DayActList["Weekly"] = [self.WeeklyAct]
 
-            self.DayActList["Habit Up"] = [act_data.HUActList[0]["activity_id"], act_data.HUActList[1]["activity_id"]]
-            self.DayActList["Roots And Tradition"] = [act_data.RNTActList[0], act_data.RNTActList[1]]
+    #         self.DayActList["Habit Up"] = [act_data.HUActList[0]["activity_id"], act_data.HUActList[1]["activity_id"]]
+    #         self.DayActList["Roots And Tradition"] = [act_data.RNTActList[0], act_data.RNTActList[1]]
 
-            tempCCAct = random.choice(act_data.CCActList)
-            for _ in range(len(act_data.CCActList)):
-                if tempCCAct in act_data.CCActList:
-                    tempCCAct = random.choice(act_data.CCActList)
-                else:
-                    break
+    #         tempCCAct = random.choice(act_data.CCActList)
+    #         for _ in range(len(act_data.CCActList)):
+    #             if tempCCAct in act_data.CCActList:
+    #                 tempCCAct = random.choice(act_data.CCActList)
+    #             else:
+    #                 break
 
-            self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus_next)] # creative corner
+    #         self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus_next)] # creative corner
 
-            self.TempExpAct1 = random.choice(act_data.ExpActList)
-            self.TempExpAct2 = random.choice(act_data.ExpActList)
-            for _ in range(len(act_data.ExpActList)):
-                if self.TempExpAct1 in act_data.ExpActList:
-                    self.TempExpAct1 = random.choice(act_data.ExpActList)
-                elif self.TempExpAct2 in act_data.ExpActList and self.TempExpAct2 != self.TempExpAct1:
-                    self.TempExpAct2 = random.choice(act_data.ExpActList)
-                else:
-                    break
+    #         self.TempExpAct1 = random.choice(act_data.ExpActList)
+    #         self.TempExpAct2 = random.choice(act_data.ExpActList)
+    #         for _ in range(len(act_data.ExpActList)):
+    #             if self.TempExpAct1 in act_data.ExpActList:
+    #                 self.TempExpAct1 = random.choice(act_data.ExpActList)
+    #             elif self.TempExpAct2 in act_data.ExpActList and self.TempExpAct2 != self.TempExpAct1:
+    #                 self.TempExpAct2 = random.choice(act_data.ExpActList)
+    #             else:
+    #                 break
 
-            self.DayActList["Learning Through Exploring"] = [(self.TempExpAct1 + ", Focus : " + self.focus), (self.TempExpAct2 + ", Focus : " + self.focus_next)] # Learning through exploring
+    #         self.DayActList["Learning Through Exploring"] = [(self.TempExpAct1 + ", Focus : " + self.focus), (self.TempExpAct2 + ", Focus : " + self.focus_next)] # Learning through exploring
 
-            day = "Day 1"
+    #         day = "Day 1"
 
-            self.WeekActList[day] = self.DayActList.copy()
-            self.DayActList.clear()
+    #         self.WeekActList[day] = self.DayActList.copy()
+    #         self.DayActList.clear()
 
-            week = "Week " + str(self.CurrWeek)
+    #         week = "Week " + str(self.CurrWeek)
 
-            self.FullActList[week] = self.WeekActList.copy()
-            self.WeekActList.clear()
+    #         self.FullActList[week] = self.WeekActList.copy()
+    #         self.WeekActList.clear()
     
     def GenerateActivities(self):
         for _ in range(1, 5): # 4 MONTHS
@@ -231,7 +244,7 @@ difference = diff.days - 84 # 84 = 12 (weeks) X 7 (days)
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade = "1"
+grade = "N"
 focus_area = ["A", "B", "C", "D", "E", "F", "G", "H"]
 gender = "MALE"
 language = "english"
@@ -255,12 +268,16 @@ for k in act_list_ref:
 for i in range(1, 9):
     act_data.RNTActList.append("rnt act" + str(i))
 
+
 def grade_filter(act_info_dict):
     if act_info_dict["standard_id"] == grade:
         return True
     return False
 
 act_data.HUActList = list(filter(grade_filter, act_data.HUActList))
+
+for i in range(1, 9): # PLACEHOLDER
+    act_data.HUActList.append({"activity_id" : i})
 # RNTActList = list(filter(grade_filter, RNTActList))
 # CCActList = list(filter(grade_filter, CCActList))
 
@@ -411,7 +428,7 @@ act_data.HUActList = list(filter(grade_filter, act_data.HUActList))
 #     fullActList["week 14"] = tempActList.copy()
 #     tempActList.clear()
 
-Generator = ActivityGenerator(focus_area, startDate)
+Generator = ActivityGeneratorNToSr(focus_area, startDate)
 Generator.GenerateActivities()
 
 fullActList = Generator.FullActList
