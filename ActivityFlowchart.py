@@ -13,6 +13,9 @@ class ActivityData:
         self.ExpActList = []
         self.FortnightAct = []
         self.WeeklyAct = []
+        self.PGActList = []
+        self.IPGActList = []
+        self.LHActList = []
     
     # def AppendHU(self, data_to_append):
     #     self.HUActList.append(data_to_append)
@@ -28,7 +31,7 @@ class ActivityData:
 
 act_data = ActivityData()
 
-class ActivityGeneratorNToSr:
+class ActivityGenerator:
     def __init__(self, focus_areas, start_date) -> None:
         self.FullActList = {}
         self.WeekActList = {}
@@ -47,40 +50,69 @@ class ActivityGeneratorNToSr:
         
         self.difference = diff.days - 84 # 84 = 12 (weeks) X 7 (days)
 
-        self.FortnightAct = {}
-        self.WeeklyAct = {}
+        self.FortnightAct = []
+        self.WeeklyAct = []
 
         self.TempExpAct = {}
+
+        self.activity_types_N_To_2 = ["Habit Up", "Roots And Tradition", "Creative Corner", "Learning Through Exploring"] # "Fortnightly", "Weekly",  At 0 and 1 positions
+        self.activity_types_3_To_9 = ["Habit Up", "Roots And Tradition", "Personal Growth", "Interpersonal Growth", "Life Hacks"] # "Fortnightly", "Weekly",  At 0 and 1 positions
+        if grade in ("N", "Jr", "Sr", "1", "2"):
+            self.activity_types = self.activity_types_N_To_2
+        else:
+            self.activity_types = self.activity_types_3_To_9
 
         self.index = 1
 
     def GenerateWeekActivities(self):
         for i in range(1, 8): # 7 DAYS
-            self.DayActList["Fortnightly"] = [self.FortnightAct]
-            self.DayActList["Weekly"] = [self.WeeklyAct]
+            #self.DayActList[self.activity_types[0]] = [self.FortnightAct]
+            #self.DayActList[self.activity_types[1]] = [self.WeeklyAct]
 
             #print(len(act_data.HUActList))
 
-            self.DayActList["Habit Up"] = [act_data.HUActList[2 * (self.CurrMonth-1)]["activity_id"], act_data.HUActList[2 * (self.CurrMonth-1) + 1]["activity_id"]] # habit up
+            self.DayActList[self.activity_types[0]] = [act_data.HUActList[2 * (self.CurrMonth-1)]["activity_id"], act_data.HUActList[2 * (self.CurrMonth-1) + 1]["activity_id"]] # habit up
 
-            self.DayActList["Roots And Tradition"] = [act_data.RNTActList[2 * (self.CurrMonth-1)], act_data.RNTActList[2 * (self.CurrMonth-1) + 1]] # roots and tradition
+            self.DayActList[self.activity_types[1]] = [act_data.RNTActList[2 * (self.CurrMonth-1)], act_data.RNTActList[2 * (self.CurrMonth-1) + 1]] # roots and tradition
 
-            tempCCAct = random.choice(act_data.CCActList)
-            for _ in range(len(act_data.CCActList)):
-                if tempCCAct in act_data.CCActList:
-                    tempCCAct = random.choice(act_data.CCActList)
-                else:
-                    break
+            if grade in ("N", "Jr", "Sr", "1", "2"):
+                tempCCAct = random.choice(act_data.CCActList)
+                for _ in range(len(act_data.CCActList)):
+                    if tempCCAct in act_data.CCActList:
+                        tempCCAct = random.choice(act_data.CCActList)
+                    else:
+                        break
 
-            self.DayActList["Creative Corner"] = [(tempCCAct + ", Focus : " + self.focus_areas[self.focus_num])] # creative corner
+                self.DayActList[self.activity_types[2]] = [(tempCCAct + ", Focus : " + self.focus_areas[self.focus_num])] # creative corner
 
-            temparr = []
-            for _ in range(self.index):
-                b = 0
-                temparr.append((self.TempExpAct[b] + ", Focus : " + self.focus))
-                temparr.append((self.TempExpAct[b + 1] + ", Focus : " + self.focus_next))
-                b += 2
-            self.DayActList["Learning Through Exploring"] = temparr #[(self.TempExpAct[0] + ", Focus : " + self.focus), (self.TempExpAct[1] + ", Focus : " + self.focus_next)] # Learning through exploring
+                temparr = []
+                for _ in range(self.index):
+                    b = 0
+                    temparr.append((self.TempExpAct[b] + ", Focus : " + self.focus))
+                    temparr.append((self.TempExpAct[b + 1] + ", Focus : " + self.focus_next))
+                    b += 2
+                self.DayActList[self.activity_types[3]] = temparr #[(self.TempExpAct[0] + ", Focus : " + self.focus), (self.TempExpAct[1] + ", Focus : " + self.focus_next)] # Learning through exploring
+
+            else:
+                tempPGAct = random.choice(act_data.PGActList)
+                for _ in range(len(act_data.CCActList)):
+                    if tempPGAct in act_data.PGActList:
+                        tempPGAct = random.choice(act_data.PGActList)
+                    else:
+                        break
+
+                self.DayActList[self.activity_types[2]] = [(tempPGAct + ", Focus : " + self.focus_areas[self.focus_num])] # Personal Growth
+                
+                if grade in ("8", "9"):
+                    self.DayActList[self.activity_types[3]] = [act_data.IPGActList[int((self.CurrWeek-1)/2)]]
+                elif grade in ("3", "4", "5", "6", "7"):
+                    self.DayActList[self.activity_types[3]] = [act_data.IPGActList[self.CurrWeek - 1]]
+                
+                self.DayActList[self.activity_types[4]] = [act_data.LHActList[int((self.CurrWeek-1)/2)]]
+
+                # self.DayActList[self.activity_types[3]] = self.WeeklyAct
+
+                # self.DayActList[self.activity_types[4]] = self.FortnightAct
 
             day = "Day " + str(i)
 
@@ -89,9 +121,17 @@ class ActivityGeneratorNToSr:
     
     def GenerateMonthActivities(self):
         for i in range(1, 5): # 4 WEEKS
-            self.FortnightAct = act_data.FortnightAct[int((i-1)/2)]
+            # self.FortnightAct = [act_data.FortnightAct[int((i-1)/2)]]
             
-            self.WeeklyAct = act_data.WeeklyAct[i-1]
+            # self.WeeklyAct = [act_data.WeeklyAct[i-1]]
+
+            # if grade in ("3", "4", "5", "6", "7", "8", "9"):
+            #     self.FortnightAct.clear()
+            #     self.FortnightAct.append(act_data.LHActList[int((i-1)/2)])
+            # self.WeeklyAct = [act_data.IPGActList[i-1]]
+            # if grade in ("8", "9"):
+            #     self.FortnightAct.append(act_data.IPGActList[int((i-1)/2)])
+            #     self.WeeklyAct.clear()
 
             if (i-1) % 2 == 0:
                 self.focus_num = self.focus_index
@@ -223,6 +263,8 @@ HUActList = [] # ["h act1", "h act2", "h act3", "h act4", "h act5", "h act6"]
 RNTActList = [] # ["rnt act1", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
 CCActList = [("CC " + str(r)) for r in range(91)]
 ExpActList = [("EXP " + str(r)) for r in range(91)]
+PGActList = [("PG " + str(r)) for r in range(91)]
+IPGActList = []
 fortnightly = ["Fort 1", "Fort 2"]
 weeklyAct = ["week 1", "week 2", "week 3", "week 4"]
 
@@ -230,6 +272,7 @@ act_data.CCActList = CCActList
 act_data.ExpActList = ExpActList
 act_data.FortnightAct = fortnightly
 act_data.WeeklyAct = weeklyAct
+act_data.PGActList = PGActList
 
 fullActList = {}  # Main huge list
 tempActList= {}  # Temporary list for for loop which appends to dailyAct list
@@ -244,7 +287,7 @@ difference = diff.days - 84 # 84 = 12 (weeks) X 7 (days)
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade = "N"
+grade = "1"  # N to Sr no data because no data in csv
 focus_area = ["A", "B", "C", "D", "E", "F", "G", "H"]
 gender = "MALE"
 language = "english"
@@ -265,8 +308,10 @@ for k in act_list_ref:
     elif id == 4:
         act_data.CCActList.append(k)
 
-for i in range(1, 9):
-    act_data.RNTActList.append("rnt act" + str(i))
+for i in range(1, 17):
+    act_data.RNTActList.append("rnt act " + str(i))
+    act_data.IPGActList.append("ipg act " + str(i))
+    act_data.LHActList.append("LH act " + str(i))
 
 
 def grade_filter(act_info_dict):
@@ -428,7 +473,7 @@ for i in range(1, 9): # PLACEHOLDER
 #     fullActList["week 14"] = tempActList.copy()
 #     tempActList.clear()
 
-Generator = ActivityGeneratorNToSr(focus_area, startDate)
+Generator = ActivityGenerator(focus_area, startDate)
 Generator.GenerateActivities()
 
 fullActList = Generator.FullActList
