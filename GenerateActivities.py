@@ -1,3 +1,4 @@
+from data_from_pgadmin import connection
 import random
 import json
 import datetime
@@ -302,16 +303,16 @@ child_id = "92615243"
 HUActList = [] # ["h act1", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
 
-CCActList = [{"activity_id" : ("CC " + str(r))} for r in range(92)]  # Comment this for main deployment
-ExpActList = [{"activity_id" : ("EXP " + str(r))} for r in range(92)]  # Comment this for main deployment
-PGActList = [{"activity_id" : ("PG " + str(r))} for r in range(92)]  # Comment this for main deployment
-IPGActList = [{"activity_id" : ("ipg act " + str(r))} for r in range(92)]  # Comment this for main deployment
+CCActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
+ExpActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
+PGActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
+IPGActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
 
 for i in range(1, 31):  # Comment this loop for main deployment
-    actData.HUActList.append({"activity_id" : ("hu act " + str(i))})
-    actData.RNTActList.append({"activity_id" : ("rnt act " + str(i))})
-    actData.IPGActList.append({"activity_id" : ("ipg act " + str(i))})
-    actData.LHActList.append({"activity_id" : ("LH act " + str(i))})
+    actData.HUActList.append({"activity_id" : i}) # ("hu act " + str(i))
+    actData.RNTActList.append({"activity_id" : i})
+    actData.IPGActList.append({"activity_id" : i})
+    actData.LHActList.append({"activity_id" : i})
 
 actData.CCActList = CCActList
 actData.ExpActList = ExpActList
@@ -364,7 +365,19 @@ def convert_datetime_to_str(date, data=""):
     hour = date.hour
     minute = date.minute
     second = date.second
-    return str((year, month, day, hour, minute, second))
+    if int(month) / 10 < 1:
+        month = "0{month}".format(month=month)
+    if int(day) / 10 < 1:
+        day = "0{day}".format(day=day)
+    if int(hour) / 10 < 1:
+        hour = "0{hour}".format(hour=hour)
+    if int(minute) / 10 < 1:
+        minute = "0{minute}".format(minute=minute)
+    if int(second) / 10 < 1:
+        second = "0{second}".format(second=second)
+
+    string = "{year}-{month}-{day} {hour}:{minutes}:{seconds}".format(year=year, month=month, day=day, hour=hour, minutes=minute, seconds=second)
+    return string
 
 def min_date(date1: datetime.datetime, date2: datetime.datetime):
     year1 = date1.year
@@ -428,3 +441,6 @@ for i in tempArr:
 
 with open("test1.json", "w") as test:
     json.dump(tempArr, test)
+
+Connection = connection()
+Connection.dump_data_in_child_activity(tempArr)
