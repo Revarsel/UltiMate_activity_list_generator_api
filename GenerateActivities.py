@@ -5,7 +5,7 @@ import datetime
 import csv
 from dateutil.relativedelta import relativedelta
 
-class Data:
+class Data: # All User Data
     def __init__(self) -> None:
         self.grade = ""
         self.pinCode = ""
