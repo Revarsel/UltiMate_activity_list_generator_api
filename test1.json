@@ -1,5 +1,557 @@
 [
     {
+        "activity_id": "CC 9",
+        "Start Date": "(2024, 6, 1, 0, 0, 30)",
+        "End Date": "(2024, 6, 1, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 24",
+        "Start Date": "(2024, 6, 2, 0, 0, 30)",
+        "End Date": "(2024, 6, 2, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 51",
+        "Start Date": "(2024, 6, 3, 0, 0, 30)",
+        "End Date": "(2024, 6, 3, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 3",
+        "Start Date": "(2024, 6, 4, 0, 0, 30)",
+        "End Date": "(2024, 6, 4, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 47",
+        "Start Date": "(2024, 6, 5, 0, 0, 30)",
+        "End Date": "(2024, 6, 5, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 88",
+        "Start Date": "(2024, 6, 6, 0, 0, 30)",
+        "End Date": "(2024, 6, 6, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 22",
+        "Start Date": "(2024, 6, 7, 0, 0, 30)",
+        "End Date": "(2024, 6, 7, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 2",
+        "Start Date": "(2024, 6, 8, 0, 0, 30)",
+        "End Date": "(2024, 6, 8, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 74",
+        "Start Date": "(2024, 6, 9, 0, 0, 30)",
+        "End Date": "(2024, 6, 9, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 65",
+        "Start Date": "(2024, 6, 10, 0, 0, 30)",
+        "End Date": "(2024, 6, 10, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 52",
+        "Start Date": "(2024, 6, 11, 0, 0, 30)",
+        "End Date": "(2024, 6, 11, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 69",
+        "Start Date": "(2024, 6, 12, 0, 0, 30)",
+        "End Date": "(2024, 6, 12, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 14",
+        "Start Date": "(2024, 6, 13, 0, 0, 30)",
+        "End Date": "(2024, 6, 13, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 32",
+        "Start Date": "(2024, 6, 14, 0, 0, 30)",
+        "End Date": "(2024, 6, 14, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 34",
+        "Start Date": "(2024, 6, 15, 0, 0, 30)",
+        "End Date": "(2024, 6, 15, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 84",
+        "Start Date": "(2024, 6, 16, 0, 0, 30)",
+        "End Date": "(2024, 6, 16, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 41",
+        "Start Date": "(2024, 6, 17, 0, 0, 30)",
+        "End Date": "(2024, 6, 17, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 63",
+        "Start Date": "(2024, 6, 18, 0, 0, 30)",
+        "End Date": "(2024, 6, 18, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 48",
+        "Start Date": "(2024, 6, 19, 0, 0, 30)",
+        "End Date": "(2024, 6, 19, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 11",
+        "Start Date": "(2024, 6, 20, 0, 0, 30)",
+        "End Date": "(2024, 6, 20, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 38",
+        "Start Date": "(2024, 6, 21, 0, 0, 30)",
+        "End Date": "(2024, 6, 21, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 17",
+        "Start Date": "(2024, 6, 22, 0, 0, 30)",
+        "End Date": "(2024, 6, 22, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 0",
+        "Start Date": "(2024, 6, 23, 0, 0, 30)",
+        "End Date": "(2024, 6, 23, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 4",
+        "Start Date": "(2024, 6, 24, 0, 0, 30)",
+        "End Date": "(2024, 6, 24, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 1",
+        "Start Date": "(2024, 6, 25, 0, 0, 30)",
+        "End Date": "(2024, 6, 25, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 6",
+        "Start Date": "(2024, 6, 26, 0, 0, 30)",
+        "End Date": "(2024, 6, 26, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 27",
+        "Start Date": "(2024, 6, 27, 0, 0, 30)",
+        "End Date": "(2024, 6, 27, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 44",
+        "Start Date": "(2024, 6, 28, 0, 0, 30)",
+        "End Date": "(2024, 6, 28, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
+        "activity_id": "CC 62",
+        "Start Date": "(2024, 6, 29, 0, 0, 30)",
+        "End Date": "(2024, 6, 29, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 33",
+        "Start Date": "(2024, 6, 30, 0, 0, 30)",
+        "End Date": "(2024, 6, 30, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 83",
+        "Start Date": "(2024, 7, 1, 0, 0, 30)",
+        "End Date": "(2024, 7, 1, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 81",
+        "Start Date": "(2024, 7, 2, 0, 0, 30)",
+        "End Date": "(2024, 7, 2, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 40",
+        "Start Date": "(2024, 7, 3, 0, 0, 30)",
+        "End Date": "(2024, 7, 3, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 7",
+        "Start Date": "(2024, 7, 4, 0, 0, 30)",
+        "End Date": "(2024, 7, 4, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 90",
+        "Start Date": "(2024, 7, 5, 0, 0, 30)",
+        "End Date": "(2024, 7, 5, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 12",
+        "Start Date": "(2024, 7, 6, 0, 0, 30)",
+        "End Date": "(2024, 7, 6, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 50",
+        "Start Date": "(2024, 7, 7, 0, 0, 30)",
+        "End Date": "(2024, 7, 7, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 46",
+        "Start Date": "(2024, 7, 8, 0, 0, 30)",
+        "End Date": "(2024, 7, 8, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 10",
+        "Start Date": "(2024, 7, 9, 0, 0, 30)",
+        "End Date": "(2024, 7, 9, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 31",
+        "Start Date": "(2024, 7, 10, 0, 0, 30)",
+        "End Date": "(2024, 7, 10, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 72",
+        "Start Date": "(2024, 7, 11, 0, 0, 30)",
+        "End Date": "(2024, 7, 11, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 60",
+        "Start Date": "(2024, 7, 12, 0, 0, 30)",
+        "End Date": "(2024, 7, 12, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 43",
+        "Start Date": "(2024, 7, 13, 0, 0, 30)",
+        "End Date": "(2024, 7, 13, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 78",
+        "Start Date": "(2024, 7, 14, 0, 0, 30)",
+        "End Date": "(2024, 7, 14, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 13",
+        "Start Date": "(2024, 7, 15, 0, 0, 30)",
+        "End Date": "(2024, 7, 15, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 68",
+        "Start Date": "(2024, 7, 16, 0, 0, 30)",
+        "End Date": "(2024, 7, 16, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 73",
+        "Start Date": "(2024, 7, 17, 0, 0, 30)",
+        "End Date": "(2024, 7, 17, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 15",
+        "Start Date": "(2024, 7, 18, 0, 0, 30)",
+        "End Date": "(2024, 7, 18, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 75",
+        "Start Date": "(2024, 7, 19, 0, 0, 30)",
+        "End Date": "(2024, 7, 19, 23, 59, 30)",
+        "focus": "C"
+    },
+    {
+        "activity_id": "CC 16",
+        "Start Date": "(2024, 7, 20, 0, 0, 30)",
+        "End Date": "(2024, 7, 20, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 45",
+        "Start Date": "(2024, 7, 21, 0, 0, 30)",
+        "End Date": "(2024, 7, 21, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 76",
+        "Start Date": "(2024, 7, 22, 0, 0, 30)",
+        "End Date": "(2024, 7, 22, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 71",
+        "Start Date": "(2024, 7, 23, 0, 0, 30)",
+        "End Date": "(2024, 7, 23, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 25",
+        "Start Date": "(2024, 7, 24, 0, 0, 30)",
+        "End Date": "(2024, 7, 24, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 36",
+        "Start Date": "(2024, 7, 25, 0, 0, 30)",
+        "End Date": "(2024, 7, 25, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 58",
+        "Start Date": "(2024, 7, 26, 0, 0, 30)",
+        "End Date": "(2024, 7, 26, 23, 59, 30)",
+        "focus": "D"
+    },
+    {
+        "activity_id": "CC 91",
+        "Start Date": "(2024, 7, 27, 0, 0, 30)",
+        "End Date": "(2024, 7, 27, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 21",
+        "Start Date": "(2024, 7, 28, 0, 0, 30)",
+        "End Date": "(2024, 7, 28, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 39",
+        "Start Date": "(2024, 7, 29, 0, 0, 30)",
+        "End Date": "(2024, 7, 29, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 80",
+        "Start Date": "(2024, 7, 30, 0, 0, 30)",
+        "End Date": "(2024, 7, 30, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 59",
+        "Start Date": "(2024, 7, 31, 0, 0, 30)",
+        "End Date": "(2024, 7, 31, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 35",
+        "Start Date": "(2024, 8, 1, 0, 0, 30)",
+        "End Date": "(2024, 8, 1, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 87",
+        "Start Date": "(2024, 8, 2, 0, 0, 30)",
+        "End Date": "(2024, 8, 2, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 61",
+        "Start Date": "(2024, 8, 3, 0, 0, 30)",
+        "End Date": "(2024, 8, 3, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 49",
+        "Start Date": "(2024, 8, 4, 0, 0, 30)",
+        "End Date": "(2024, 8, 4, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 67",
+        "Start Date": "(2024, 8, 5, 0, 0, 30)",
+        "End Date": "(2024, 8, 5, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 89",
+        "Start Date": "(2024, 8, 6, 0, 0, 30)",
+        "End Date": "(2024, 8, 6, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 86",
+        "Start Date": "(2024, 8, 7, 0, 0, 30)",
+        "End Date": "(2024, 8, 7, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 66",
+        "Start Date": "(2024, 8, 8, 0, 0, 30)",
+        "End Date": "(2024, 8, 8, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 20",
+        "Start Date": "(2024, 8, 9, 0, 0, 30)",
+        "End Date": "(2024, 8, 9, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 82",
+        "Start Date": "(2024, 8, 10, 0, 0, 30)",
+        "End Date": "(2024, 8, 10, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 5",
+        "Start Date": "(2024, 8, 11, 0, 0, 30)",
+        "End Date": "(2024, 8, 11, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 8",
+        "Start Date": "(2024, 8, 12, 0, 0, 30)",
+        "End Date": "(2024, 8, 12, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 57",
+        "Start Date": "(2024, 8, 13, 0, 0, 30)",
+        "End Date": "(2024, 8, 13, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 42",
+        "Start Date": "(2024, 8, 14, 0, 0, 30)",
+        "End Date": "(2024, 8, 14, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 56",
+        "Start Date": "(2024, 8, 15, 0, 0, 30)",
+        "End Date": "(2024, 8, 15, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 30",
+        "Start Date": "(2024, 8, 16, 0, 0, 30)",
+        "End Date": "(2024, 8, 16, 23, 59, 30)",
+        "focus": "E"
+    },
+    {
+        "activity_id": "CC 29",
+        "Start Date": "(2024, 8, 17, 0, 0, 30)",
+        "End Date": "(2024, 8, 17, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 26",
+        "Start Date": "(2024, 8, 18, 0, 0, 30)",
+        "End Date": "(2024, 8, 18, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 64",
+        "Start Date": "(2024, 8, 19, 0, 0, 30)",
+        "End Date": "(2024, 8, 19, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 85",
+        "Start Date": "(2024, 8, 20, 0, 0, 30)",
+        "End Date": "(2024, 8, 20, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 18",
+        "Start Date": "(2024, 8, 21, 0, 0, 30)",
+        "End Date": "(2024, 8, 21, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 23",
+        "Start Date": "(2024, 8, 22, 0, 0, 30)",
+        "End Date": "(2024, 8, 22, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 54",
+        "Start Date": "(2024, 8, 23, 0, 0, 30)",
+        "End Date": "(2024, 8, 23, 23, 59, 30)",
+        "focus": "F"
+    },
+    {
+        "activity_id": "CC 19",
+        "Start Date": "(2024, 8, 24, 0, 0, 30)",
+        "End Date": "(2024, 8, 24, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 37",
+        "Start Date": "(2024, 8, 25, 0, 0, 30)",
+        "End Date": "(2024, 8, 25, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 79",
+        "Start Date": "(2024, 8, 26, 0, 0, 30)",
+        "End Date": "(2024, 8, 26, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 70",
+        "Start Date": "(2024, 8, 27, 0, 0, 30)",
+        "End Date": "(2024, 8, 27, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 53",
+        "Start Date": "(2024, 8, 28, 0, 0, 30)",
+        "End Date": "(2024, 8, 28, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 28",
+        "Start Date": "(2024, 8, 29, 0, 0, 30)",
+        "End Date": "(2024, 8, 29, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 77",
+        "Start Date": "(2024, 8, 30, 0, 0, 30)",
+        "End Date": "(2024, 8, 30, 23, 59, 30)",
+        "focus": "A"
+    },
+    {
+        "activity_id": "CC 55",
+        "Start Date": "(2024, 8, 31, 0, 0, 30)",
+        "End Date": "(2024, 8, 31, 23, 59, 30)",
+        "focus": "B"
+    },
+    {
         "activity_id": "hu act 1",
         "Start Date": "(2024, 6, 1, 0, 0, 1)",
         "End Date": "(2024, 6, 1, 23, 59, 30)"
@@ -1840,212 +2392,282 @@
         "End Date": "(2024, 8, 31, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 20",
+        "activity_id": "EXP 39",
         "Start Date": "(2024, 6, 1, 0, 0, 30)",
         "End Date": "(2024, 6, 7, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 15",
+        "activity_id": "EXP 5",
         "Start Date": "(2024, 6, 1, 0, 0, 30)",
         "End Date": "(2024, 6, 7, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 46",
+        "activity_id": "EXP 23",
         "Start Date": "(2024, 6, 1, 0, 0, 30)",
         "End Date": "(2024, 6, 7, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 13",
+        "activity_id": "EXP 0",
+        "Start Date": "(2024, 6, 1, 0, 0, 30)",
+        "End Date": "(2024, 6, 7, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 53",
         "Start Date": "(2024, 6, 8, 0, 0, 30)",
         "End Date": "(2024, 6, 14, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 20",
+        "activity_id": "EXP 42",
         "Start Date": "(2024, 6, 8, 0, 0, 30)",
         "End Date": "(2024, 6, 14, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 24",
+        "activity_id": "EXP 35",
         "Start Date": "(2024, 6, 8, 0, 0, 30)",
         "End Date": "(2024, 6, 14, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 9",
+        "activity_id": "EXP 73",
+        "Start Date": "(2024, 6, 8, 0, 0, 30)",
+        "End Date": "(2024, 6, 14, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 4",
         "Start Date": "(2024, 6, 15, 0, 0, 30)",
         "End Date": "(2024, 6, 21, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 9",
+        "activity_id": "EXP 51",
         "Start Date": "(2024, 6, 15, 0, 0, 30)",
         "End Date": "(2024, 6, 21, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 30",
+        "activity_id": "EXP 63",
         "Start Date": "(2024, 6, 15, 0, 0, 30)",
         "End Date": "(2024, 6, 21, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 11",
+        "activity_id": "EXP 72",
+        "Start Date": "(2024, 6, 15, 0, 0, 30)",
+        "End Date": "(2024, 6, 21, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 40",
         "Start Date": "(2024, 6, 22, 0, 0, 30)",
         "End Date": "(2024, 6, 28, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 22",
+        "activity_id": "EXP 66",
         "Start Date": "(2024, 6, 22, 0, 0, 30)",
         "End Date": "(2024, 6, 28, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 35",
+        "activity_id": "EXP 64",
         "Start Date": "(2024, 6, 22, 0, 0, 30)",
         "End Date": "(2024, 6, 28, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 3",
+        "activity_id": "EXP 80",
+        "Start Date": "(2024, 6, 22, 0, 0, 30)",
+        "End Date": "(2024, 6, 28, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 31",
         "Start Date": "(2024, 6, 29, 0, 0, 30)",
         "End Date": "(2024, 7, 5, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 1",
+        "activity_id": "EXP 49",
         "Start Date": "(2024, 6, 29, 0, 0, 30)",
         "End Date": "(2024, 7, 5, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 55",
+        "activity_id": "EXP 12",
         "Start Date": "(2024, 6, 29, 0, 0, 30)",
         "End Date": "(2024, 7, 5, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 29",
+        "activity_id": "EXP 33",
+        "Start Date": "(2024, 6, 29, 0, 0, 30)",
+        "End Date": "(2024, 7, 5, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 65",
         "Start Date": "(2024, 7, 6, 0, 0, 30)",
         "End Date": "(2024, 7, 12, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 26",
+        "activity_id": "EXP 57",
         "Start Date": "(2024, 7, 6, 0, 0, 30)",
         "End Date": "(2024, 7, 12, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 11",
+        "activity_id": "EXP 26",
         "Start Date": "(2024, 7, 6, 0, 0, 30)",
         "End Date": "(2024, 7, 12, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 4",
+        "activity_id": "EXP 7",
+        "Start Date": "(2024, 7, 6, 0, 0, 30)",
+        "End Date": "(2024, 7, 12, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 87",
         "Start Date": "(2024, 7, 13, 0, 0, 30)",
         "End Date": "(2024, 7, 19, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 25",
+        "activity_id": "EXP 13",
         "Start Date": "(2024, 7, 13, 0, 0, 30)",
         "End Date": "(2024, 7, 19, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 2",
+        "activity_id": "EXP 34",
         "Start Date": "(2024, 7, 13, 0, 0, 30)",
         "End Date": "(2024, 7, 19, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 5",
+        "activity_id": "EXP 21",
+        "Start Date": "(2024, 7, 13, 0, 0, 30)",
+        "End Date": "(2024, 7, 19, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 11",
         "Start Date": "(2024, 7, 20, 0, 0, 30)",
         "End Date": "(2024, 7, 26, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 16",
+        "activity_id": "EXP 46",
         "Start Date": "(2024, 7, 20, 0, 0, 30)",
         "End Date": "(2024, 7, 26, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 75",
+        "activity_id": "EXP 17",
         "Start Date": "(2024, 7, 20, 0, 0, 30)",
         "End Date": "(2024, 7, 26, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 8",
+        "activity_id": "EXP 47",
+        "Start Date": "(2024, 7, 20, 0, 0, 30)",
+        "End Date": "(2024, 7, 26, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 84",
         "Start Date": "(2024, 7, 27, 0, 0, 30)",
         "End Date": "(2024, 8, 2, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 5",
+        "activity_id": "EXP 19",
         "Start Date": "(2024, 7, 27, 0, 0, 30)",
         "End Date": "(2024, 8, 2, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 82",
+        "activity_id": "EXP 88",
         "Start Date": "(2024, 7, 27, 0, 0, 30)",
         "End Date": "(2024, 8, 2, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 27",
+        "activity_id": "EXP 25",
+        "Start Date": "(2024, 7, 27, 0, 0, 30)",
+        "End Date": "(2024, 8, 2, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 6",
         "Start Date": "(2024, 8, 3, 0, 0, 30)",
         "End Date": "(2024, 8, 9, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 17",
+        "activity_id": "EXP 77",
         "Start Date": "(2024, 8, 3, 0, 0, 30)",
         "End Date": "(2024, 8, 9, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 85",
+        "activity_id": "EXP 48",
         "Start Date": "(2024, 8, 3, 0, 0, 30)",
         "End Date": "(2024, 8, 9, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 22",
+        "activity_id": "EXP 59",
+        "Start Date": "(2024, 8, 3, 0, 0, 30)",
+        "End Date": "(2024, 8, 9, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 24",
         "Start Date": "(2024, 8, 10, 0, 0, 30)",
         "End Date": "(2024, 8, 16, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 18",
+        "activity_id": "EXP 54",
         "Start Date": "(2024, 8, 10, 0, 0, 30)",
         "End Date": "(2024, 8, 16, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 16",
+        "activity_id": "EXP 45",
         "Start Date": "(2024, 8, 10, 0, 0, 30)",
         "End Date": "(2024, 8, 16, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 7",
+        "activity_id": "EXP 68",
+        "Start Date": "(2024, 8, 10, 0, 0, 30)",
+        "End Date": "(2024, 8, 16, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 62",
         "Start Date": "(2024, 8, 17, 0, 0, 30)",
         "End Date": "(2024, 8, 23, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 12",
+        "activity_id": "EXP 18",
         "Start Date": "(2024, 8, 17, 0, 0, 30)",
         "End Date": "(2024, 8, 23, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 44",
+        "activity_id": "EXP 16",
         "Start Date": "(2024, 8, 17, 0, 0, 30)",
         "End Date": "(2024, 8, 23, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 15",
+        "activity_id": "EXP 15",
+        "Start Date": "(2024, 8, 17, 0, 0, 30)",
+        "End Date": "(2024, 8, 23, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 81",
         "Start Date": "(2024, 8, 24, 0, 0, 30)",
         "End Date": "(2024, 8, 30, 23, 59, 30)"
     },
     {
-        "activity_id": "LH act 29",
+        "activity_id": "EXP 8",
         "Start Date": "(2024, 8, 24, 0, 0, 30)",
         "End Date": "(2024, 8, 30, 23, 59, 30)"
     },
     {
-        "activity_id": "PG 37",
+        "activity_id": "EXP 30",
         "Start Date": "(2024, 8, 24, 0, 0, 30)",
         "End Date": "(2024, 8, 30, 23, 59, 30)"
     },
     {
-        "activity_id": "ipg act 30",
+        "activity_id": "EXP 83",
+        "Start Date": "(2024, 8, 24, 0, 0, 30)",
+        "End Date": "(2024, 8, 30, 23, 59, 30)"
+    },
+    {
+        "activity_id": "EXP 67",
         "Start Date": "(2024, 8, 31, 0, 0, 30)",
         "End Date": "(2024, 9, 1, 0, 0, 0)"
     },
     {
-        "activity_id": "LH act 6",
+        "activity_id": "EXP 61",
         "Start Date": "(2024, 8, 31, 0, 0, 30)",
         "End Date": "(2024, 9, 1, 0, 0, 0)"
     },
     {
-        "activity_id": "PG 84",
+        "activity_id": "EXP 52",
+        "Start Date": "(2024, 8, 31, 0, 0, 30)",
+        "End Date": "(2024, 9, 1, 0, 0, 0)"
+    },
+    {
+        "activity_id": "EXP 28",
         "Start Date": "(2024, 8, 31, 0, 0, 30)",
         "End Date": "(2024, 9, 1, 0, 0, 0)"
     }

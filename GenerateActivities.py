@@ -39,9 +39,9 @@ class ActivityData:
 
 actData = ActivityData()
 
-start = "Start Date"
-end = "End Date"
-focus_string = "focus"
+start = "Start Date" # one var for the key "Start Date"
+end = "End Date" # one var for the key "End Date"
+focus_string = "focus" # one var for the key "focus"
 
 class GenerateActivities:
     def __init__(self) -> None:
@@ -90,11 +90,12 @@ class GenerateActivities:
                     if tempCCAct not in self.actDone:
                         break
 
+                remove_key_values_from_dictionary(tempCCAct)
                 self.actDone.append(tempCCAct)
+
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
                 tempCCAct[focus_string] = focus
-                remove_key_values_from_dictionary(tempCCAct)
                 self.fullActList.append(tempCCAct)
             
             elif grade in ("3", "4", "5", "6", "7"):
@@ -106,7 +107,9 @@ class GenerateActivities:
                     if tempPGAct not in self.actDone:
                         break
 
+                remove_key_values_from_dictionary(tempPGAct)
                 self.actDone.append(tempPGAct)
+
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
                 self.fullActList.append(tempPGAct) # Personal Growth
@@ -129,6 +132,11 @@ class GenerateActivities:
                 actData.RNTActList[index][end] = nextDate
                 actData.RNTActList[index + 1][end] = nextDate
 
+                remove_key_values_from_dictionary(actData.HUActList[index])
+                remove_key_values_from_dictionary(actData.HUActList[index + 1])
+                remove_key_values_from_dictionary(actData.RNTActList[index])
+                remove_key_values_from_dictionary(actData.RNTActList[index + 1])
+
                 self.fullActList.append(actData.HUActList[index].copy())
                 self.fullActList.append(actData.HUActList[index + 1].copy())
 
@@ -150,27 +158,30 @@ class GenerateActivities:
 
             tempExpActList = FilterFunctions.focus_area(actData.ExpActList, focusArea2PerWeek[0])
 
-            length = int(len(tempExpActList) / 2)
-            tempExpActList1 = tempExpActList[:length]
-            tempExpActList2 = tempExpActList[length:]
+            # length = int(len(tempExpActList) / 2)
+            # tempExpActList1 = tempExpActList[:length]
+            # tempExpActList2 = tempExpActList[length:]
 
             #print(len(tempExpActList2))
             tempIPGActList = FilterFunctions.focus_area(actData.IPGActList, focusWeek)
             if grade in ("N", "Jr", "Sr"):
-                act1 = random.choice(tempExpActList1)
-                act2 = random.choice(tempExpActList2)
+                act1 = random.choice(tempExpActList)
+                act2 = random.choice(tempExpActList)
 
                 while act1 in self.actDone or act1 == act2:
-                    act1 = random.choice(tempExpActList1)
+                    act1 = random.choice(tempExpActList)
                     if act1 not in self.actDone and act1 != act2:
                         break
-                
+
+                remove_key_values_from_dictionary(act1)
                 self.actDone.append(act1)
+
                 while act2 in self.actDone or act1 == act2:
-                    act2 = random.choice(tempExpActList2)
+                    act2 = random.choice(tempExpActList)
                     if act2 not in self.actDone and act1 != act2:
                         break
-                
+
+                remove_key_values_from_dictionary(act2)
                 self.actDone.append(act2)
 
                 act1[start] = currDate
@@ -180,24 +191,26 @@ class GenerateActivities:
 
                 self.fullActList.append(act1) # Learning Through Exploring for Nursery Junior and Senior KG
                 self.fullActList.append(act2)
-            
+
             elif grade in ("1", "2"):
                 for _ in range(2):
-                    act1 = random.choice(tempExpActList1)
-                    act2 = random.choice(tempExpActList2)
+                    act1 = random.choice(tempExpActList)
+                    act2 = random.choice(tempExpActList)
 
                     while act1 in self.actDone or act1 == act2:
-                        act1 = random.choice(tempExpActList1)
+                        act1 = random.choice(tempExpActList)
                         if act1 not in self.actDone and act1 != act2:
                             break
-                    
+
+                    remove_key_values_from_dictionary(act1)
                     self.actDone.append(act1)
-                    
+
                     while act2 in self.actDone or act1 == act2:
-                        act2 = random.choice(tempExpActList2)
+                        act2 = random.choice(tempExpActList)
                         if act2 not in self.actDone and act1 != act2:
                             break
-                    
+
+                    remove_key_values_from_dictionary(act2)
                     self.actDone.append(act2)
 
                     act1[start] = currDate
@@ -216,6 +229,7 @@ class GenerateActivities:
                     if tempIPGAct not in self.actDone:
                         break
 
+                remove_key_values_from_dictionary(tempIPGAct)
                 self.actDone.append(tempIPGAct)
 
                 tempIPGAct[start] = currDate
@@ -230,12 +244,13 @@ class GenerateActivities:
                         if tempLHAct not in self.actDone:
                             break
 
+                    remove_key_values_from_dictionary(tempLHAct)
                     self.actDone.append(tempLHAct)
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate) # seconds=0
                     self.fullActList.append(tempLHAct)
-                
+
                 elif grade in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
 
@@ -244,6 +259,7 @@ class GenerateActivities:
                         if tempLHAct not in self.actDone:
                             break
 
+                    remove_key_values_from_dictionary(tempLHAct)
                     self.actDone.append(tempLHAct)
 
                     tempLHAct[start] = currDate
@@ -252,22 +268,23 @@ class GenerateActivities:
 
                     tempPGList = FilterFunctions.focus_area(actData.PGActList, focusWeek)
                     tempPGAct = random.choice(tempPGList)
-                    
+
                     while tempPGAct in self.actDone:
                         tempPGAct = random.choice(tempPGList)
                         if tempPGAct not in self.actDone:
                             break
 
+                    remove_key_values_from_dictionary(tempPGAct)
                     self.actDone.append(tempPGAct)
+
                     tempPGAct[start] = currDate
                     tempPGAct[end] = nextDate
                     self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
-                
-    
+
     def GenerateActivities(self):
         self.GenerateDailyActivities()
         self.GenerateWeeklyActivities()
-            
+
 
 startDate = datetime.datetime(2024, 6, 1)
 endDate = startDate + relativedelta(months=3)
@@ -276,7 +293,7 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade = "8"  # N to Sr no data because no data in csv
+grade = "1"  # N to Sr no data because no data in csv
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
@@ -284,12 +301,13 @@ child_id = "92615243"
 
 HUActList = [] # ["h act1", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
-CCActList = [{"activity_id" : ("CC " + str(r))} for r in range(92)]
-ExpActList = [{"activity_id" : ("EXP " + str(r))} for r in range(92)]
-PGActList = [{"activity_id" : ("PG " + str(r))} for r in range(92)]
-IPGActList = [{"activity_id" : ("ipg act " + str(r))} for r in range(92)]
 
-for i in range(1, 31):
+CCActList = [{"activity_id" : ("CC " + str(r))} for r in range(92)]  # Comment this for main deployment
+ExpActList = [{"activity_id" : ("EXP " + str(r))} for r in range(92)]  # Comment this for main deployment
+PGActList = [{"activity_id" : ("PG " + str(r))} for r in range(92)]  # Comment this for main deployment
+IPGActList = [{"activity_id" : ("ipg act " + str(r))} for r in range(92)]  # Comment this for main deployment
+
+for i in range(1, 31):  # Comment this loop for main deployment
     actData.HUActList.append({"activity_id" : ("hu act " + str(i))})
     actData.RNTActList.append({"activity_id" : ("rnt act " + str(i))})
     actData.IPGActList.append({"activity_id" : ("ipg act " + str(i))})
@@ -311,7 +329,7 @@ class FilterFunctions:
         return list
         # tempArr = []
         # for t in list:
-        #     if t["standard_id"] == grade:
+        #     if t["standard_id"] == grade: # Uncomment this for main deployment
         #         tempArr.append(t)
         # return tempArr
     
@@ -327,7 +345,7 @@ class FilterFunctions:
         #         tempArr.append(k)
         # return tempArr
     
-        # if pair["primary_skill"] == focus:
+        # if pair["primary_skill"] == focus: # Uncomment this for main deployment
         #     return True
         # return False
 
