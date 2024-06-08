@@ -2,11 +2,11 @@ import psycopg2
 import csv
 import datetime
  
-DB_NAME = "ultimatedb"
+DB_NAME = "postgres"
 DB_USER = "postgres"
-DB_PASS = "Pratik@2855" # put in password
+DB_PASS = "Satksh123?" # put in password
 DB_HOST = "localhost"
-DB_PORT = "9876"
+DB_PORT = "5432"
 
 column_names = []
 
@@ -27,11 +27,12 @@ class connection:
             print("database connected")
         except:
             print("database could not be connected")
+            exit()
 
-    def get_birth_year_data(self):
+    def get_table_data(self, database_name: str):
         cursor = self.conn.cursor()
-        sql = "COPY (SELECT * FROM birth_year) TO STDOUT WITH CSV DELIMITER ';';"
-        cursor.execute("SELECT * FROM birth_year LIMIT 0")
+        sql = "COPY (SELECT * FROM {db_name}) TO STDOUT WITH CSV DELIMITER ';';".format(db_name=database_name)
+        cursor.execute("SELECT * FROM {db_name} LIMIT 0".format(db_name=database_name))
         column_names = [desc[0] for desc in cursor.description]
 
 
@@ -83,4 +84,4 @@ def check_date_between_two_dates(date1: datetime.datetime, date2: datetime.datet
 
 if __name__ == "__main__":
     Connection = connection()
-    Connection.get_birth_year_data()
+    Connection.get_table_data("activity")

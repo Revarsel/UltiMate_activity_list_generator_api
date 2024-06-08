@@ -294,11 +294,15 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade = "1"  # N to Sr no data because no data in csv
+grade = 1  # N to Sr no data because no data in csv
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
 child_id = "92615243"
+
+map_grade = ["N", "Jr", "Sr"]
+if grade - 3 < 0:
+    grade = map_grade[grade]
 
 HUActList = [] # ["h act1", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
@@ -404,15 +408,16 @@ def min_date(date1: datetime.datetime, date2: datetime.datetime):
 def remove_key_values_from_dictionary(dictionary: dict):
     keys = list(dictionary.keys())
     for i in keys:
-        if i not in (end, start, focus_string, "activity_id"):
+        if i not in (end, start, focus_string, "activity_id", "child_id"):
             dictionary.pop(i)
 
 actListRef = []
 
-with open("data-1716973262669.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
+with open("table1.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
     data = csv.DictReader(activities_data)
     for i in data:
         actListRef.append(i)
+    print(actListRef[0])
 
 for k in actListRef:
     id = int(k["act_category_id"])
@@ -424,6 +429,9 @@ for k in actListRef:
         actData.CCActList.append(k)
 
 actData.filterLists()
+
+Connection = connection()
+Connection.get_table_data("activity")
 
 Generator = GenerateActivities()
 # Generator.GenerateDailyActivities()
@@ -442,5 +450,4 @@ for i in tempArr:
 with open("test1.json", "w") as test:
     json.dump(tempArr, test)
 
-Connection = connection()
 Connection.dump_data_in_child_activity(tempArr)
