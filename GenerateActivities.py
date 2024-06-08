@@ -1,4 +1,5 @@
 from data_from_pgadmin import connection
+from testing_direct_sql_data import get_data
 import random
 import json
 import datetime
@@ -413,11 +414,13 @@ def remove_key_values_from_dictionary(dictionary: dict):
 
 actListRef = []
 
-with open("table1.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
-    data = csv.DictReader(activities_data)
-    for i in data:
-        actListRef.append(i)
-    print(actListRef[0])
+# with open("table1.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
+#     data = csv.DictReader(activities_data)
+#     for i in data:
+#         actListRef.append(i)
+#     print(actListRef[0])
+
+actListRef = get_data()
 
 for k in actListRef:
     id = int(k["act_category_id"])
@@ -431,7 +434,7 @@ for k in actListRef:
 actData.filterLists()
 
 Connection = connection()
-Connection.get_table_data("activity")
+# Connection.get_table_data("activity")
 
 Generator = GenerateActivities()
 # Generator.GenerateDailyActivities()
@@ -443,11 +446,11 @@ tempArr = []
 for i in Generator.fullActList:
     tempArr.append(i)
 
-for i in tempArr:
-    i[start] = convert_datetime_to_str(i[start], i)
-    i[end] = convert_datetime_to_str(i[end])
+# for i in tempArr:
+#     i[start] = convert_datetime_to_str(i[start], i)
+#     i[end] = convert_datetime_to_str(i[end])
 
-with open("test1.json", "w") as test:
-    json.dump(tempArr, test)
+# with open("test1.json", "w") as test:
+#     json.dump(tempArr, test)
 
 Connection.dump_data_in_child_activity(tempArr)

@@ -76,11 +76,8 @@ class connection:
     def dump_data_in_child_activity(self, fullActList: list):
         cursor = self.conn.cursor()
         for i in fullActList:
-            query = "INSERT INTO public.child_activity (activity_id, start_date, end_date)VALUES ({act_id}, {start}, {end})".format(act_id=i["activity_id"], start=i["Start Date"], end=i["End Date"])
+            query = "INSERT INTO(child_activity_id, activity_id, child_id, start_date, end_date, activity_status_id, act_start_time, act_completion_time, reassign_count, activity_time_minutes, wordle_words_id, is_archived, created_by, updated_id, created_date, updated_date, revision)VALUES (83762, {act_id}, , {child_id}, {start}, {end})".format(act_id=i["activity_id"], start=i["Start Date"], end=i["End Date"])
             cursor.execute(query)
-
-def check_date_between_two_dates(date1: datetime.datetime, date2: datetime.datetime, date_check: str):
-    pass
 
 if __name__ == "__main__":
     Connection = connection()
