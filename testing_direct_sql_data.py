@@ -1,9 +1,9 @@
 import psycopg2
 
-DB_NAME = "postgres"
-DB_USER = "postgres"
-DB_PASS = "Satksh123?" # put in password
-DB_HOST = "localhost"
+DB_NAME = "ultimatedb"
+DB_USER = "postgress"
+DB_PASS = "Shubham123" # put in password
+DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
 
 data = []
@@ -26,11 +26,11 @@ def get_data():
 
         cursor = conn.cursor()
 
-        cursor.execute("SELECT * FROM {table} LIMIT 0".format(table=table_name))
+        cursor.execute("SELECT * FROM public.{table} LIMIT 0".format(table=table_name))
         column_names = [desc[0] for desc in cursor.description]
         data.append(column_names)
 
-        sql = "SELECT * FROM {table};".format(table=table_name)
+        sql = "SELECT * FROM public.{table};".format(table=table_name)
         cursor.execute(sql)
         data.append(cursor.fetchall())
 

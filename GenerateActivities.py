@@ -41,8 +41,8 @@ class ActivityData:
 
 actData = ActivityData()
 
-start = "Start Date" # one var for the key "Start Date"
-end = "End Date" # one var for the key "End Date"
+start = "start_date" # one var for the key "Start Date"
+end = "end_date" # one var for the key "End Date"
 focus_string = "focus" # one var for the key "focus"
 
 class GenerateActivities:
@@ -92,7 +92,7 @@ class GenerateActivities:
                         break
                     tempCCAct = random.choice(actData.CCActList)
 
-                remove_key_values_from_dictionary(tempCCAct)
+                #remove_key_values_from_dictionary(tempCCAct)
                 self.actDone.append(tempCCAct)
 
                 tempCCAct[start] = currDate
@@ -109,7 +109,7 @@ class GenerateActivities:
                         break
                     tempPGAct = random.choice(tempPGList)
 
-                remove_key_values_from_dictionary(tempPGAct)
+                #remove_key_values_from_dictionary(tempPGAct)
                 self.actDone.append(tempPGAct)
 
                 tempPGAct[start] = currDate
@@ -134,10 +134,10 @@ class GenerateActivities:
                 actData.RNTActList[index][end] = nextDate
                 actData.RNTActList[index + 1][end] = nextDate
 
-                remove_key_values_from_dictionary(actData.HUActList[index])
-                remove_key_values_from_dictionary(actData.HUActList[index + 1])
-                remove_key_values_from_dictionary(actData.RNTActList[index])
-                remove_key_values_from_dictionary(actData.RNTActList[index + 1])
+                #remove_key_values_from_dictionary(actData.HUActList[index])
+                #remove_key_values_from_dictionary(actData.HUActList[index + 1])
+                #remove_key_values_from_dictionary(actData.RNTActList[index])
+                #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
 
                 self.fullActList.append(actData.HUActList[index].copy())
                 self.fullActList.append(actData.HUActList[index + 1].copy())
@@ -175,7 +175,7 @@ class GenerateActivities:
                         break
                     act1 = random.choice(tempExpActList)
 
-                remove_key_values_from_dictionary(act1)
+                #remove_key_values_from_dictionary(act1)
                 self.actDone.append(act1)
 
                 for _ in range(len(tempExpActList)):
@@ -183,7 +183,7 @@ class GenerateActivities:
                         break
                     act2 = random.choice(tempExpActList)
 
-                remove_key_values_from_dictionary(act2)
+                #remove_key_values_from_dictionary(act2)
                 self.actDone.append(act2)
 
                 act1[start] = currDate
@@ -204,7 +204,7 @@ class GenerateActivities:
                             break
                         act1 = random.choice(tempExpActList)
 
-                    remove_key_values_from_dictionary(act1)
+                    #remove_key_values_from_dictionary(act1)
                     self.actDone.append(act1)
 
                     for _ in range(len(tempExpActList)):
@@ -212,7 +212,7 @@ class GenerateActivities:
                             break
                         act2 = random.choice(tempExpActList)
 
-                    remove_key_values_from_dictionary(act2)
+                    #remove_key_values_from_dictionary(act2)
                     self.actDone.append(act2)
 
                     act1[start] = currDate
@@ -231,7 +231,7 @@ class GenerateActivities:
                         break
                     tempIPGAct = random.choice(tempIPGActList)
 
-                remove_key_values_from_dictionary(tempIPGAct)
+                #remove_key_values_from_dictionary(tempIPGAct)
                 self.actDone.append(tempIPGAct)
 
                 tempIPGAct[start] = currDate
@@ -246,7 +246,7 @@ class GenerateActivities:
                             break
                         tempLHAct = random.choice(tempLHActList)
 
-                    remove_key_values_from_dictionary(tempLHAct)
+                    #remove_key_values_from_dictionary(tempLHAct)
                     self.actDone.append(tempLHAct)
 
                     tempLHAct[start] = currDate
@@ -261,7 +261,7 @@ class GenerateActivities:
                             break
                         tempLHAct = random.choice(tempLHActList)
 
-                    remove_key_values_from_dictionary(tempLHAct)
+                    #remove_key_values_from_dictionary(tempLHAct)
                     self.actDone.append(tempLHAct)
 
                     tempLHAct[start] = currDate
@@ -276,7 +276,7 @@ class GenerateActivities:
                             break
                         tempPGAct = random.choice(tempPGList)
 
-                    remove_key_values_from_dictionary(tempPGAct)
+                    #remove_key_values_from_dictionary(tempPGAct)
                     self.actDone.append(tempPGAct)
 
                     tempPGAct[start] = currDate
@@ -437,20 +437,25 @@ Connection = connection()
 # Connection.get_table_data("activity")
 
 Generator = GenerateActivities()
-Generator.GenerateDailyActivities()
+# Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
-# Generator.GenerateActivities()
+Generator.GenerateActivities()
 
 tempArr = []
 
 for i in Generator.fullActList:
     tempArr.append(i)
 
-for i in tempArr:
-    i[start] = convert_datetime_to_str(i[start], i)
-    i[end] = convert_datetime_to_str(i[end])
+# for i in tempArr:
+#     for k in range(len(i.keys())):
+#         value = list(i.values())
+#         keys = list(i.keys())
+#         if type(value[k]) == datetime.datetime:
+#             i[keys[k]] = convert_datetime_to_str(i[keys[k]]) 
+#         # i[start] = convert_datetime_to_str(i[start], i)
+#         # i[end] = convert_datetime_to_str(i[end])
 
-with open("test1.json", "w") as test:
-    json.dump(tempArr, test)
+# with open("test1.json", "w") as test:
+#     json.dump(tempArr, test)
 
-# Connection.dump_data_in_child_activity(tempArr)
+Connection.dump_data_in_child_activity(tempArr, child_id)
