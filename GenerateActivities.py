@@ -148,7 +148,7 @@ class GenerateActivities:
 
 
     def GenerateWeeklyActivities(self):
-        index = int(dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is also considered a week)
+        index = int(dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
 
         tempLHActList = actData.LHActList
         for i in range(index): # start to end date number of weeks
@@ -299,7 +299,7 @@ grade = 2  # 1 -> N, 2 -> Jr etc
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = "92615243"
+child_id = "9066977754"
 
 map_grade = ["N", "Jr", "Sr"]
 if grade - 3 < 0:
@@ -446,6 +446,10 @@ tempArr = []
 for i in Generator.fullActList:
     tempArr.append(i)
 
+Connection.dump_data_in_child_activity(tempArr, child_id)
+
+index = 0
+
 # for i in tempArr:
 #     for k in range(len(i.keys())):
 #         value = list(i.values())
@@ -454,8 +458,9 @@ for i in Generator.fullActList:
 #             i[keys[k]] = convert_datetime_to_str(i[keys[k]]) 
 #         # i[start] = convert_datetime_to_str(i[start], i)
 #         # i[end] = convert_datetime_to_str(i[end])
+#     i["index"] = index
+#     index += 1
 
 # with open("test1.json", "w") as test:
 #     json.dump(tempArr, test)
 
-Connection.dump_data_in_child_activity(tempArr, child_id)
