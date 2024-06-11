@@ -15,7 +15,6 @@ host = DB_HOST
 user = DB_USER
 port = DB_PORT
 password = DB_PASS
-#conn = psycopg2.connect()
 
 def get_data():
     try:
@@ -37,9 +36,9 @@ def get_data():
 
         cursor.close()
 
-        print("database connected")
+        print("database connected (get data)")
     except:
-        print("database could not be connected")
+        print("database could not be connected (get data)")
 
     data_to_dict = []
 
@@ -52,5 +51,5 @@ def get_data():
             temp[col_data] = row_data
         data_to_dict.append(temp)
 
-    print(data_to_dict[5])
+    #print(data_to_dict[5])
     return data_to_dict

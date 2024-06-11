@@ -24,54 +24,10 @@ class connection:
                                         password=self.password,
                                         host=self.host,
                                         port=self.port)
-            print("database connected")
+            print("database connected (upload data)")
         except:
-            print("database could not be connected")
+            print("database could not be connected (upload data)")
             exit()
-
-    def get_table_data(self, database_name: str):
-        cursor = self.conn.cursor()
-        sql = "COPY (SELECT * FROM {db_name}) TO STDOUT WITH CSV DELIMITER ';';".format(db_name=database_name)
-        cursor.execute("SELECT * FROM {db_name} LIMIT 0".format(db_name=database_name))
-        column_names = [desc[0] for desc in cursor.description]
-
-
-        with open("table.csv", "w") as file:
-            csvwriter = csv.writer(file, delimiter=';')
-            csvwriter.writerow(column_names)
-            cursor.copy_expert(sql, file)
-        
-        # with open("table.csv", 'r') as file:
-        #     csvreader = csv.DictReader(file)
-        #     for i in csvreader:
-        #         print(i)
-
-        cursor.close()
-
-        # print(column_names)
-    
-    def get_child_activity_table(self):
-        cursor = self.conn.cursor()
-        sql = "COPY (SELECT * FROM child_activity) TO STDOUT WITH CSV DELIMITER ';';"
-        cursor.execute("SELECT * FROM language LIMIT 0")
-        column_names = [desc[0] for desc in cursor.description]
-
-        fullActList = []
-        with open("table.csv", "w") as file:
-            csvwriter = csv.writer(file, delimiter=';')
-            csvwriter.writerow(column_names)
-            cursor.copy_expert(sql, file)
-
-            csvreader = csv.DictReader(file)
-            for i in csvreader:
-                fullActList.append(i)
-            
-        
-        # for i in fullActList:
-        #     if i[]
-
-        cursor.close()
-        pass
 
     def dump_data_in_child_activity(self, fullActList: list):
         cursor = self.conn.cursor()
