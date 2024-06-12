@@ -119,7 +119,7 @@ class GenerateActivities:
         index = 0
         for months in range(len(self.monthDays)):
             for currDay in range(self.monthDays[months]):
-                currDate = startDate + relativedelta(months=months, days=currDay, second=1)
+                currDate = startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
 
                 actData.HUActList[index][start] = currDate   # Habit Up
