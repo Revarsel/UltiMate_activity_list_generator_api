@@ -8,7 +8,7 @@ DB_PASS = "Shubham123" # put in password
 DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
 
-currDate = datetime.datetime(2024, 7, 1) + relativedelta(hours=1) # adding hours because in db start dates arent exactly 2024-08-22, they have fewm inutes added to it
+currDate = datetime.datetime(2024, 6, 1) + relativedelta(hours=1) # adding hours because in db start dates arent exactly 2024-08-22, they have fewm inutes added to it
 # nextDate = currDate + relativedelta(days=7)
 
 database = DB_NAME
