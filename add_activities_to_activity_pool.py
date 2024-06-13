@@ -26,7 +26,7 @@ def get_activity_pool_activities(activities):
     for i in activities:
         if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]:
             daily.append(i)
-        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"]: # and currDate < i["start_date"]:
+        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]:
             weekly.append(i)
         else:
             print("not weekly or daily")
@@ -74,7 +74,7 @@ try:
     
     activity_pool = get_activity_pool_activities(data)
 
-    
+    # add the above data in activity pool table
 
     cursor.close()
 
