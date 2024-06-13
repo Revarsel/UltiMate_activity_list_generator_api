@@ -74,7 +74,9 @@ try:
     
     activity_pool = get_activity_pool_activities(data)
 
-    # add the above data in activity pool table
+    # activity pool isnt a table
+    # it is similar to category like hu rnt etc
+    # set the act_category_id to activity_pool
 
     cursor.close()
 
