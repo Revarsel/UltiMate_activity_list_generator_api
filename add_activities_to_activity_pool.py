@@ -77,6 +77,7 @@ try:
     # activity pool isnt a table
     # it is similar to category like hu rnt etc
     # set the act_category_id to activity_pool
+    # but act_category_id column doesnt exist
 
     cursor.close()
 
