@@ -62,7 +62,7 @@ class GenerateActivities:
         self.focusArea2PerWeek = tempArr2PerWeek
         self.fullActList = []
         self.monthDays = []
-        self.actDone = []
+        self.actDone = [] # this stores all activity ids to check for duplicates in the following activity generators
         for j in range(1, 4):
             monthPrev = startDate + relativedelta(months=max((j-1), 0))
             monthNext = startDate + relativedelta(months=j)
@@ -83,17 +83,17 @@ class GenerateActivities:
                 tempCCAct = random.choice(actData.CCActList)   # Creative Corner
 
                 for _ in range(len(tempCCList)):
-                    if tempCCAct not in self.actDone:
+                    if tempCCAct["activity_id"] not in self.actDone:
                         break
                     tempCCAct = random.choice(tempCCList)
                 
-                for _ in range(len(actData.CCActList)):
-                    if tempCCAct not in self.actDone:
-                        break
-                    tempCCAct = random.choice(actData.CCActList)
+                # for _ in range(len(actData.CCActList)):
+                #     if tempCCAct["activity_id"] not in self.actDone:
+                #         break
+                #     tempCCAct = random.choice(actData.CCActList)
 
                 #remove_key_values_from_dictionary(tempCCAct)
-                self.actDone.append(tempCCAct)
+                self.actDone.append(tempCCAct["activity_id"])
 
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
@@ -105,12 +105,12 @@ class GenerateActivities:
                 tempPGAct = random.choice(tempPGList)
                 
                 for _ in range(len(tempPGList)):
-                    if tempPGAct not in self.actDone:
+                    if tempPGAct["activity_id"] not in self.actDone:
                         break
                     tempPGAct = random.choice(tempPGList)
 
                 #remove_key_values_from_dictionary(tempPGAct)
-                self.actDone.append(tempPGAct)
+                self.actDone.append(tempPGAct["activity_id"])
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
@@ -171,20 +171,20 @@ class GenerateActivities:
                 act2 = random.choice(tempExpActList)
                 
                 for _ in range(len(tempExpActList)):
-                    if act1 not in self.actDone and act1 != act2:
+                    if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                         break
                     act1 = random.choice(tempExpActList)
 
-                #remove_key_values_from_dictionary(act1)
-                self.actDone.append(act1)
+                #remove_key_values_from_dictionary(act1["activity_id"])
+                self.actDone.append(act1["activity_id"])
 
                 for _ in range(len(tempExpActList)):
-                    if act2 not in self.actDone and act1 != act2:
+                    if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                         break
                     act2 = random.choice(tempExpActList)
 
                 #remove_key_values_from_dictionary(act2)
-                self.actDone.append(act2)
+                self.actDone.append(act2["activity_id"])
 
                 act1[start] = currDate
                 act2[start] = currDate
@@ -200,20 +200,20 @@ class GenerateActivities:
                     act2 = random.choice(tempExpActList)
 
                     for _ in range(len(tempExpActList)):
-                        if act1 not in self.actDone and act1 != act2:
+                        if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                             break
                         act1 = random.choice(tempExpActList)
 
-                    #remove_key_values_from_dictionary(act1)
-                    self.actDone.append(act1)
+                    #remove_key_values_from_dictionary(act1["activity_id"])
+                    self.actDone.append(act1["activity_id"])
 
                     for _ in range(len(tempExpActList)):
-                        if act2 not in self.actDone and act1 != act2:
+                        if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                             break
                         act2 = random.choice(tempExpActList)
 
                     #remove_key_values_from_dictionary(act2)
-                    self.actDone.append(act2)
+                    self.actDone.append(act2["activity_id"])
 
                     act1[start] = currDate
                     act2[start] = currDate
@@ -227,12 +227,12 @@ class GenerateActivities:
                 tempIPGAct = random.choice(tempIPGActList)
 
                 for _ in range(len(tempIPGActList)):
-                    if tempIPGAct not in self.actDone:
+                    if tempIPGAct["activity_id"] not in self.actDone:
                         break
                     tempIPGAct = random.choice(tempIPGActList)
 
                 #remove_key_values_from_dictionary(tempIPGAct)
-                self.actDone.append(tempIPGAct)
+                self.actDone.append(tempIPGAct["activity_id"])
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
@@ -242,12 +242,12 @@ class GenerateActivities:
                     tempLHAct = random.choice(tempLHActList)
 
                     for _ in range(len(tempLHActList)):
-                        if tempLHAct not in self.actDone:
+                        if tempLHAct["activity_id"] not in self.actDone:
                             break
                         tempLHAct = random.choice(tempLHActList)
 
                     #remove_key_values_from_dictionary(tempLHAct)
-                    self.actDone.append(tempLHAct)
+                    self.actDone.append(tempLHAct["activity_id"])
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate) # seconds=0
@@ -257,12 +257,12 @@ class GenerateActivities:
                     tempLHAct = random.choice(tempLHActList)
 
                     for _ in range(len(tempLHActList)):
-                        if tempLHAct not in self.actDone:
+                        if tempLHAct["activity_id"] not in self.actDone:
                             break
                         tempLHAct = random.choice(tempLHActList)
 
                     #remove_key_values_from_dictionary(tempLHAct)
-                    self.actDone.append(tempLHAct)
+                    self.actDone.append(tempLHAct["activity_id"])
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = nextDate
@@ -272,12 +272,12 @@ class GenerateActivities:
                     tempPGAct = random.choice(tempPGList)
 
                     for _ in range(len(tempPGList)):
-                        if tempPGAct not in self.actDone:
+                        if tempPGAct["activity_id"] not in self.actDone:
                             break
                         tempPGAct = random.choice(tempPGList)
 
                     #remove_key_values_from_dictionary(tempPGAct)
-                    self.actDone.append(tempPGAct)
+                    self.actDone.append(tempPGAct["activity_id"])
 
                     tempPGAct[start] = currDate
                     tempPGAct[end] = nextDate
@@ -286,6 +286,10 @@ class GenerateActivities:
     def GenerateActivities(self):
         self.GenerateDailyActivities()
         self.GenerateWeeklyActivities()
+    
+    def AddExistingActivities(self, activities: list):
+        for i in activities:
+            self.actDone.append(i[0])
 
 
 startDate = datetime.datetime(2024, 6, 1)
@@ -305,8 +309,8 @@ map_grade = ["N", "Jr", "Sr"]
 if grade - 3 < 0:
     grade = map_grade[grade]
 
-HUActList = [] # ["h act1", "h act2", "h act3", "h act4", "h act5", "h act6"]  
-RNTActList = [] # ["rnt act1", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
+HUActList = [] # ["h act1["activity_id"]", "h act2", "h act3", "h act4", "h act5", "h act6"]  
+RNTActList = [] # ["rnt act1["activity_id"]", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
 
 # CCActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
 # ExpActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
@@ -434,9 +438,11 @@ for k in actListRef:
 actData.filterLists()
 
 Connection = connection()
+print(Connection.get_table_data("child_activity")[0])
 # Connection.get_table_data("activity")
 
 Generator = GenerateActivities()
+Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
 # Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
 Generator.GenerateActivities()

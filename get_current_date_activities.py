@@ -8,7 +8,7 @@ DB_PASS = "Shubham123" # put in password
 DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
 
-currDate = datetime.datetime(2024, 6, 1) + relativedelta(hours=1) # adding hours because in db start dates arent exactly 2024-08-22, they have fewm inutes added to it
+currDate = datetime.datetime(2024, 6, 8) + relativedelta(hours=1) # adding hours because in db start dates arent exactly 2024-08-22, they have few minutes added to it
 # nextDate = currDate + relativedelta(days=7)
 
 database = DB_NAME
@@ -37,12 +37,12 @@ try:
 
     for i in data:
 
-        if i[5] == 1:
+        if i[5] == 3: # all activities are 1 right now so this should be empty
             activities.append(i)
 
     print("database connected")
-except:
-    print("database could not be connected")
+except Exception as error:
+    print("database could not be connected" + error)
     exit()
 
 for i in activities:

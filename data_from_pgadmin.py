@@ -45,6 +45,16 @@ class connection:
             index += 1
             self.conn.commit()
         cursor.close()
+    
+    def get_table_data(self, tableName):
+        cursor = self.conn.cursor()
+        sql = "SELECT activity_id FROM public.{table}".format(table=tableName)
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        temp = []
+        for i in data:
+            temp.append(i)
+        return temp
 
 
 if __name__ == "__main__":
