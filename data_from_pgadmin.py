@@ -41,12 +41,12 @@ class connection:
         index = 1
         for i in fullActList:
             query = "INSERT INTO public.child_activity\
-                    (activity_id, child_id, start_date, end_date, activity_status_id, reassign_count, is_archived, created_by, updated_by, created_date, updated_date, revision)\
+                    (activity_id, child_id, start_date, end_date, activity_status_id, reassign_count, wordle_words_id, is_archived, created_by, updated_by, created_date, updated_date, revision)\
                     VALUES\
-                    (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+                    (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
                     # ({child_act_id}, {act_id}, {child_id}, {start_date}, {end_date}, {act_status_id}, {reassign_count}, {is_archived}, {created_by}, {updated_by}, {created_date}, {updated_date}, {revision});"
                     #.format(child_act_id=index, act_id=i["activity_id"], child_id=child_id, start_date=i["start_date"], end_date=i["end_date"], act_status_id=10283, reassign_count=0, is_archived=i["is_archived"], created_by=i["created_by"], updated_by=i["updated_by"], created_date=i["created_date"], updated_date=i["updated_date"], revision=0)
-            cursor.execute(query, [i["activity_id"], child_id, i["start_date"], i["end_date"], 1, 0, i["is_archived"], i["created_by"], i["updated_by"], i["created_date"], i["updated_date"], 0])
+            cursor.execute(query, [i["activity_id"], child_id, i["start_date"], i["end_date"], 1, 0, i["wordle_words_id"], i["is_archived"], i["created_by"], i["updated_by"], i["created_date"], i["updated_date"], 0])
             index += 1
             self.conn.commit()
         cursor.close()

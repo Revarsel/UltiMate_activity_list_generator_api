@@ -98,16 +98,18 @@ class GenerateActivities:
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
                 tempCCAct[focus_string] = focus
+                tempCCAct["wordle_words_id"] = 0
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
                 #print(b)
                 if currDate > currentDate:
-                    wordle_act = actData.WordleList[grade_num-3] # -3 because 1 -> N, 2 -> Jr etc
-                    wordle_act["wordle_words_id"] = wordle_words_list[b][0]
-                    wordle_act[start] = currDate
-                    wordle_act[end] = nextDate
-                    self.fullActList.append(wordle_act)
+                    if grade_num >= 3:
+                        wordle_act = actData.WordleList[grade_num-3]
+                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                        wordle_act[start] = currDate
+                        wordle_act[end] = nextDate
+                        self.fullActList.append(wordle_act)
                     self.fullActList.append(tempCCAct)
             
             elif grade in ("3", "4", "5", "6", "7"):
@@ -124,15 +126,17 @@ class GenerateActivities:
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
+                tempPGAct["wordle_words_id"] = 0
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
                 if currDate > currentDate:
-                    wordle_act = actData.WordleList[grade_num-3]
-                    wordle_act["wordle_words_id"] = wordle_words_list[b][0]
-                    wordle_act[start] = currDate
-                    wordle_act[end] = nextDate
-                    self.fullActList.append(wordle_act)
+                    if grade_num >= 3:
+                        wordle_act = actData.WordleList[grade_num-3]
+                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                        wordle_act[start] = currDate
+                        wordle_act[end] = nextDate
+                        self.fullActList.append(wordle_act)
                     self.fullActList.append(tempPGAct) # Personal Growth
 
         
@@ -153,6 +157,18 @@ class GenerateActivities:
 
                 actData.RNTActList[index][end] = nextDate
                 actData.RNTActList[index + 1][end] = nextDate
+
+                actData.HUActList[index]["wordle_words_id"] = 0   # Habit Up
+                actData.HUActList[index + 1]["wordle_words_id"] = 0
+
+                actData.HUActList[index]["wordle_words_id"] = 0
+                actData.HUActList[index + 1]["wordle_words_id"] = 0
+
+                actData.RNTActList[index]["wordle_words_id"] = 0   # Roots and Traditions
+                actData.RNTActList[index + 1]["wordle_words_id"] = 0
+
+                actData.RNTActList[index]["wordle_words_id"] = 0
+                actData.RNTActList[index + 1]["wordle_words_id"] = 0
 
                 #remove_key_values_from_dictionary(actData.HUActList[index])
                 #remove_key_values_from_dictionary(actData.HUActList[index + 1])
@@ -211,6 +227,8 @@ class GenerateActivities:
                 act2[start] = currDate
                 act1[end] = nextDate
                 act2[end] = nextDate
+                act1["wordle_words_id"] = 0
+                act2["wordle_words_id"] = 0
 
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
@@ -244,6 +262,8 @@ class GenerateActivities:
                     act2[start] = currDate
                     act1[end] = nextDate
                     act2[end] = nextDate
+                    act1["wordle_words_id"] = 0
+                    act2["wordle_words_id"] = 0
 
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
@@ -265,6 +285,7 @@ class GenerateActivities:
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
+                tempIPGAct["wordle_words_id"] = 0
                 self.fullActList.append(tempIPGAct) # Interpersonal Growth
 
                 if i % 2 == 0 and grade not in ("8", "9"):
@@ -280,6 +301,7 @@ class GenerateActivities:
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate) # seconds=0
+                    tempLHAct["wordle_words_id"] = 0
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -299,6 +321,9 @@ class GenerateActivities:
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = nextDate
+
+                    tempLHAct["wordle_words_id"] = 0
+
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -318,6 +343,9 @@ class GenerateActivities:
 
                     tempPGAct[start] = currDate
                     tempPGAct[end] = nextDate
+
+                    tempPGAct["wordle_words_id"] = 0
+
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -345,7 +373,7 @@ grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = "9066977754"
+child_id = "1"
 
 currentDate = datetime.datetime(2024, 6, 1)
 subscribed = True
@@ -492,9 +520,9 @@ Connection = connection()
 # print(Connection.get_table_data("child_activity")[0])
 # Connection.get_table_data("activity")
 wordle_words_list = Connection.get_wordle_words(startDate, endDate, grade_num) # get data from wordle_word db
-print(len(wordle_words_list), dayDifference, end='\n')
-print(wordle_words_list[0], end='\n')
-print(wordle_words_list[-1], end='\n')
+# print(len(wordle_words_list), dayDifference, end='\n')
+# print(wordle_words_list[0], end='\n')
+# print(wordle_words_list[-1], end='\n')
 
 Generator = GenerateActivities()
 Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
@@ -509,19 +537,19 @@ for i in Generator.fullActList:
 
 Connection.dump_data_in_child_activity(tempArr, child_id)
 
-index = 0
+# index = 0
 
-for i in tempArr:
-    for k in range(len(i.keys())):
-        value = list(i.values())
-        keys = list(i.keys())
-        if type(value[k]) == datetime.datetime:
-            i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
-        # i[start] = convert_datetime_to_str(i[start], i)
-        # i[end] = convert_datetime_to_str(i[end])
-    i["index"] = index
-    index += 1
+# for i in tempArr:
+#     for k in range(len(i.keys())):
+#         value = list(i.values())
+#         keys = list(i.keys())
+#         if type(value[k]) == datetime.datetime:
+#             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
+#         # i[start] = convert_datetime_to_str(i[start], i)
+#         # i[end] = convert_datetime_to_str(i[end])
+#     i["index"] = index
+#     index += 1
 
-with open("test1.json", "w") as test:
-    json.dump(tempArr, test)
+# with open("test1.json", "w") as test:
+#     json.dump(tempArr, test)
 
