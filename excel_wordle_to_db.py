@@ -9,18 +9,17 @@ words_list = {}
 standard = 4
 
 
-with open("Wordle_List.csv", 'r') as file:
+with open("wordle_words_330.csv", 'r') as file:
     csvread = csv.reader(file, delimiter=';')
     for i in csvread:
         # print(i)
         all_columns.append(i)
 
 for i in range(1, 11):
-    currDate = datetime.datetime(2024, 6, 2)
     words_list[i] = []
     for k in all_columns[1:]:
-        words_list[i].append([k[i-1], currDate])
-        currDate = currDate + relativedelta(days=1)
+        # print(k)
+        words_list[i].append(k[i])
     
 #print(words_list[2])
 
@@ -39,9 +38,10 @@ today = datetime.date.today()
 cursor = conn.cursor()
 index = 0
 for i in words_list:
+    currDate = datetime.datetime(2024, 6, 1)
     for k in words_list[i]:
-        #print(k[0])
-        if k[0] == "null" or len(k[0]) != 5:
+        # print(k)
+        if k == "null" or len(k) != 5:
             continue
 
         sql = "INSERT INTO public.wordle_words\
@@ -49,7 +49,8 @@ for i in words_list:
                 VALUES\
                 (%s, %s, %s, %s, %s, %s, %s, %s)"
 
-        cursor.execute(sql, [index, k[0], i, False, "Bhuvan", today, 0, k[1]])
+        cursor.execute(sql, [index, k, i+3, False, "Bhuvan", today, 0, currDate])
         index += 1
+        currDate += relativedelta(days=1)
 
 # "wordle_words_id"	"word"	"standard_id"	"is_archived"	"created_by"	"updated_by"	"created_date"	"updated_date"	"revision"	"word_show_date"

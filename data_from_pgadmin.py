@@ -1,10 +1,15 @@
 import psycopg2
+import datetime
+from dateutil.relativedelta import relativedelta
  
 DB_NAME = "ultimatedb"
 DB_USER = "postgress"
 DB_PASS = "Shubham123" # put in password
 DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
+
+startdate = datetime.datetime(2024, 6, 1)
+enddate = startdate + relativedelta(months=3)
 
 column_names = []
 
@@ -55,10 +60,20 @@ class connection:
         for i in data:
             temp.append(i)
         return temp
+    
+    def get_wordle_words(self, startdate, enddate, grade):
+        cursor = self.conn.cursor()
+        sql = "SELECT * FROM public.wordle_words\
+                WHERE word_show_date >= %s AND word_show_date <= %s AND standard_id = %s" #.format(start=startdate, end=enddate, grade=5)
+        #print(sql)
+        cursor.execute(sql, [startdate, enddate, grade])
+        return cursor.fetchall()
 
 
 if __name__ == "__main__":
     Connection = connection()
+    for i in Connection.get_wordle_words(startdate, enddate, 5):
+        print(i)
 
 
 

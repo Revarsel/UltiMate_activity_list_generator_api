@@ -25,6 +25,7 @@ class ActivityData:
         self.PGActList = []
         self.IPGActList = []
         self.LHActList = []
+        self.WordleList = []
 
     def filterLists(self):
         FilterFunctions.grade(self.HUActList, userData.grade)
@@ -100,7 +101,13 @@ class GenerateActivities:
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
+                #print(b)
                 if currDate > currentDate:
+                    wordle_act = actData.WordleList[grade_num-3] # -3 because 1 -> N, 2 -> Jr etc
+                    wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                    wordle_act[start] = currDate
+                    wordle_act[end] = nextDate
+                    self.fullActList.append(wordle_act)
                     self.fullActList.append(tempCCAct)
             
             elif grade in ("3", "4", "5", "6", "7"):
@@ -121,8 +128,14 @@ class GenerateActivities:
                     continue
 
                 if currDate > currentDate:
+                    wordle_act = actData.WordleList[grade_num-3]
+                    wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                    wordle_act[start] = currDate
+                    wordle_act[end] = nextDate
+                    self.fullActList.append(wordle_act)
                     self.fullActList.append(tempPGAct) # Personal Growth
 
+        
         index = 0
         for months in range(len(self.monthDays)):
             for currDay in range(self.monthDays[months]):
@@ -327,20 +340,23 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade = 2  # 1 -> N, 2 -> Jr etc
+grade_num = 4  # 1 -> N, 2 -> Jr etc
+grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
 child_id = "9066977754"
 
-currentDate = datetime.datetime(2024, 7, 10)
-subscribed = False
+currentDate = datetime.datetime(2024, 6, 1)
+subscribed = True
 grade_changed = True
 focus_changed = False
 
 map_grade = ["N", "Jr", "Sr"]
-if grade - 3 < 0:
-    grade = map_grade[grade]
+if grade_num - 3 < 0:
+    grade = map_grade[grade_num]
+else:
+    grade = str(grade_num-3)
 
 HUActList = [] # ["h act1["activity_id"]", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1["activity_id"]", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
@@ -465,6 +481,8 @@ for k in actListRef:
         actData.HUActList.append(k)
     elif id == 2:
         actData.RNTActList.append(k)
+    elif id == 3:
+        actData.WordleList.append(k)
     elif id == 4:
         actData.CCActList.append(k)
 
@@ -473,9 +491,13 @@ actData.filterLists()
 Connection = connection()
 # print(Connection.get_table_data("child_activity")[0])
 # Connection.get_table_data("activity")
+wordle_words_list = Connection.get_wordle_words(startDate, endDate, grade_num) # get data from wordle_word db
+print(len(wordle_words_list), dayDifference, end='\n')
+print(wordle_words_list[0], end='\n')
+print(wordle_words_list[-1], end='\n')
 
 Generator = GenerateActivities()
-# Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
+Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
 # Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
 Generator.GenerateActivities()
@@ -485,21 +507,21 @@ tempArr = []
 for i in Generator.fullActList:
     tempArr.append(i)
 
-# Connection.dump_data_in_child_activity(tempArr, child_id)
+Connection.dump_data_in_child_activity(tempArr, child_id)
 
-# index = 0
+index = 0
 
-# for i in tempArr:
-#     for k in range(len(i.keys())):
-#         value = list(i.values())
-#         keys = list(i.keys())
-#         if type(value[k]) == datetime.datetime:
-#             i[keys[k]] = convert_datetime_to_str(i[keys[k]]) 
-#         # i[start] = convert_datetime_to_str(i[start], i)
-#         # i[end] = convert_datetime_to_str(i[end])
-#     i["index"] = index
-#     index += 1
+for i in tempArr:
+    for k in range(len(i.keys())):
+        value = list(i.values())
+        keys = list(i.keys())
+        if type(value[k]) == datetime.datetime:
+            i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
+        # i[start] = convert_datetime_to_str(i[start], i)
+        # i[end] = convert_datetime_to_str(i[end])
+    i["index"] = index
+    index += 1
 
-# with open("test1.json", "w") as test:
-#     json.dump(tempArr, test)
+with open("test1.json", "w") as test:
+    json.dump(tempArr, test)
 
