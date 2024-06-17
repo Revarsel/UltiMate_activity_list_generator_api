@@ -3,7 +3,6 @@ from testing_direct_sql_data import get_data
 import random
 import json
 import datetime
-import csv
 from dateutil.relativedelta import relativedelta
 
 class Data: # All User Data
@@ -98,7 +97,11 @@ class GenerateActivities:
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
                 tempCCAct[focus_string] = focus
-                self.fullActList.append(tempCCAct)
+                if subscribed == False and (grade_changed == False and focus_changed == False):
+                    continue
+
+                if currDate > currentDate:
+                    self.fullActList.append(tempCCAct)
             
             elif grade in ("3", "4", "5", "6", "7"):
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
@@ -114,7 +117,11 @@ class GenerateActivities:
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
-                self.fullActList.append(tempPGAct) # Personal Growth
+                if subscribed == False and (grade_changed == False and focus_changed == False):
+                    continue
+
+                if currDate > currentDate:
+                    self.fullActList.append(tempPGAct) # Personal Growth
 
         index = 0
         for months in range(len(self.monthDays)):
@@ -139,11 +146,12 @@ class GenerateActivities:
                 #remove_key_values_from_dictionary(actData.RNTActList[index])
                 #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
 
-                self.fullActList.append(actData.HUActList[index].copy())
-                self.fullActList.append(actData.HUActList[index + 1].copy())
+                if currDate > currentDate and (grade_changed == True or subscribed == True):
+                    self.fullActList.append(actData.HUActList[index].copy())
+                    self.fullActList.append(actData.HUActList[index + 1].copy())
 
-                self.fullActList.append(actData.RNTActList[index].copy())
-                self.fullActList.append(actData.RNTActList[index + 1].copy())
+                    self.fullActList.append(actData.RNTActList[index].copy())
+                    self.fullActList.append(actData.RNTActList[index + 1].copy())
             index += 2
 
 
@@ -191,8 +199,12 @@ class GenerateActivities:
                 act1[end] = nextDate
                 act2[end] = nextDate
 
-                self.fullActList.append(act1) # Learning Through Exploring for Nursery Junior and Senior KG
-                self.fullActList.append(act2)
+                if subscribed == False and (grade_changed == False and focus_changed == False):
+                    continue
+
+                if currDate > currentDate:
+                    self.fullActList.append(act1) # Learning Through Exploring for Nursery Junior and Senior KG
+                    self.fullActList.append(act2)
 
             elif grade in ("1", "2"):
                 for _ in range(2):
@@ -220,8 +232,12 @@ class GenerateActivities:
                     act1[end] = nextDate
                     act2[end] = nextDate
 
-                    self.fullActList.append(act1) # Learning Through Exploring for First and Second Standards
-                    self.fullActList.append(act2)
+                    if subscribed == False and (grade_changed == False and focus_changed == False):
+                        continue
+
+                    if currDate > currentDate:
+                        self.fullActList.append(act1) # Learning Through Exploring for First and Second Standards
+                        self.fullActList.append(act2)
 
             else:
                 tempIPGAct = random.choice(tempIPGActList)
@@ -251,7 +267,11 @@ class GenerateActivities:
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate) # seconds=0
-                    self.fullActList.append(tempLHAct)
+                    if subscribed == False and (grade_changed == False and focus_changed == False):
+                        continue
+
+                    if currDate > currentDate:
+                        self.fullActList.append(tempLHAct)
 
                 elif grade in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
@@ -266,7 +286,11 @@ class GenerateActivities:
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = nextDate
-                    self.fullActList.append(tempLHAct) # Life Hacks
+                    if subscribed == False and (grade_changed == False and focus_changed == False):
+                        continue
+
+                    if currDate > currentDate:
+                        self.fullActList.append(tempLHAct) # Life Hacks
 
                     tempPGList = FilterFunctions.focus_area(actData.PGActList, focusWeek)
                     tempPGAct = random.choice(tempPGList)
@@ -281,7 +305,11 @@ class GenerateActivities:
 
                     tempPGAct[start] = currDate
                     tempPGAct[end] = nextDate
-                    self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
+                    if subscribed == False and (grade_changed == False and focus_changed == False):
+                        continue
+
+                    if currDate > currentDate:
+                        self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
 
     def GenerateActivities(self):
         self.GenerateDailyActivities()
@@ -304,6 +332,11 @@ focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
 child_id = "9066977754"
+
+currentDate = datetime.datetime(2024, 7, 10)
+subscribed = False
+grade_changed = True
+focus_changed = False
 
 map_grade = ["N", "Jr", "Sr"]
 if grade - 3 < 0:
@@ -335,7 +368,7 @@ userData.gender = gender
 userData.language = language
 
 class FilterFunctions:
-    def grade(list, grade):
+    def grade(list, grade) -> list:
         # return list
         tempArr = []
         for t in list:
@@ -438,11 +471,11 @@ for k in actListRef:
 actData.filterLists()
 
 Connection = connection()
-print(Connection.get_table_data("child_activity")[0])
+# print(Connection.get_table_data("child_activity")[0])
 # Connection.get_table_data("activity")
 
 Generator = GenerateActivities()
-Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
+# Generator.AddExistingActivities(Connection.get_table_data("child_activity"))
 # Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
 Generator.GenerateActivities()
@@ -452,9 +485,9 @@ tempArr = []
 for i in Generator.fullActList:
     tempArr.append(i)
 
-Connection.dump_data_in_child_activity(tempArr, child_id)
+# Connection.dump_data_in_child_activity(tempArr, child_id)
 
-index = 0
+# index = 0
 
 # for i in tempArr:
 #     for k in range(len(i.keys())):

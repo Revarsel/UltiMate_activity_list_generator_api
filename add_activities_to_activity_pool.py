@@ -28,8 +28,8 @@ def get_activity_pool_activities(activities):
             daily.append(i)
         elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]:
             weekly.append(i)
-        else:
-            print("not weekly or daily")
+        # else:
+        #     print("not weekly or daily")
 
     for i in daily:
         if i["start_date"] + relativedelta(days=3) < currDate:
@@ -39,8 +39,8 @@ def get_activity_pool_activities(activities):
         if i["start_date"] + relativedelta(weeks=2) < currDate:
             activity_pool.append(i)
 
-    # for i in activity_pool:
-    #     print(i, end='\n\n')
+    for i in activity_pool:
+        print(i, end='\n\n')
 
 try:
     conn = psycopg2.connect(database=database,
@@ -86,3 +86,10 @@ except Exception as error:
     print("database could not be connected")
     print(error)
     exit()
+
+'''  this is for joining activity and focus_area to get both data in same table (understand this again)
+SELECT * FROM public.activity
+INNER JOIN
+public.act_focus_area ON activity.activity_id=act_focus_area.activity_id
+WHERE act_focus_area.focus_area_id IN (SELECT focus_area_id FROM child_focus_area WHERE child_id=9066977754)
+'''
