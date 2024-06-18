@@ -21,26 +21,33 @@ currDate = datetime.datetime(2024, 8, 21)
 def get_activity_pool_activities(activities):
     daily = []
     weekly = []
+    fortnightly = []
     activity_pool = []
 
     for i in activities:
-        if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]:
+        if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
             daily.append(i)
-        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]:
+        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
             weekly.append(i)
+        elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+            fortnightly.append(i)
         # else:
         #     print("not weekly or daily")
 
     for i in daily:
-        if i["start_date"] + relativedelta(days=3) < currDate:
+        if i["start_date"] + relativedelta(days=3) < currDate and i["activity_status_id"] != 3:
             activity_pool.append(i)
 
     for i in weekly:
-        if i["start_date"] + relativedelta(weeks=2) < currDate:
+        if i["start_date"] + relativedelta(weeks=2) < currDate and i["activity_status_id"] != 3:
+            activity_pool.append(i)
+    
+    for i in fortnightly:
+        if i["start_date"] + relativedelta(weeks=4) < currDate and i["activity_status_id"] != 3:
             activity_pool.append(i)
 
     for i in activity_pool:
-        print(i, end='\n\n')
+        print(i, end='\n')
 
 try:
     conn = psycopg2.connect(database=database,
@@ -91,5 +98,5 @@ except Exception as error:
 SELECT * FROM public.activity
 INNER JOIN
 public.act_focus_area ON activity.activity_id=act_focus_area.activity_id
-WHERE act_focus_area.focus_area_id IN (SELECT focus_area_id FROM child_focus_area WHERE child_id=9066977754)
+WHERE act_focus_area.focus_area_id IN (SELECT focus_area_id FROM child_focus_area WHERE child_id=1)
 '''
