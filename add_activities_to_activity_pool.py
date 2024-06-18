@@ -19,32 +19,41 @@ activities = []
 currDate = datetime.datetime(2024, 8, 21)
 
 def get_activity_pool_activities(activities):
+    CC = []
     daily = []
     weekly = []
     fortnightly = []
     activity_pool = []
 
     for i in activities:
-        if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
-            daily.append(i)
-        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
-            weekly.append(i)
-        elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
-            fortnightly.append(i)
+        if i["act_category_id"] == 4:
+            CC.append(i)
+
+    # for i in activities:
+    #     if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
+    #         daily.append(i)
+    #     elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+    #         weekly.append(i)
+    #     elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+    #         fortnightly.append(i)
         # else:
         #     print("not weekly or daily")
-
-    for i in daily:
-        if i["start_date"] + relativedelta(days=3) < currDate and i["activity_status_id"] != 3:
-            activity_pool.append(i)
-
-    for i in weekly:
-        if i["start_date"] + relativedelta(weeks=2) < currDate and i["activity_status_id"] != 3:
-            activity_pool.append(i)
     
-    for i in fortnightly:
-        if i["start_date"] + relativedelta(weeks=4) < currDate and i["activity_status_id"] != 3:
+    for i in CC: # CC is daily
+        if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
             activity_pool.append(i)
+
+    # for i in daily:
+    #     if i["start_date"] + relativedelta(days=3) < currDate and i["activity_status_id"] != 3:
+    #         activity_pool.append(i)
+
+    # for i in weekly:
+    #     if i["start_date"] + relativedelta(weeks=2) < currDate and i["activity_status_id"] != 3:
+    #         activity_pool.append(i)
+    
+    # for i in fortnightly:
+    #     if i["start_date"] + relativedelta(weeks=4) < currDate and i["activity_status_id"] != 3:
+    #         activity_pool.append(i)
 
     for i in activity_pool:
         print(i, end='\n')
@@ -80,11 +89,6 @@ try:
         data.append(temp)
     
     activity_pool = get_activity_pool_activities(data)
-
-    # activity pool isnt a table
-    # it is similar to category like hu rnt etc
-    # set the act_category_id to activity_pool
-    # but act_category_id column doesnt exist
 
     cursor.close()
 

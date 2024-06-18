@@ -19,7 +19,7 @@ password = DB_PASS
 conn = psycopg2
 activities = []
 
-def get_filtered_activities(activities):
+def get_activities(activities):
     CC = []
     EXP = []
     PG = []
@@ -30,38 +30,38 @@ def get_filtered_activities(activities):
     fortnightly = []
     activityArr = []
 
-    for i in activities:
-        if i["act_category_id"] == 4:
-            CC.append(i)
-
     # for i in activities:
-    #     if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
-    #         daily.append(i)
-    #     elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
-    #         weekly.append(i)
-        # elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all fortnightly activities
-        #     fortnightly.append(i)
+    #     if i["act_category_id"] == 4:
+    #         CC.append(i)
+
+    for i in activities:
+        if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
+            daily.append(i)
+        elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+            weekly.append(i)
+        elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all fortnightly activities
+            fortnightly.append(i)
         # else:
         #     print("not weekly or daily")
     
-    for i in CC: # CC is daily
-        if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
+    # for i in CC: # CC is daily
+    #     if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
+    #         activityArr.append(i)
+
+    for i in daily:
+        if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3:
             activityArr.append(i)
 
-    # for i in daily:
-    #     if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3:
-    #         activityArr.append(i)
-
-    # for i in weekly:
-    #     if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=1) and i["activity_status_id"] != 3:
-    #         activityArr.append(i)
+    for i in weekly:
+        if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=1) and i["activity_status_id"] != 3:
+            activityArr.append(i)
     
-    # for i in fortnightly:
-    #     if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=3) and i["activity_status_id"] != 3:
-    #         activityArr.append(i)
+    for i in fortnightly:
+        if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=3) and i["activity_status_id"] != 3:
+            activityArr.append(i)
 
     for i in activityArr:
-        print(i, end='\n')
+        print(i["activity_id"], end='\n')
     
     return activityArr
 
@@ -100,7 +100,7 @@ try:
             temp[col_data] = row_data
         data.append(temp)
     
-    activities = get_filtered_activities(data)
+    activities = get_activities(data)
     print(len(activities))
 
     print("database connected")
