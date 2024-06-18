@@ -16,7 +16,7 @@ user = DB_USER
 port = DB_PORT
 password = DB_PASS
 
-def get_data():
+def get_data(grade):
     try:
         conn = psycopg2.connect(database=database,
                                     user=user,
@@ -30,7 +30,8 @@ def get_data():
         column_names = [desc[0] for desc in cursor.description]
         data.append(column_names)
 
-        sql = "SELECT * FROM public.{table};".format(table=table_name)
+        sql = "SELECT * FROM public.{table}\
+               WHERE standard_id={grade}".format(table=table_name, grade=grade)
         cursor.execute(sql)
         data.append(cursor.fetchall())
 

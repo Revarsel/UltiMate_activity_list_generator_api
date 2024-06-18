@@ -27,17 +27,6 @@ class ActivityData:
         self.LHActList = []
         self.WordleList = []
 
-    def filterLists(self):
-        FilterFunctions.grade(self.HUActList, userData.grade)
-        FilterFunctions.grade(self.RNTActList, userData.grade)
-        if userData.grade in ("N", "Jr", "Sr", "1", "2"):
-            FilterFunctions.grade(self.CCActList, userData.grade)
-            FilterFunctions.grade(self.ExpActList, userData.grade)
-        else:
-            FilterFunctions.grade(self.PGActList, userData.grade)
-            FilterFunctions.grade(self.IPGActList, userData.grade)
-            FilterFunctions.grade(self.LHActList, userData.grade)
-
 
 actData = ActivityData()
 
@@ -70,6 +59,12 @@ class GenerateActivities:
             self.monthDays.append(dayDiff)
     
     def GenerateDailyActivities(self):
+        match quarter: # get this quarter from data table and the percentages too
+            case 1:
+                quarterDay = int(dayDifference / 2)
+            case 2:
+                quarterDay = int(dayDifference / 3)
+
         for b in range(dayDifference):
             currDate = startDate + relativedelta(days=b, second=30)
             nextDate = currDate + relativedelta(hours=23, minutes=59) # seconds = 0
@@ -104,15 +99,15 @@ class GenerateActivities:
 
                 #print(b)
                 if currDate > currentDate:
-                    if grade_num >= 3:
-                        wordle_act = actData.WordleList[grade_num-3]
+                    if grade_num >= 4:
+                        wordle_act = actData.WordleList[grade_num-4]
                         wordle_act["wordle_words_id"] = wordle_words_list[b][0]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
                         self.fullActList.append(wordle_act)
                     self.fullActList.append(tempCCAct)
             
-            elif grade in ("3", "4", "5", "6", "7"):
+            elif grade in ("3", "4", "5"):
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
                 tempPGAct = random.choice(tempPGList)
                 
@@ -131,13 +126,42 @@ class GenerateActivities:
                     continue
 
                 if currDate > currentDate:
-                    if grade_num >= 3:
-                        wordle_act = actData.WordleList[grade_num-3]
+                    if grade_num >= 4:
+                        wordle_act = actData.WordleList[grade_num-4]
                         wordle_act["wordle_words_id"] = wordle_words_list[b][0]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
                         self.fullActList.append(wordle_act)
                     self.fullActList.append(tempPGAct) # Personal Growth
+            
+            elif grade in ("6", "7"):
+                tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
+                tempPGAct = random.choice(tempPGList)
+                
+                for _ in range(len(tempPGList)):
+                    if tempPGAct["activity_id"] not in self.actDone:
+                        break
+                    tempPGAct = random.choice(tempPGList)
+
+                #remove_key_values_from_dictionary(tempPGAct)
+                self.actDone.append(tempPGAct["activity_id"])
+
+                tempPGAct[start] = currDate
+                tempPGAct[end] = nextDate + relativedelta(days=1) # because for 6, 7 this act is 2 days not 1 and wordle is still 1 day
+                tempPGAct["wordle_words_id"] = 0
+                if subscribed == False and (grade_changed == False and focus_changed == False):
+                    continue
+
+                if currDate > currentDate:
+                    if grade_num >= 4:
+                        wordle_act = actData.WordleList[grade_num-4]
+                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                        wordle_act[start] = currDate
+                        wordle_act[end] = nextDate
+                        self.fullActList.append(wordle_act)
+                    
+                    if b % 2 == 0:
+                        self.fullActList.append(tempPGAct) # Personal Growth
 
         
         index = 0
@@ -351,10 +375,33 @@ class GenerateActivities:
 
                     if currDate > currentDate:
                         self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
+                
+    def GenerateQuarterlyActivities(self):
+            tempLHActList = actData.LHActList
+            tempLHAct = random.choice(tempLHActList)
+
+            for _ in range(len(tempLHActList)):
+                if tempLHAct["activity_id"] not in self.actDone and tempLHAct["act_frequency_id"] == 1: # this number should be for quarterly frequency
+                    break
+                tempLHAct = random.choice(tempLHActList)
+
+            #remove_key_values_from_dictionary(tempLHAct)
+            self.actDone.append(tempLHAct["activity_id"])
+
+            tempLHAct[start] = startDate
+            tempLHAct[end] = endDate # seconds=0
+            tempLHAct["wordle_words_id"] = 0
+
+            if subscribed == False and (grade_changed == False and focus_changed == False):
+                return
+
+            self.fullActList.append(tempLHAct)
+
 
     def GenerateActivities(self):
         self.GenerateDailyActivities()
         self.GenerateWeeklyActivities()
+        self.GenerateQuarterlyActivities()
     
     def AddExistingActivities(self, activities: list):
         for i in activities:
@@ -374,6 +421,8 @@ focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
 child_id = "1"
+
+quarter = 1
 
 currentDate = datetime.datetime(2024, 6, 1)
 subscribed = True
@@ -501,7 +550,7 @@ actListRef = []
 #         actListRef.append(i)
 #     print(actListRef[0])
 
-actListRef = get_data()
+actListRef = get_data(grade_num)
 
 for k in actListRef:
     id = int(k["act_category_id"])
@@ -513,8 +562,6 @@ for k in actListRef:
         actData.WordleList.append(k)
     elif id == 4:
         actData.CCActList.append(k)
-
-actData.filterLists()
 
 Connection = connection()
 # print(Connection.get_table_data("child_activity")[0])
