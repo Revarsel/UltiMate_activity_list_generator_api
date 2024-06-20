@@ -1,12 +1,15 @@
 import psycopg2
 import datetime
 from dateutil.relativedelta import relativedelta
+import sys
 
 DB_NAME = "ultimatedb"
 DB_USER = "postgress"
 DB_PASS = "Shubham123" # put in password
 DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
+
+child_id = sys.argv[1]
 
 database = DB_NAME
 host = DB_HOST
@@ -73,7 +76,7 @@ try:
     column_names = [desc[0] for desc in cursor.description]
     temp.append(column_names)
 
-    sql = "SELECT * FROM public.child_activity"
+    sql = "SELECT * FROM public.child_activity WHERE child_id={child}".format(child=child_id)
     cursor.execute(sql)
     temp.append(cursor.fetchall())
 
