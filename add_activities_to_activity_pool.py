@@ -56,7 +56,7 @@ def get_activity_pool_activities(activities):
     #         activity_pool.append(i)
 
     for i in activity_pool:
-        print(i, end='\n')
+        print(i["activity_id"], end='\n')
 
 try:
     conn = psycopg2.connect(database=database,
