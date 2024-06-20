@@ -1,9 +1,10 @@
 from data_from_pgadmin import connection
 from testing_direct_sql_data import get_data
 import random
-import json
+# import json
 import datetime
 from dateutil.relativedelta import relativedelta
+import sys
 
 class Data: # All User Data
     def __init__(self) -> None:
@@ -415,12 +416,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = 4  # 1 -> N, 2 -> Jr etc
+grade_num = sys.argv[1]  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = "1"
+child_id = sys.argv[2]
 
 quarter = 1
 
