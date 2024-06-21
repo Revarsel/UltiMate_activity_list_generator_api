@@ -107,9 +107,8 @@ class GenerateActivities:
                         wordle_act["wordle_words_id"] = wordle_words_list[b][0]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
-                        # self.fullActList.append(wordle_act)
-                    self.fullActList.append(tempCCAct)
-                    print(tempCCAct, end='\n')
+                        self.fullActList.append(wordle_act.copy())
+                    self.fullActList.append(tempCCAct.copy())
             
             elif grade in ("3", "4", "5"):
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
@@ -135,8 +134,8 @@ class GenerateActivities:
                         wordle_act["wordle_words_id"] = wordle_words_list[b][0]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
-                        self.fullActList.append(wordle_act)
-                    self.fullActList.append(tempPGAct) # Personal Growth
+                        self.fullActList.append(wordle_act.copy())
+                    self.fullActList.append(tempPGAct.copy()) # Personal Growth
             
             elif grade in ("6", "7"):
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
@@ -162,56 +161,53 @@ class GenerateActivities:
                         wordle_act["wordle_words_id"] = wordle_words_list[b][0]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
-                        self.fullActList.append(wordle_act)
+                        self.fullActList.append(wordle_act.copy())
                     
                     if b % 2 == 0:
-                        self.fullActList.append(tempPGAct) # Personal Growth
+                        self.fullActList.append(tempPGAct.copy()) # Personal Growth
         
-        # print(self.fullActList)
+        index = 0
+        for months in range(len(self.monthDays)):
+            for currDay in range(self.monthDays[months]):
+                currDate = startDate + relativedelta(months=months, days=currDay, second=30)
+                nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
 
-        
-        # index = 0
-        # for months in range(len(self.monthDays)):
-        #     for currDay in range(self.monthDays[months]):
-        #         currDate = startDate + relativedelta(months=months, days=currDay, second=30)
-        #         nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
+                actData.HUActList[index][start] = currDate   # Habit Up
+                actData.HUActList[index + 1][start] = currDate
 
-        #         actData.HUActList[index][start] = currDate   # Habit Up
-        #         actData.HUActList[index + 1][start] = currDate
+                actData.HUActList[index][end] = nextDate
+                actData.HUActList[index + 1][end] = nextDate
 
-        #         actData.HUActList[index][end] = nextDate
-        #         actData.HUActList[index + 1][end] = nextDate
+                actData.RNTActList[index][start] = currDate   # Roots and Traditions
+                actData.RNTActList[index + 1][start] = currDate
 
-        #         actData.RNTActList[index][start] = currDate   # Roots and Traditions
-        #         actData.RNTActList[index + 1][start] = currDate
+                actData.RNTActList[index][end] = nextDate
+                actData.RNTActList[index + 1][end] = nextDate
 
-        #         actData.RNTActList[index][end] = nextDate
-        #         actData.RNTActList[index + 1][end] = nextDate
+                actData.HUActList[index]["wordle_words_id"] = 0   # Habit Up
+                actData.HUActList[index + 1]["wordle_words_id"] = 0
 
-        #         actData.HUActList[index]["wordle_words_id"] = 0   # Habit Up
-        #         actData.HUActList[index + 1]["wordle_words_id"] = 0
+                actData.HUActList[index]["wordle_words_id"] = 0
+                actData.HUActList[index + 1]["wordle_words_id"] = 0
 
-        #         actData.HUActList[index]["wordle_words_id"] = 0
-        #         actData.HUActList[index + 1]["wordle_words_id"] = 0
+                actData.RNTActList[index]["wordle_words_id"] = 0   # Roots and Traditions
+                actData.RNTActList[index + 1]["wordle_words_id"] = 0
 
-        #         actData.RNTActList[index]["wordle_words_id"] = 0   # Roots and Traditions
-        #         actData.RNTActList[index + 1]["wordle_words_id"] = 0
+                actData.RNTActList[index]["wordle_words_id"] = 0
+                actData.RNTActList[index + 1]["wordle_words_id"] = 0
 
-        #         actData.RNTActList[index]["wordle_words_id"] = 0
-        #         actData.RNTActList[index + 1]["wordle_words_id"] = 0
+                #remove_key_values_from_dictionary(actData.HUActList[index])
+                #remove_key_values_from_dictionary(actData.HUActList[index + 1])
+                #remove_key_values_from_dictionary(actData.RNTActList[index])
+                #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
 
-        #         #remove_key_values_from_dictionary(actData.HUActList[index])
-        #         #remove_key_values_from_dictionary(actData.HUActList[index + 1])
-        #         #remove_key_values_from_dictionary(actData.RNTActList[index])
-        #         #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
+                if currDate > currentDate and (grade_changed == True or subscribed == True):
+                    self.fullActList.append(actData.HUActList[index].copy())
+                    self.fullActList.append(actData.HUActList[index + 1].copy())
 
-        #         if currDate > currentDate and (grade_changed == True or subscribed == True):
-        #             self.fullActList.append(actData.HUActList[index].copy())
-        #             self.fullActList.append(actData.HUActList[index + 1].copy())
-
-        #             self.fullActList.append(actData.RNTActList[index].copy())
-        #             self.fullActList.append(actData.RNTActList[index + 1].copy())
-        #     index += 2
+                    self.fullActList.append(actData.RNTActList[index].copy())
+                    self.fullActList.append(actData.RNTActList[index + 1].copy())
+            index += 2
 
 
     def GenerateWeeklyActivities(self):
@@ -264,8 +260,8 @@ class GenerateActivities:
                     continue
 
                 if currDate > currentDate:
-                    self.fullActList.append(act1) # Learning Through Exploring for Nursery Junior and Senior KG
-                    self.fullActList.append(act2)
+                    self.fullActList.append(act1.copy()) # Learning Through Exploring for Nursery Junior and Senior KG
+                    self.fullActList.append(act2.copy())
 
             elif grade in ("1", "2"):
                 for _ in range(2):
@@ -299,8 +295,8 @@ class GenerateActivities:
                         continue
 
                     if currDate > currentDate:
-                        self.fullActList.append(act1) # Learning Through Exploring for First and Second Standards
-                        self.fullActList.append(act2)
+                        self.fullActList.append(act1.copy()) # Learning Through Exploring for First and Second Standards
+                        self.fullActList.append(act2.copy())
 
             else:
                 tempIPGAct = random.choice(tempIPGActList)
@@ -316,7 +312,7 @@ class GenerateActivities:
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
                 tempIPGAct["wordle_words_id"] = 0
-                self.fullActList.append(tempIPGAct) # Interpersonal Growth
+                self.fullActList.append(tempIPGAct.copy()) # Interpersonal Growth
 
                 if i % 2 == 0 and grade not in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
@@ -336,7 +332,7 @@ class GenerateActivities:
                         continue
 
                     if currDate > currentDate:
-                        self.fullActList.append(tempLHAct)
+                        self.fullActList.append(tempLHAct.copy())
 
                 elif grade in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
@@ -358,7 +354,7 @@ class GenerateActivities:
                         continue
 
                     if currDate > currentDate:
-                        self.fullActList.append(tempLHAct) # Life Hacks
+                        self.fullActList.append(tempLHAct.copy()) # Life Hacks
 
                     tempPGList = FilterFunctions.focus_area(actData.PGActList, focusWeek)
                     tempPGAct = random.choice(tempPGList)
@@ -380,7 +376,7 @@ class GenerateActivities:
                         continue
 
                     if currDate > currentDate:
-                        self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
+                        self.fullActList.append(tempPGAct.copy()) # Personal Growth For Eighth and Ninth (1 per week not everyday)
                 
     def GenerateQuarterlyActivities(self):
         if grade not in ("N", "Jr", "Sr", "1", "2"):
@@ -402,13 +398,13 @@ class GenerateActivities:
             if subscribed == False and (grade_changed == False and focus_changed == False):
                 return
 
-            self.fullActList.append(tempLHAct)
+            self.fullActList.append(tempLHAct.copy())
 
 
     def GenerateActivities(self):
         self.GenerateDailyActivities()
-        # self.GenerateWeeklyActivities()
-        # self.GenerateQuarterlyActivities()
+        self.GenerateWeeklyActivities()
+        self.GenerateQuarterlyActivities()
     
     def AddExistingActivitiesToExclude(self, activities: list):
         for i in activities:
@@ -592,27 +588,24 @@ Generator.GenerateActivities()
 
 tempArr = []
 
-print()
-
 for i in Generator.fullActList:
     tempArr.append(i)
-    # print(i, end='\n')
 
-# Connection.dump_data_in_child_activity(tempArr, child_id)
+Connection.dump_data_in_child_activity(tempArr, child_id)
 
-index = 0
+# index = 0
 
-for i in tempArr:
-    for k in range(len(i.keys())):
-        value = list(i.values())
-        keys = list(i.keys())
-        if type(value[k]) == datetime.datetime:
-            i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
-        # i[start] = convert_datetime_to_str(i[start], i)
-        # i[end] = convert_datetime_to_str(i[end])
-    # i["index"] = index
-    index += 1
+# for i in tempArr:
+#     for k in range(len(i.keys())):
+#         value = list(i.values())
+#         keys = list(i.keys())
+#         if type(value[k]) == datetime.datetime:
+#             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
+#         # i[start] = convert_datetime_to_str(i[start], i)
+#         # i[end] = convert_datetime_to_str(i[end])
+#     # i["index"] = index
+#     index += 1
 
-with open("test1.json", "w") as test:
-    json.dump(tempArr, test)
+# with open("test1.json", "w") as test:
+#     json.dump(tempArr, test)
 

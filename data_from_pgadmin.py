@@ -53,7 +53,7 @@ class connection:
     
     def get_table_data(self, tableName):
         cursor = self.conn.cursor()
-        sql = "SELECT activity_id FROM public.{table}".format(table=tableName)
+        sql = "SELECT * FROM public.{table}".format(table=tableName)
         cursor.execute(sql)
         data = cursor.fetchall()
         temp = []
