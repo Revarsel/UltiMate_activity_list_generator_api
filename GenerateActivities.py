@@ -378,6 +378,7 @@ class GenerateActivities:
                         self.fullActList.append(tempPGAct) # Personal Growth For Eighth and Ninth (1 per week not everyday)
                 
     def GenerateQuarterlyActivities(self):
+        if grade not in ("N", "Jr", "Sr", "1", "2"):
             tempLHActList = actData.LHActList
             tempLHAct = random.choice(tempLHActList)
 
@@ -416,12 +417,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = sys.argv[1]  # 1 -> N, 2 -> Jr etc
+grade_num = 4 #sys.argv[1]  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = sys.argv[2]
+child_id = "1" #sys.argv[2]
 
 quarter = 1
 
@@ -487,6 +488,10 @@ class FilterFunctions:
         # return False
 
 counter = 0
+
+def authorize(token):
+    if token != "":
+        raise "dfg"
 
 def convert_datetime_to_str(date, data=""):
     if type(date) == str:
