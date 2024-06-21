@@ -10,7 +10,7 @@ DB_PORT = "5432"
 child_id = "1" #sys.argv[1]
 grade = 4
 
-currDate = datetime.datetime(2024, 8, 10)
+currDate = datetime.datetime(2024, 8, 20)
 subscribeDate = datetime.datetime(2024, 8, 1)
 
 database = DB_NAME
