@@ -9,7 +9,7 @@ DB_PASS = "Shubham123" # put in password
 DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
 
-child_id = sys.argv[1]
+child_id = "1" #sys.argv[1]
 
 database = DB_NAME
 host = DB_HOST
@@ -19,7 +19,7 @@ password = DB_PASS
 conn = psycopg2
 activities = []
 
-currDate = datetime.datetime(2024, 8, 21)
+currDate = datetime.datetime(2024, 7, 21)
 
 def get_activity_pool_activities(activities):
     CC = []
@@ -72,11 +72,17 @@ try:
 
     temp = []
 
-    cursor.execute("SELECT * FROM public.child_activity LIMIT 0")
+    sql = "SELECT child_activity.*, activity.act_category_id\
+    FROM child_activity\
+    LEFT JOIN activity ON child_activity.activity_id=activity.activity_id\
+    WHERE child_activity.child_id={child}".format(child=child_id)
+
+    cursor.execute(sql)
     column_names = [desc[0] for desc in cursor.description]
     temp.append(column_names)
 
-    sql = "SELECT * FROM public.child_activity WHERE child_id={child}".format(child=child_id)
+
+    #sql = "SELECT * FROM public.child_activity WHERE child_id={child}".format(child=child_id)
     cursor.execute(sql)
     temp.append(cursor.fetchall())
 
