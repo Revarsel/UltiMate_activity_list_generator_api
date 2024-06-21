@@ -79,7 +79,8 @@ class GenerateActivities:
                 tempCCList = FilterFunctions.focus_area(actData.CCActList, focus)
                 tempCCAct = random.choice(actData.CCActList)   # Creative Corner
 
-                for _ in range(len(tempCCList)):
+                # while tempCCAct["activity_id"] in self.actDone:
+                for _ in range(1000):
                     if tempCCAct["activity_id"] not in self.actDone:
                         break
                     tempCCAct = random.choice(tempCCList)
@@ -114,7 +115,8 @@ class GenerateActivities:
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
                 tempPGAct = random.choice(tempPGList)
                 
-                for _ in range(len(tempPGList)):
+                # while tempPGAct["activity_id"] in self.actDone:
+                for _ in range(1000):
                     if tempPGAct["activity_id"] not in self.actDone:
                         break
                     tempPGAct = random.choice(tempPGList)
@@ -141,7 +143,8 @@ class GenerateActivities:
                 tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)   # Personal Growth
                 tempPGAct = random.choice(tempPGList)
                 
-                for _ in range(len(tempPGList)):
+                # while tempPGAct["activity_id"] in self.actDone:
+                for _ in range(1000):
                     if tempPGAct["activity_id"] not in self.actDone:
                         break
                     tempPGAct = random.choice(tempPGList)
@@ -233,7 +236,8 @@ class GenerateActivities:
                 act1 = random.choice(tempExpActList)
                 act2 = random.choice(tempExpActList)
                 
-                for _ in range(len(tempExpActList)):
+                # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+                for _ in range(1000):
                     if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                         break
                     act1 = random.choice(tempExpActList)
@@ -241,7 +245,8 @@ class GenerateActivities:
                 #remove_key_values_from_dictionary(act1["activity_id"])
                 self.actDone.append(act1["activity_id"])
 
-                for _ in range(len(tempExpActList)):
+                # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+                for _ in range(1000):
                     if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                         break
                     act2 = random.choice(tempExpActList)
@@ -268,7 +273,8 @@ class GenerateActivities:
                     act1 = random.choice(tempExpActList)
                     act2 = random.choice(tempExpActList)
 
-                    for _ in range(len(tempExpActList)):
+                    # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+                    for _ in range(1000):
                         if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                             break
                         act1 = random.choice(tempExpActList)
@@ -276,7 +282,8 @@ class GenerateActivities:
                     #remove_key_values_from_dictionary(act1["activity_id"])
                     self.actDone.append(act1["activity_id"])
 
-                    for _ in range(len(tempExpActList)):
+                    # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+                    for _ in range(1000):
                         if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
                             break
                         act2 = random.choice(tempExpActList)
@@ -301,7 +308,8 @@ class GenerateActivities:
             else:
                 tempIPGAct = random.choice(tempIPGActList)
 
-                for _ in range(len(tempIPGActList)):
+                # while tempIPGAct["activity_id"] in self.actDone:
+                for _ in range(1000):
                     if tempIPGAct["activity_id"] not in self.actDone:
                         break
                     tempIPGAct = random.choice(tempIPGActList)
@@ -317,7 +325,8 @@ class GenerateActivities:
                 if i % 2 == 0 and grade not in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
 
-                    for _ in range(len(tempLHActList)):
+                    # while tempLHAct["activity_id"] in self.actDone:
+                    for _ in range(1000):
                         if tempLHAct["activity_id"] not in self.actDone:
                             break
                         tempLHAct = random.choice(tempLHActList)
@@ -337,7 +346,8 @@ class GenerateActivities:
                 elif grade in ("8", "9"):
                     tempLHAct = random.choice(tempLHActList)
 
-                    for _ in range(len(tempLHActList)):
+                    # while tempLHAct["activity_id"] in self.actDone:
+                    for _ in range(1000):
                         if tempLHAct["activity_id"] not in self.actDone:
                             break
                         tempLHAct = random.choice(tempLHActList)
@@ -359,7 +369,8 @@ class GenerateActivities:
                     tempPGList = FilterFunctions.focus_area(actData.PGActList, focusWeek)
                     tempPGAct = random.choice(tempPGList)
 
-                    for _ in range(len(tempPGList)):
+                    # while tempPGAct["activity_id"] in self.actDone:
+                    for _ in range(1000):
                         if tempPGAct["activity_id"] not in self.actDone:
                             break
                         tempPGAct = random.choice(tempPGList)
@@ -383,7 +394,7 @@ class GenerateActivities:
             tempLHActList = actData.LHActList
             tempLHAct = random.choice(tempLHActList)
 
-            for _ in range(len(tempLHActList)):
+            for _ in range(1000):
                 if tempLHAct["activity_id"] not in self.actDone and tempLHAct["act_frequency_id"] == 1: # this number should be for quarterly frequency
                     break
                 tempLHAct = random.choice(tempLHActList)
@@ -579,7 +590,7 @@ wordle_words_list = Connection.get_wordle_words(startDate, endDate, grade_num) #
 # print(wordle_words_list[-1], end='\n')
 
 Generator = GenerateActivities()
-# Generator.AddExistingActivitiesToExclude(Connection.get_table_data("child_activity"))
+Generator.AddExistingActivitiesToExclude(Connection.get_table_data("child_activity"))
 # Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
 Generator.GenerateActivities()

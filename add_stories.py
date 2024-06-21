@@ -1,4 +1,5 @@
 import psycopg2
+import datetime
 
 DB_NAME = "ultimatedb"
 DB_USER = "postgress"
@@ -7,6 +8,10 @@ DB_HOST = "62.72.57.120"
 DB_PORT = "5432"
 
 child_id = "1" #sys.argv[1]
+grade = 4
+
+currDate = datetime.datetime(2024, 8, 10)
+subscribeDate = datetime.datetime(2024, 8, 1)
 
 database = DB_NAME
 host = DB_HOST
@@ -14,6 +19,10 @@ user = DB_USER
 port = DB_PORT
 password = DB_PASS
 conn = psycopg2
+
+dayDiff = (currDate - subscribeDate).days
+
+week = int(dayDiff / 7) + 1
 
 try:
     conn = psycopg2.connect(database=database,
@@ -28,17 +37,13 @@ try:
 
     temp = []
 
-    sql = "SELECT child_activity.*, activity.act_category_id\
-    FROM child_activity\
-    LEFT JOIN activity ON child_activity.activity_id=activity.activity_id\
-    WHERE child_activity.child_id={child}".format(child=child_id)
+    sql = "select * from story\
+        where standard_id={grade} and week_num <= {week}".format(grade=grade, week=week)
 
     cursor.execute(sql)
     column_names = [desc[0] for desc in cursor.description]
     temp.append(column_names)
 
-
-    #sql = "SELECT * FROM public.child_activity WHERE child_id={child}".format(child=child_id)
     cursor.execute(sql)
     temp.append(cursor.fetchall())
 
@@ -52,6 +57,9 @@ try:
             row_data = i[k]
             temp[col_data] = row_data
         data.append(temp)
+
+    for i in data:
+        print(i["story_id"])
 
 except:
     print("database not connected")
