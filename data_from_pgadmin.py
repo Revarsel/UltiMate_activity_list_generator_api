@@ -49,6 +49,7 @@ class connection:
             cursor.execute(query, [i["activity_id"], child_id, i["start_date"], i["end_date"], 1, 0, i["wordle_words_id"], i["is_archived"], i["created_by"], i["updated_by"], i["created_date"], i["updated_date"], 0])
             index += 1
             self.conn.commit()
+            # return
         cursor.close()
     
     def get_table_data(self, tableName):

@@ -72,9 +72,9 @@ try:
 
     temp = []
 
-    sql = "SELECT child_activity.*, activity.act_category_id\
-    FROM child_activity\
-    LEFT JOIN activity ON child_activity.activity_id=activity.activity_id\
+    sql = "SELECT child_activity.child_id, child_activity.start_date, child_activity.end_date, child_activity.activity_status_id, activity.*\
+    FROM activity\
+    LEFT JOIN child_activity ON child_activity.activity_id=activity.activity_id\
     WHERE child_activity.child_id={child}".format(child=child_id)
 
     cursor.execute(sql)
