@@ -4,6 +4,7 @@ import random
 import json
 import datetime
 from dateutil.relativedelta import relativedelta
+import sqlalchemy_test
 import sys
 
 class Data: # All User Data
@@ -105,7 +106,7 @@ class GenerateActivities:
                     # print(currDate)
                     if grade_num >= 4:
                         wordle_act = actData.WordleList[grade_num-4]
-                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                        wordle_act["wordle_words_id"] = wordle_words_list[b]["wordle_words_id"]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
                         self.fullActList.append(wordle_act.copy())
@@ -133,7 +134,7 @@ class GenerateActivities:
                 if currDate > currentDate:
                     if grade_num >= 4:
                         wordle_act = actData.WordleList[grade_num-4]
-                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
+                        wordle_act["wordle_words_id"] = wordle_words_list[b]["wordle_words_id"]
                         wordle_act[start] = currDate
                         wordle_act[end] = nextDate
                         self.fullActList.append(wordle_act.copy())
@@ -419,7 +420,7 @@ class GenerateActivities:
     
     def AddExistingActivitiesToExclude(self, activities: list):
         for i in activities:
-            self.actDone.append(i[0])
+            self.actDone.append(i)
 
 
 startDate = datetime.datetime(2024, 6, 1)
@@ -568,7 +569,9 @@ actListRef = []
 #         actListRef.append(i)
 #     print(actListRef[0])
 
-actListRef = get_data(grade_num)
+Conn = sqlalchemy_test.Connection()
+
+actListRef = Conn.get_activities(grade_num)
 
 for k in actListRef:
     id = int(k["act_category_id"])
@@ -581,16 +584,16 @@ for k in actListRef:
     elif id == 4:
         actData.CCActList.append(k)
 
-Connection = connection()
+# Connection = connection()
 # print(Connection.get_table_data("child_activity")[0])
 # Connection.get_table_data("activity")
-wordle_words_list = Connection.get_wordle_words(startDate, endDate, grade_num) # get data from wordle_word db
+wordle_words_list = Conn.get_wordle_words(startDate, endDate, grade_num) #Connection.get_wordle_words(startDate, endDate, grade_num) # get data from wordle_word db
 # print(len(wordle_words_list), dayDifference, end='\n')
 # print(wordle_words_list[0], end='\n')
 # print(wordle_words_list[-1], end='\n')
 
 Generator = GenerateActivities()
-Generator.AddExistingActivitiesToExclude(Connection.get_table_data("child_activity"))
+Generator.AddExistingActivitiesToExclude(Conn.get_child_activity_table_activities(child_id))#Connection.get_table_data("child_activity"))
 # Generator.GenerateDailyActivities()
 # Generator.GenerateWeeklyActivities()
 Generator.GenerateActivities()
@@ -602,7 +605,9 @@ tempArr = []
 for i in Generator.fullActList:
     tempArr.append(i)
 
-Connection.dump_data_in_child_activity(tempArr, child_id)
+# Connection.dump_data_in_child_activity(tempArr, child_id)
+
+Conn.dump_data_in_child_activity(fullActList=tempArr, child_id=child_id)
 
 # index = 0
 
