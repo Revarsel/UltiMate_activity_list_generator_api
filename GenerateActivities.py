@@ -7,6 +7,10 @@ from dateutil.relativedelta import relativedelta
 import sqlalchemy_test
 import sys
 
+if len(sys.argv) != 3:
+    print("Wrong Usage. Usage is: python ____.py (child_id) (grade)")
+    exit()
+
 class Data: # All User Data
     def __init__(self) -> None:
         self.grade = ""
@@ -430,12 +434,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = 4 #sys.argv[1]  # 1 -> N, 2 -> Jr etc
+grade_num = sys.argv[2]  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = "1" #sys.argv[2]
+child_id = sys.argv[1]
 
 quarter = 1
 
