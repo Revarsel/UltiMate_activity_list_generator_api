@@ -124,7 +124,7 @@ class Connection:
             #     print("not weekly or daily")
         
         for i in CC: # CC is daily
-            if i["start_date"] <= currDate and i["activity_status_id"] != 3: # 3 is completed ( and i["end_date"] > currDate - relativedelta(days=2) )
+            if i["end_date"] < currDate and i["activity_status_id"] != 3: # 3 is completed ( and i["end_date"] > currDate - relativedelta(days=2) , i["start_date"] <= currDate)
                 activity_pool.append(i)
 
         # for i in daily:
@@ -144,7 +144,52 @@ class Connection:
         
         return activity_pool
 
-    def get_child_activities(self, child_id):
+    def get_current_date_activities(self, activities, currDate):
+            daily = []
+            weekly = []
+            fortnightly = []
+            activityArr = []
+
+            # for i in activities:
+            #     if i["act_category_id"] == 4:
+            #         CC.append(i)
+
+            for i in activities:
+                if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
+                    daily.append(i)
+                elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+                    weekly.append(i)
+                elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all fortnightly activities
+                    fortnightly.append(i)
+                # else:
+                #     print("not weekly or daily")
+            
+            # for i in CC: # CC is daily
+            #     if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
+            #         activityArr.append(i)
+
+            for i in daily:
+                if (i["act_category_id"] == 1 or i["act_category_id"] == 2 or i["act_category_id"] == 3) and i["end_date"] < currDate:
+                    # print(i["act_category_id"])
+                    continue
+
+                if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3:
+                    activityArr.append(i)
+
+            for i in weekly:
+                if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=1) and i["activity_status_id"] != 3:
+                    activityArr.append(i)
+            
+            for i in fortnightly:
+                if i["start_date"] < currDate and i["end_date"] > currDate - relativedelta(weeks=3) and i["activity_status_id"] != 3:
+                    activityArr.append(i)
+
+            # for i in activityArr:
+            #     print(i["activity_id"], end='\n')
+            
+            return activityArr
+
+    def get_child_activities_with_activity_table(self, child_id):
         selected = select(ChildActivity.start_date, ChildActivity.end_date, ChildActivity.child_id, ChildActivity.activity_status_id, Activity).select_from(ChildActivity).join(Activity, ChildActivity.activity_id==Activity.activity_id).where(ChildActivity.child_id==child_id)
 
         arr = ["start_date", "end_date", "child_id", "activity_status_id"]
@@ -254,9 +299,9 @@ class Connection:
 
         return arr
 
-startdate = datetime.datetime(2024, 6, 1)
-enddate = startdate + relativedelta(months=3)
-grade = 4
+# startdate = datetime.datetime(2024, 6, 1)
+# enddate = startdate + relativedelta(months=3)
+# grade = 4
 
 # conn = Connection()
 # activities = conn.get_activities(grade)

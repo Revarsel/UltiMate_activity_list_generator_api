@@ -1,74 +1,70 @@
 import datetime
-from dateutil.relativedelta import relativedelta
 import sqlalchemy_test
 import json
 import sys
 
-DB_NAME = "ultimatedb"
-DB_USER = "postgress"
-DB_PASS = "Shubham123" # put in password
-DB_HOST = "62.72.57.120"
-DB_PORT = "5432"
+if len(sys.argv) != 3:
+    print("Wrong Usage. Usage is: python ___.py (child_id) (current date in string)")
+    exit()
 
-child_id = "1" #sys.argv[1]
+child_id = sys.argv[1]
 
-database = DB_NAME
-host = DB_HOST
-user = DB_USER
-port = DB_PORT
-password = DB_PASS
-# conn = psycopg2
-activities = []
+date_string = sys.argv[2]
+try:
+    date_time_obj = datetime.datetime.strptime(date_string, '%Y-%m-%d %H:%M:%S')
+except ValueError as e:
+    print(f"Error parsing date = {e}")
 
-currDate = datetime.datetime(2024, 8, 21)
+currDate = date_time_obj #datetime.datetime(2024, 8, 21)
 
-def get_activity_pool_activities(activities):
-    CC = []
-    daily = []
-    weekly = []
-    fortnightly = []
-    activity_pool = []
+# def get_activity_pool_activities(activities):
+#     CC = []
+#     daily = []
+#     weekly = []
+#     fortnightly = []
+#     activity_pool = []
 
-    for i in activities:
-        if i["act_category_id"] == 4:
-            # print(i)
-            CC.append(i)
+#     for i in activities:
+#         if i["act_category_id"] == 4:
+#             # print(i)
+#             CC.append(i)
 
-    # for i in activities:
-    #     if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
-    #         daily.append(i)
-    #     elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
-    #         weekly.append(i)
-    #     elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
-    #         fortnightly.append(i)
-        # else:
-        #     print("not weekly or daily")
+#     # for i in activities:
+#     #     if i["start_date"] + relativedelta(days=1) > i["end_date"] and currDate > i["start_date"]: # get all daily activities
+#     #         daily.append(i)
+#     #     elif i["start_date"] + relativedelta(weeks=1) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+#     #         weekly.append(i)
+#     #     elif i["start_date"] + relativedelta(weeks=2) > i["end_date"] and currDate > i["start_date"]: # get all weekly activities
+#     #         fortnightly.append(i)
+#         # else:
+#         #     print("not weekly or daily")
     
-    for i in CC: # CC is daily
-        if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
-            # print(i)
-            activity_pool.append(i)
+#     for i in CC: # CC is daily
+#         if i["start_date"] <= currDate and i["end_date"] > currDate - relativedelta(days=2) and i["activity_status_id"] != 3: # 3 is completed
+#             # print(i)
+#             activity_pool.append(i)
 
-    # for i in daily:
-    #     if i["start_date"] + relativedelta(days=3) < currDate and i["activity_status_id"] != 3:
-    #         activity_pool.append(i)
+#     # for i in daily:
+#     #     if i["start_date"] + relativedelta(days=3) < currDate and i["activity_status_id"] != 3:
+#     #         activity_pool.append(i)
 
-    # for i in weekly:
-    #     if i["start_date"] + relativedelta(weeks=2) < currDate and i["activity_status_id"] != 3:
-    #         activity_pool.append(i)
+#     # for i in weekly:
+#     #     if i["start_date"] + relativedelta(weeks=2) < currDate and i["activity_status_id"] != 3:
+#     #         activity_pool.append(i)
     
-    # for i in fortnightly:
-    #     if i["start_date"] + relativedelta(weeks=4) < currDate and i["activity_status_id"] != 3:
-    #         activity_pool.append(i)
+#     # for i in fortnightly:
+#     #     if i["start_date"] + relativedelta(weeks=4) < currDate and i["activity_status_id"] != 3:
+#     #         activity_pool.append(i)
 
-    for i in activity_pool:
-        print(i["activity_id"], end='\n')
+#     for i in activity_pool:
+#         print(i["activity_id"], end='\n')
     
-    return activity_pool
+#     return activity_pool
 
 conn = sqlalchemy_test.Connection()
-activities = conn.get_child_activities(child_id)
+activities = conn.get_child_activities_with_activity_table(child_id)
 activity_pool = conn.get_activity_pool_activities(activities, currDate)
+
 # for i in activities:
 #     print(i["start_date"])
 # print(len(activity_pool))
@@ -113,7 +109,9 @@ for i in activity_pool:
     # i["index"] = index
     index += 1
 
-sys.stdout.write(json.dumps(activity_pool))
+# sys.stdout.write(json.dumps(activity_pool, indent=4))
+json.dump(activity_pool, sys.stdout, indent=4)
+# print(index)
 
 # try:
 #     conn = psycopg2.connect(database=database,
