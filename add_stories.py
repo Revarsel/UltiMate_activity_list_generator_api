@@ -1,65 +1,61 @@
-import psycopg2
+import connection
 import datetime
-
-DB_NAME = "ultimatedb"
-DB_USER = "postgress"
-DB_PASS = "Shubham123" # put in password
-DB_HOST = "62.72.57.120"
-DB_PORT = "5432"
+import json
+import sys
 
 child_id = "1" #sys.argv[1]
-grade = 4
+grade = 4 #sys.argv[2]
 
 currDate = datetime.datetime(2024, 8, 20)
 subscribeDate = datetime.datetime(2024, 8, 1)
-
-database = DB_NAME
-host = DB_HOST
-user = DB_USER
-port = DB_PORT
-password = DB_PASS
-conn = psycopg2
 
 dayDiff = (currDate - subscribeDate).days
 
 week = int(dayDiff / 7) + 1
 
-try:
-    conn = psycopg2.connect(database=database,
-                            user=user,
-                            password=password,
-                            host=host,
-                            port=port)
+conn = connection.Connection()
 
-    cursor = conn.cursor()
+stories = conn.get_stories(week, grade)
 
-    print("database connected")
+def convert_datetime_to_str(date, data=""):
+    if type(date) == str:
+        print(data)
+        return date
+    else:
+        pass
+        #return date
+    year = date.year
+    month = date.month
+    day = date.day
+    hour = date.hour
+    minute = date.minute
+    second = date.second
+    if int(month) / 10 < 1:
+        month = "0{month}".format(month=month)
+    if int(day) / 10 < 1:
+        day = "0{day}".format(day=day)
+    if int(hour) / 10 < 1:
+        hour = "0{hour}".format(hour=hour)
+    if int(minute) / 10 < 1:
+        minute = "0{minute}".format(minute=minute)
+    if int(second) / 10 < 1:
+        second = "0{second}".format(second=second)
 
-    temp = []
+    string = "{year}-{month}-{day} {hour}:{minutes}:{seconds}".format(year=year, month=month, day=day, hour=hour, minutes=minute, seconds=second)
+    return string
 
-    sql = "select * from story\
-        where standard_id={grade} and week_num <= {week}".format(grade=grade, week=week)
 
-    cursor.execute(sql)
-    column_names = [desc[0] for desc in cursor.description]
-    temp.append(column_names)
+index = 0
+for i in stories:
+    for k in range(len(i.keys())):
+        value = list(i.values())
+        keys = list(i.keys())
+        if type(value[k]) == datetime.datetime:
+            i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
+        # i[start] = convert_datetime_to_str(i[start], i)
+        # i[end] = convert_datetime_to_str(i[end])
+    # i["index"] = index
+    index += 1
 
-    cursor.execute(sql)
-    temp.append(cursor.fetchall())
+json.dump(stories, sys.stdout, indent=4)
 
-    data = []
-
-    col = temp[0]
-    for i in temp[1]:
-        temp = {}
-        for k in range(len(col)):
-            col_data = col[k]
-            row_data = i[k]
-            temp[col_data] = row_data
-        data.append(temp)
-
-    for i in data:
-        print(i["story_id"])
-
-except:
-    print("database not connected")

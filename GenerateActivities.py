@@ -4,7 +4,7 @@ import random
 import json
 import datetime
 from dateutil.relativedelta import relativedelta
-import sqlalchemy_test
+import connection
 import sys
 
 if len(sys.argv) != 3:
@@ -101,19 +101,12 @@ class GenerateActivities:
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
                 tempCCAct[focus_string] = focus
-                tempCCAct["wordle_words_id"] = 0
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
                 #print(b)
                 if currDate > currentDate:
                     # print(currDate)
-                    if grade_num >= 4:
-                        wordle_act = actData.WordleList[grade_num-4]
-                        wordle_act["wordle_words_id"] = wordle_words_list[b]["wordle_words_id"]
-                        wordle_act[start] = currDate
-                        wordle_act[end] = nextDate
-                        self.fullActList.append(wordle_act.copy())
                     self.fullActList.append(tempCCAct.copy())
             
             elif grade in ("3", "4", "5"):
@@ -131,17 +124,10 @@ class GenerateActivities:
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
-                tempPGAct["wordle_words_id"] = 0
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
                 if currDate > currentDate:
-                    if grade_num >= 4:
-                        wordle_act = actData.WordleList[grade_num-4]
-                        wordle_act["wordle_words_id"] = wordle_words_list[b]["wordle_words_id"]
-                        wordle_act[start] = currDate
-                        wordle_act[end] = nextDate
-                        self.fullActList.append(wordle_act.copy())
                     self.fullActList.append(tempPGAct.copy()) # Personal Growth
             
             elif grade in ("6", "7"):
@@ -159,17 +145,10 @@ class GenerateActivities:
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate + relativedelta(days=1) # because for 6, 7 this act is 2 days not 1 and wordle is still 1 day
-                tempPGAct["wordle_words_id"] = 0
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
 
                 if currDate > currentDate:
-                    if grade_num >= 4:
-                        wordle_act = actData.WordleList[grade_num-4]
-                        wordle_act["wordle_words_id"] = wordle_words_list[b][0]
-                        wordle_act[start] = currDate
-                        wordle_act[end] = nextDate
-                        self.fullActList.append(wordle_act.copy())
                     
                     if b % 2 == 0:
                         self.fullActList.append(tempPGAct.copy()) # Personal Growth
@@ -191,18 +170,6 @@ class GenerateActivities:
 
                 actData.RNTActList[index][end] = nextDate
                 actData.RNTActList[index + 1][end] = nextDate
-
-                actData.HUActList[index]["wordle_words_id"] = 0   # Habit Up
-                actData.HUActList[index + 1]["wordle_words_id"] = 0
-
-                actData.HUActList[index]["wordle_words_id"] = 0
-                actData.HUActList[index + 1]["wordle_words_id"] = 0
-
-                actData.RNTActList[index]["wordle_words_id"] = 0   # Roots and Traditions
-                actData.RNTActList[index + 1]["wordle_words_id"] = 0
-
-                actData.RNTActList[index]["wordle_words_id"] = 0
-                actData.RNTActList[index + 1]["wordle_words_id"] = 0
 
                 #remove_key_values_from_dictionary(actData.HUActList[index])
                 #remove_key_values_from_dictionary(actData.HUActList[index + 1])
@@ -263,8 +230,6 @@ class GenerateActivities:
                 act2[start] = currDate
                 act1[end] = nextDate
                 act2[end] = nextDate
-                act1["wordle_words_id"] = 0
-                act2["wordle_words_id"] = 0
 
                 if subscribed == False and (grade_changed == False and focus_changed == False):
                     continue
@@ -300,8 +265,6 @@ class GenerateActivities:
                     act2[start] = currDate
                     act1[end] = nextDate
                     act2[end] = nextDate
-                    act1["wordle_words_id"] = 0
-                    act2["wordle_words_id"] = 0
 
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
@@ -324,7 +287,6 @@ class GenerateActivities:
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
-                tempIPGAct["wordle_words_id"] = 0
                 self.fullActList.append(tempIPGAct.copy()) # Interpersonal Growth
 
                 if i % 2 == 0 and grade not in ("8", "9"):
@@ -341,7 +303,6 @@ class GenerateActivities:
 
                     tempLHAct[start] = currDate
                     tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate) # seconds=0
-                    tempLHAct["wordle_words_id"] = 0
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -363,7 +324,6 @@ class GenerateActivities:
                     tempLHAct[start] = currDate
                     tempLHAct[end] = nextDate
 
-                    tempLHAct["wordle_words_id"] = 0
 
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
@@ -386,8 +346,6 @@ class GenerateActivities:
                     tempPGAct[start] = currDate
                     tempPGAct[end] = nextDate
 
-                    tempPGAct["wordle_words_id"] = 0
-
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -409,7 +367,6 @@ class GenerateActivities:
 
             tempLHAct[start] = startDate
             tempLHAct[end] = endDate # seconds=0
-            tempLHAct["wordle_words_id"] = 0
 
             if subscribed == False and (grade_changed == False and focus_changed == False):
                 return
@@ -424,7 +381,7 @@ class GenerateActivities:
     
     def AddExistingActivitiesToExclude(self, activities: list):
         for i in activities:
-            self.actDone.append(i)
+            self.actDone.append(i["activity_id"])
 
 
 startDate = datetime.datetime(2024, 6, 1)
@@ -573,7 +530,7 @@ actListRef = []
 #         actListRef.append(i)
 #     print(actListRef[0])
 
-Conn = sqlalchemy_test.Connection()
+Conn = connection.Connection()
 
 actListRef = Conn.get_activities(grade_num)
 

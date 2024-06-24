@@ -1,4 +1,4 @@
-import sqlalchemy_test
+import connection
 import datetime
 from dateutil.relativedelta import relativedelta
 import json
@@ -69,7 +69,7 @@ currDate = date_time_obj #datetime.datetime(2024, 7, 8) + relativedelta(hours=1)
     
 #     return activityArr
 
-conn = sqlalchemy_test.Connection()
+conn = connection.Connection()
 activities = conn.get_child_activities_with_activity_table(child_id)
 currDateActivities = conn.get_current_date_activities(activities, currDate)
 
@@ -111,6 +111,7 @@ for i in currDateActivities:
     index += 1
 
 json.dump(currDateActivities, sys.stdout, indent=4)
+
 # print(index)
 
 # try:

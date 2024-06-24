@@ -1,5 +1,5 @@
 import datetime
-import sqlalchemy_test
+import connection
 import json
 import sys
 
@@ -61,7 +61,7 @@ currDate = date_time_obj #datetime.datetime(2024, 8, 21)
     
 #     return activity_pool
 
-conn = sqlalchemy_test.Connection()
+conn = connection.Connection()
 activities = conn.get_child_activities_with_activity_table(child_id)
 activity_pool = conn.get_activity_pool_activities(activities, currDate)
 

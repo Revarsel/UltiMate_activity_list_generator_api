@@ -86,6 +86,45 @@ class WordleWords(Base):
     revision = Column(Integer, default=0, nullable=True)
     word_show_date = Column(TIMESTAMP)
 
+class Story(Base):
+    __tablename__ = "story"
+
+    story_id = Column(Integer, primary_key=True) #NOT NULL,
+    title = Column(Text) #NOT NULL,
+    is_festival = Column(Boolean, nullable=True)
+    festival_id = Column(BigInteger, nullable=True)
+    cover_image_path = Column(Text) #NOT NULL
+    primary_language_id = Column(BigInteger) #NOT NULL
+    primary_file_path = Column(Text, nullable=True)
+    primary_audio_file_path = Column(Text, nullable=True)
+    primary_question_pdf = Column(Text, nullable=True)
+    min_time_minutes = Column(Integer) #NOT NULL
+    max_time_minutes = Column(Integer) #NOT NULL
+    points = Column(Integer) #NOT NULL
+    week_num = Column(Integer) #NOT NULL
+    standard_id = Column(BigInteger) #NOT NULL
+    is_archived = Column(Boolean) #NOT NULL
+    created_by = Column(VARCHAR(35)) #NOT NULL
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)  #NOT NULL
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
+def get_result_as_dict(result):
+    count = 0
+    arr = []
+
+    for i in result:
+        count += 1
+        tempdict: dict = i[0].__dict__.copy()
+        key = list(tempdict.keys())
+
+        tempdict.pop(key[0])
+
+        arr.append(tempdict.copy())
+    
+    return (arr, count)
+
 class Connection:
     def __init__(self) -> None:
         self.session = self.get_session()
@@ -225,18 +264,9 @@ class Connection:
 
         result = self.session.execute(selected)
 
-        arr = []
-
-        for i in result:
-            tempdict: dict = i[0].__dict__
-            key = list(tempdict.keys())
-
-            tempdict.pop(key[0])
-
-            arr.append(tempdict.copy())
+        arr = get_result_as_dict(result)
             
-
-        return arr
+        return arr[0]
         
 
     # actPool = get_activity_pool_activities(activities=activities)
@@ -252,52 +282,72 @@ class Connection:
                         activity_status_id = 1, #act["activity_status_id"],
                         is_archived = act["is_archived"],
                         created_by = act["created_by"],
-                        created_date = act["created_date"],)
+                        created_date = act["created_date"])
             self.session.add(childAct)
             self.session.commit()
             # break
+    
+    def dump_wordle_in_child_activity(self, wordle_act_list: list, child_id):
+        for act in wordle_act_list:
+            # print(act)
+            childAct = ChildActivity(
+                        activity_id = act["activity_id"],
+                        child_id = child_id,
+                        start_date = act["start_date"],
+                        end_date = act["end_date"],
+                        activity_status_id = 1, #act["activity_status_id"],
+                        is_archived = act["is_archived"],
+                        created_by = act["created_by"],
+                        created_date = act["created_date"],
+                        wordle_words_id = act["wordle_words_id"])
+            self.session.add(childAct)
+            self.session.commit()
     
     def get_child_activity_table_activities(self, child_id):
         selected = select(ChildActivity).where(ChildActivity.child_id==child_id)
 
         result = self.session.execute(selected)
-        fullActList = []
 
-        count = 0
-        for i in result:
-            # print(i)
-            count += 1
+        fullActList = get_result_as_dict(result)
 
-            ActData: dict = i[0].__dict__.copy()
-            # childActData: dict = i[0].__dict__.copy()
-
-            key = list(ActData.keys())
-
-            ActData.pop(key[0])
-
-            fullActList.append(ActData["activity_id"])
-
-        # print(fullActList[-2])
-        # print(count)
-        return fullActList
+        return fullActList[0]
     
     def get_wordle_words(self, startdate, enddate, grade):
         selected = select(WordleWords).filter(WordleWords.word_show_date >= startdate).filter(WordleWords.word_show_date < enddate).filter(WordleWords.standard_id == grade)
         
         result = self.session.execute(selected)
 
-        arr = []
+        arr = get_result_as_dict(result)
 
-        for i in result:
-            tempdict: dict = i[0].__dict__
-            key = list(tempdict.keys())
+        # for i in result:
+        #     tempdict: dict = i[0].__dict__
+        #     key = list(tempdict.keys())
 
-            tempdict.pop(key[0])
+        #     tempdict.pop(key[0])
 
-            arr.append(tempdict.copy())
-            
+        #     arr.append(tempdict.copy())
 
-        return arr
+        return arr[0]
+    
+    def get_stories(self, week, grade):
+        selected = select(Story).filter(Story.standard_id==grade).filter(Story.week_num<=week)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+
+    def get_wordle_act(self, grade):
+        selected = select(Activity).filter(Activity.act_category_id==3).filter(Activity.standard_id==grade)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0][0]
+
+    
 
 # startdate = datetime.datetime(2024, 6, 1)
 # enddate = startdate + relativedelta(months=3)
