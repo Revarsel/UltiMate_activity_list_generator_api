@@ -1,5 +1,3 @@
-from data_from_pgadmin import connection
-from testing_direct_sql_data import get_data
 import random
 import json
 import datetime
@@ -8,7 +6,7 @@ import connection
 import sys
 
 if len(sys.argv) != 3:
-    print("Wrong Usage. Usage is: python ____.py (child_id) (grade)")
+    print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
     exit()
 
 class Data: # All User Data

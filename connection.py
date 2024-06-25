@@ -110,6 +110,14 @@ class Story(Base):
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
 
+def convert_to_json_readable(data) -> dict:
+    tempDict = {"DATA": []}
+
+    for i in data:
+        tempDict["DATA"].append(i)
+    
+    return tempDict
+
 def get_result_as_dict(result):
     count = 0
     arr = []

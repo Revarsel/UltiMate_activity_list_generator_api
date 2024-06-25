@@ -109,8 +109,10 @@ for i in activity_pool:
     # i["index"] = index
     index += 1
 
+activity_pool_dict = connection.convert_to_json_readable(activity_pool)
+
 # sys.stdout.write(json.dumps(activity_pool, indent=4))
-json.dump(activity_pool, sys.stdout, indent=4)
+json.dump(activity_pool_dict, sys.stdout, indent=4)
 # print(index)
 
 # try:

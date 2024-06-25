@@ -110,7 +110,9 @@ for i in currDateActivities:
             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
     index += 1
 
-json.dump(currDateActivities, sys.stdout, indent=4)
+currDateDict = connection.convert_to_json_readable(currDateActivities)
+
+json.dump(currDateDict, sys.stdout, indent=4)
 
 # print(index)
 
