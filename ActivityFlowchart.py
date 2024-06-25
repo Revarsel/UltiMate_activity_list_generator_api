@@ -292,7 +292,7 @@ focus_area = ["A", "B", "C", "D", "E", "F", "G", "H"]
 gender = "MALE"
 language = "english"
 
-act_list_ref = []
+act_list_ref = [] #gyu
 
 with open("data-1716973262669.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
     data = csv.DictReader(activities_data)
