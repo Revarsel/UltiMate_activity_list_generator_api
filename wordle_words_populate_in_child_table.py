@@ -9,7 +9,7 @@ conn = connection.Connection()
 startdate = datetime.datetime(2024, 6, 1) #sys.argv[3]
 enddate = startdate + relativedelta(months=3)
 grade = 4 #sys.argv[2]
-child_id = 1 #sys.argv[1]
+child_id = 4 #sys.argv[1]
 
 wordle_words = conn.get_wordle_words(startdate, enddate, grade)
 

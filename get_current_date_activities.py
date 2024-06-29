@@ -73,6 +73,9 @@ conn = connection.Connection()
 activities = conn.get_child_activities_with_activity_table(child_id)
 currDateActivities = conn.get_current_date_activities(activities, currDate)
 
+# for i in activities:
+#     print(i["activity_id"], i["act_category_id"])
+
 def convert_datetime_to_str(date, data=""):
     if type(date) == str:
         print(data)
@@ -112,7 +115,7 @@ for i in currDateActivities:
 
 currDateDict = connection.convert_to_json_readable(currDateActivities)
 
-json.dump(currDateDict, sys.stdout, indent=4)
+# json.dump(currDateDict, sys.stdout, indent=4)
 
 # print(index)
 

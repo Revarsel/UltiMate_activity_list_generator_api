@@ -234,6 +234,7 @@ class Connection:
             # for i in activityArr:
             #     print(i["activity_id"], end='\n')
             
+            print(len(activityArr))
             return activityArr
 
     def get_child_activities_with_activity_table(self, child_id):
