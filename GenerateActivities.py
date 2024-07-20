@@ -202,76 +202,76 @@ class GenerateActivities:
 
             #print(len(tempExpActList2))
             tempIPGActList = FilterFunctions.focus_area(actData.IPGActList, focusWeek)
-            if grade in ("N", "Jr", "Sr"):
-                act1 = random.choice(tempExpActList)
-                act2 = random.choice(tempExpActList)
+            # if grade in ("N", "Jr", "Sr"):
+            #     act1 = random.choice(tempExpActList)
+            #     act2 = random.choice(tempExpActList)
                 
-                # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
-                for _ in range(1000):
-                    if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
-                        break
-                    act1 = random.choice(tempExpActList)
+            #     # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+            #     for _ in range(1000):
+            #         if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
+            #             break
+            #         act1 = random.choice(tempExpActList)
 
-                #remove_key_values_from_dictionary(act1["activity_id"])
-                self.actDone.append(act1["activity_id"])
+            #     #remove_key_values_from_dictionary(act1["activity_id"])
+            #     self.actDone.append(act1["activity_id"])
 
-                # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
-                for _ in range(1000):
-                    if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
-                        break
-                    act2 = random.choice(tempExpActList)
+            #     # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+            #     for _ in range(1000):
+            #         if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
+            #             break
+            #         act2 = random.choice(tempExpActList)
 
-                #remove_key_values_from_dictionary(act2)
-                self.actDone.append(act2["activity_id"])
+            #     #remove_key_values_from_dictionary(act2)
+            #     self.actDone.append(act2["activity_id"])
 
-                act1[start] = currDate
-                act2[start] = currDate
-                act1[end] = nextDate
-                act2[end] = nextDate
+            #     act1[start] = currDate
+            #     act2[start] = currDate
+            #     act1[end] = nextDate
+            #     act2[end] = nextDate
 
-                if subscribed == False and (grade_changed == False and focus_changed == False):
-                    continue
+            #     if subscribed == False and (grade_changed == False and focus_changed == False):
+            #         continue
 
-                if currDate > currentDate:
-                    self.fullActList.append(act1.copy()) # Learning Through Exploring for Nursery Junior and Senior KG
-                    self.fullActList.append(act2.copy())
+            #     if currDate > currentDate:
+            #         self.fullActList.append(act1.copy()) # Learning Through Exploring for Nursery Junior and Senior KG
+            #         self.fullActList.append(act2.copy())
 
-            elif grade in ("1", "2"):
-                for _ in range(2):
-                    act1 = random.choice(tempExpActList)
-                    act2 = random.choice(tempExpActList)
+            # elif grade in ("1", "2"):
+            #     for _ in range(2):
+            #         act1 = random.choice(tempExpActList)
+            #         act2 = random.choice(tempExpActList)
 
-                    # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
-                    for _ in range(1000):
-                        if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
-                            break
-                        act1 = random.choice(tempExpActList)
+            #         # while act1["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+            #         for _ in range(1000):
+            #             if act1["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
+            #                 break
+            #             act1 = random.choice(tempExpActList)
 
-                    #remove_key_values_from_dictionary(act1["activity_id"])
-                    self.actDone.append(act1["activity_id"])
+            #         #remove_key_values_from_dictionary(act1["activity_id"])
+            #         self.actDone.append(act1["activity_id"])
 
-                    # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
-                    for _ in range(1000):
-                        if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
-                            break
-                        act2 = random.choice(tempExpActList)
+            #         # while act2["activity_id"] in self.actDone or act1["activity_id"] == act2["activity_id"]:
+            #         for _ in range(1000):
+            #             if act2["activity_id"] not in self.actDone and act1["activity_id"] != act2["activity_id"]:
+            #                 break
+            #             act2 = random.choice(tempExpActList)
 
-                    #remove_key_values_from_dictionary(act2)
-                    self.actDone.append(act2["activity_id"])
+            #         #remove_key_values_from_dictionary(act2)
+            #         self.actDone.append(act2["activity_id"])
 
-                    act1[start] = currDate
-                    act2[start] = currDate
-                    act1[end] = nextDate
-                    act2[end] = nextDate
+            #         act1[start] = currDate
+            #         act2[start] = currDate
+            #         act1[end] = nextDate
+            #         act2[end] = nextDate
 
-                    if subscribed == False and (grade_changed == False and focus_changed == False):
-                        continue
+            #         if subscribed == False and (grade_changed == False and focus_changed == False):
+            #             continue
 
-                    if currDate > currentDate:
-                        self.fullActList.append(act1.copy()) # Learning Through Exploring for First and Second Standards
-                        self.fullActList.append(act2.copy())
+            #         if currDate > currentDate:
+            #             self.fullActList.append(act1.copy()) # Learning Through Exploring for First and Second Standards
+            #             self.fullActList.append(act2.copy())
 
-            else:
+            if grade in ("3", "4", "5", "6", "7"):
                 tempIPGAct = random.choice(tempIPGActList)
 
                 # while tempIPGAct["activity_id"] in self.actDone:
