@@ -64,6 +64,7 @@ class GenerateActivities:
             self.monthDays.append(dayDiff)
     
     def GenerateDailyActivities(self):
+        discuss = 0 # 0=False, 1=True
         # match quarter: # get this quarter from data table and the percentages too
         #     case 1:
         #         quarterDay = int(dayDifference / 2)
@@ -73,6 +74,14 @@ class GenerateActivities:
         for b in range(dayDifference):
             currDate = startDate + relativedelta(days=b, second=30)
             nextDate = currDate + relativedelta(hours=23, minutes=59) # seconds = 0
+            day = currDate.weekday()
+            if day == 6:
+                discuss = 0
+                continue
+            elif day == 5:
+                discuss = 1
+            else:
+                discuss = 0
 
             week = int((b) / 7)
             
@@ -84,7 +93,7 @@ class GenerateActivities:
 
                 # while tempCCAct["activity_id"] in self.actDone:
                 for _ in range(1000):
-                    if tempCCAct["activity_id"] not in self.actDone:
+                    if tempCCAct["activity_id"] not in self.actDone and tempCCAct["is_discussion"] == discuss:
                         break
                     tempCCAct = random.choice(tempCCList)
                 

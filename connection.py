@@ -33,6 +33,8 @@ class ChildActivity(Base):
     created_date = Column(TIMESTAMP)
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, nullable=True, default=0)
+    is_favourite = Column(Boolean, default=False)
+    is_parent_approved = Column(Boolean, default=False)
 
 class Activity(Base):
     __tablename__ = "activity"
@@ -291,7 +293,9 @@ class Connection:
                         activity_status_id = 1, #act["activity_status_id"],
                         is_archived = act["is_archived"],
                         created_by = act["created_by"],
-                        created_date = act["created_date"])
+                        created_date = act["created_date"],
+                        is_favourite=False,
+                        is_parent_approved=False)
             self.session.add(childAct)
             self.session.commit()
             # break
@@ -308,7 +312,9 @@ class Connection:
                         is_archived = act["is_archived"],
                         created_by = act["created_by"],
                         created_date = act["created_date"],
-                        wordle_words_id = act["wordle_words_id"])
+                        wordle_words_id = act["wordle_words_id"],
+                        is_favourite=False,
+                        is_parent_approved=False)
             self.session.add(childAct)
             self.session.commit()
     
