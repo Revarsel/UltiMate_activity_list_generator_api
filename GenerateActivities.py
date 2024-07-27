@@ -93,7 +93,7 @@ class GenerateActivities:
 
                 # while tempCCAct["activity_id"] in self.actDone:
                 for _ in range(1000):
-                    if tempCCAct["activity_id"] not in self.actDone and tempCCAct["is_discussion"] == discuss:
+                    if tempCCAct["activity_id"] not in self.actDone: #and tempCCAct["is_discussion"] == discuss:
                         break
                     tempCCAct = random.choice(tempCCList)
                 
@@ -416,7 +416,7 @@ map_grade = ["N", "Jr", "Sr"]
 if grade_num - 3 < 0:
     grade = map_grade[grade_num]
 else:
-    grade = str(grade_num-3)
+    grade = str(grade_num-2)
 
 HUActList = [] # ["h act1["activity_id"]", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1["activity_id"]", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
