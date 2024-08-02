@@ -390,7 +390,7 @@ class GenerateActivities:
             self.actDone.append(i["activity_id"])
 
 
-startDate = datetime.datetime(2024, 6, 1)
+startDate = datetime.datetime.now() #datetime.datetime(2024, 6, 1)
 endDate = startDate + relativedelta(months=3)
 dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 
