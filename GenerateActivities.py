@@ -331,7 +331,6 @@ class GenerateActivities:
                     tempLHAct[start] = currDate
                     tempLHAct[end] = nextDate
 
-
                     if subscribed == False and (grade_changed == False and focus_changed == False):
                         continue
 
@@ -412,11 +411,11 @@ subscribed = True
 grade_changed = False
 focus_changed = False
 
-map_grade = ["N", "Jr", "Sr"]
+map_grade = ["N", "Jr", "Sr"] # = [1,2,3] grade_num
 if grade_num - 3 < 0:
     grade = map_grade[grade_num]
 else:
-    grade = str(grade_num-2)
+    grade = str(grade_num-3)
 
 HUActList = [] # ["h act1["activity_id"]", "h act2", "h act3", "h act4", "h act5", "h act6"]  
 RNTActList = [] # ["rnt act1["activity_id"]", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
@@ -551,6 +550,12 @@ for k in actListRef:
         actData.WordleList.append(k)
     elif id == 4:
         actData.CCActList.append(k)
+    elif id == 5:
+        actData.PGActList.append(k)
+    elif id == 6:
+        actData.IPGActList.append(k)
+    elif id == 7:
+        actData.LHActList.append(k)
 
 # Connection = connection()
 # print(Connection.get_table_data("child_activity")[0])
