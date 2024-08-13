@@ -100,17 +100,19 @@ class Story(Base):
     primary_file_path = Column(Text, nullable=True)
     primary_audio_file_path = Column(Text, nullable=True)
     primary_question_pdf = Column(Text, nullable=True)
-    min_time_minutes = Column(Integer) #NOT NULL
-    max_time_minutes = Column(Integer) #NOT NULL
+    avg_time_minutes = Column(Integer)
     points = Column(Integer) #NOT NULL
     week_num = Column(Integer) #NOT NULL
     standard_id = Column(BigInteger) #NOT NULL
+    narrated_by = Column(VARCHAR(40), nullable=True)
+    thumbnail_image_path = Column(Text)
     is_archived = Column(Boolean) #NOT NULL
     created_by = Column(VARCHAR(35)) #NOT NULL
     updated_by = Column(VARCHAR(35), nullable=True)
     created_date = Column(TIMESTAMP)  #NOT NULL
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
+
 
 def convert_to_json_readable(data) -> dict:
     tempDict = {"DATA": []}

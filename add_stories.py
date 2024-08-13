@@ -52,9 +52,6 @@ for i in stories:
         keys = list(i.keys())
         if type(value[k]) == datetime.datetime:
             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
-        # i[start] = convert_datetime_to_str(i[start], i)
-        # i[end] = convert_datetime_to_str(i[end])
-    # i["index"] = index
     index += 1
 
 json.dump(stories, sys.stdout, indent=4)
