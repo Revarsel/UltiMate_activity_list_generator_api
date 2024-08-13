@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select
+from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select, asc
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dateutil.relativedelta import relativedelta
 import datetime
@@ -39,45 +39,52 @@ class ChildActivity(Base):
 class Activity(Base):
     __tablename__ = "activity"
 
-    activity_id = Column(Integer, primary_key=True) #NOT NULL,
-    title = Column(VARCHAR(50)) #NOT NULL,
-    standard_id = Column(BigInteger) #NOT NULL,
-    gender_id = Column(BigInteger) #NOT NULL,
-    difficulty_level_id = Column(BigInteger, nullable=True)
-    activity_game_type_id = Column(BigInteger, nullable=True)
-    priority_id = Column(BigInteger) #NOT NULL,
-    act_category_id = Column(BigInteger) #NOT NULL,
-    parent_desc = Column(Text) #NOT NULL,
-    child_desc = Column(Text, nullable=True)
-    purpose_outcome = Column(Text, nullable=True)
-    act_frequency_id = Column(BigInteger) #NOT NULL,
-    points = Column(Integer) #NOT NULL,
-    is_foundational = Column(Boolean) #NOT NULL,
-    min_time_minutes = Column(Integer) #NOT NULL,
-    max_time_minutes = Column(Integer) #NOT NULL,
-    is_safety_risk = Column(Boolean) #NOT NULL,
-    is_festival = Column(Boolean) #NOT NULL,
-    festival_id = Column(BigInteger, nullable=True)
-    is_discrematory = Column(Boolean) #NOT NULL,
-    is_external_dependency = Column(Boolean) #NOT NULL,
-    is_parent_supervision = Column(Boolean) #NOT NULL,
-    is_parent_involment = Column(Boolean) #NOT NULL,
-    parent_involment_level_id = Column(BigInteger, nullable=True)
-    is_screen_time = Column(Boolean) #NOT NULL,
-    screen_time_category_id = Column(BigInteger, nullable=True)
-    is_negative_effects = Column(Boolean) #NOT NULL,
-    is_free = Column(Boolean) #NOT NULL,
-    is_archived = Column(Boolean) #NOT NULL,
-    created_by = Column(VARCHAR(35)) #NOT NULL,
-    updated_by = Column(VARCHAR(35), nullable=True) 
-    created_date = Column(TIMESTAMP) #NOT NULL,
-    updated_date = Column(TIMESTAMP, nullable=True)
-    revision = Column(Integer, default=0, nullable=True)
+    activity_id = Column(Integer, primary_key=True, autoincrement=True)# SERIAL NOT NULL,
+    title = Column(VARCHAR(50))# character varying(50) NOT NULL,
+    gender_id = Column(BigInteger)# bigint NOT NULL,
+    difficulty_level_id = Column(BigInteger, nullable=True)# bigint,
+    activity_game_type_id = Column(BigInteger, nullable=True)# bigint,
+    priority_id = Column(BigInteger)# bigint NOT NULL,
+    act_category_id = Column(BigInteger)# bigint NOT NULL,
+    parent_desc = Column(Text, nullable=True)# text,
+    child_desc = Column(Text)# text NOT NULL,
+    purpose_outcome = Column(Text, nullable=True)# text,
+    act_frequency_id = Column(BigInteger)# bigint NOT NULL,
+    points = Column(Integer)# integer NOT NULL,
+    is_foundational = Column(Boolean, nullable=True)#3 boolean,
+    avg_time_minutes = Column(Integer)# integer NOT NULL,
+    is_safety_risk = Column(Boolean)# boolean NOT NULL,
+    is_festival = Column(Boolean)# boolean NOT NULL,
+    festival_id = Column(BigInteger, nullable=True)# bigint,
+    is_discrematory = Column(Boolean)# boolean NOT NULL,
+    is_external_dependency = Column(Boolean)# boolean NOT NULL,
+    is_parent_supervision = Column(Boolean)# boolean NOT NULL,
+    is_parent_involment = Column(Boolean)# boolean NOT NULL,
+    parent_involment_level_id = Column(BigInteger, nullable=True)# bigint,
+    is_screen_time = Column(Boolean)# boolean NOT NULL,
+    screen_time_category_id = Column(BigInteger)# bigint,
+    is_negative_effects = Column(Boolean)# boolean NOT NULL,
+    is_trial = Column(Boolean)# boolean NOT NULL,
+    is_premium = Column(Boolean, nullable=True)# boolean,
+    is_discussion = Column(Boolean, nullable=True)# boolean,
+    cover_image_path = Column(Text, nullable=True)# text,
+    ideal_time = Column(VARCHAR(30), nullable=True)# character varying(30),
+    ideal_day = Column(VARCHAR(30), nullable=True)# character varying(30),
+    benefit = Column(Text, nullable=True)# text,
+    who_should_not_do = Column(Text, nullable=True)# text,
+    more_info = Column(Text, nullable=True)# text,
+    deity = Column(VARCHAR(50), nullable=True)# character varying(50),
+    is_archived = Column(Boolean)# boolean NOT NULL,
+    created_by = Column(VARCHAR(35))# character varying(35) NOT NULL,
+    updated_by = Column(VARCHAR(35), nullable=True)# character varying(35),
+    created_date = Column(TIMESTAMP)# timestamp without time zone NOT NULL,
+    updated_date = Column(TIMESTAMP, nullable=True)# timestamp without time zone,
+    revision = Column(Integer, default=0)# integer DEFAULT 0
 
 class WordleWords(Base):
     __tablename__ = "wordle_words"
 
-    wordle_words_id = Column(Integer, primary_key=True)
+    wordle_words_id = Column(Integer, primary_key=True, autoincrement=True)
     word = Column(VARCHAR(5))
     standard_id = Column(BigInteger)
     is_archived = Column(Boolean)
@@ -91,7 +98,7 @@ class WordleWords(Base):
 class Story(Base):
     __tablename__ = "story"
 
-    story_id = Column(Integer, primary_key=True) #NOT NULL,
+    story_id = Column(Integer, primary_key=True, autoincrement=True) #NOT NULL,
     title = Column(Text) #NOT NULL,
     is_festival = Column(Boolean, nullable=True)
     festival_id = Column(BigInteger, nullable=True)
@@ -112,6 +119,50 @@ class Story(Base):
     created_date = Column(TIMESTAMP)  #NOT NULL
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
+
+class FocusArea(Base):
+    __tablename__ = "focus_area"
+
+    focus_area_id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(VARCHAR(50))
+    description = Column(VARCHAR(50), nullable=True)
+    standard_id = Column(BigInteger)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+    mintintcolor = Column(VARCHAR(50), nullable=True)
+    maxtintcolor = Column(VARCHAR(50), nullable=True)
+
+
+    """
+    story_id = Column(Integer, primary_key=True) #SERIAL NOT NULL,
+    title = Column(Text) #text NOT NULL,
+    description = Column(Text, nullable=True)# text,
+    importance = Column(Text) #text NOT NULL,
+    is_festival = Column(Boolean)# boolean,
+    festival_id = Column(BigInteger)# bigint,
+    cover_image_path = Column(Text) #text NOT NULL,
+    thumbnail_image_path = Column(Text)# text NOT NULL,
+    primary_language_id = Column(BigInteger)# bigint NOT NULL,
+    primary_file_path = Column(Text, nullable=True)# text,
+    primary_audio_file_path = Column(Text, nullable=True)# text,
+    narrated_by = Column(VARCHAR(40), nullable=True) #character varying(40),
+    primary_question_pdf = Column(Text, nullable=True)# text,
+    avg_time_minutes = Column(Integer) #integer NOT NULL,
+    points = Column(Integer) #integer NOT NULL,
+    week_num = Column(Integer) #integer NOT NULL,
+    is_trial = Column(Boolean) #boolean NOT NULL,
+    is_premium = Column(Boolean, nullable=True)# boolean,
+    is_archived = Column(Boolean) #boolean NOT NULL,
+    created_by = Column(VARCHAR(35))# character varying(35) NOT NULL,
+    updated_by = Column(VARCHAR(35), nullable=True)# character varying(35),
+    created_date = Column(TIMESTAMP) #timestamp without time zone NOT NULL,
+    updated_date = Column(TIMESTAMP, nullable=True)# timestamp without time zone,
+    revision = Column(Integer, default=0)# integer DEFAULT 0,
+    """
 
 
 def convert_to_json_readable(data) -> dict:
@@ -346,8 +397,8 @@ class Connection:
 
         return arr[0]
     
-    def get_stories(self, week, grade):
-        selected = select(Story).filter(Story.standard_id==grade).filter(Story.week_num<=week)
+    def get_stories(self): #, week, grade):
+        selected = select(Story) #.filter(Story.standard_id==grade).filter(Story.week_num<=week)
 
         result = self.session.execute(selected)
 
@@ -355,6 +406,15 @@ class Connection:
 
         return arr[0]
 
+    def get_stories_only_8(self):
+        selected = select(Story).limit(8) #.filter(Story.standard_id==grade).filter(Story.week_num<=week)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+    
     def get_wordle_act(self, grade):
         selected = select(Activity).filter(Activity.act_category_id==3).filter(Activity.standard_id==grade)
 
@@ -363,6 +423,15 @@ class Connection:
         arr = get_result_as_dict(result)
 
         return arr[0][0]
+    
+    def get_focus_area(self):
+        selected = select(FocusArea).order_by(asc(FocusArea.standard_id))
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
 
     
 

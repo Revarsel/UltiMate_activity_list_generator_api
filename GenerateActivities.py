@@ -5,9 +5,9 @@ from dateutil.relativedelta import relativedelta
 import connection
 import sys
 
-if len(sys.argv) != 3:
-    print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
-    exit()
+# if len(sys.argv) != 3:
+#     print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
+#     exit()
 
 class Data: # All User Data
     def __init__(self) -> None:
@@ -172,11 +172,11 @@ class GenerateActivities:
                 actData.HUActList[index][end] = nextDate
                 actData.HUActList[index + 1][end] = nextDate
 
-                actData.RNTActList[index][start] = currDate   # Roots and Traditions
-                actData.RNTActList[index + 1][start] = currDate
+                # actData.RNTActList[index][start] = currDate   # Roots and Traditions
+                # actData.RNTActList[index + 1][start] = currDate
 
-                actData.RNTActList[index][end] = nextDate
-                actData.RNTActList[index + 1][end] = nextDate
+                # actData.RNTActList[index][end] = nextDate
+                # actData.RNTActList[index + 1][end] = nextDate
 
                 #remove_key_values_from_dictionary(actData.HUActList[index])
                 #remove_key_values_from_dictionary(actData.HUActList[index + 1])
@@ -187,9 +187,19 @@ class GenerateActivities:
                     self.fullActList.append(actData.HUActList[index].copy())
                     self.fullActList.append(actData.HUActList[index + 1].copy())
 
-                    self.fullActList.append(actData.RNTActList[index].copy())
-                    self.fullActList.append(actData.RNTActList[index + 1].copy())
+                    # self.fullActList.append(actData.RNTActList[index].copy())
+                    # self.fullActList.append(actData.RNTActList[index + 1].copy())
             index += 2
+        
+        shlokas = []
+        for k in actData.RNTActList:
+            if k["act_category_id"] == 3:
+                if k["activity_game_type_id"] == 1:
+                    shlokas.append(k.copy())
+        
+        json.dump(shlokas, sys.stdout, indent=4)
+        print(shlokas)
+        exit()
 
 
     def GenerateWeeklyActivities(self):
@@ -397,12 +407,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
+grade_num = 4 #int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = sys.argv[1]
+child_id = 30 #sys.argv[1]
 
 quarter = 1
 
@@ -580,7 +590,7 @@ for i in Generator.fullActList:
 
 # Connection.dump_data_in_child_activity(tempArr, child_id)
 
-Conn.dump_data_in_child_activity(fullActList=tempArr, child_id=child_id)
+# Conn.dump_data_in_child_activity(fullActList=tempArr, child_id=child_id)
 
 # index = 0
 
