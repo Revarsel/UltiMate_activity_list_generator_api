@@ -2,6 +2,7 @@ import connection
 import json
 import sys
 import datetime
+import copy 
 
 def convert_datetime_to_str(date, data=""):
     if type(date) == str:
@@ -32,7 +33,7 @@ def convert_datetime_to_str(date, data=""):
 
 conn = connection.Connection()
 
-stories = conn.get_stories_only_8()
+stories = conn.get_stories_only_n(10)
 
 stories_title = []
 
@@ -41,7 +42,7 @@ for b in stories:
 
 focus_list = conn.get_focus_area()
 
-focus_ordered = [[] for _ in range(12)]
+focus_ordered = [[] for _ in range(12)] # array for each std
 
 index = 0
 for i in focus_list:
@@ -51,6 +52,15 @@ for i in focus_list:
         if type(value[k]) == datetime.datetime:
             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
     index += 1
+
+# index = 0
+# for i in stories:
+#     for k in range(len(i.keys())):
+#         value = list(i.values())
+#         keys = list(i.keys())
+#         if type(value[k]) == datetime.datetime:
+#             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)  # use this for json dump only
+#     index += 1
 
 for i in focus_list:
     match i["standard_id"]:
@@ -79,8 +89,16 @@ for i in focus_list:
         case 12:
             focus_ordered[11].append(i)
 
+final_stories = []
 
-for i in range(10): # 10 focus areas
-    
+for standard in range(12): # 12 stds
+    for focusindex in range(len(focus_ordered[standard])): # focus of each std
+        # for i in range(1): # 8 stories per focus area per standard
+        story = copy.deepcopy(stories[0])
+        for i in range(8):
+            story["title"] = str(focus_ordered[standard][focusindex]["focus_area_id"]) + "_Q1_" + str(standard+1) + "_" + str(stories_title[i])
+            final_stories.append(copy.deepcopy(story))
 
-json.dump(focus_ordered[0], sys.stdout, indent=4)
+# json.dump(len(final_stories), sys.stdout, indent=4)
+
+conn.dump_stories_in_story_table(final_stories)

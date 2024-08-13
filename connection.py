@@ -100,6 +100,8 @@ class Story(Base):
 
     story_id = Column(Integer, primary_key=True, autoincrement=True) #NOT NULL,
     title = Column(Text) #NOT NULL,
+    importance = Column(Text)
+    is_trial = Column(Boolean)
     is_festival = Column(Boolean, nullable=True)
     festival_id = Column(BigInteger, nullable=True)
     cover_image_path = Column(Text) #NOT NULL
@@ -367,8 +369,29 @@ class Connection:
                         created_date = act["created_date"],
                         wordle_words_id = act["wordle_words_id"],
                         is_favourite=False,
-                        is_parent_approved=False)
+                        is_parent_approved=False
+                        )
             self.session.add(childAct)
+            self.session.commit()
+    
+    def dump_stories_in_story_table(self, story_list: list):
+        for story in story_list:
+            story_act = Story(
+                            title = story["title"], #NOT NULL,
+                            cover_image_path = story["cover_image_path"], #NOT NULL
+                            primary_language_id = story["primary_language_id"], #NOT NULL
+                            avg_time_minutes = story["avg_time_minutes"],
+                            points = story["points"], #NOT NULL
+                            week_num = story["week_num"], #NOT NULL
+                            standard_id = story["standard_id"], #NOT NULL
+                            thumbnail_image_path = story["thumbnail_image_path"],
+                            is_archived = story["is_archived"], #NOT NULL
+                            created_by = story["created_by"], #NOT NULL
+                            created_date = story["created_date"],  #NOT NULL
+                            is_trial=False,
+                            importance="default"
+                            )
+            self.session.add(story_act)
             self.session.commit()
     
     def get_child_activity_table_activities(self, child_id):
@@ -406,8 +429,8 @@ class Connection:
 
         return arr[0]
 
-    def get_stories_only_8(self):
-        selected = select(Story).limit(8) #.filter(Story.standard_id==grade).filter(Story.week_num<=week)
+    def get_stories_only_n(self,n):
+        selected = select(Story).limit(n) #.filter(Story.standard_id==grade).filter(Story.week_num<=week)
 
         result = self.session.execute(selected)
 
