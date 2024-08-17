@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select, asc
+from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select, asc, desc
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dateutil.relativedelta import relativedelta
 import datetime
@@ -12,6 +12,45 @@ passwd = "Shubham123"
 host = "62.72.57.120"
 port = "5432"
 database = "ultimatedb"
+
+def convert_datetime_to_str(date, data=""):
+    if type(date) == str:
+        print(data)
+        return date
+    else:
+        pass
+        #return date
+    year = date.year
+    month = date.month
+    day = date.day
+    hour = date.hour
+    minute = date.minute
+    second = date.second
+    if int(month) / 10 < 1:
+        month = "0{month}".format(month=month)
+    if int(day) / 10 < 1:
+        day = "0{day}".format(day=day)
+    if int(hour) / 10 < 1:
+        hour = "0{hour}".format(hour=hour)
+    if int(minute) / 10 < 1:
+        minute = "0{minute}".format(minute=minute)
+    if int(second) / 10 < 1:
+        second = "0{second}".format(second=second)
+
+    string = "{year}-{month}-{day} {hour}:{minutes}:{seconds}".format(year=year, month=month, day=day, hour=hour, minutes=minute, seconds=second)
+    return string
+
+def convert_all_values_to_json_readable(data):
+    data_given = data
+
+    for i in data_given:
+        for k in range(len(i.keys())):
+            value = list(i.values())
+            keys = list(i.keys())
+            if type(value[k]) == datetime.datetime:
+                i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
+    
+    return data_given
 
 class ChildActivity(Base):
     __tablename__ = "child_activity"
@@ -40,6 +79,7 @@ class Activity(Base):
     __tablename__ = "activity"
 
     activity_id = Column(Integer, primary_key=True, autoincrement=True)# SERIAL NOT NULL,
+    standard_id = Column(BigInteger)
     title = Column(VARCHAR(50))# character varying(50) NOT NULL,
     gender_id = Column(BigInteger)# bigint NOT NULL,
     difficulty_level_id = Column(BigInteger, nullable=True)# bigint,
@@ -52,7 +92,7 @@ class Activity(Base):
     act_frequency_id = Column(BigInteger)# bigint NOT NULL,
     points = Column(Integer)# integer NOT NULL,
     is_foundational = Column(Boolean, nullable=True)#3 boolean,
-    avg_time_minutes = Column(Integer)# integer NOT NULL,
+    #avg_time_minutes = Column(Integer)# integer NOT NULL,
     is_safety_risk = Column(Boolean)# boolean NOT NULL,
     is_festival = Column(Boolean)# boolean NOT NULL,
     festival_id = Column(BigInteger, nullable=True)# bigint,
@@ -74,12 +114,27 @@ class Activity(Base):
     who_should_not_do = Column(Text, nullable=True)# text,
     more_info = Column(Text, nullable=True)# text,
     deity = Column(VARCHAR(50), nullable=True)# character varying(50),
+    shlok_length_id = Column(Integer, nullable=True)
+    narrated_by = Column(VARCHAR(40), nullable=True)
     is_archived = Column(Boolean)# boolean NOT NULL,
     created_by = Column(VARCHAR(35))# character varying(35) NOT NULL,
     updated_by = Column(VARCHAR(35), nullable=True)# character varying(35),
     created_date = Column(TIMESTAMP)# timestamp without time zone NOT NULL,
     updated_date = Column(TIMESTAMP, nullable=True)# timestamp without time zone,
     revision = Column(Integer, default=0)# integer DEFAULT 0
+
+class ActivityStandard(Base):
+    __tablename__ = "activity_standard"
+
+    activity_standard_id = Column(Integer, primary_key=True) # SERIAL NOT NULL,
+    activity_id = Column(BigInteger) # NOT NULL,
+    standard_id = Column(BigInteger) # NOT NULL,
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
 
 class WordleWords(Base):
     __tablename__ = "wordle_words"
@@ -137,6 +192,32 @@ class FocusArea(Base):
     revision = Column(Integer, default=0, nullable=True)
     mintintcolor = Column(VARCHAR(50), nullable=True)
     maxtintcolor = Column(VARCHAR(50), nullable=True)
+
+class FocusAreaFrequency(Base):
+    __tablename__ = "focus_area_frequency"
+    focus_area_frequency_id	= Column(Integer, primary_key=True)
+    month = Column(BigInteger)
+    week = Column(BigInteger)
+    focus_area_id = Column(BigInteger)
+    standard_id = Column(BigInteger)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
+class ShlokLength(Base):
+    __tablename__ = "shlok_length"
+
+    shlok_length_id = Column(Integer, primary_key=True)
+    name = Column(VARCHAR(50))
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
 
 
     """
@@ -326,12 +407,23 @@ class Connection:
         return fullActList
     
     def get_activities(self, grade):
+        # selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade)
         selected = select(Activity).where(Activity.standard_id==grade)
 
         result = self.session.execute(selected)
 
         arr = get_result_as_dict(result)
-            
+
+        # arr = []
+        # for i in result:
+        #     tempdict: dict = i[1].__dict__.copy()
+        #     key = list(tempdict.keys())
+
+        #     tempdict.pop(key[0])
+        #     tempdict["standard_id"] = i[0]
+
+        #     arr.append(tempdict.copy())
+        
         return arr[0]
         
 
@@ -339,7 +431,6 @@ class Connection:
 
     def dump_data_in_child_activity(self, fullActList: list, child_id):
         for act in fullActList:
-            # print(act)
             childAct = ChildActivity(
                         activity_id = act["activity_id"],
                         child_id = child_id,
@@ -456,7 +547,64 @@ class Connection:
 
         return arr[0]
 
+    def get_focus_area_frequency(self, grade):
+        selected = select(FocusAreaFrequency).filter(FocusAreaFrequency.standard_id==grade).order_by(asc(FocusAreaFrequency.focus_area_frequency_id))
+
+        result = self.session.execute(selected)
+
+        arr1 = get_result_as_dict(result)
+
+        arr = []
+        for i in arr1[0]:
+            arr.append(i["focus_area_id"])
+
+        return arr
     
+    def get_mudras(self):
+        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==5)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+    
+    def get_shloks(self):
+        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==4)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+    
+    def get_existing_shloks(self, child_id):
+        selected = select(ChildActivity.start_date, ChildActivity.end_date, ChildActivity.child_id, ChildActivity.activity_status_id, Activity).select_from(ChildActivity).join(Activity, ChildActivity.activity_id==Activity.activity_id).where(ChildActivity.child_id==child_id).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==4).order_by(desc(ChildActivity.start_date))
+
+        result = self.session.execute(selected)
+
+        arr = ["start_date", "end_date", "child_id", "activity_status_id"]
+
+        result = self.session.execute(selected)
+        fullActList = []
+
+        for i in result:
+            ActData: dict = i[4].__dict__.copy()
+
+            key = list(ActData.keys())
+
+            ActData.pop(key[0])
+
+            dict1 = {arr[0]: i[0], arr[1]: i[1], arr[2]: i[2], arr[3]: i[3]}
+
+            ActData.update(dict1)
+
+            fullActList.append(ActData.copy())
+
+        return fullActList
+
+# conn = Connection()
+# print(len(conn.get_focus_area_frequency(1)[:26]))
 
 # startdate = datetime.datetime(2024, 6, 1)
 # enddate = startdate + relativedelta(months=3)
