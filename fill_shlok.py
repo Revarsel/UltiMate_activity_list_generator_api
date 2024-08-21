@@ -46,12 +46,21 @@ long = list(filter(filter_long, shloks))
 existing_shloks = conn.get_existing_shloks(child_id)
 existing_shloks = convert_all_values_to_json_readable(existing_shloks)
 existing_id = []
-last_3_deities = []
+previous_deities = []
 
+sanskrit = 0
+regional = 0
+
+count = 0
 for i in existing_shloks:
     existing_id.append(i["activity_id"])
-    if i["deity"] not in last_3_deities and i["shlok_length_id"] == type_of_shlok:
-        last_3_deities.append(i["deity"])
+    if i["deity"] not in previous_deities and i["shlok_length_id"] == type_of_shlok and count < 3:
+        if i["language_id"] == 14:
+            sanskrit += 1
+        else:
+            regional += 1
+        count += 1
+        previous_deities.append(i["deity"])
 
 short_shlok = random.choice(short)
 medium_shlok = random.choice(medium)
@@ -60,7 +69,9 @@ long_shlok = random.choice(long)
 match type_of_shlok:
     case 1:
         for i in range(1000):
-            if short_shlok["deity"] not in last_3_deities and short_shlok["activity_id"] not in existing_id:
+            if short_shlok["deity"] not in previous_deities and short_shlok["activity_id"] not in existing_id:
+                if regional >= 1 and short_shlok["language_id"] == 14:
+                    continue
                 short_shlok["start_date"] = currDate
                 short_shlok["end_date"] = nextDate
                 conn.dump_data_in_child_activity([short_shlok], child_id)
@@ -69,7 +80,7 @@ match type_of_shlok:
 
     case 2:
         for i in range(1000):
-            if medium_shlok["deity"] not in last_3_deities and medium_shlok["activity_id"] not in existing_id:
+            if medium_shlok["deity"] not in previous_deities and medium_shlok["activity_id"] not in existing_id:
                 medium_shlok["start_date"] = currDate
                 medium_shlok["end_date"] = nextDate
                 conn.dump_data_in_child_activity([medium_shlok], child_id)
@@ -78,11 +89,11 @@ match type_of_shlok:
 
     case 3:
         for i in range(1000):
-            if long_shlok["deity"] not in last_3_deities and long_shlok["activity_id"] not in existing_id:
+            if long_shlok["deity"] not in previous_deities and long_shlok["activity_id"] not in existing_id:
                 long_shlok["start_date"] = currDate
                 long_shlok["end_date"] = nextDate
                 conn.dump_data_in_child_activity([long_shlok], child_id)
                 break
             long_shlok = random.choice(long)
 
-json.dump(last_3_deities, sys.stdout, indent=4)
+json.dump(previous_deities, sys.stdout, indent=4)
