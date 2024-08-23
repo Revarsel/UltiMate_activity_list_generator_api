@@ -93,12 +93,11 @@ final_stories = []
 
 for standard in range(12): # 12 stds
     for focusindex in range(len(focus_ordered[standard])): # focus of each std
-        # for i in range(1): # 8 stories per focus area per standard
         story = copy.deepcopy(stories[0])
         for i in range(8):
             story["title"] = str(focus_ordered[standard][focusindex]["focus_area_id"]) + "_Q1_" + str(standard+1) + "_" + str(stories_title[i])
             final_stories.append(copy.deepcopy(story))
 
-# json.dump(len(final_stories), sys.stdout, indent=4)
+json.dump(len(final_stories), sys.stdout, indent=4)
 
-conn.dump_stories_in_story_table(final_stories)
+# conn.dump_stories_in_story_table(final_stories)

@@ -5,9 +5,9 @@ from dateutil.relativedelta import relativedelta
 from connection import Connection, convert_all_values_to_json_readable
 import sys
 
-if len(sys.argv) != 3:
-    print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
-    exit()
+# if len(sys.argv) != 3:
+#     print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
+#     exit()
 
 class Data: # All User Data
     def __init__(self) -> None:
@@ -22,14 +22,14 @@ userData = Data()
 
 class ActivityData:
     def __init__(self) -> None:
-        self.HUActList = []
-        self.RNTActList = []
-        self.CCActList = []
-        self.ExpActList = []
-        self.PGActList = []
-        self.IPGActList = []
-        self.LHActList = []
-        self.WordleList = []
+        self.HUActList = [[], []]
+        self.RNTActList = [[], []]
+        self.CCActList = [[], []]
+        self.ExpActList = [[], []]
+        self.PGActList = [[], []]
+        self.IPGActList = [[], []]
+        self.LHActList = [[], []]
+        self.WordleList = [[], []]
 
 
 actData = ActivityData()
@@ -50,10 +50,9 @@ class GenerateActivities:
                 else:
                     tempArrWeekly.append(userData.focusArea[int(1 + (i * 2))])
                     tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int((i * 2) + 1)]))
-                
-        # print(tempArr2PerWeek)
+
         weeks_num = int(dayDifference/7)
-        self.focusAreaWeekly = tempArrWeekly #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArrWeekly
+        self.focusAreaWeekly = Conn.get_focus_area_frequency(grade_num)[:weeks_num+1] #tempArrWeekly
         self.focusArea2PerWeek = tempArr2PerWeek #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArr2PerWeek
         self.fullActList = []
         self.monthDays = []
@@ -66,11 +65,6 @@ class GenerateActivities:
     
     def GenerateDailyActivities(self):
         discuss = 0 # 0=False, 1=True
-        # match quarter: # get this quarter from data table and the percentages too
-        #     case 1:
-        #         quarterDay = int(dayDifference / 2)
-        #     case 2:
-        #         quarterDay = int(dayDifference / 3)
 
         for b in range(dayDifference):
             currDate = startDate + relativedelta(days=b, second=30)
@@ -85,15 +79,21 @@ class GenerateActivities:
                 discuss = 0
 
             week = int((b) / 7)
-            
-            focus = self.focusAreaWeekly[week % 12]
+
+            focus = self.focusAreaWeekly[week]
 
             if grade in ("N", "Jr", "Sr", "1", "2"): # Creative Corner
-                tempCCList = FilterFunctions.focus_area(actData.CCActList, focus)
-                tempCCAct = random.choice(actData.CCActList)
+                tempCCList = []
+                prev = True
+                if len(actData.CCActList[1]) == 0: # previous grade activities are empty
+                    prev = False
+                    tempCCList = FilterFunctions.focus_area(actData.CCActList[0], focus)
+                else:
+                    tempCCList = FilterFunctions.focus_area(actData.CCActList[1], focus)
+                tempCCAct = random.choice(tempCCList)
 
                 for _ in range(1000):
-                    if tempCCAct["activity_id"] not in self.actDone: #and tempCCAct["is_discussion"] == discuss:
+                    if tempCCAct["activity_id"] not in self.actDone and tempCCAct["is_discussion"] == discuss:
                         break
                     tempCCAct = random.choice(tempCCList)
 
@@ -101,15 +101,22 @@ class GenerateActivities:
 
                 tempCCAct[start] = currDate
                 tempCCAct[end] = nextDate
-                tempCCAct[focus_string] = focus
-                if subscribed == False and (grade_changed == False and focus_changed == False):
-                    continue
 
-                if currDate > currentDate:
-                    self.fullActList.append(tempCCAct.copy())
+                self.fullActList.append(tempCCAct.copy())
+                
+                if prev:
+                    actData.CCActList[1] = custom_remove(actData.CCActList[1], tempCCAct)
+                else:
+                    actData.CCActList[0] = custom_remove(actData.CCActList[0], tempCCAct)
             
             elif grade in ("3", "4", "5", "6", "7"): # Personal Growth
-                tempPGList = FilterFunctions.focus_area(actData.PGActList, focus)
+                tempPGList = []
+                prev = True
+                if len(actData.PGActList[1]) == 0: # previous grade activities are empty
+                    prev = False
+                    tempPGList = FilterFunctions.focus_area(actData.PGActList[0], focus)
+                else:
+                    tempPGList = FilterFunctions.focus_area(actData.PGActList[1], focus)
                 tempPGAct = random.choice(tempPGList)
                 
                 for _ in range(1000):
@@ -121,11 +128,13 @@ class GenerateActivities:
 
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
-                if subscribed == False and (grade_changed == False and focus_changed == False):
-                    continue
 
-                if currDate > currentDate:
-                    self.fullActList.append(tempPGAct.copy()) # Personal Growth
+                self.fullActList.append(tempPGAct.copy()) # Personal Growth
+                
+                if prev:
+                    actData.PGActList[1] = custom_remove(actData.PGActList[1], tempPGAct)
+                else:
+                    actData.PGActList[0] = custom_remove(actData.PGActList[0], tempPGAct)
         
         index = 0
         for months in range(len(self.monthDays)):
@@ -133,11 +142,11 @@ class GenerateActivities:
                 currDate = startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
 
-                actData.HUActList[index][start] = currDate   # Habit Up
-                actData.HUActList[index + 1][start] = currDate
+                actData.HUActList[0][index][start] = currDate   # Habit Up
+                actData.HUActList[0][index + 1][start] = currDate
 
-                actData.HUActList[index][end] = nextDate
-                actData.HUActList[index + 1][end] = nextDate
+                actData.HUActList[0][index][end] = nextDate
+                actData.HUActList[0][index + 1][end] = nextDate
 
                 # actData.RNTActList[index][start] = currDate   # Roots and Traditions
                 # actData.RNTActList[index + 1][start] = currDate
@@ -151,8 +160,8 @@ class GenerateActivities:
                 #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
 
                 if currDate > currentDate and (grade_changed == True or subscribed == True):
-                    self.fullActList.append(actData.HUActList[index].copy())
-                    self.fullActList.append(actData.HUActList[index + 1].copy())
+                    self.fullActList.append(actData.HUActList[0][index].copy())
+                    self.fullActList.append(actData.HUActList[0][index + 1].copy())
 
                     # self.fullActList.append(actData.RNTActList[index].copy())
                     # self.fullActList.append(actData.RNTActList[index + 1].copy())
@@ -162,48 +171,74 @@ class GenerateActivities:
     def GenerateWeeklyActivities(self):
         weeks = int(dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
 
-        tempLHActList = FilterFunctions.focus_area(actData.LHActList, focusWeek)
-        tempIPGActList = FilterFunctions.focus_area(actData.IPGActList, focusWeek)
-        tempPGList = FilterFunctions.focus_area(actData.PGActList, focusWeek)
-
         for i in range(weeks): # start to end date number of weeks
+            focus = self.focusAreaWeekly[i]
             currDate = startDate + relativedelta(weeks=i, seconds=30)
             nextDate = min_date(currDate + relativedelta(days=6, hours=23, minutes=59), endDate) # seconds=0
 
-            focusWeek = self.focusAreaWeekly[i % 12]
-
             if grade in ("3", "4", "5"): # Interpersonal Growth (once a week)
-                tempIPGAct = random.choice(tempIPGActList)
+                tempIPGList = []
+                prev = True
+                if len(actData.IPGActList[1]) == 0: # previous grade activities are empty
+                    prev = False
+                    tempIPGList = FilterFunctions.focus_area(actData.IPGActList[0], focus)
+                else:
+                    tempIPGList = FilterFunctions.focus_area(actData.IPGActList[1], focus)
+                tempIPGAct = random.choice(tempIPGList)
 
                 for _ in range(1000):
                     if tempIPGAct["activity_id"] not in self.actDone:
                         break
-                    tempIPGAct = random.choice(tempIPGActList)
+                    tempIPGAct = random.choice(tempIPGList)
 
                 self.actDone.append(tempIPGAct["activity_id"])
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
                 self.fullActList.append(tempIPGAct.copy())
+
+                if prev:
+                    actData.IPGActList[1] = custom_remove(actData.IPGActList[1], tempIPGAct)
+                else:
+                    actData.IPGActList[0] = custom_remove(actData.IPGActList[0], tempIPGAct)
             
             elif grade in ("6", "7", "8", "9"): # (once every 2 weeks)
                 if i % 2 == 0:
-                    tempIPGAct = random.choice(tempIPGActList)
+                    tempIPGList = []
+                    prev = True
+                    if len(actData.IPGActList[1]) == 0: # previous grade activities are empty
+                        prev = False
+                        tempIPGList = FilterFunctions.focus_area(actData.IPGActList[0], focus)
+                    else:
+                        tempIPGList = FilterFunctions.focus_area(actData.IPGActList[1], focus)
+                    tempIPGAct = random.choice(tempIPGList)
 
                     for _ in range(1000):
                         if tempIPGAct["activity_id"] not in self.actDone:
                             break
-                        tempIPGAct = random.choice(tempIPGActList)
+                        tempIPGAct = random.choice(tempIPGList)
 
                     self.actDone.append(tempIPGAct["activity_id"])
 
                     tempIPGAct[start] = currDate
-                    tempIPGAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate)
+                    tempIPGAct[end] = nextDate
                     self.fullActList.append(tempIPGAct.copy())
+
+                    if prev:
+                        actData.IPGActList[1] = custom_remove(actData.IPGActList[1], tempIPGAct)
+                    else:
+                        actData.IPGActList[0] = custom_remove(actData.IPGActList[0], tempIPGAct)
             
             if grade in ("8", "9"): # Personal Growth
+                tempPGList = []
+                prev = True
+                if len(actData.PGActList[1]) == 0: # previous grade activities are empty
+                    prev = False
+                    tempPGList = FilterFunctions.focus_area(actData.PGActList[0], focus)
+                else:
+                    tempPGList = FilterFunctions.focus_area(actData.PGActList[1], focus)
                 tempPGAct = random.choice(tempPGList)
-
+                
                 for _ in range(1000):
                     if tempPGAct["activity_id"] not in self.actDone:
                         break
@@ -214,49 +249,67 @@ class GenerateActivities:
                 tempPGAct[start] = currDate
                 tempPGAct[end] = nextDate
 
-                if subscribed == False and (grade_changed == False and focus_changed == False):
-                    continue
-
-                if currDate > currentDate:
-                    self.fullActList.append(tempPGAct.copy())
+                self.fullActList.append(tempPGAct.copy()) # Personal Growth
+                
+                if prev:
+                    actData.PGActList[1] = custom_remove(actData.PGActList[1], tempPGAct)
+                else:
+                    actData.PGActList[0] = custom_remove(actData.PGActList[0], tempPGAct)
 
             if grade in ("8", "9"): # life hacks (once a week)
-                tempLHAct = random.choice(tempLHActList)
-
+                tempLHList = []
+                prev = True
+                if len(actData.LHActList[1]) == 0: # previous grade activities are empty
+                    prev = False
+                    tempLHList = FilterFunctions.focus_area(actData.LHActList[0], focus)
+                else:
+                    tempLHList = FilterFunctions.focus_area(actData.LHActList[1], focus)
+                tempLHAct = random.choice(tempLHList)
+                
                 for _ in range(1000):
                     if tempLHAct["activity_id"] not in self.actDone:
                         break
-                    tempLHAct = random.choice(tempLHActList)
+                    tempPGAct = random.choice(tempLHList)
 
                 self.actDone.append(tempLHAct["activity_id"])
 
                 tempLHAct[start] = currDate
                 tempLHAct[end] = nextDate
-                if subscribed == False and (grade_changed == False and focus_changed == False):
-                    continue
 
-                if currDate > currentDate:
-                    self.fullActList.append(tempLHAct.copy())
+                self.fullActList.append(tempLHAct.copy()) # Personal Growth
+                
+                if prev:
+                    actData.LHActList[1] = custom_remove(actData.LHActList[1], tempLHAct)
+                else:
+                    actData.LHActList[0] = custom_remove(actData.LHActList[0], tempLHAct)
             
             elif grade in ("3", "4", "5", "6", "7"): # (once every 2 weeks)
                 if i % 2 == 0:
-                    tempLHAct = random.choice(tempLHActList)
-
+                    tempLHList = []
+                    prev = True
+                    if len(actData.LHActList[1]) == 0: # previous grade activities are empty
+                        prev = False
+                        tempLHList = FilterFunctions.focus_area(actData.LHActList[0], focus)
+                    else:
+                        tempLHList = FilterFunctions.focus_area(actData.LHActList[1], focus)
+                    tempLHAct = random.choice(tempLHList)
+                    
                     for _ in range(1000):
                         if tempLHAct["activity_id"] not in self.actDone:
                             break
-                        tempLHAct = random.choice(tempLHActList)
+                        tempLHAct = random.choice(tempLHList)
 
                     self.actDone.append(tempLHAct["activity_id"])
 
                     tempLHAct[start] = currDate
-                    tempLHAct[end] = min_date(currDate + relativedelta(days=13, hours=23, minutes=59), endDate)
+                    tempLHAct[end] = nextDate
 
-                    if subscribed == False and (grade_changed == False and focus_changed == False):
-                        continue
-
-                    if currDate > currentDate:
-                        self.fullActList.append(tempLHAct.copy())
+                    self.fullActList.append(tempLHAct.copy()) # Personal Growth
+                    
+                    if prev:
+                        actData.LHActList[1] = custom_remove(actData.LHActList[1], tempLHAct)
+                    else:
+                        actData.LHActList[0] = custom_remove(actData.LHActList[0], tempLHAct)
                 
     def GenerateQuarterlyActivities(self):
         if grade not in ("N", "Jr", "Sr", "1", "2"):
@@ -347,12 +400,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
+grade_num = 4 #int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = sys.argv[1]
+child_id = 40 #sys.argv[1]
 
 quarter = 1
 
@@ -419,9 +472,16 @@ class FilterFunctions:
 
 counter = 0
 
-def authorize(token):
-    if token != "":
-        raise "dfg"
+def custom_remove(data, data_to_remove):
+    for i in range(len(data)):
+        index = 0
+        data_value = data[i]
+        if data_value["activity_id"] == data_to_remove["activity_id"]:
+            index = i
+            data.pop(index)
+            return data
+    else:
+        return []
 
 def convert_datetime_to_str(date, data=""):
     if type(date) == str:
@@ -472,11 +532,8 @@ def min_date(date1: datetime.datetime, date2: datetime.datetime):
     elif day2 < day1:
         return date2
 
-def remove_key_values_from_dictionary(dictionary: dict):
-    keys = list(dictionary.keys())
-    for i in keys:
-        if i not in (end, start, focus_string, "activity_id", "child_id"):
-            dictionary.pop(i)
+def is_in_actDone(generator: GenerateActivities, act_id):
+    return (act_id in generator.actDone)
 
 def func(val):
     if val["act_category_id"] == 2 and val["activity_game_type_id"] == 5:
@@ -506,67 +563,72 @@ def filter_shloks(data):
         return True
     return False
 
-actListRef = []
-
-# with open("table1.csv") as activities_data:  # 1 -> habit up, 2 -> rnt, 4 -> CC  (act_category_id)
-#     data = csv.DictReader(activities_data)
-#     for i in data:
-#         actListRef.append(i)
-#     print(actListRef[0])
 
 Conn = Connection()
 
-actListRef = Conn.get_activities(grade_num)
+actListBothGrade = Conn.get_activities(grade_num)
+actListRefCurrGrade = actListBothGrade[0]
+actListRefPrevGrade = actListBothGrade[1]
+
 mudras = Conn.get_mudras()
-# print(actListRef[0])
-# exit()
 
-count = 0
-for k in actListRef:
-    id = int(k["act_category_id"])
-    # print(count)
-    count += 1
-    if id == 1:
-        actData.HUActList.append(k)
-    elif id == 2:
-        actData.RNTActList.append(k)
-    elif id == 3:
-        actData.WordleList.append(k)
-    elif id == 4:
-        actData.CCActList.append(k)
-    elif id == 5:
-        actData.PGActList.append(k)
-    elif id == 6:
-        actData.IPGActList.append(k)
-    elif id == 7:
-        actData.LHActList.append(k)
-
-# Connection = connection()
-# print(Connection.get_table_data("child_activity")[0])
-# Connection.get_table_data("activity")
-wordle_words_list = Conn.get_wordle_words(startDate, endDate, grade_num) #Connection.get_wordle_words(startDate, endDate, grade_num) # get data from wordle_word db
+wordle_words_list = Conn.get_wordle_words(startDate, endDate, grade_num)
 # print(len(wordle_words_list), dayDifference, end='\n')
 # print(wordle_words_list[0], end='\n')
 # print(wordle_words_list[-1], end='\n')
 
 Generator = GenerateActivities()
-Generator.AddExistingActivitiesToExclude(Conn.get_child_activity_table_activities(child_id))#Connection.get_table_data("child_activity"))
-# Generator.GenerateDailyActivities()
-# Generator.GenerateWeeklyActivities()
-# Generator.GenerateMudras()
+Generator.AddExistingActivitiesToExclude(Conn.get_child_activity_table_activities(child_id))
+
+for k in actListRefCurrGrade:
+    id = int(k["act_category_id"])
+    act_id = int(k["activity_id"])
+
+    if is_in_actDone(Generator, act_id):
+        continue
+
+    if id == 1:
+        actData.HUActList[0].append(k)
+    elif id == 2:
+        actData.RNTActList[0].append(k)
+    elif id == 3:
+        actData.WordleList[0].append(k)
+    elif id == 4:
+        actData.CCActList[0].append(k)
+    elif id == 5:
+        actData.PGActList[0].append(k)
+    elif id == 6:
+        actData.IPGActList[0].append(k)
+    elif id == 7:
+        actData.LHActList[0].append(k)
+
+for k in actListRefPrevGrade:
+    id = int(k["act_category_id"])
+
+    if is_in_actDone(Generator, act_id):
+        continue
+
+    if id == 1:
+        actData.HUActList[1].append(k)
+    elif id == 2:
+        actData.RNTActList[1].append(k)
+    elif id == 3:
+        actData.WordleList[1].append(k)
+    elif id == 4:
+        actData.CCActList[1].append(k)
+    elif id == 5:
+        actData.PGActList[1].append(k)
+    elif id == 6:
+        actData.IPGActList[1].append(k)
+    elif id == 7:
+        actData.LHActList[1].append(k)
+
 Generator.GenerateActivities()
-
-#print(Generator.fullActList)
-
-# tempArr = []
-
-# for i in Generator.fullActList:
-#     tempArr.append(i)
 
 
 Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
 
-# tempArr = convert_all_values_to_json_readable(tempArr)
+# tempArr = convert_all_values_to_json_readable(Generator.fullActList)
 
 # json.dump(len(tempArr), sys.stdout, indent=4)
 # print("\n" + str(grade))

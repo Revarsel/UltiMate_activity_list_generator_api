@@ -196,7 +196,6 @@ class FocusArea(Base):
 class FocusAreaFrequency(Base):
     __tablename__ = "focus_area_frequency"
     focus_area_frequency_id	= Column(Integer, primary_key=True)
-    month = Column(BigInteger)
     week = Column(BigInteger)
     focus_area_id = Column(BigInteger)
     standard_id = Column(BigInteger)
@@ -407,24 +406,41 @@ class Connection:
         return fullActList
     
     def get_activities(self, grade):
-        # selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade)
-        selected = select(Activity).where(Activity.standard_id==grade)
+        selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade)
+        # selected = select(Activity).where(Activity.standard_id==grade)
 
         result = self.session.execute(selected)
 
-        arr = get_result_as_dict(result)
+        # arr = get_result_as_dict(result)
 
-        # arr = []
-        # for i in result:
-        #     tempdict: dict = i[1].__dict__.copy()
-        #     key = list(tempdict.keys())
+        arr = []
+        for i in result:
+            tempdict: dict = i[1].__dict__.copy()
+            key = list(tempdict.keys())
 
-        #     tempdict.pop(key[0])
-        #     tempdict["standard_id"] = i[0]
+            tempdict.pop(key[0])
+            tempdict["standard_id"] = i[0]
 
-        #     arr.append(tempdict.copy())
-        
-        return arr[0]
+            arr.append(tempdict.copy())
+
+        if grade == 1:
+            return [arr]
+        else:
+            selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==(int(grade)-1))
+            # selected = select(Activity).where(Activity.standard_id==grade)
+
+            result = self.session.execute(selected)
+            arr1 = []
+            for i in result:
+                tempdict: dict = i[1].__dict__.copy()
+                key = list(tempdict.keys())
+
+                tempdict.pop(key[0])
+                tempdict["standard_id"] = i[0]
+
+                arr1.append(tempdict.copy())
+            
+            return [arr, arr1]
         
 
     # actPool = get_activity_pool_activities(activities=activities)
@@ -548,7 +564,7 @@ class Connection:
         return arr[0]
 
     def get_focus_area_frequency(self, grade):
-        selected = select(FocusAreaFrequency).filter(FocusAreaFrequency.standard_id==grade).order_by(asc(FocusAreaFrequency.focus_area_frequency_id))
+        selected = select(FocusAreaFrequency).filter(FocusAreaFrequency.standard_id==grade).order_by(asc(FocusAreaFrequency.week))
 
         result = self.session.execute(selected)
 
@@ -602,6 +618,33 @@ class Connection:
             fullActList.append(ActData.copy())
 
         return fullActList
+    
+    def get_activities_only(self):
+        selected = select(Activity)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+    
+    def dump_activities_in_activity_standard_table(self, activities):
+        for act in activities:
+            std_id = int(act["standard_id"])
+            if std_id > 12:
+                std_id -= 1
+            else:
+                std_id += 1
+            Act = ActivityStandard(
+                                activity_id = act["activity_id"],
+                                standard_id = std_id,
+                                is_archived = False,
+                                created_by = "bhuvan",
+                                created_date = datetime.datetime.now()
+                                )
+            self.session.add(Act)
+            self.session.commit()
+
 
 # conn = Connection()
 # print(len(conn.get_focus_area_frequency(1)[:26]))
