@@ -5,9 +5,9 @@ from dateutil.relativedelta import relativedelta
 from connection import Connection, convert_all_values_to_json_readable
 import sys
 
-# if len(sys.argv) != 3:
-#     print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
-#     exit()
+if len(sys.argv) != 3:
+    print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
+    exit()
 
 class Data: # All User Data
     def __init__(self) -> None:
@@ -400,12 +400,12 @@ dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = 4 #int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
+grade_num = int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
-child_id = 40 #sys.argv[1]
+child_id = sys.argv[1]
 
 quarter = 1
 
