@@ -42,18 +42,18 @@ class GenerateActivities:
     def __init__(self) -> None:
         tempArrWeekly = []
         tempArr2PerWeek = []
-        for i in range(3):  # loop to order focus areas as [A,B,A,B,C,D,C,D,E,F,E,F]
-            for k in range(4):
-                if k % 2 == 0:
-                    tempArrWeekly.append(userData.focusArea[int((i * 2))])
-                    tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int(1 + (i * 2))]))
-                else:
-                    tempArrWeekly.append(userData.focusArea[int(1 + (i * 2))])
-                    tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int((i * 2) + 1)]))
+        # for i in range(3):  # loop to order focus areas as [A,B,A,B,C,D,C,D,E,F,E,F]
+        #     for k in range(4):
+        #         if k % 2 == 0:
+        #             tempArrWeekly.append(userData.focusArea[int((i * 2))])
+        #             tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int(1 + (i * 2))]))
+        #         else:
+        #             tempArrWeekly.append(userData.focusArea[int(1 + (i * 2))])
+        #             tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int((i * 2) + 1)]))
 
         weeks_num = int(dayDifference/7)
         self.focusAreaWeekly = Conn.get_focus_area_frequency(grade_num)[:weeks_num+1] #tempArrWeekly
-        self.focusArea2PerWeek = tempArr2PerWeek #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArr2PerWeek
+        # self.focusArea2PerWeek = tempArr2PerWeek #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArr2PerWeek
         self.fullActList = []
         self.monthDays = []
         self.actDone = [] # this stores all activity ids to check for duplicates in the following activity generators
