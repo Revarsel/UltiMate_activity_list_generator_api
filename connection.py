@@ -218,6 +218,58 @@ class ShlokLength(Base):
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
 
+class Child(Base):
+    __tablename__ = "child" 
+
+    child_id = Column(Integer, primary_key=True)
+    nick_name = Column(VARCHAR(35)) #NOT NULL,
+    first_name = Column(VARCHAR(35), nullable=True)
+    last_name = Column(VARCHAR(35), nullable=True)
+    contact_number = Column(VARCHAR(15), nullable=True)
+    contact_country_code = Column(BigInteger, nullable=True)
+    parent_id = Column(BigInteger)
+    standard_id = Column(BigInteger)
+    birth_year_id = Column(BigInteger)
+    user_id = Column(BigInteger, nullable=True)
+    gender_id = Column(BigInteger, nullable=True)
+    balance_points = Column(Integer, nullable=True)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
+class Users(Base):
+    __tablename__ = "users"
+
+    user_id = Column(Integer, primary_key=True)
+    first_name = Column(VARCHAR(20))
+    middle_name = Column(VARCHAR(20), nullable=True)
+    last_name = Column(VARCHAR(20))
+    username = Column(VARCHAR(35))
+    contact_number = Column(VARCHAR(15))
+    contact_country_code = Column(BigInteger)
+    image_path = Column(VARCHAR(200), nullable=True)
+    google_email = Column(VARCHAR(35), nullable=True)
+    microsoft_email = Column(VARCHAR(35), nullable=True)
+    is_active = Column(Boolean, nullable=True)
+    is_new_user = Column(Boolean, nullable=True)
+    last_logged_in = Column(TIMESTAMP, nullable=True)
+    bad_credential_count = Column(Integer, nullable=True)
+    locked = Column(TIMESTAMP, nullable=True)
+    locked_date = Column(TIMESTAMP, nullable=True)
+    password = Column(VARCHAR(100), nullable=True)
+    user_type_id = Column(BigInteger)
+    otp = Column(VARCHAR(15), nullable=True)
+    password_updated = Column(TIMESTAMP, nullable=True)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
 
     """
     story_id = Column(Integer, primary_key=True) #SERIAL NOT NULL,
@@ -601,7 +653,7 @@ class Connection:
 
         arr = ["start_date", "end_date", "child_id", "activity_status_id"]
 
-        result = self.session.execute(selected)
+        # result = self.session.execute(selected)
         fullActList = []
 
         for i in result:
@@ -644,9 +696,42 @@ class Connection:
                                 )
             self.session.add(Act)
             self.session.commit()
+    
+    def get_child_details(self, child_id):
+        selected = select(Users.is_new_user, Child).select_from(Users).join(Child, Child.user_id==Users.user_id).where(Child.child_id==child_id)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0][0]
+    
+    '''selected = select(Users.is_new_user, Child).select_from(Users).join(Child, Child.user_id==Users.user_id).where(Child.child_id==child_id)
+
+        result = self.session.execute(selected)
+
+        arr = ["is_new_user"]
+
+        fullActList = []
+
+        for i in result:
+            ActData: dict = i[1].__dict__.copy()
+
+            key = list(ActData.keys())
+
+            ActData.pop(key[0])
+
+            dict1 = {arr[0]: i[0]}
+
+            ActData.update(dict1)
+
+            fullActList.append(ActData.copy())
+
+        return fullActList[0]'''
 
 
-# conn = Connection()
+conn = Connection()
+print(conn.get_child_details(4))
 # print(len(conn.get_focus_area_frequency(1)[:26]))
 
 # startdate = datetime.datetime(2024, 6, 1)

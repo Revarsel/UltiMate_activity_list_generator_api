@@ -5,8 +5,8 @@ from dateutil.relativedelta import relativedelta
 from connection import Connection, convert_all_values_to_json_readable
 import sys
 
-if len(sys.argv) != 3:
-    print("Wrong Usage. Usage is: ____.py (child_id) (grade)")
+if len(sys.argv) != 2:
+    print("Wrong Usage. Usage is: ____.py (child_id)")
     exit()
 
 class Data: # All User Data
@@ -159,12 +159,12 @@ class GenerateActivities:
                 #remove_key_values_from_dictionary(actData.RNTActList[index])
                 #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
 
-                if currDate > currentDate and (grade_changed == True or subscribed == True):
-                    self.fullActList.append(actData.HUActList[0][index].copy())
-                    self.fullActList.append(actData.HUActList[0][index + 1].copy())
 
-                    # self.fullActList.append(actData.RNTActList[index].copy())
-                    # self.fullActList.append(actData.RNTActList[index + 1].copy())
+                self.fullActList.append(actData.HUActList[0][index].copy())
+                self.fullActList.append(actData.HUActList[0][index + 1].copy())
+
+                # self.fullActList.append(actData.RNTActList[index].copy())
+                # self.fullActList.append(actData.RNTActList[index + 1].copy())
             index += 2
 
 
@@ -326,9 +326,6 @@ class GenerateActivities:
             tempLHAct[start] = startDate
             tempLHAct[end] = endDate
 
-            if subscribed == False and (grade_changed == False and focus_changed == False):
-                return
-
             self.fullActList.append(tempLHAct.copy())
     
     def GenerateMudras(self):
@@ -397,46 +394,27 @@ startDate = datetime.datetime.now() #datetime.datetime(2024, 6, 1)
 endDate = startDate + relativedelta(months=3)
 dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
 
+Conn = Connection()
+
 # MAIN INPUT VARIABLES
 pin_code = 411038
 religion = "Hindu" # jai shree ram
-grade_num = int(sys.argv[2])  # 1 -> N, 2 -> Jr etc
 grade = ""
 focus_area = ["A", "B", "C", "D", "E", "F"]
 gender = "MALE"
 language = "english"
+
 child_id = sys.argv[1]
+child_details = Conn.get_child_details(child_id)
+grade_num = int(child_details["standard_id"])  # 1 -> N, 2 -> Jr etc
 
 quarter = 1
-
-currentDate = datetime.datetime(2024, 6, 1)
-subscribed = True
-grade_changed = False
-focus_changed = False
 
 map_grade = ["N", "Jr", "Sr"] # = [1,2,3] grade_num
 if grade_num - 3 < 0:
     grade = map_grade[grade_num]
 else:
     grade = str(grade_num-3)
-
-HUActList = [] # ["h act1["activity_id"]", "h act2", "h act3", "h act4", "h act5", "h act6"]  
-RNTActList = [] # ["rnt act1["activity_id"]", "rnt act2", "rnt act3", "rnt act4", "rnt act5", "rnt act6"]
-
-# CCActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
-# ExpActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
-# PGActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
-# IPGActList = [{"activity_id" : r} for r in range(92)]  # Comment this for main deployment
-
-# for i in range(1, 31):  # Comment this loop for main deployment
-#     actData.HUActList.append({"activity_id" : i}) # ("hu act " + str(i))
-#     actData.RNTActList.append({"activity_id" : i})
-#     actData.IPGActList.append({"activity_id" : i})
-#     actData.LHActList.append({"activity_id" : i})
-
-# actData.CCActList = CCActList
-# actData.ExpActList = ExpActList
-# actData.PGActList = PGActList
 
 userData.pinCode = pin_code
 userData.religion = religion
@@ -447,7 +425,6 @@ userData.language = language
 
 class FilterFunctions:
     def grade(list, grade) -> list:
-        # return list
         tempArr = []
         for t in list:
             if t["standard_id"] == grade: # Uncomment this for main deployment
@@ -562,9 +539,6 @@ def filter_shloks(data):
     if data["act_category_id"] == 2 and data["activity_game_type_id"] == 4:
         return True
     return False
-
-
-Conn = Connection()
 
 actListBothGrade = Conn.get_activities(grade_num)
 actListRefCurrGrade = actListBothGrade[0]
