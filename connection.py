@@ -270,6 +270,18 @@ class Users(Base):
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
 
+class ActFocusArea(Base):
+    __tablename__ = "act_focus_area"
+
+    act_focus_area_id = Column(Integer, primary_key=True)
+    activity_id = Column(BigInteger)
+    focus_area_id = Column(BigInteger)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
 
     """
     story_id = Column(Integer, primary_key=True) #SERIAL NOT NULL,
@@ -462,8 +474,6 @@ class Connection:
         # selected = select(Activity).where(Activity.standard_id==grade)
 
         result = self.session.execute(selected)
-
-        # arr = get_result_as_dict(result)
 
         arr = []
         for i in result:
@@ -697,16 +707,19 @@ class Connection:
             self.session.add(Act)
             self.session.commit()
     
+    def dump_activities_in_act_focus_area_table(self, activity, focus_id):
+        Act = ActFocusArea(
+                            activity_id = activity["activity_id"],
+                            focus_area_id = focus_id,
+                            is_archived = False,
+                            created_by = "bhuvan",
+                            created_date = datetime.datetime.now()
+                            )
+        self.session.add(Act)
+        self.session.commit()
+    
     def get_child_details(self, child_id):
         selected = select(Users.is_new_user, Child).select_from(Users).join(Child, Child.user_id==Users.user_id).where(Child.child_id==child_id)
-
-        result = self.session.execute(selected)
-
-        arr = get_result_as_dict(result)
-
-        return arr[0][0]
-    
-    '''selected = select(Users.is_new_user, Child).select_from(Users).join(Child, Child.user_id==Users.user_id).where(Child.child_id==child_id)
 
         result = self.session.execute(selected)
 
@@ -727,11 +740,12 @@ class Connection:
 
             fullActList.append(ActData.copy())
 
-        return fullActList[0]'''
+        return fullActList[0]
 
 
-conn = Connection()
-print(conn.get_child_details(4))
+if __name__ == "__main__":
+    conn = Connection()
+    print(conn.get_child_details(4))
 # print(len(conn.get_focus_area_frequency(1)[:26]))
 
 # startdate = datetime.datetime(2024, 6, 1)

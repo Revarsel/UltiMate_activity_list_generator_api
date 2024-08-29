@@ -9,17 +9,6 @@ if len(sys.argv) != 2:
     print("Wrong Usage. Usage is: ____.py (child_id)")
     exit()
 
-class Data: # All User Data
-    def __init__(self) -> None:
-        self.grade = ""
-        self.pinCode = ""
-        self.religion = ""
-        self.focusArea = []
-        self.gender = ""
-        self.language = ""
-
-userData = Data()
-
 class ActivityData:
     def __init__(self) -> None:
         self.HUActList = [[], []]
@@ -64,7 +53,7 @@ class GenerateActivities:
             self.monthDays.append(dayDiff)
     
     def GenerateDailyActivities(self):
-        discuss = 0 # 0=False, 1=True
+        discuss = 0 # 0 = False, 1 = True
 
         for b in range(dayDifference):
             currDate = startDate + relativedelta(days=b, second=30)
@@ -383,7 +372,8 @@ class GenerateActivities:
         self.GenerateWeeklyActivities()
         self.GenerateQuarterlyActivities()
         self.GenerateMudras()
-        self.GenerateShloks()
+        if is_new_user:
+            self.GenerateShloks()
     
     def AddExistingActivitiesToExclude(self, activities: list):
         for i in activities:
@@ -407,6 +397,7 @@ language = "english"
 child_id = sys.argv[1]
 child_details = Conn.get_child_details(child_id)
 grade_num = int(child_details["standard_id"])  # 1 -> N, 2 -> Jr etc
+is_new_user = child_details["is_new_user"]
 
 quarter = 1
 
@@ -415,13 +406,6 @@ if grade_num - 3 < 0:
     grade = map_grade[grade_num]
 else:
     grade = str(grade_num-3)
-
-userData.pinCode = pin_code
-userData.religion = religion
-userData.grade = grade
-userData.focusArea = focus_area
-userData.gender = gender
-userData.language = language
 
 class FilterFunctions:
     def grade(list, grade) -> list:
@@ -599,6 +583,7 @@ for k in actListRefPrevGrade:
 
 Generator.GenerateActivities()
 
+exit()
 
 Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
 
