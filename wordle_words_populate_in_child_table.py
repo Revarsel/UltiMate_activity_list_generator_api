@@ -6,12 +6,13 @@ import sys
 
 conn = connection.Connection()
 
-startdate = datetime.datetime(2024, 6, 1) #sys.argv[3]
+startdate = datetime.datetime.now() #sys.argv[3]
 enddate = startdate + relativedelta(months=3)
-grade = 4 #sys.argv[2]
-child_id = 4 #sys.argv[1]
+child_id = sys.argv[1]
+child_details = conn.get_child_details(child_id)
+grade_num = int(child_details["standard_id"])
 
-wordle_words = conn.get_wordle_words(startdate, enddate, grade)
+wordle_words = conn.get_wordle_words(startdate, enddate, grade_num)
 
 def convert_datetime_to_str(date, data=""):
     if type(date) == str:
@@ -40,7 +41,7 @@ def convert_datetime_to_str(date, data=""):
     string = "{year}-{month}-{day} {hour}:{minutes}:{seconds}".format(year=year, month=month, day=day, hour=hour, minutes=minute, seconds=second)
     return string
 
-wordle_act = conn.get_wordle_act(grade)
+wordle_act = conn.get_wordle_act(grade_num)
 
 index = 0
 for i in wordle_words:
