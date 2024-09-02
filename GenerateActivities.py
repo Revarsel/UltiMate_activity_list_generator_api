@@ -583,8 +583,6 @@ for k in actListRefPrevGrade:
 
 Generator.GenerateActivities()
 
-exit()
-
 Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
 
 # tempArr = convert_all_values_to_json_readable(Generator.fullActList)

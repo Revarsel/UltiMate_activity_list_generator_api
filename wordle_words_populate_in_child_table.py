@@ -1,4 +1,4 @@
-from connection import Connection, convert_all_values_to_json_readable
+from connection import Connection, convert_all_values_to_json_readable, convert_datetime_to_str
 import datetime
 from dateutil.relativedelta import relativedelta
 import json
@@ -6,7 +6,7 @@ import sys
 
 conn = Connection()
 
-startdate = datetime.datetime.now() #sys.argv[3]
+startdate = datetime.datetime.now()
 enddate = startdate + relativedelta(months=3)
 child_id = sys.argv[1]
 child_details = conn.get_child_details(child_id)
@@ -15,23 +15,6 @@ grade = int(child_details["standard_id"])
 wordle_words = conn.get_wordle_words(startdate, enddate, grade)
 
 wordle_act = conn.get_wordle_act(grade)
-
-# index = 0
-# for i in wordle_words:
-#     for k in range(len(i.keys())):
-#         value = list(i.values())
-#         keys = list(i.keys())
-#         if type(value[k]) == datetime.datetime:
-#             i[keys[k]] = convert_datetime_to_str(i[keys[k]], i)
-#     index += 1
-# index = 0
-
-# for k in range(len(wordle_act.keys())):
-#     value = list(wordle_act.values())
-#     keys = list(wordle_act.keys())
-#     if type(value[k]) == datetime.datetime:
-#         wordle_act[keys[k]] = convert_datetime_to_str(wordle_act[keys[k]], wordle_act)
-# index += 1
 
 fullActList = []
 
@@ -45,7 +28,8 @@ for i in wordle_words:
     fullActList.append(wordle_activity.copy())
     currDate = currDate + datetime.timedelta(days=1)
 
+# fullActList = convert_all_values_to_json_readable(fullActList)
 # print(json.dumps(fullActList, indent=4))
 conn.dump_wordle_in_child_activity(fullActList, child_id)
-# print(json.dumps(wordle_words, indent=4))
+# print(json.dumps(fullActList.__len__(), indent=4))
 
