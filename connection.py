@@ -486,7 +486,7 @@ class Connection:
             arr.append(tempdict.copy())
 
         if grade == 1:
-            return [arr]
+            return [arr, []]
         else:
             selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==(int(grade)-1))
             # selected = select(Activity).where(Activity.standard_id==grade)

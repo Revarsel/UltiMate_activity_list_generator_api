@@ -184,6 +184,8 @@ class GenerateActivities:
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
+                if nextDate == None:
+                    print(tempIPGAct)
                 self.fullActList.append(tempIPGAct.copy())
 
                 if prev:
@@ -401,8 +403,8 @@ class GenerateActivities:
         self.GenerateWeeklyActivities()
         self.GenerateQuarterlyActivities()
         self.GenerateMudras()
-        if is_new_user:
-            self.GenerateShloks()
+        # if is_new_user:
+        self.GenerateShloks()
     
     def AddExistingActivitiesToExclude(self, activities: list):
         for i in activities:
@@ -501,26 +503,32 @@ def convert_datetime_to_str(date, data=""):
     return string
 
 def min_date(date1: datetime.datetime, date2: datetime.datetime):
-    year1 = date1.year
-    year2 = date2.year
-    if year2 > year1:
+
+    if date1 < date2:
         return date1
-    elif year2 < year1:
-        return date2
-    
-    month1 = date1.month
-    month2 = date2.month
-    if month2 > month1:
-        return date1
-    elif month2 < month1:
+    else: 
         return date2
 
-    day1 = date1.day
-    day2 = date2.day
-    if day2 > day1:
-        return date1
-    elif day2 < day1:
-        return date2
+    # year1 = date1.year
+    # year2 = date2.year
+    # if year2 > year1:
+    #     return date1
+    # elif year2 < year1:
+    #     return date2
+    
+    # month1 = date1.month
+    # month2 = date2.month
+    # if month2 > month1:
+    #     return date1
+    # elif month2 < month1:
+    #     return date2
+
+    # day1 = date1.day
+    # day2 = date2.day
+    # if day2 > day1:
+    #     return date1
+    # elif day2 < day1:
+    #     return date2
 
 def is_in_actDone(generator: GenerateActivities, act_id):
     return (act_id in generator.actDone)
@@ -571,8 +579,9 @@ for k in actListRefCurrGrade:
     id = int(k["act_category_id"])
     act_id = int(k["activity_id"])
 
-    if is_in_actDone(Generator, act_id):
-        continue
+    # if is_in_actDone(Generator, act_id):
+    #     print(id, act_id)
+    #     continue
 
     if id == 1:
         actData.HUActList[0].append(k)
@@ -592,8 +601,8 @@ for k in actListRefCurrGrade:
 for k in actListRefPrevGrade:
     id = int(k["act_category_id"])
 
-    if is_in_actDone(Generator, act_id):
-        continue
+    # if is_in_actDone(Generator, act_id):
+    #     continue
 
     if id == 1:
         actData.HUActList[1].append(k)
@@ -611,10 +620,11 @@ for k in actListRefPrevGrade:
         actData.LHActList[1].append(k)
 
 Generator.GenerateActivities()
+# Generator.GenerateWeeklyActivities()
 
 Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
 
 # tempArr = convert_all_values_to_json_readable(Generator.fullActList)
 
-# json.dump(len(tempArr), sys.stdout, indent=4)
+# json.dump(tempArr, sys.stdout, indent=4)
 # print("\n" + str(grade))
