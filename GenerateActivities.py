@@ -302,20 +302,49 @@ class GenerateActivities:
                 
     def GenerateQuarterlyActivities(self):
         if grade not in ("N", "Jr", "Sr", "1", "2"):
-            tempLHActList = actData.LHActList
-            tempLHAct = random.choice(tempLHActList)
-
+            focus = self.focusAreaWeekly[0]
+            tempLHList = []
+            prev = True
+            if len(actData.LHActList[1]) == 0: # previous grade activities are empty
+                prev = False
+                tempLHList = FilterFunctions.focus_area(actData.LHActList[0], focus)
+            else:
+                tempLHList = FilterFunctions.focus_area(actData.LHActList[1], focus)
+            tempLHAct = random.choice(tempLHList)
+            
             for _ in range(1000):
-                if tempLHAct["activity_id"] not in self.actDone and tempLHAct["act_frequency_id"] == 1: # this number should be for quarterly frequency
+                if tempLHAct["activity_id"] not in self.actDone:
                     break
-                tempLHAct = random.choice(tempLHActList)
+                tempLHAct = random.choice(tempLHList)
 
             self.actDone.append(tempLHAct["activity_id"])
 
             tempLHAct[start] = startDate
             tempLHAct[end] = endDate
 
-            self.fullActList.append(tempLHAct.copy())
+            self.fullActList.append(tempLHAct.copy()) # Personal Growth
+            
+            if prev:
+                actData.LHActList[1] = custom_remove(actData.LHActList[1], tempLHAct)
+            else:
+                actData.LHActList[0] = custom_remove(actData.LHActList[0], tempLHAct)
+            
+            ################################################
+
+            # tempLHActList = actData.LHActList
+            # tempLHAct = random.choice(tempLHActList)
+
+            # for _ in range(1000):
+            #     if tempLHAct["activity_id"] not in self.actDone and tempLHAct["act_frequency_id"] == 1: # this number should be for quarterly frequency
+            #         break
+            #     tempLHAct = random.choice(tempLHActList)
+
+            # self.actDone.append(tempLHAct["activity_id"])
+
+            # tempLHAct[start] = startDate
+            # tempLHAct[end] = endDate
+
+            # self.fullActList.append(tempLHAct.copy())
     
     def GenerateMudras(self):
         weeks = int(dayDifference / 7) + 1
