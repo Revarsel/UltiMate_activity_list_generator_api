@@ -5,7 +5,7 @@ from dateutil.relativedelta import relativedelta
 from connection import Connection, convert_all_values_to_json_readable
 import sys
 
-if len(sys.argv) != 2:
+if len(sys.argv) != 1:
     print("Wrong Usage. Usage is: ____.py (child_id)")
     exit()
 

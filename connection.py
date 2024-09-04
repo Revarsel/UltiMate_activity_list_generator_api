@@ -79,7 +79,7 @@ class Activity(Base):
     __tablename__ = "activity"
 
     activity_id = Column(Integer, primary_key=True, autoincrement=True)# SERIAL NOT NULL,
-    standard_id = Column(BigInteger)
+    # standard_id = Column(BigInteger)
     title = Column(VARCHAR(50))# character varying(50) NOT NULL,
     gender_id = Column(BigInteger)# bigint NOT NULL,
     difficulty_level_id = Column(BigInteger, nullable=True)# bigint,
@@ -206,11 +206,12 @@ class FocusAreaFrequency(Base):
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
 
-class ShlokLength(Base):
-    __tablename__ = "shlok_length"
+class ShlokDurationCategory(Base):
+    __tablename__ = "shlok_duration_category"
 
-    shlok_length_id = Column(Integer, primary_key=True)
+    shlok_duration_category_id = Column(Integer, primary_key=True)
     name = Column(VARCHAR(50))
+    value = Column(VARCHAR)
     is_archived = Column(Boolean)
     created_by = Column(VARCHAR(35))
     updated_by = Column(VARCHAR(35), nullable=True)
@@ -276,6 +277,20 @@ class ActFocusArea(Base):
     act_focus_area_id = Column(Integer, primary_key=True)
     activity_id = Column(BigInteger)
     focus_area_id = Column(BigInteger)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
+class ShlokSequence(Base):
+    __tablename__ = "shlok_sequence"
+
+    shlok_sequence_id = Column(Integer, primary_key=True)
+    activity_id = Column(BigInteger)
+    standard_id = Column(BigInteger)
+    sequence = Column(Integer)
     is_archived = Column(Boolean)
     created_by = Column(VARCHAR(35))
     updated_by = Column(VARCHAR(35), nullable=True)
@@ -522,11 +537,9 @@ class Connection:
                         is_parent_approved=False)
             self.session.add(childAct)
             self.session.commit()
-            # break
     
     def dump_wordle_in_child_activity(self, wordle_act_list: list, child_id):
         for act in wordle_act_list:
-            # print(act)
             childAct = ChildActivity(
                         activity_id = act["activity_id"],
                         child_id = child_id,
@@ -647,8 +660,8 @@ class Connection:
 
         return arr[0]
     
-    def get_shloks(self):
-        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==4)
+    def get_shloks(self, grade):
+        selected = select(ShlokSequence).filter(ShlokSequence.standard_id==grade)
 
         result = self.session.execute(selected)
 
@@ -663,7 +676,6 @@ class Connection:
 
         arr = ["start_date", "end_date", "child_id", "activity_status_id"]
 
-        # result = self.session.execute(selected)
         fullActList = []
 
         for i in result:
@@ -681,6 +693,15 @@ class Connection:
 
         return fullActList
     
+    def get_shlok_from_activity_id(self, id):
+        selected = select(ShlokSequence).filter(ShlokSequence.activity_id==id) # select_from(ShlokSequence).join(Activity, Activity.activity_id==ShlokSequence.activity_id).
+    
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+
     def get_activities_only(self):
         selected = select(Activity)
 

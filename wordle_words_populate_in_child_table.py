@@ -33,3 +33,4 @@ for i in wordle_words:
 conn.dump_wordle_in_child_activity(fullActList, child_id)
 # print(json.dumps(fullActList.__len__(), indent=4))
 
+# 
