@@ -5,8 +5,8 @@ from dateutil.relativedelta import relativedelta
 from connection import Connection, convert_all_values_to_json_readable
 import sys
 
-if len(sys.argv) != 1:
-    print("Wrong Usage. Usage is: ____.py (child_id)")
+if len(sys.argv) == 1:
+    print("Provide A child_id To Fill Activities In")
     exit()
 
 class ActivityData:
@@ -28,35 +28,35 @@ end = "end_date" # one var for the key "End Date"
 focus_string = "focus" # one var for the key "focus"
 
 class GenerateActivities:
-    def __init__(self) -> None:
-        tempArrWeekly = []
-        tempArr2PerWeek = []
-        # for i in range(3):  # loop to order focus areas as [A,B,A,B,C,D,C,D,E,F,E,F]
-        #     for k in range(4):
-        #         if k % 2 == 0:
-        #             tempArrWeekly.append(userData.focusArea[int((i * 2))])
-        #             tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int(1 + (i * 2))]))
-        #         else:
-        #             tempArrWeekly.append(userData.focusArea[int(1 + (i * 2))])
-        #             tempArr2PerWeek.append((userData.focusArea[int((i * 2))], userData.focusArea[int((i * 2) + 1)]))
+    def __init__(self, start_date=datetime.datetime.now(), end_date=datetime.datetime.now()+relativedelta(months=3), weeks_completed=0) -> None:
+        self.startDate = start_date
+        self.endDate = end_date
+        self.dayDifference = (self.endDate - self.startDate).days # - 84 # 84 days = 12 weeks
 
-        weeks_num = int(dayDifference/7)
-        self.focusAreaWeekly = Conn.get_focus_area_frequency(grade_num)[:weeks_num+1] #tempArrWeekly
+        weeks_num = int(self.dayDifference/7) + 1
+
+        focusAreaFrequency = Conn.get_focus_area_frequency(grade_num)
+        self.focusAreaWeekly = focusAreaFrequency[weeks_completed:weeks_completed+weeks_num+1] #tempArrWeekly
+
+        # print(weeks_num)
+        # print(focusAreaFrequency)
+        # print(self.focusAreaWeekly)
+
         # self.focusArea2PerWeek = tempArr2PerWeek #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArr2PerWeek
         self.fullActList = []
         self.monthDays = []
         self.actDone = [] # this stores all activity ids to check for duplicates in the following activity generators
         for j in range(1, 4):
-            monthPrev = startDate + relativedelta(months=max((j-1), 0))
-            monthNext = startDate + relativedelta(months=j)
+            monthPrev = self.startDate + relativedelta(months=max((j-1), 0))
+            monthNext = self.startDate + relativedelta(months=j)
             dayDiff = (monthNext - monthPrev).days
             self.monthDays.append(dayDiff)
     
     def GenerateDailyActivities(self):
         discuss = 0 # 0 = False, 1 = True
 
-        for b in range(dayDifference):
-            currDate = startDate + relativedelta(days=b, second=30)
+        for b in range(self.dayDifference):
+            currDate = self.startDate + relativedelta(days=b, second=30)
             nextDate = currDate + relativedelta(hours=23, minutes=59) # seconds = 0
             day = currDate.weekday()
             if day == 5:
@@ -128,7 +128,7 @@ class GenerateActivities:
         index = 0
         for months in range(len(self.monthDays)):
             for currDay in range(self.monthDays[months]):
-                currDate = startDate + relativedelta(months=months, days=currDay, second=30)
+                currDate = self.startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
 
                 actData.HUActList[0][index][start] = currDate   # Habit Up
@@ -143,12 +143,6 @@ class GenerateActivities:
                 # actData.RNTActList[index][end] = nextDate
                 # actData.RNTActList[index + 1][end] = nextDate
 
-                #remove_key_values_from_dictionary(actData.HUActList[index])
-                #remove_key_values_from_dictionary(actData.HUActList[index + 1])
-                #remove_key_values_from_dictionary(actData.RNTActList[index])
-                #remove_key_values_from_dictionary(actData.RNTActList[index + 1])
-
-
                 self.fullActList.append(actData.HUActList[0][index].copy())
                 self.fullActList.append(actData.HUActList[0][index + 1].copy())
 
@@ -158,12 +152,12 @@ class GenerateActivities:
 
 
     def GenerateWeeklyActivities(self):
-        weeks = int(dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
+        weeks = int(self.dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
 
         for i in range(weeks): # start to end date number of weeks
             focus = self.focusAreaWeekly[i]
-            currDate = startDate + relativedelta(weeks=i, seconds=30)
-            nextDate = min_date(currDate + relativedelta(days=6, hours=23, minutes=59), endDate) # seconds=0
+            currDate = self.startDate + relativedelta(weeks=i, seconds=30)
+            nextDate = min_date(currDate + relativedelta(days=6, hours=23, minutes=59), self.endDate) # seconds=0
 
             if grade in ("3", "4", "5"): # Interpersonal Growth (once a week)
                 tempIPGList = []
@@ -321,8 +315,8 @@ class GenerateActivities:
 
             self.actDone.append(tempLHAct["activity_id"])
 
-            tempLHAct[start] = startDate
-            tempLHAct[end] = endDate
+            tempLHAct[start] = self.startDate
+            tempLHAct[end] = self.endDate
 
             self.fullActList.append(tempLHAct.copy()) # Personal Growth
             
@@ -349,14 +343,13 @@ class GenerateActivities:
             # self.fullActList.append(tempLHAct.copy())
     
     def GenerateMudras(self):
-        weeks = int(dayDifference / 7) + 1
-        currDate = startDate
+        weeks = int(self.dayDifference / 7) + 1
+        currDate = self.startDate
         nextDate = currDate + relativedelta(weeks=2)
 
         existing_mudras: list = Conn.get_child_activities_with_activity_table(child_id)
 
-        mudras.sort(key=sort_activity_id)
-        existing_mudras = list(filter(func, existing_mudras))
+        existing_mudras = list(filter(filter_mudra, existing_mudras))
 
         for i in range(weeks):
             if i % 2 == 1:
@@ -370,33 +363,21 @@ class GenerateActivities:
             rand_mudra["start_date"] = currDate
             rand_mudra["end_date"] = nextDate
             currDate = nextDate
-            nextDate = min_date(endDate, currDate + relativedelta(weeks=2))
+            nextDate = min_date(self.endDate, currDate + relativedelta(weeks=2))
             self.fullActList.append(rand_mudra.copy())
     
     def GenerateShloks(self):
         shloks = Conn.get_shloks()
 
-        short = list(filter(filter_short, shloks))
-        medium = list(filter(filter_medium, shloks))
-        long = list(filter(filter_long, shloks))
+        next_shlok = shloks[0]
+        for i in shloks:
+            if int(i["sequence"]) == 1:
+                next_shlok = i
+                next_shlok["start_date"] = self.startDate
+                next_shlok["end_date"] = self.startDate + relativedelta(weeks=2)
+                break
 
-        short_shlok = random.choice(short)
-        medium_shlok = random.choice(medium)
-        long_shlok = random.choice(long)
-
-        short_shlok["start_date"] = startDate
-        short_shlok["end_date"] = startDate + relativedelta(weeks=2)
-
-        medium_shlok["start_date"] = startDate
-        medium_shlok["end_date"] = startDate + relativedelta(weeks=2)
-
-        long_shlok["start_date"] = startDate
-        long_shlok["end_date"] = startDate + relativedelta(weeks=2)
-
-        self.fullActList.append(short_shlok)
-        self.fullActList.append(medium_shlok)
-        self.fullActList.append(long_shlok)
-
+        self.fullActList.append(next_shlok)
 
     def GenerateActivities(self):
         self.GenerateDailyActivities()
@@ -410,57 +391,14 @@ class GenerateActivities:
         for i in activities:
             self.actDone.append(i["activity_id"])
 
-
-startDate = datetime.datetime.now() #datetime.datetime(2024, 6, 1)
-endDate = startDate + relativedelta(months=3)
-dayDifference = (endDate - startDate).days # - 84 # 84 days = 12 weeks
-
-Conn = Connection()
-
-# MAIN INPUT VARIABLES
-pin_code = 411038
-religion = "Hindu" # jai shree ram
-grade = ""
-focus_area = ["A", "B", "C", "D", "E", "F"]
-gender = "MALE"
-language = "english"
-
-child_id = sys.argv[1]
-child_details = Conn.get_child_details(child_id)
-grade_num = int(child_details["standard_id"])  # 1 -> N, 2 -> Jr etc
-is_new_user = child_details["is_new_user"]
-
-quarter = 1
-
-map_grade = ["N", "Jr", "Sr"] # = [1,2,3] grade_num
-if grade_num - 3 < 0:
-    grade = map_grade[grade_num]
-else:
-    grade = str(grade_num-3)
-
 class FilterFunctions:
-    def grade(list, grade) -> list:
-        tempArr = []
-        for t in list:
-            if t["standard_id"] == grade: # Uncomment this for main deployment
-                tempArr.append(t)
-        return tempArr
-    
-        # if pair["standard_id"] == grade:
-        #     return True
-        # return False
-
     def focus_area(list, focus) -> list:
-        return list
-        # tempArr = []
-        # for k in list:
-        #     if k["primary_skill"] == focus:
-        #         tempArr.append(k)
-        # return tempArr
-    
-        # if pair["primary_skill"] == focus: # Uncomment this for main deployment
-        #     return True
-        # return False
+        tempArr = []
+        for k in list:
+            if k["focus_area_id"] == focus:
+                tempArr.append(k)
+        return tempArr
+        # return list
 
 counter = 0
 
@@ -475,32 +413,6 @@ def custom_remove(data, data_to_remove):
     else:
         return []
 
-def convert_datetime_to_str(date, data=""):
-    if type(date) == str:
-        print(data)
-        return date
-    else:
-        pass
-        #return date
-    year = date.year
-    month = date.month
-    day = date.day
-    hour = date.hour
-    minute = date.minute
-    second = date.second
-    if int(month) / 10 < 1:
-        month = "0{month}".format(month=month)
-    if int(day) / 10 < 1:
-        day = "0{day}".format(day=day)
-    if int(hour) / 10 < 1:
-        hour = "0{hour}".format(hour=hour)
-    if int(minute) / 10 < 1:
-        minute = "0{minute}".format(minute=minute)
-    if int(second) / 10 < 1:
-        second = "0{second}".format(second=second)
-
-    string = "{year}-{month}-{day} {hour}:{minutes}:{seconds}".format(year=year, month=month, day=day, hour=hour, minutes=minute, seconds=second)
-    return string
 
 def min_date(date1: datetime.datetime, date2: datetime.datetime):
 
@@ -533,7 +445,7 @@ def min_date(date1: datetime.datetime, date2: datetime.datetime):
 def is_in_actDone(generator: GenerateActivities, act_id):
     return (act_id in generator.actDone)
 
-def func(val):
+def filter_mudra(val):
     if val["act_category_id"] == 2 and val["activity_game_type_id"] == 5:
         return True
     return False
@@ -561,70 +473,103 @@ def filter_shloks(data):
         return True
     return False
 
-actListBothGrade = Conn.get_activities(grade_num)
-actListRefCurrGrade = actListBothGrade[0]
-actListRefPrevGrade = actListBothGrade[1]
+Conn = Connection()
 
-mudras = Conn.get_mudras()
+for child_num in range(1, len(sys.argv)):
+    print(child_num)
 
-wordle_words_list = Conn.get_wordle_words(startDate, endDate, grade_num)
-# print(len(wordle_words_list), dayDifference, end='\n')
-# print(wordle_words_list[0], end='\n')
-# print(wordle_words_list[-1], end='\n')
+    child_id = sys.argv[child_num]
+    child_details = Conn.get_child_details(child_id)
+    grade_num = int(child_details["standard_id"])  # 1 -> N, 2 -> Jr etc
+    user_id = int(child_details["user_id"])
+    is_new_user = child_details["is_new_user"]
+    grade = ""
 
-Generator = GenerateActivities()
-Generator.AddExistingActivitiesToExclude(Conn.get_child_activity_table_activities(child_id))
+    map_grade = ["N", "Jr", "Sr"] # = [1,2,3] grade_num
+    if grade_num - 3 < 0:
+        grade = map_grade[grade_num]
+    else:
+        grade = str(grade_num-3)
 
-for k in actListRefCurrGrade:
-    id = int(k["act_category_id"])
-    act_id = int(k["activity_id"])
+    subscription = Conn.get_subscription_from_user_id(user_id) # returns all subscriptions of the user in descending order
+    start_date: datetime.datetime = subscription[0]["start_date"]
+    end_date: datetime.datetime = subscription[0]["end_date"]
 
-    # if is_in_actDone(Generator, act_id):
-    #     print(id, act_id)
-    #     continue
+    weeks_completed_already = 0
+    if len(subscription) > 0:
+        for index, value in enumerate(subscription[1:]):
+            weeks = 0
+            sub_start: datetime.datetime = value["start_date"]
+            sub_end: datetime.datetime = value["end_date"]
+            weeks = int(((sub_end-sub_start).days)/7)
+            weeks_completed_already += weeks
 
-    if id == 1:
-        actData.HUActList[0].append(k)
-    elif id == 2:
-        actData.RNTActList[0].append(k)
-    elif id == 3:
-        actData.WordleList[0].append(k)
-    elif id == 4:
-        actData.CCActList[0].append(k)
-    elif id == 5:
-        actData.PGActList[0].append(k)
-    elif id == 6:
-        actData.IPGActList[0].append(k)
-    elif id == 7:
-        actData.LHActList[0].append(k)
+    # print(start_date)
+    # print(end_date)
+    # print((end_date-start_date).days)
+    # print(int((((subscription[1]["end_date"])-(subscription[1]["start_date"])).days)/7))
+    # print(subscription[1:])
 
-for k in actListRefPrevGrade:
-    id = int(k["act_category_id"])
+    # generate2 = GenerateActivities(start_date, end_date, 0)
+    # generate2.GenerateDailyActivities()
+    # print()
+    # generatpr = GenerateActivities(start_date, end_date, weeks_completed_already)
+    # generatpr.GenerateDailyActivities()
 
-    # if is_in_actDone(Generator, act_id):
-    #     continue
+    # exit()
 
-    if id == 1:
-        actData.HUActList[1].append(k)
-    elif id == 2:
-        actData.RNTActList[1].append(k)
-    elif id == 3:
-        actData.WordleList[1].append(k)
-    elif id == 4:
-        actData.CCActList[1].append(k)
-    elif id == 5:
-        actData.PGActList[1].append(k)
-    elif id == 6:
-        actData.IPGActList[1].append(k)
-    elif id == 7:
-        actData.LHActList[1].append(k)
+    actListBothGrade = Conn.get_activities(grade_num)
+    mudras = Conn.get_mudras()
+    actListRefCurrGrade = actListBothGrade[0]
+    actListRefPrevGrade = actListBothGrade[1]
 
-Generator.GenerateActivities()
-# Generator.GenerateWeeklyActivities()
+    Generator = GenerateActivities(start_date=start_date, end_date=end_date, weeks_completed=weeks_completed_already)
+    wordle_words_list = Conn.get_wordle_words(Generator.startDate, Generator.endDate, grade_num)
+    Generator.AddExistingActivitiesToExclude(Conn.get_child_activity_table_activities(child_id))
 
-Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
+    for k in actListRefCurrGrade:
+        id = int(k["act_category_id"])
+        act_id = int(k["activity_id"])
 
-# tempArr = convert_all_values_to_json_readable(Generator.fullActList)
+        if id == 1:
+            actData.HUActList[0].append(k)
+        elif id == 2:
+            actData.RNTActList[0].append(k)
+        elif id == 3:
+            actData.WordleList[0].append(k)
+        elif id == 4:
+            actData.CCActList[0].append(k)
+        elif id == 5:
+            actData.PGActList[0].append(k)
+        elif id == 6:
+            actData.IPGActList[0].append(k)
+        elif id == 7:
+            actData.LHActList[0].append(k)
 
-# json.dump(tempArr, sys.stdout, indent=4)
-# print("\n" + str(grade))
+    for k in actListRefPrevGrade:
+        id = int(k["act_category_id"])
+
+        if id == 1:
+            actData.HUActList[1].append(k)
+        elif id == 2:
+            actData.RNTActList[1].append(k)
+        elif id == 3:
+            actData.WordleList[1].append(k)
+        elif id == 4:
+            actData.CCActList[1].append(k)
+        elif id == 5:
+            actData.PGActList[1].append(k)
+        elif id == 6:
+            actData.IPGActList[1].append(k)
+        elif id == 7:
+            actData.LHActList[1].append(k)
+
+    Generator.GenerateActivities()
+    # Generator.GenerateWeeklyActivities()
+
+    Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
+
+    # tempArr = convert_all_values_to_json_readable(Generator.fullActList)
+
+    # json.dump(tempArr, sys.stdout, indent=4)
+    # print("\n" + str(grade))

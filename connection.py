@@ -271,6 +271,21 @@ class Users(Base):
     updated_date = Column(TIMESTAMP, nullable=True)
     revision = Column(Integer, default=0, nullable=True)
 
+class UserSubscription(Base):
+    __tablename__ = "user_subscription"
+
+    user_subscription_id = Column(Integer, primary_key=True)
+    subscription_plan_id = Column(BigInteger)
+    user_id = Column(BigInteger)
+    start_date = Column(TIMESTAMP)
+    end_date = Column(TIMESTAMP)
+    is_archived = Column(Boolean)
+    created_by = Column(VARCHAR(35))
+    updated_by = Column(VARCHAR(35), nullable=True)
+    created_date = Column(TIMESTAMP)
+    updated_date = Column(TIMESTAMP, nullable=True)
+    revision = Column(Integer, default=0, nullable=True)
+
 class ActFocusArea(Base):
     __tablename__ = "act_focus_area"
 
@@ -485,35 +500,72 @@ class Connection:
         return fullActList
     
     def get_activities(self, grade):
-        selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade)
+        selected = select(ActFocusArea.focus_area_id, ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).join(ActFocusArea, ActFocusArea.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade).filter(Activity.is_trial==False)
         # selected = select(Activity).where(Activity.standard_id==grade)
 
         result = self.session.execute(selected)
 
         arr = []
         for i in result:
-            tempdict: dict = i[1].__dict__.copy()
+            tempdict: dict = i[2].__dict__.copy()
             key = list(tempdict.keys())
 
             tempdict.pop(key[0])
-            tempdict["standard_id"] = i[0]
+            tempdict["focus_area_id"] = i[0]
+            tempdict["standard_id"] = i[1]
 
             arr.append(tempdict.copy())
 
         if grade == 1:
             return [arr, []]
         else:
-            selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==(int(grade)-1))
-            # selected = select(Activity).where(Activity.standard_id==grade)
+            selected = select(ActFocusArea.focus_area_id, ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).join(ActFocusArea, ActFocusArea.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==int(grade-1)).filter(Activity.is_trial==False)
 
             result = self.session.execute(selected)
             arr1 = []
             for i in result:
-                tempdict: dict = i[1].__dict__.copy()
+                tempdict: dict = i[2].__dict__.copy()
                 key = list(tempdict.keys())
 
                 tempdict.pop(key[0])
-                tempdict["standard_id"] = i[0]
+                tempdict["focus_area_id"] = i[0]
+                tempdict["standard_id"] = i[1]
+
+                arr1.append(tempdict.copy())
+            
+            return [arr, arr1]
+        
+    def get_trial_activities(self, grade):
+        selected = select(ActFocusArea.focus_area_id, ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).join(ActFocusArea, ActFocusArea.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==grade).filter(Activity.is_trial==True)
+        # selected = select(Activity).where(Activity.standard_id==grade)
+
+        result = self.session.execute(selected)
+
+        arr = []
+        for i in result:
+            tempdict: dict = i[2].__dict__.copy()
+            key = list(tempdict.keys())
+
+            tempdict.pop(key[0])
+            tempdict["focus_area_id"] = i[0]
+            tempdict["standard_id"] = i[1]
+
+            arr.append(tempdict.copy())
+
+        if grade == 1:
+            return [arr, []]
+        else:
+            selected = select(ActFocusArea.focus_area_id, ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, ActivityStandard.activity_id==Activity.activity_id).join(ActFocusArea, ActFocusArea.activity_id==Activity.activity_id).where(ActivityStandard.standard_id==int(grade-1)).filter(Activity.is_trial==True)
+
+            result = self.session.execute(selected)
+            arr1 = []
+            for i in result:
+                tempdict: dict = i[2].__dict__.copy()
+                key = list(tempdict.keys())
+
+                tempdict.pop(key[0])
+                tempdict["focus_area_id"] = i[0]
+                tempdict["standard_id"] = i[1]
 
                 arr1.append(tempdict.copy())
             
@@ -652,7 +704,16 @@ class Connection:
         return arr
     
     def get_mudras(self):
-        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==5)
+        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==5).filter(Activity.is_trial==False)
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
+    
+    def get_trial_mudras(self):
+        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==5).filter(Activity.is_trial==True)
 
         result = self.session.execute(selected)
 
@@ -762,6 +823,15 @@ class Connection:
             fullActList.append(ActData.copy())
 
         return fullActList[0]
+    
+    def get_subscription_from_user_id(self, user_id):
+        selected = select(UserSubscription).where(UserSubscription.user_id==user_id).order_by(desc(UserSubscription.start_date))
+
+        result = self.session.execute(selected)
+
+        arr = get_result_as_dict(result)
+
+        return arr[0]
 
 
 if __name__ == "__main__":
