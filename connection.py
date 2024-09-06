@@ -114,7 +114,7 @@ class Activity(Base):
     who_should_not_do = Column(Text, nullable=True)# text,
     more_info = Column(Text, nullable=True)# text,
     deity = Column(VARCHAR(50), nullable=True)# character varying(50),
-    shlok_length_id = Column(Integer, nullable=True)
+    # shlok_length_id = Column(Integer, nullable=True)
     narrated_by = Column(VARCHAR(40), nullable=True)
     is_archived = Column(Boolean)# boolean NOT NULL,
     created_by = Column(VARCHAR(35))# character varying(35) NOT NULL,
