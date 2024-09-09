@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select, asc, desc
+from sqlalchemy import create_engine, BigInteger, Boolean, Integer, VARCHAR, Column, TIMESTAMP, and_, Text, select, asc, desc, update
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dateutil.relativedelta import relativedelta
 import datetime
@@ -588,7 +588,7 @@ class Connection:
                         is_favourite=False,
                         is_parent_approved=False)
             self.session.add(childAct)
-            self.session.commit()
+        self.session.commit()
     
     def dump_wordle_in_child_activity(self, wordle_act_list: list, child_id):
         for act in wordle_act_list:
@@ -832,11 +832,19 @@ class Connection:
         arr = get_result_as_dict(result)
 
         return arr[0]
+    
+    def update_child_activity_table_archive(self, child_id, date: datetime.datetime):
+        selected = update(ChildActivity).where(ChildActivity.child_id == child_id).where(ChildActivity.start_date > date).values(is_archived=True)
+
+        self.session.execute(selected)
+        self.session.commit()
+
 
 
 if __name__ == "__main__":
     conn = Connection()
-    print(conn.get_child_details(4))
+    print(conn.get_child_details(3))
+    # conn.update_child_activity_table_archive(41, datetime.datetime(2024, 10, 29))
 # print(len(conn.get_focus_area_frequency(1)[:26]))
 
 # startdate = datetime.datetime(2024, 6, 1)

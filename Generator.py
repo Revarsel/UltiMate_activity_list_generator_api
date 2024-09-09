@@ -51,7 +51,8 @@ class FilterFunctions:
         return list
 
 class GenerateActivities:
-    def __init__(self, child_id, Conn: Connection, trial = False) -> None:
+    def __init__(self, child_id, Conn: Connection) -> None:
+        trial = False
         self.actData = ActivityData()
 
         self.Conn = Conn
@@ -76,8 +77,17 @@ class GenerateActivities:
             self.shloks = self.Conn.get_shloks(1)
 
         subscription = self.Conn.get_subscription_from_user_id(self.user_id) # returns all subscriptions of the user in descending order
+        if len(subscription) == 0:
+            raise Exception("No subscription found!")
+        
         start_date: datetime.datetime = subscription[0]["start_date"]
         end_date: datetime.datetime = subscription[0]["end_date"]
+
+        plan = subscription[0]["subscription_plan_id"]
+        if plan == 5:
+            trial = True
+        else:
+            trial = False
 
         weeks_completed_already = 0
         if len(subscription) > 0:
@@ -105,7 +115,6 @@ class GenerateActivities:
 
         for k in actListRefCurrGrade:
             id = int(k["act_category_id"])
-            act_id = int(k["activity_id"])
 
             if id == 1:
                 self.actData.HUActList[0].append(k)
