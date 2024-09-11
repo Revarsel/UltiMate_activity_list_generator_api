@@ -644,18 +644,10 @@ class Connection:
 
         arr = get_result_as_dict(result)
 
-        # for i in result:
-        #     tempdict: dict = i[0].__dict__
-        #     key = list(tempdict.keys())
-
-        #     tempdict.pop(key[0])
-
-        #     arr.append(tempdict.copy())
-
         return arr[0]
     
-    def get_stories(self): #, week, grade):
-        selected = select(Story) #.filter(Story.standard_id==grade).filter(Story.week_num<=week)
+    def get_stories(self):
+        selected = select(Story)
 
         result = self.session.execute(selected)
 
@@ -673,13 +665,28 @@ class Connection:
         return arr[0]
     
     def get_wordle_act(self, grade):
-        selected = select(Activity).filter(Activity.act_category_id==3).filter(Activity.standard_id==grade)
+        selected = select(ActivityStandard.standard_id, Activity).select_from(Activity).join(ActivityStandard, Activity.activity_id==ActivityStandard.activity_id).filter(Activity.act_category_id==3).filter(ActivityStandard.standard_id==grade)
 
         result = self.session.execute(selected)
 
-        arr = get_result_as_dict(result)
+        arr = ["standard_id"]
 
-        return arr[0][0]
+        fullActList = []
+
+        for i in result:
+            ActData: dict = i[1].__dict__.copy()
+
+            key = list(ActData.keys())
+
+            ActData.pop(key[0])
+
+            dict1 = {arr[0]: i[0]}
+
+            ActData.update(dict1)
+
+            fullActList.append(ActData.copy())
+
+        return fullActList[0]
     
     def get_focus_area(self):
         selected = select(FocusArea).order_by(asc(FocusArea.standard_id))
@@ -838,7 +845,6 @@ class Connection:
 
         self.session.execute(selected)
         self.session.commit()
-
 
 
 if __name__ == "__main__":

@@ -6,19 +6,25 @@ import sys
 
 conn = Connection()
 
-startdate = datetime.datetime.now()
-enddate = startdate + relativedelta(months=3)
 child_id = sys.argv[1]
 child_details = conn.get_child_details(child_id)
-grade = int(child_details["standard_id"])
+user_id = int(child_details["user_id"])
+grade_num = int(child_details["standard_id"])
 
-wordle_words = conn.get_wordle_words(startdate, enddate, grade)
+subscription = conn.get_subscription_from_user_id(user_id) # returns all subscriptions of the user in descending order
+if len(subscription) == 0:
+    raise Exception("No subscription found!")
 
-wordle_act = conn.get_wordle_act(grade)
+start_date: datetime.datetime = subscription[0]["start_date"]
+end_date: datetime.datetime = subscription[0]["end_date"]
+
+wordle_words = conn.get_wordle_words(start_date, end_date, grade_num)
+
+wordle_act = conn.get_wordle_act(grade_num)
 
 fullActList = []
 
-currDate = startdate + datetime.timedelta(seconds=30)
+currDate = start_date + datetime.timedelta(seconds=30)
 
 for i in wordle_words:
     wordle_activity = wordle_act
@@ -32,5 +38,3 @@ for i in wordle_words:
 # print(json.dumps(fullActList, indent=4))
 conn.dump_wordle_in_child_activity(fullActList, child_id)
 # print(json.dumps(fullActList.__len__(), indent=4))
-
-# 
