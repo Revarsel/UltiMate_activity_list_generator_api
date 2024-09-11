@@ -3,14 +3,13 @@ from connection import Connection, convert_all_values_to_json_readable
 import sys
 import json
 
-if len(sys.argv) in [1,2]:
-    print("Usage is (is_upgrade) [child_id_1, child_id_2, ...]")
+if len(sys.argv) == 1:
+    print("Usage is [child_id_1, child_id_2, ...]")
     exit()
 
 Conn = Connection()
 
-
-for child_num in range(2, len(sys.argv)-1):
+for child_num in range(1, len(sys.argv)):
     try:
         child_id = sys.argv[child_num]
         Generator = GenerateActivities(child_id, Conn)
