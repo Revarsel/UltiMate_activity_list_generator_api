@@ -277,6 +277,7 @@ class UserSubscription(Base):
     user_subscription_id = Column(Integer, primary_key=True)
     subscription_plan_id = Column(BigInteger)
     user_id = Column(BigInteger)
+    child_id = Column(BigInteger)
     start_date = Column(TIMESTAMP)
     end_date = Column(TIMESTAMP)
     is_archived = Column(Boolean)
@@ -831,8 +832,8 @@ class Connection:
 
         return fullActList[0]
     
-    def get_subscription_from_user_id(self, user_id):
-        selected = select(UserSubscription).where(UserSubscription.user_id==user_id).order_by(desc(UserSubscription.start_date))
+    def get_subscription_from_child_id(self, child_id):
+        selected = select(UserSubscription).where(UserSubscription.child_id==child_id).order_by(desc(UserSubscription.start_date))
 
         result = self.session.execute(selected)
 

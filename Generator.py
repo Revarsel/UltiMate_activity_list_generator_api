@@ -51,8 +51,7 @@ class FilterFunctions:
         return list
 
 class GenerateActivities:
-    def __init__(self, child_id, Conn: Connection) -> None:
-        trial = False
+    def __init__(self, child_id, Conn: Connection, trial: bool) -> None:
         self.actData = ActivityData()
 
         self.Conn = Conn
@@ -75,22 +74,22 @@ class GenerateActivities:
             self.shloks = self.Conn.get_shloks(3)
         elif self.grade_num < 3:
             self.shloks = self.Conn.get_shloks(1)
-
-        subscription = self.Conn.get_subscription_from_user_id(self.user_id) # returns all subscriptions of the user in descending order
-        if len(subscription) == 0:
-            raise Exception("No subscription found!")
         
-        start_date: datetime.datetime = subscription[0]["start_date"]
-        end_date: datetime.datetime = subscription[0]["end_date"]
-
-        plan = subscription[0]["subscription_plan_id"]
-        if plan == 5:
-            trial = True
+        if trial == False:
+            subscription = self.Conn.get_subscription_from_child_id(self.child_id) # returns all subscriptions of the user in descending order
+            if len(subscription) == 0:
+                raise Exception("No subscription found!")
+        
+            start_date: datetime.datetime = subscription[0]["start_date"]
+            end_date: datetime.datetime = subscription[0]["end_date"]
         else:
-            trial = False
+            start_date: datetime.datetime = datetime.datetime.now()
+            end_date: datetime.datetime = datetime.datetime.now() + relativedelta(days=7)
+        
+        plan = subscription[0]["subscription_plan_id"]
 
         weeks_completed_already = 0
-        if len(subscription) > 0:
+        if len(subscription) > 1:
             for index, value in enumerate(subscription[1:]):
                 weeks = 0
                 sub_start: datetime.datetime = value["start_date"]
@@ -104,11 +103,9 @@ class GenerateActivities:
         if trial:
             actListBothGrade = self.Conn.get_trial_activities(self.grade_num)
             self.mudras = self.Conn.get_trial_mudras()
-            # end_date = datetime.datetime.now() + relativedelta(days=7)
         else:
             actListBothGrade = self.Conn.get_activities(self.grade_num)
             self.mudras = self.Conn.get_mudras()
-            # end_date=datetime.datetime.now()+relativedelta(months=3)
 
         actListRefCurrGrade = actListBothGrade[0]
         actListRefPrevGrade = actListBothGrade[1]

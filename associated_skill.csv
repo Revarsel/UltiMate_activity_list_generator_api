@@ -1,0 +1,38 @@
+"associated_skill_id","name","description","is_archived","created_by","updated_by","created_date","updated_date","revision"
+1,"Cognitive",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+2,"Collaboration",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+3,"Communication",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+4,"Compassion",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+5,"Concentration",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+6,"Conflict Resolution",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+7,"Creativity",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+8,"Critical Thinking",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+9,"Cultural Competence",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+10,"Emotional Regulations",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+11,"Empathy",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+12,"Entrepreneurship",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+13,"Financial Literacy",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+14,"Goal Setting",NULL,False,"admin",NULL,"2024-06-03 12:00:00",NULL,0
+15,"Gratitude",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+16,"Imagination",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+17,"Innovation",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+18,"Integrity",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+19,"Leadership",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+20,"Logical and Lateral",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+21,"Memory",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+22,"Mindfulness",NULL,False,"admin",NULL,"2024-05-11 12:00:00",NULL,0
+23,"Moral Values",NULL,False,"admin",NULL,"2024-05-12 12:00:00",NULL,0
+24,"Fine Motor Skills",NULL,False,"admin",NULL,"2024-05-13 12:00:00",NULL,0
+25,"Observation Skills",NULL,False,"admin",NULL,"2024-05-14 12:00:00",NULL,0
+26,"Health and Fitness",NULL,False,"admin",NULL,"2024-05-15 12:00:00",NULL,0
+27,"Problem Solving",NULL,False,"admin",NULL,"2024-05-16 12:00:00",NULL,0
+28,"Resilience",NULL,False,"admin",NULL,"2024-05-17 12:00:00",NULL,0
+29,"Self Discipline",NULL,False,"admin",NULL,"2024-05-18 12:00:00",NULL,0
+30,"Socio Environmental",NULL,False,"admin",NULL,"2024-05-19 12:00:00",NULL,0
+31,"Strategic Thinking",NULL,False,"admin",NULL,"2024-05-20 12:00:00",NULL,0
+32,"Stress Management",NULL,False,"admin",NULL,"2024-05-21 12:00:00",NULL,0
+33,"Team Work",NULL,False,"admin",NULL,"2024-05-22 12:00:00",NULL,0
+34,"Time Management",NULL,False,"admin",NULL,"2024-05-23 12:00:00",NULL,0
+35,"Assertiveness",NULL,False,"admin",NULL,"2024-05-24 12:00:00",NULL,0
+36,"Decision Making",NULL,False,"admin",NULL,"2024-05-25 12:00:00",NULL,0
+37,"Kindness",NULL,False,"admin",NULL,"2024-05-25 12:00:00",NULL,0

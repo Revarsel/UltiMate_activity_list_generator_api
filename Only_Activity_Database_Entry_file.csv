@@ -1,0 +1,201 @@
+Act_id,Focus area,associated Skill 1,associated Skill 2,associated skill 3,associated skill 4,1,2,3,4,5,6,7,8,9,10,11,12
+98,Creativity,Creativity,Fine Motor Skills,None,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+99,Creativity,Creativity,Fine Motor Skills,Expression,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+100,Motor Skills,Concentration,Gross Motor Skills,Balance,Patience,Y,None,None,None,None,None,None,None,None,None,None,None
+101,Creativity,Sensory Development,Fine Motor Skills,Creativity,Expression,Y,Y,Y,None,None,None,None,None,None,None,None,None
+102,Cognitive,Sensory Development,Creativity,None,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+103,Motor Skills,Critical thinking,Focus,Determination,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+104,Empathy,Fine Motor Skills,Creativity,None,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+105,Empathy,Peace,Patience,Sensory Development,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+106,Imagination,Patience,Fine Motor Skills,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+107,Creativity,Fine Motor Skills,Confidence,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+108,Cognitive,Fine motor skills,Focus,Creativity,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+109,Sensory development,Fine Motor Skills,concentration,Observation skills,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+110,Creativity & imagination,Fine Motor Skills,Patience,Concentration,None,Y,Y,Y,Y,Y,None,None,None,None,None,None,None
+111,Creativity & imagination,Fine Motor Skills,Patience,Concentration,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+112,Creativity & imagination,Focus,Patience,Observation skills,Fine Motor Skills,Y,Y,Y,None,None,None,None,None,None,None,None,None
+113,Creativity,Fine Motor Skills,Concentration,None,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+114,Logical and Lateral,Cognitive Development,Focus,Patience,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+115,Logical and Lateral,Creativity,Imagination,Patience,Concentration,Y,Y,None,None,None,None,None,None,None,None,None,None
+116,Communication,Teamwork,Collaboration,None,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+117,Creativity,Fine Motor Skills,Creativity,Focus,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+118,Motor Skills,Critical thinking,Focus,Concentration,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+119,Creativity,Fine Motor Skills,Focus,None,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+120,Cognitive,Observation skills,Memory,None,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+121,Motor Skills,Patience,concentration,None,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+122,Motor Skills,Concentration,Patience,Cognitive,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+123,Imagination,Creativity,Cognitive Development,Observation skills,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+124,Motor Skills,Creativity,Patience,Concentration,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+125,Motor Skills,Concentration,Problem Solving,Patience,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+126,Cognitive,Sensory Development,Critical Thinking,Memory,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+127,Cognitive,Sensory Development,Memory,Critical Thinking,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+128,Creativity,Sensory Development,Critical Thinking,Concentration,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+129,Creativity,motor skills,Sensory development,Concentration,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+130,Memory,cognitive development,Patience,focus,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+131,Self Discipline,Fine Motor Skills,Patience,None,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+132,Motor Skills,Creativity,Fine Motor Skills,Patience,None,Y,Y,None,None,None,None,None,None,None,None,None,None
+133,Motor Skills,Creativity,Imagination,Sensory Development,None,Y,Y,Y,None,None,None,None,None,None,None,None
+134,Creativity,Fine Motor Skills,Memory,Focus,Logical Reasoning,Y,Y,Y,None,None,None,None,None,None,None,None
+135,Motor Skills,Balance,Co-ordination,Concentration,None,None,Y,Y,Y,None,None,None,None,None,None,None
+136,Motor Skills,Sensory Development,Concentration,Speed,None,Y,Y,Y,None,None,None,None,None,None,None,None
+137,Creativity,Motor skills,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+138,Creativity,observation skills,focus,motor skills,None,None,Y,Y,Y,None,None,None,None,None,None,None
+139,Creativity,observation skills,focus,motor skills,None,Y,Y,Y,None,None,None,None,None,None,None,None
+140,Creativity,motor skills,focus,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+141,Creativity & Imagination,motor skills,patience,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+142,Creativity & Imagination,motor skills,sensory organ development,problem solving,socio environmental awareness,None,Y,Y,Y,None,None,None,None,None,None,None
+143,Fine Motor Skills,Concentration,Co- ordination,Focus,None,Y,Y,Y,None,None,None,None,None,None,None,None
+144,cognitive development,Motor skills,Focus,Critical thinking,None,None,Y,Y,Y,None,None,None,None,None,None,None
+145,Motor Skills,Cognitive Development,Reflexes,Gross Motor Skills,None,None,Y,Y,None,None,None,None,None,None,None,None
+146,Logical and Lateral,Fine Motor Skills,Concentration,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+147,Motor Skills,Critical Thinking,Fine Motor Skills,Problem Solving,Focus,Y,Y,Y,None,None,None,None,None,None,None,None
+148,Motor Skills,Critical Thinking,Focus,Concentration,None,None,Y,Y,None,None,None,None,None,None,None,None
+149,creativity,Focus,Patience,Fine Motor Skills,None,None,Y,Y,None,None,None,None,None,None,None,None
+150,Creativity,Patience,Fine Motor Skills,Concentration,None,Y,Y,Y,None,None,None,None,None,None,None,None
+151,Creativity,Patience,Concentration,Fine Motor Skills,None,Y,Y,Y,None,None,None,None,None,None,None,None
+152,Motor Skills,Concentration,Patience,Cognitive Development,None,None,Y,Y,None,None,None,None,None,None,None,None
+153,Creativity,Fine Motor Skills,Naturalistic Intelligence,Concentration,None,None,Y,Y,None,None,None,None,None,None,None,None
+154,Cognitive,Creativity,Motor Skills,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+155,Cognitive,Critical Thinking,Memory,motor skills,None,None,Y,Y,None,None,None,None,None,None,None,None
+156,Creativity,Fine Motor Skills,Concentration,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+157,Cognitive,Fine Motor Skills,Concentration,Focus,Patience,Y,Y,Y,None,None,None,None,None,None,None,None
+158,Motor Skills,Concentration,Patience,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+159,Logical and Lateral,cognitive development,Memory,Fine Motor Skills,Critical Thinking,None,None,Y,Y,None,None,None,None,None,None,None,None
+160,Imagination,Creativity,Observation skills,Critical Thinking,Concentration,None,Y,Y,None,None,None,None,None,None,None,None,None
+161,Creativity,Observation Skills,Sensory Organ Development,Fine Motor Skills,Memory,Y,Y,Y,None,None,None,None,None,None,None,None,None
+162,Logical and Lateral,Responsibility,Accountability,Creativity,Fine Motor Skills,None,Y,Y,Y,Y,None,None,None,None,None,None,None
+163,Cognitive,creativity,Critical Thinking,Concept Learning,Memory,None,Y,Y,Y,None,None,None,None,None,None,None,None
+164,Logical and Lateral,None,Concept Learning,None,None,None,None,Y,Y,Y,Y,None,None,None,None,None,None
+165,Imagination,cognitive development,focus,None,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+166,Creativity,Observation Skills,creativity,None,None,Y,Y,Y,None,None,None,None,None,None,None,None,None
+167,Motor Skills,focus,patience,None,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+168,Creativity & Imagination,concentration,Fine Motor Skills,Patience,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+169,Cognitive  ,Critical Thinking,Reflexes,Concentration,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+170,Motor Skills,Cognitive Development,Reflexes,Gross Motor Skills,Focus,None,None,Y,Y,None,None,None,None,None,None,None,None
+171,Logical and Lateral,Focus,Fine Motor Skills,Concentration,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+172,Logical and Lateral,Critical Thinking,Concentration,Patience,Cognitive,None,Y,Y,Y,None,None,None,None,None,None,None,None
+173,Imagination,Cognitive Development,Fine Motor Skills,Co-ordination,Concentration,None,Y,Y,Y,None,None,None,None,None,None,None,None
+174,Logical and Lateral,Fine Motor Skills,Co-ordination,Focus,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+175,Memory,Cognitive Development,Fine Motor Skills,Focus,sensory Organ Development,None,None,Y,Y,None,None,None,None,None,None,None,None
+176,Logical and Lateral,Critical Thinking,Co-ordination,Patience,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+177,Imagination,Fine Motor Skills,Patience,Critical Thinking,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+178,Motor Skills,concentration,cognitive development,Creativity,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+179,Motor Skills,Concentration,Patience,None,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+180,Cognitive,Memory,Critical Thinking,Concentration,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+181,Motor Skills,concentration,patience,None,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+182,Creativity,concentration,Patience,Fine Motor Skills,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+183,Cognitive,Memory,Concentration,None,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+184,Cognitive,motor skills ,Patience,Concentration,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+185,Creativity,motor skills ,concentration,Critical thinking,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+186,Creativity,Fine Motor Skills,Imagination,Concentration,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+187,Creativity,Fine Motor Skills,Imagination,Concentration,Patience,None,Y,Y,None,None,None,None,None,None,None,None,None
+188,creativity,Fine Motor Skills,Imagination,None,None,None,Y,Y,None,None,None,None,None,None,None,None,None
+189,Creativity,Fine Motor Skills,concentration,Patience,Imagination,None,None,Y,Y,None,None,None,None,None,None,None,None
+190,Cognitive,Sensory Development,Creativity,Fine Motor Skills,None,None,Y,Y,Y,None,None,None,None,None,None,None,None
+191,Creativity,Creativity,Fine Motor Skills,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+192,Logical and Lateral,Concept learning,Observation Skills,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+193,Cognitive development,motors skills,Concentration,Creativity,brain development,None,None,None,Y,None,None,None,None,None,None,None,None
+194,Motor Skills,Creativity & imagination,Focus,None,None,None,Y,Y,Y,Y,Y,None,None,None,None,None,None
+195,Creativity,motor skills,Concentration,sensory development,None,None,None,None,Y,Y,Y,None,None,None,None,None,None
+196,Logical and Lateral,motor skills,focus,concentration,problem solving,None,None,None,Y,Y,None,None,None,None,None,None,None
+197,Cognitive,Creativity,Observation skills,critical thinking,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+198,Creativity,Imagination,Fine motor skills,Patience,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+199,Logical and Lateral,Creativity & imagination,Critical thinking,Problem solving,Motor skills,None,None,None,Y,Y,Y,None,None,None,None,None,None
+200,Logical and Lateral,Cognitive development,Critical thinking,Creativity and imagination,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+201,Cognitive,Focus,Fine Motor Skills,Reflexes,Confidence,None,None,Y,Y,Y,None,None,None,None,None,None,None
+202,Cognitive,Gross Motor Skills,Focus,Concentration,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+203,Creativity,Fine Motor Skills,Patience,Cognitive Development,None,None,None,None,Y,Y,Y,None,None,None,None,None,None
+204,Cognitive,Fine Motor Skills,Concentration,None,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+205,Emotional Regulation,Fine Motor Skills,Concentration,Patience,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+206,Motor Skills,Patience,Concentration,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+207,Logical and Lateral,Concentration,Focus,Motor skills,None,None,None,Y,Y,None,None,None,None,None,None,None,None
+208,Logical and Lateral,Creativity,Motor skills,Imagination,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+209,Creativity,Motor skills,Imagination,Patience,Concentration,None,None,None,Y,Y,None,None,None,None,None,None,None
+210,Creativity,Motor skills,Concentration,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+211,Logical and Lateral,Creativity,Fine Motor Skills,None,None,None,None,None,Y,Y,Y,None,None,None,None,None,None
+212,Creativity,Fine Motor Skills,Patience,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+213,Creativity,Motor skills,Patience,Critical Thinking,Concentration,None,None,None,Y,Y,None,None,None,None,None,None,None
+214,Logical and Lateral,Cognitive development,Critical Thinking,None,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+215,Creativity,Patience,Concentration,None,None,None,None,Y,Y,Y,None,None,None,None,None,None,None
+216,Creativity,Fine Motor Skills,Concentration,Patience,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+217,Logical and Lateral,Fine Motor Skills,Imagination,Critical Thinking,None,None,None,None,Y,Y,None,None,None,None,None,None,None
+218,Creativity,fine motor skills,Concentration,None,None,None,None,None,Y,Y,None,None,None,None,None,None
+219,Creativity,motor skills,imagination,art & craft,None,None,None,None,None,Y,Y,Y,None,None,None,None
+220,Team Work,team work,Decision Making,None,None,None,None,None,Y,Y,Y,None,None,None,None,None
+221,Creativity,Patience,fine motor skills,imagination,None,None,None,None,None,Y,Y,None,None,None,None,None
+222,Creativity,patience,None,None,None,None,None,None,None,Y,Y,Y,None,None,None,None
+223,Creativity,observation,motor skills,None,None,None,None,Y,Y,Y,Y,None,None,None,None,None
+224,Concentration,critical thinking,observation skills,None,None,None,None,None,Y,Y,Y,None,None,None,None,None
+225,Concentration,Fine Motor Skills,Focus,Cognitive Development,Critical Thinking,None,None,None,None,Y,Y,None,None,None,None,None
+226,Logical and Lateral,Fine Motor Skills,Concentration,Patience,Focus,None,None,None,None,Y,Y,None,None,None,None,None
+227,Creativity,Fine Motor Skills,Critical Thinking,Patience,Cognitive Development,None,None,None,None,Y,Y,None,None,None,None,None
+228,Cognitive,Critical Thinking,Problem Solving,Focus,Patience,None,None,None,None,Y,Y,None,None,None,None,None
+229,Creativity,Fine Motor Skills,patience,Concentration,None,None,None,None,None,Y,Y,None,None,None,None,None
+230,Problem Solving,Critical Thinking,Cognitive,Fine Motor Skills,None,None,None,None,Y,Y,Y,None,None,None,None,None
+231,Logical and Lateral,Critical Thinking,Cognitive,Fine Motor Skills,None,None,None,None,Y,Y,Y,None,None,None,None,None
+232,Cognitive,concentration,fine motor skills,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+233,Cognitive,concentration,Critical Thinking,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+234,Creativity,Fine Motor Skills,Concentration,None,None,None,None,None,Y,Y,None,None,None,None,None,None
+235,Logical and Lateral,Creativity,fine motor skills,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+236,Creativity,Fine Motor Skills,Concentration,None,None,None,None,None,Y,Y,Y,None,None,None,None,None
+237,Logical and Lateral,Observation skills,Critical thinking,None,None,None,None,None,Y,Y,None,None,None,None,None,None
+238,Cognitive,Observation skills,Critical Thinking,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+239,Logical and Lateral,Fine Motor Skills,Patience,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+240,Creativity,fine motor skills,patience,concentration,None,None,None,None,Y,Y,Y,None,None,None,None,None
+241,Logical and Lateral,Fine Motor Skills,Concentration,creativity,Critical Thinking,None,None,None,Y,Y,Y,None,None,None,None,None
+242,Logical and Lateral,Creativity,fine motor skills,concentration,Critical Thinking,None,None,None,None,Y,Y,None,None,None,None,None
+243,Creativity,Fine Motor Skills,Concentration,patience,None,None,None,None,Y,Y,Y,None,None,None,None,None
+244,Creativity,Fine Motor Skills,Concentration,Patience,None,None,None,None,None,Y,Y,Y,None,None,None,None
+245,Logical and Lateral,imagination,fine motor skills,concentration,None,None,None,None,Y,Y,Y,None,None,None,None,None
+246,Creativity,Imagination,fine motor skills,patience,concentration,None,None,None,Y,Y,Y,None,None,None,None,None
+247,Logical and Lateral,Creativity,fine motor skills,concentration,None,None,None,None,Y,Y,None,None,None,None,None,None
+248,Creativity,Fine Motor Skills,Imagination,Patience,None,None,None,None,None,Y,Y,Y,None,None,None,None
+249,Logical and Lateral,Fine Motor Skills,Patience,Cognitive Development,None,None,None,None,None,Y,Y,None,None,None,None,None
+250,Creativity,Fine Motor Skills,Concentration,Patience,None,None,None,None,Y,Y,Y,None,None,None,None,None
+251,Creativity,motor skills,Concentration,imagination,None,None,None,None,None,Y,Y,None,None,None,None,None
+252,Creativity,critical thinking,concentration,None,None,None,None,None,None,None,Y,Y,Y,None,None,None
+253,Logical and Lateral,concentration,fine motor skills,None,None,None,None,None,None,Y,Y,Y,None,None,None,None
+254,Cognitive,critical thinking,creativity,fun science,None,None,None,None,None,Y,Y,Y,None,None,None,None
+255,Logical and Lateral,critical thinking,curiosity,love for learning,problem solving,None,None,None,None,Y,Y,Y,None,None,None,None
+256,Creativity,problem solving,creativity,aerodynamics,fun science,None,None,None,None,Y,Y,Y,None,None,None,None
+257,Logical and Lateral,creativity,critical thinking,Patience,confidence,None,None,None,None,Y,Y,Y,None,None,None,None
+258,Creativity,imagination,None,None,None,None,None,None,None,Y,Y,Y,None,None,None,None
+259,Logical and Lateral,problem solving,creativity,confidence,None,None,None,None,None,Y,Y,Y,None,None,None,None
+260,Logical and Lateral,Observation skills,Critical Thinking,None,None,None,None,None,None,Y,Y,Y,None,None,None,None
+261,Logical and Lateral,Critical Thinking,Motor Skills,Observation skills,None,None,None,None,None,None,Y,Y,None,None,None,None
+262,Concentration,Critical Thinking,Motor Skills,Problem Solving,None,None,None,None,Y,Y,Y,None,None,None,None,None
+263,Problem Solving,Critical thinking,Problem Solving,Concentration,focus,None,None,None,None,Y,Y,Y,None,None,None,None
+264,Problem Solving,concentration,fine motor skills,patience,None,None,None,None,None,Y,Y,Y,None,None,None,None
+265,Concentration,critical thinking,creativity,None,None,None,None,None,None,None,Y,Y,None,None,None,None
+266,Logical and lateral,Critical Thinking,Observation Skills,Cognitive Development,None,None,None,None,None,None,Y,Y,None,None,None,None
+267,Logical and lateral,Critical Thinking,Observation Skills,Cognitive Development,None,None,None,None,None,None,Y,Y,None,None,None,None
+268,Creativity,fine motor skills,critical thinking,patience,None,None,None,None,None,None,Y,Y,None,None,None,None
+269,None,Problem Solving,Naturalistic Intelligence,Persistence,Leadership,None,None,None,None,None,None,Y,Y,None,None,None,None
+270,None,Perspective,Love of Learning,Critical Thinking,None,None,None,None,None,None,None,Y,Y,None,None,None,None
+271,None,Perspective,Love of Learning,Critical Thinking,None,None,None,None,None,None,None,Y,Y,Y,None,None,None
+272,Logical and Lateral,Creativity,perspectives,Fun Science,Curiosity,None,None,None,None,None,Y,Y,Y,None,None,None,None
+273,Leadership,Creativity,fun science,concentration,curiosity,None,None,None,None,None,None,Y,Y,None,None,None,None
+274,Critical Thinking,Creativity,curiosity,Fun Science,None,None,None,None,None,None,None,Y,Y,None,None,None,None
+275,Logical and Lateral,Love of Learning,perspectives,Fun Science,curiosity,None,None,None,None,None,None,Y,Y,None,None,None,None
+276,Logical and Lateral,Love of Learning,observation skills,Fun Science,curiosity,None,None,None,None,None,None,Y,Y,Y,None,None,None
+277,Critical Thinking,curiosity,perspective,Fun Science,None,None,None,None,None,None,None,Y,Y,Y,None,None,None
+278,Conflict Resolution,creative,fun science,Critical Thinking,None,None,None,None,None,None,None,Y,Y,Y,None,None,None
+279,Logical and Lateral,Fine Motor Skills,Concentration,patience,None,None,None,None,None,None,Y,Y,None,None,None,None,None
+280,Logical and Lateral,Fine Motor Skills,Problem solving,innovation,Patience,None,None,None,None,None,None,Y,Y,None,None,None,None
+281,Logical and Lateral,Fine Motor Skills,Critical Thinking,Creativity,patience,None,None,None,None,None,None,Y,Y,None,None,None,None
+282,Logical and Lateral,concentration,Fine Motor Skills,patience,problem solving,None,None,None,None,None,Y,Y,Y,None,None,None,None
+283,Critical Thinking,Time Management,Critical Thinking,Problem Solving,Logical Reasoning,None,None,None,None,None,None,Y,Y,None,None,None,None
+284,Moral Values,Fine Motor Skills,Focus,Patience,Cognitive Development,None,None,None,None,None,None,Y,Y,None,None,None,None
+285,Critical Thinking,Cognitive Development,Observation skills,None,None,None,None,None,None,None,None,Y,Y,None,None,None,None
+286,Conflict Resolution,Concentration,Problem Solving,Persistence,Spatial Intelligence,None,None,None,None,None,None,None,Y,Y,Y,None,None
+287,Logical and Lateral,Open Mindedness,Perspective,Curiosity,Love of Learning,None,None,None,None,None,None,None,Y,Y,Y,None,None
+288,Logical and Lateral,creativity,curiosity,Critical Thinking,None,None,None,None,None,None,None,None,Y,Y,None,None,None
+289,Integrity,Focus,Reflexes,Motor Skills,None,None,None,None,None,None,None,Y,Y,Y,None,None,None
+290,Critical Thinking,Cognitive Development,Focus,Concentration,None,None,None,None,None,None,None,None,Y,Y,None,None,None
+291,Critical Thinking,Fine motor skills,Cognitive Development,None,None,None,None,None,None,None,None,Y,Y,None,None,None,None
+292,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
+293,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
+294,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
+295,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
+296,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None
+297,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None

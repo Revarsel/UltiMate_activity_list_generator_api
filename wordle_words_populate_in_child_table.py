@@ -11,7 +11,7 @@ child_details = conn.get_child_details(child_id)
 user_id = int(child_details["user_id"])
 grade_num = int(child_details["standard_id"])
 
-subscription = conn.get_subscription_from_user_id(user_id) # returns all subscriptions of the user in descending order
+subscription = conn.get_subscription_from_child_id(child_id) # returns all subscriptions of the user in descending order
 if len(subscription) == 0:
     raise Exception("No subscription found!")
 
