@@ -1,4 +1,4 @@
-from connection import Connection, convert_all_values_to_json_readable, convert_datetime_to_str
+from connection import Connection, convert_all_values_to_json_readable
 import datetime
 from dateutil.relativedelta import relativedelta
 import json
