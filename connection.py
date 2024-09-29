@@ -721,7 +721,7 @@ class Connection:
         return arr[0]
     
     def get_trial_mudras(self):
-        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==5).filter(Activity.is_trial==True)
+        selected = select(Activity).filter(Activity.act_category_id==2).filter(Activity.activity_game_type_id==4).filter(Activity.is_trial==True)
 
         result = self.session.execute(selected)
 

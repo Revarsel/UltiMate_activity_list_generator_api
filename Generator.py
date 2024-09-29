@@ -54,6 +54,8 @@ class GenerateActivities:
     def __init__(self, child_id, Conn: Connection, trial: bool) -> None:
         self.actData = ActivityData()
 
+        self.trial = trial
+
         self.Conn = Conn
 
         self.child_id = child_id
@@ -183,7 +185,8 @@ class GenerateActivities:
                 discuss = 1
             elif day == 6 or day % 2 == 1: # 6 is sunday, day % 0 gives alternate
                 discuss = 0
-                continue
+                if not self.trial:
+                    continue
             else:
                 discuss = 0
 
@@ -250,7 +253,7 @@ class GenerateActivities:
             for currDay in range(self.monthDays[months]):
                 currDate = self.startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
-                print(self.actData.HUActList)
+                # print(self.actData.HUActList)
 
                 self.actData.HUActList[0][index][start] = currDate   # Habit Up
                 self.actData.HUActList[0][index + 1][start] = currDate
@@ -299,8 +302,6 @@ class GenerateActivities:
 
                 tempIPGAct[start] = currDate
                 tempIPGAct[end] = nextDate
-                if nextDate == None:
-                    print(tempIPGAct)
                 self.fullActList.append(tempIPGAct.copy())
 
                 if prev:
