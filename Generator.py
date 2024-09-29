@@ -90,7 +90,9 @@ class GenerateActivities:
             end_date: datetime.datetime = datetime.datetime.now() + relativedelta(days=7)
 
         weeks_completed_already = 0
-        if trial == True:
+        plan = 0
+        if trial == False:
+            plan = subscription[0]["subscription_plan_id"]
             if len(subscription) > 1:
                 for index, value in enumerate(subscription[1:]):
                     weeks = 0
@@ -151,6 +153,7 @@ class GenerateActivities:
         self.startDate = start_date
         self.endDate = end_date
         self.dayDifference = (self.endDate - self.startDate).days
+        # print(self.dayDifference)
 
         weeks_num = int(self.dayDifference/7) + 1
 
@@ -165,14 +168,14 @@ class GenerateActivities:
         self.fullActList = []
         self.actDone = [] # this stores all activity ids to check for duplicates in the following activity generators
         self.monthDays = []
+        diff = self.dayDifference
         if trial:
             self.monthDays.append(7)
         else:
-            for j in range(1, (weeks_num%4)):
-                monthPrev = self.startDate + relativedelta(months=max((j-1), 0))
-                monthNext = self.startDate + relativedelta(months=j)
-                dayDiff = (monthNext - monthPrev).days
-                self.monthDays.append(dayDiff)
+            for _ in range((self.dayDifference % 30) + 1):
+                self.monthDays.append(min(30, diff))
+                diff -= 30
+        # print(self.monthDays)
     
     def GenerateDailyActivities(self):
         discuss = 0 # 0 = False, 1 = True
@@ -250,6 +253,7 @@ class GenerateActivities:
         
         index = 0
         for months in range(len(self.monthDays)):
+            # print("done")
             for currDay in range(self.monthDays[months]):
                 currDate = self.startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
@@ -276,8 +280,7 @@ class GenerateActivities:
 
 
     def GenerateWeeklyActivities(self):
-        weeks = int(self.dayDifference / 7) + 1 # Find num of weeks (give 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
-
+        weeks = int(self.dayDifference / 7) + 1 # Find num of weeks (gives 1 week less so we have to add 1 to it since half a week is taken as 0 week but we want it as 1 week)
         for i in range(weeks): # start to end date number of weeks
             focus = self.focusAreaWeekly[i]
             currDate = self.startDate + relativedelta(weeks=i, seconds=30)

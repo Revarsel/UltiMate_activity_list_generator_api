@@ -9,12 +9,19 @@ if len(sys.argv) in [1,2]:
 
 Conn = Connection()
 
+is_trial = False
+if sys.argv[1] == "true":
+    is_trial = True
+
 for child_num in range(2, len(sys.argv)):
     try:
         child_id = sys.argv[child_num]
-        Generator = GenerateActivities(child_id, Conn, sys.argv[1])
+
+        Generator = GenerateActivities(child_id, Conn, is_trial)
 
         Generator.GenerateActivities()
+
+        # print(Generator.fullActList.__len__())
 
         Conn.dump_data_in_child_activity(fullActList=Generator.fullActList, child_id=child_id)
 
