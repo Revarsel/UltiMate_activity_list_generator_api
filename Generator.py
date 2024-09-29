@@ -75,6 +75,7 @@ class GenerateActivities:
         elif self.grade_num < 3:
             self.shloks = self.Conn.get_shloks(1)
         
+        subscription = []
         if trial == False:
             subscription = self.Conn.get_subscription_from_child_id(self.child_id) # returns all subscriptions of the user in descending order
             if len(subscription) == 0:
@@ -85,17 +86,16 @@ class GenerateActivities:
         else:
             start_date: datetime.datetime = datetime.datetime.now()
             end_date: datetime.datetime = datetime.datetime.now() + relativedelta(days=7)
-        
-        plan = subscription[0]["subscription_plan_id"]
 
         weeks_completed_already = 0
-        if len(subscription) > 1:
-            for index, value in enumerate(subscription[1:]):
-                weeks = 0
-                sub_start: datetime.datetime = value["start_date"]
-                sub_end: datetime.datetime = value["end_date"]
-                weeks = int(((sub_end-sub_start).days)/7)
-                weeks_completed_already += weeks
+        if trial == True:
+            if len(subscription) > 1:
+                for index, value in enumerate(subscription[1:]):
+                    weeks = 0
+                    sub_start: datetime.datetime = value["start_date"]
+                    sub_end: datetime.datetime = value["end_date"]
+                    weeks = int(((sub_end-sub_start).days)/7)
+                    weeks_completed_already += weeks
         
         # start_date = datetime.datetime.now()
         # end_date = datetime.datetime.now() + relativedelta(months=3)
@@ -161,13 +161,16 @@ class GenerateActivities:
 
         # self.focusArea2PerWeek = tempArr2PerWeek #Conn.get_focus_area_frequency(grade_num)[:weeks_num*2] #tempArr2PerWeek
         self.fullActList = []
-        self.monthDays = []
         self.actDone = [] # this stores all activity ids to check for duplicates in the following activity generators
-        for j in range(1, 4):
-            monthPrev = self.startDate + relativedelta(months=max((j-1), 0))
-            monthNext = self.startDate + relativedelta(months=j)
-            dayDiff = (monthNext - monthPrev).days
-            self.monthDays.append(dayDiff)
+        self.monthDays = []
+        if trial:
+            self.monthDays.append(7)
+        else:
+            for j in range(1, (weeks_num%4)):
+                monthPrev = self.startDate + relativedelta(months=max((j-1), 0))
+                monthNext = self.startDate + relativedelta(months=j)
+                dayDiff = (monthNext - monthPrev).days
+                self.monthDays.append(dayDiff)
     
     def GenerateDailyActivities(self):
         discuss = 0 # 0 = False, 1 = True
@@ -247,6 +250,7 @@ class GenerateActivities:
             for currDay in range(self.monthDays[months]):
                 currDate = self.startDate + relativedelta(months=months, days=currDay, second=30)
                 nextDate = currDate + relativedelta(hours=23, minutes=59, seconds=29)  # days=currDay
+                print(self.actData.HUActList)
 
                 self.actData.HUActList[0][index][start] = currDate   # Habit Up
                 self.actData.HUActList[0][index + 1][start] = currDate

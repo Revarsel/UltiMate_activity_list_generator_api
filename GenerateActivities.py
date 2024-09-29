@@ -4,7 +4,7 @@ import sys
 import json
 
 if len(sys.argv) in [1,2]:
-    print("Usage is [child_id_1, child_id_2, ...]")
+    print("Usage is [is_trial, child_id_1, child_id_2, ...]")
     exit()
 
 Conn = Connection()

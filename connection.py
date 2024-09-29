@@ -583,9 +583,9 @@ class Connection:
                         start_date = act["start_date"],
                         end_date = act["end_date"],
                         activity_status_id = 1, #act["activity_status_id"],
-                        is_archived = act["is_archived"],
+                        is_archived = False,
                         created_by = act["created_by"],
-                        created_date = act["created_date"],
+                        created_date = datetime.datetime.now(),
                         is_favourite=False,
                         is_parent_approved=False)
             self.session.add(childAct)
