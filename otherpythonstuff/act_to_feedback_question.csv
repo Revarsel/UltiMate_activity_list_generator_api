@@ -1,373 +1,385 @@
-question_id,question_text,response_type_id,is_multiselect,rating_min,rating_max,is_mandatory
-0,Did your child learn any new shapes or figures while performing the activity?,Radio Button,false,,,false
-1,What was  one specific aspect of the activity that your child found exciting or fun?,Checkbox,true,,,false
-2,Did your child react to the different textures of the sponge and the paint on their hands?,Radio Button,false,,,false
-3,Did your child use the space well and arrange shapes well on the paper?,Radio Button,false,,,false
-4, On which line your child movements were the best?,Radio Button,false,,,false
-5,Did your child seem engaged and focused during the activity?,Radio Button,false,,,false
-6, What did your child enjoy the most about using an old toothbrush and paint?,Checkbox,true,,,false
-7,Did child seem interested to do this new painting technique again?,Radio Button,false,,,false
-8,What did your child enjoy the most while playing with the dough?,Checkbox,true,,,false
-9, How did your child react to the different colours? Did it enhance their interest in the activity?,Radio Button,false,,,false
-10,How did the child feel after taking out the toys out successfully?,Radio Button,false,,,false
-11,Did child show any preference of hand while doing this activity?,Radio Button,false,,,false
-12,Do you feel that this activity contributed to family bonding?,Radio Button,false,,,false
-13,How did they explore and experiment with creating bubbles?,Text Box,false,,,false
-14,Did they seem engaged and interested in the process?,Radio Button,false,,,false
-15,Did your child show excitement or anticipation about using the calming bottle when feeling restless?,Radio Button,false,,,false
-16, Did child come up with any ideas or did they ask you?,Radio Button,false,,,false
-17,Would child be interested to make greeting cards using this technique?,Radio Button,false,,,false
-18,Did child experiment with different colours?,Radio Button,false,,,false
-19, Did they try to make different designs?,Radio Button,false,,,false
-20,Did child do this activity with ease?,Radio Button,false,,,false
-21,Did child want to do it again after finishing?,Radio Button,false,,,false
-22,What part of this activity did child enjoy the most?,Radio Button,false,,,false
-23,Have you noticed any change in child's mood after this activity?,Radio Button,false,,,false
-24,What did child enjoy more?,Radio Button,false,,,false
-25,Would child like to make more bookmarks to gift to friends and family?,Radio Button,false,,,false
-26,How many animals did child make?,Radio Button,false,,,false
-27,Would child like to arrange a puppet show with these animals?,Radio Button,false,,,false
-28,Was child focused and patient throughout the activity?,Radio Button,false,,,false
-29,Does child show any preference while using hand?,Radio Button,false,,,false
-30,How many shapes could child make with the sticks?,Radio Button,false,,,false
-31,Did child also try to make any other design with the sticks?,Radio Button,false,,,false
-32, Was child able to balance the sticks on a fork?,Radio Button,false,,,false
-33,How many times did child drop the sticks?,Radio Button,false,,,false
-34, Did child colour the rainbow well? ,Radio Button,false,,,false
-35,was child excited to see the rainbow lights?,Radio Button,false,,,false
-36,Was child able to fling the ball upwards by punching the bag?,Radio Button,false,,,false
-37,Did child play collaboratively or competitively?,Radio Button,false,,,false
-38, Was child able to apply fevicol?,Radio Button,false,,,false
-39,Was child able to do the sprinkling action for salt?,Radio Button,false,,,false
-40,Was child able to trace most, if not all patterns?,Radio Button,false,,,false
-41,Do you think child will improve in this activity with regular practice?,Radio Button,false,,,false
-42,Did child enjoy collecting leaves for this activity?,Radio Button,false,,,false
-43,Did child make any designs that took you by surprise? What were they?,Text Box,false,,,false
-44,Was child able to colour most shapes correctly?,Radio Button,false,,,false
-45,Was child patient enough to finish the entire sheet?,Radio Button,false,,,false
-46,Which part of this activity did child enjoy the most?,Radio Button,false,,,false
-47,Do you feel that repeating this activity regularly has helped with your child's grip and 40?,Radio Button,false,,,false
-48,Was child able to put the cotton buds in?,Radio Button,false,,,false
-49,Would child like to use this as a display art in your home?,Radio Button,false,,,false
-50,Did child like to make a variety of shapes for shadow play?,Radio Button,false,,,false
-51,Did child understand how the shapes got projected on the wall?,Radio Button,false,,,false
-52,Did child help you to make this big bubble wand?,Radio Button,false,,,false
-53,Did child like this as compared to regular bubble wands?,Radio Button,false,,,false
-54,Was child able to maintain 39 throughout the activity?,Radio Button,false,,,false
-55,Did child get irritated if they could not finish the task?,Radio Button,false,,,false
-56,Was child able to categorize most food items as per taste?,Radio Button,false,,,false
-57,Which out of these tastes does child find easiest to identify?,Radio Button,false,,,false
-58,Did child touch and feel most, if not all objects?,Radio Button,false,,,false
-59,Was child able to classify?,Radio Button,false,,,false
-60,Was child open to mixing paints with their fingers?,Radio Button,false,,,false
-61,Did child this way of learning about secondary colours?,Radio Button,false,,,false
-62,Was child able to make shapes using the molds?,Radio Button,false,,,false
-63,Does child like using molds or do they prefer to make objects by hand?,Radio Button,false,,,false
-64,Was child observing carefully and patiently?,Radio Button,false,,,false
-65,Would child like to solve more complex shapes and patterns?,Radio Button,false,,,false
-66,Was child patient throughout the activity?,Radio Button,false,,,false
-67,Does child regularly clean crayons and toys after playtime?,Radio Button,false,,,false
-68,Did child feel proud of themselves after finishing the tree?,Radio Button,false,,,false
-69,Can child think of other designs to do with this technique?,Text Box,false,,,false
-70,Was your child able to come up with different shapes objects?,Radio Button,false,,,false
-71,Did your child find it difficult or easy to shape the dough with their fingers?,Radio Button,false,,,false
-72,Did the child experiment with different colors and techniques on their own?.,Radio Button,false,,,false
-73, Did the child share any stories or ideas about their creations?,Radio Button,false,,,false
-74,Did child perform the activity with ease?,Radio Button,false,,,false
-75, Would child be interested to do this again?,Radio Button,false,,,false
-76,Could child do this activity with both hands simultaneously?,Radio Button,false,,,false
-77,How eager is child to do activities like these that require 39 and 5?,Radio Button,false,,,false
-78,Was child able to make impressions using crayons?,Radio Button,false,,,false
-79,Did child use these imprints for any other art and craft?,Radio Button,false,,,false
-80,Did child enjoy making this colourful prints frame?,Radio Button,false,,,false
-81,Did child think of any designs or patterns to make while pressing palm on paper?,Radio Button,false,,,false
-82,Was child comfortable touching the ice cold balloon?,Radio Button,false,,,false
-83,Did child enjoy using water colours in this activity?,Radio Button,false,,,false
-84,Was child able to do the colouring and spraying water independently?,Radio Button,false,,,false
-85,Did child convert this activity into an art piece like a nameplate/ wall hanging/ poster etc.?,Radio Button,false,,,false
-86,Did child use these googly eyes for any art and craft projects?,Radio Button,false,,,false
-87,Did child ask to make these in different sizes and shapes?,Radio Button,false,,,false
-88,Was child able to do most, if not all exercises?,Radio Button,false,,,false
-89,Did child get better with practice?,Radio Button,false,,,false
-90,Was child able to arrange the matchsticks properly?,Radio Button,false,,,false
-91,Was child surprised to see what happened when water was added?,Radio Button,false,,,false
-92, Did child enjoy playing with cardboard shoes?,Radio Button,false,,,false
-93,Could they use both feet effectively?,Radio Button,false,,,false
-94,Did child enjoy chiseling the ice away to find the dinosaur?,Radio Button,false,,,false
-95,Would child like to do this activity with any variation? What would they like?,Text Box,false,,,false
-96,Did child like colouring the eyes and mouth?,Radio Button,false,,,false
-97,Would child like to make more such monster hands?,Radio Button,false,,,false
-98,Which part of the activity did child like the most?,Radio Button,false,,,false
-99,Would child like to make more animals this way?,Radio Button,false,,,false
-100,Did child like collecting different types of leaves?,Radio Button,false,,,false
-101,Would child like to make more such bookmarks to gift to friends and family?,Radio Button,false,,,false
-102,Does child use this board to practice writing?,Radio Button,false,,,false
-103,Would child like similar boards for writing small words?,Radio Button,false,,,false
-104,did child enjoy collecting the flowers?,Radio Button,false,,,false
-105,Would child like to display this creation in your family living room?,Radio Button,false,,,false
-106,Did child like crumpling and tearing of paper?,Radio Button,false,,,false
-107,Did child learn about the inside of an anthill?,Radio Button,false,,,false
-108,Did child like the idea of sensory play to learn letters and numbers?,Radio Button,false,,,false
-109,Do you notice any improvements in child's letter, number and colour recognition after doing this activity repeatedly?,Radio Button,false,,,false
-110,Did child add any fun elements to the spider like a bow or a hat?,Radio Button,false,,,false
-111,Would child like to make other animals using cable ties?,Radio Button,false,,,false
-112,Was child consistent and patient with their efforts?,Radio Button,false,,,false
-113,Did child get better with practice?,Radio Button,false,,,false
-114,Was child able to do the sieving action?,Radio Button,false,,,false
-115,Did child patiently sort out all the chana?,Radio Button,false,,,false
-116, Did the child enjoyed doing longer phrases?,Radio Button,false,,,false
-117, Do you think hands on leaning lets child remember better?,Radio Button,false,,,false
-118,How many shapes were built by the child?,Radio Button,false,,,false
-119,What theme did you decide on?,Text Box,false,,,false
-120, Were they able to make patterns as requested?,Radio Button,false,,,false
-121,What did the child enjoy most while playing with the sand?,Text Box,false,,,false
-122,Did child like the idea of making newspaper bags at home?,Radio Button,false,,,false
-123,Do they like to use these bags?,Radio Button,false,,,false
-124,Did child find moving the hands around interesting? ,Radio Button,false,,,false
-125,Did they understand the different nomenclatures used to tell time?,Radio Button,false,,,false
-126, Did child expect a rainbow to be formed before you started with the activity? ,Radio Button,false,,,false
-127,What was child's reaction after seeing the rainbow get formed?,Radio Button,false,,,false
-128,Was child able to make the butterfly flap its wings?,Radio Button,false,,,false
-129,Did child ask to make more such butterflies?,Radio Button,false,,,false
-130,Did child make a creative bracelet or ring?,Radio Button,false,,,false
-131,Did child try to make other pieces of jewelry?,Radio Button,false,,,false
-132,Was child able to pick up small objects using a stick?,Radio Button,false,,,false
-133,Did child's speed increase with practice?,Radio Button,false,,,false
-134,Did child additionally decorate the fruit basket?,Radio Button,false,,,false
-135,would child like to make similar fruit baskets to gift to friends and family?,Radio Button,false,,,false
-136,was child able to focus throughout the game?,Radio Button,false,,,false
-137,Is child able to play even after leveling up the game?,Radio Button,false,,,false
-138,Was child able to catch most of the balls?,Radio Button,false,,,false
-139,Did child get better at activity with practice?,Radio Button,false,,,false
-140,Could child replicate your drawing?,Radio Button,false,,,false
-141, Did you enjoy doing this activity together?,Radio Button,false,,,false
-142,Did child enjoy doing the setup for this experiment? ,Radio Button,false,,,false
-143,Did child observe patiently, the changes happening everyday?,Radio Button,false,,,false
-144,Was child able to draw vehicles using the template?,Radio Button,false,,,false
-145,Did child try to draw anything besides vehicles?,Radio Button,false,,,false
-146,Did child enjoy setting up this activity?,Radio Button,false,,,false
-147,Did child try to play this game with friends or siblings?,Radio Button,false,,,false
-148, was child curious to see the outcome of this activity?,Radio Button,false,,,false
-149,Can child think of any variation to this activity besides the gymnast? What is it?,Text Box,false,,,false
-150,Was child able to cut the leaves well?,Radio Button,false,,,false
-151,Did child get better at activity with practice?,Radio Button,false,,,false
-152,Was child able to match the code most, if not all times?,Radio Button,false,,,false
-153,Would child like to solve a longer code next time?,Radio Button,false,,,false
-154,Did child enjoy making the shoe template?,Radio Button,false,,,false
-155,Was child able to weave through the holes in the shoe and make knots?,Radio Button,false,,,false
-156,What part of this activity did child enjoy the most?,Radio Button,false,,,false
-157,Would child like to make more name plates for extended family?,Radio Button,false,,,false
-158,Did child like this different method of blowing bubbles?,Radio Button,false,,,false
-159,Would child like to explore coloured water?,Radio Button,false,,,false
-160,Did child like making the flowers?,Radio Button,false,,,false
-161,Were they surprised to see the flowers bloom in water?,Radio Button,false,,,false
-162,Was child able to create designs using a cotton bud?,Radio Button,false,,,false
-163,Would child like to make more artwork using this technique?,Radio Button,false,,,false
-164,Did child enjoy this technique of painting?,Radio Button,false,,,false
-165,Would child like to turn this into an art piece to put up for display?,Radio Button,false,,,false
-166,How many cars did child make?,Radio Button,false,,,false
-167,Would child like to hang these cars up for display?,Radio Button,false,,,false
-168,Was child able to twist the paper strips?,Radio Button,false,,,false
-169,Would child like to make more craft using this technique for friends and family?,Radio Button,false,,,false
-170, Did they express any sensory difficulties while writing in foam?,Radio Button,false,,,false
-171,What did they write or draw?,text Box,false,,,false
-172,Did child enjoy this jewelry making process?,Radio Button,false,,,false
-173,What all ornaments did they make?,text Box,false,,,false
-174,Did child weigh various objects in the house to see which was heavier and lighter?,Radio Button,false,,,false
-175,What did child learn from this activity?,text Box,false,,,false
-176,Did child keep trying till they could do the exercise well?,Radio Button,false,,,false
-177,Did child get better with practice?,Radio Button,false,,,false
-178,Did child come up with new and unique animals to make hand shadows?,Radio Button,false,,,false
-179,Did child enjoy guessing each other's shadows?,Radio Button,false,,,false
-180,Was child able to participate for most tasks in this activity?,Radio Button,false,,,false
-181,Does child use these tongs to pick things up?,Radio Button,false,,,false
-182,Did child use 7 in colouring the paper strip?,Radio Button,false,,,false
-183,Does child try the spinner at various locations and various heights?,Radio Button,false,,,false
-184,Did child observe the experiment carefully?,Radio Button,false,,,false
-185,Did they enjoy putting the food colour in both liquids?,Radio Button,false,,,false
-186,Did child stick the sticks on their own or did they require help?,Radio Button,false,,,false
-187,Does child fill the feeder and maintain cleanliness?,Radio Button,false,,,false
-188,Can child think of any other design for mobile stand using same materials?,Radio Button,false,,,false
-189,Does child like to make utility items from things available at home?,Radio Button,false,,,false
-190,Did child participate in making the weighing scale?,Radio Button,false,,,false
-191,Did child use this to weigh various materials?,Radio Button,false,,,false
-192,Was child able to perform this activity? ,Radio Button,false,,,false
-193,Did child face any difficulties ?,Radio Button,false,,,false
-194, Could child manage to move all balls in one toss?,Radio Button,false,,,false
-195,Did child keep trying even if they failed?,Radio Button,false,,,false
-196,Does child usually like DIY activities?,Radio Button,false,,,false
-197,What did child decide to use the finished jar for?,text Box,false,,,false
-198,Was child able to complete the activity?,Radio Button,false,,,false
-199,Did child get better with practice?,Radio Button,false,,,false
-200,Was child able to make the stress balloon independently?,Radio Button,false,,,false
-201,Does child use this balloon in times of stress?,Radio Button,false,,,false
-202,Was child patient enough to put the pom pom through the holes in the cardboard?,Radio Button,false,,,false
-203,Did child come up with any trick or strategy?,Radio Button,false,,,false
-204,Was child keen on winning the game?,Radio Button,false,,,false
-205,Does child like to play this game with friends?,Radio Button,false,,,false
-206,Was child thrilled to make a rewritable pad at home?,Radio Button,false,,,false
-207,Does child use this pad regularly?,Radio Button,false,,,false
-208,Did child like this new technique of paper mache?,Radio Button,false,,,false
-209,Would child like to make more such art using this technique?,Radio Button,false,,,false
-210,Did child like this new style of painting?,Radio Button,false,,,false
-211,Would child like to make more such art using this technique?,Radio Button,false,,,false
-212,Was child keen on recycling an old box?,Radio Button,false,,,false
-213,Would child like to make more things using old boxes?,Radio Button,false,,,false
-214,Did child use these butterflies in any art work/ show piece?,Radio Button,false,,,false
-215,Can child think of any other things they would like to make using this technique? What are they?,text Box,false,,,false
-216,Can child think of any other animals to make using this idea?,Radio Button,false,,,false
-217,Would child like to make more octo pops and gift to friends?,Radio Button,false,,,false
-218,Did child find this method of learning interesting?,Radio Button,false,,,false
-219,Would child like to explore similar grammar activities?,Radio Button,false,,,false
-220,Was child excited to make their own stickers?,Radio Button,false,,,false
-221,Would child like to make more stickers?,Radio Button,false,,,false
-222,Was child able to do the weaving pattern of thread?,Radio Button,false,,,false
-223,Did child use this as an art piece to display?,Radio Button,false,,,false
-224,Did child assemble everything themselves?,Radio Button,false,,,false
-225,Does child play with this DIY toy often?,Radio Button,false,,,false
-226, Did they ask for assistance or prefer to work independently?,Radio Button,false,,,false
-227,Did they show interest in wearing the jewelry themselves or giving it as a gift?,Radio Button,false,,,false
-228,How did your child feel after completing the activity?,Radio Button,false,,,false
-229,Did child show interest in making more dolls to gift to friends?,Radio Button,false,,,false
-230,What did your child enjoy most about painting the t-shirts together? ,Checkbox,true,,,false
-231,Did child find t-shirt painting easy or challenging?,Radio Button,false,,,false
-232,Which materials did child like to use?,Checkbox,true,,,false
-233,What can you learn from the elements of nature, that you selected for your nature collage?,Text box,false,,,false
-234,What part of this activity did child enjoy the most?,Checkbox,true,,,false
-235,,,false,,,false
-236,Was child eager to make festival decorations at home?,Radio Button,false,,,false
-237,Would child be able to teach this activity to a younger child independently?,Radio Button,false,,,false
-238,Did child understand why oil floats on water?,Radio Button,false,,,false
-239,Would child like to try the same activity using different liquids?,Radio Button,false,,,false
-240, Was child able to stack and balance the arrangement?,Radio Button,false,,,false
-241,Did the stack collapse at any point of time?,Radio Button,false,,,false
-242, Did child make more than 1 park bench? ,Radio Button,false,,,false
-243,Did child think of any unique design for the bench?,Radio Button,false,,,false
-244,Did child follow all the steps to make the cycle patiently?,Radio Button,false,,,false
-245,Did child add some unique elements to their cycle?,Radio Button,false,,,false
-246,Was child able to figure out the puzzle?,Radio Button,false,,,false
-247, How much time and how many attempts did it take?,Text box,false,,,false
-248,Did child enjoy making the bees?,Radio Button,false,,,false
-249,Does child use this light up activity as  a showpiece or wall art?,Radio Button,false,,,false
-250,Did child enjoy setting up this puzzle activity?,Radio Button,false,,,false
-251,Was child able to focus the whole time and solve the puzzle?,Radio Button,false,,,false
-252,Was child able to set up the activity independently?,Radio Button,false,,,false
-253,Was child amazed to see the water dispenser in action?,Radio Button,false,,,false
-254,Did child expect the balloon to not pop?,Radio Button,false,,,false
-255,Does child enjoy doing science experiments at home?,Radio Button,false,,,false
-256,Did child like making patterns with thread?,Radio Button,false,,,false
-257,Did child use the big flower to make any wall art or showpiece?,Radio Button,false,,,false
-258,Did child enjoy setting up this activity?,Radio Button,false,,,false
-259,Can child think of any variations to be added to this activity? What are they?,Text box,false,,,false
-260,Did child follow all the steps to make the frog patiently?,Radio Button,false,,,false
-261,Would child like to make more such jumping animal toys?,Radio Button,false,,,false
-262,Did child observe patiently?,Radio Button,false,,,false
-263,Did child understand the reason for colour spreading through different temperature of water at different rates?,Radio Button,false,,,false
-264,Was child able to observe the experiment patiently?,Radio Button,false,,,false
-265,Did child understand the reason behind the volcanic eruptions?,Radio Button,false,,,false
-266,Was child able to fold the paper as shown in the video?,Radio Button,false,,,false
-267,Would child like to make more mobile stands to give to family and friends?,Radio Button,false,,,false
-268,Was child able to wrap the ribbon around the ruler?,Radio Button,false,,,false
-269,Would child like to make more flowers in different colours?,Radio Button,false,,,false
-270,Was child able to fold the paper as shown in the video?,Radio Button,false,,,false
-271,Would child like to make more tops to share with friends?,Radio Button,false,,,false
-272,Was child able to replicate pattern properly?,Radio Button,false,,,false
-273,Would child like to explore more patterns?,Radio Button,false,,,false
-274,Did child patiently stick all the popsicle sticks ?,Radio Button,false,,,false
-275,Does child keep the bird nest clean?,Radio Button,false,,,false
-276,Was child interested in constructing the marble track?,Radio Button,false,,,false
-277,Does child use marble track while playing with friends?,Radio Button,false,,,false
-278,Was child curious to see what happens to the ball?,Radio Button,false,,,false
-279,Did child understand the reason of this experiment?,Radio Button,false,,,false
-280,How many bookmarks did child make?,Radio Button,false,,,false
-281,Would child like to make more bookmarks for friends and family?,Radio Button,false,,,false
-282,Did child make more coasters for family to use?,Radio Button,false,,,false
-283,What else can child think of to repurpose old lids?,Text Box,false,,,false
-284,Did child enjoy this new technique?,Radio Button,false,,,false
-285,Would child like to create more art using this technique?,Radio Button,false,,,false
-286,Was child interested in making complex geometrical figures?,Radio Button,false,,,false
-287,Does child prefer learning geometry by this method?,Radio Button,false,,,false
-288,Did child like this new technique of creating art?,Radio Button,false,,,false
-289,Would child like to demonstrate this activity to a friend?,Radio Button,false,,,false
-290,Did child make more than one nutty hero?,Radio Button,false,,,false
-291,Can child think of other things from the kitchen to use ?,Text Box,false,,,false
-292, Did your child learn any new skills or gain any insights from this activity?,Radio Button,false,,,false
-293, Did your child express interest in exploring other carving/ sculpting activities after completing this one?,Radio Button,false,,,false
-294,How many different objects was child able to design using geometrical shapes?,Radio Button,false,,,false
-295,Did you come up with new ideas? If yes, what are those objects you thought?,Text Box,false,,,false
-296,What part of this activity did child find most interesting?,Checkbox,true,,,false
-297,Did child read up some extra information about this topic?,Radio Button,false,,,false
-298,Did child try and make different shapes out of tissue paper apart from butterfly?,Radio Button,false,,,false
-299,Did child try to do some other activities related to static energy as well?,Radio Button,false,,,false
-300,How well do you think your paper plane flew? ,Radio Button,false,,,false
-301,What factors do you think affected its flight?,Text Box,false,,,false
-302,Would child like to design a different type of vehicle next time?,Radio Button,false,,,false
-303,,,false,,,false
-304,Was child able to repurpose waste material to make a dream catcher?,Radio Button,false,,,false
-305,Would child like to make a more decorative dream catcher or add variations to design next time?,Radio Button,false,,,false
-306,Did child read extra information to understand this topic better?,Radio Button,false,,,false
-307,Would child like to do a similar activity with life stages of different insects?,Radio Button,false,,,false
-308,Was child curious while setting up this activity in a Ziploc bag?,Radio Button,false,,,false
-309, Did child record their observations?,Radio Button,false,,,false
-310,Did child enjoy cutting and shaping the Oreo cream?,Radio Button,false,,,false
-311,Could child arrange the moons in correct order?,Radio Button,false,,,false
-312,Could child make good impressions by rubbing? ,Radio Button,false,,,false
-313,Did child do the calculations well?,Radio Button,false,,,false
-314,Was child able to understand why water comes out when cap is loosened?,Radio Button,false,,,false
-315,Did child try to use the water fountain for any specific purpose like watering the plants/ giving water to birds and animals?,Radio Button,false,,,false
-316,Was child involved actively in this activity?,Radio Button,false,,,false
-317,Did child use 7 to decorate the stand?,Radio Button,false,,,false
-318,What part of this activity did child show interest in?,Radio Button,false,,,false
-319,Did child understand why the sun started spinning?,Radio Button,false,,,false
-320,Were you expecting water to rise in the jar?,Radio Button,false,,,false
-321,What do you think was the reason for water rising in the jar?,Text Box,false,,,false
-322,Did you expect the plate to stick to the jar?,Radio Button,false,,,false
-323,What do you think is the reason for the plate to stick to the glass jar?,Text Box,false,,,false
-324,Was child able to assemble the well together?,Radio Button,false,,,false
-325,Was child amazed to learn about the functioning of a well?,Radio Button,false,,,false
-326, What was your favourite part of the activity?,Radio Button,false,,,false
-327, How did you feel assigning tasks to all the family members? Did you find it to be easy or challenging?,Radio Button,false,,,false
-328, Why do you think the balloon moved across the string?,Radio Button,false,,,false
-329,,,false,,,false
-330, What did you observe during the reaction between the baking soda and vinegar?,Checkbox,true,,,false
-331, Why do you think the volcano erupted?,Text Box,false,,,false
-332,Why do you think the pepper was attracted to the comb or balloon?,Radio Button,false,,,false
-333,Would you like to explore more experiments involving static electricity in the future? ,Radio Button,false,,,false
-334,Did you understand the science behind why the balloon inflated?,Radio Button,false,,,false
-335,Do you feel confident teaching this experiment to a group of younger kids?,Radio Button,false,,,false
-336,Why do you think the ball was able to float in the air stream?,Radio Button,false,,,false
-337, How did changing the angle of the hair dryer affect the ball's behaviour?,Radio Button,false,,,false
-338,What did you learn about in this activity?,Checkbox,true,,,false
-339,Would you like to demonstrate this activity independently in school or in front of friends?,Radio Button,false,,,false
-340, How did the salt affect the ice cube?,Radio Button,false,,,false
-341,Did you learn about melting temperature of ice in this experiment?,Radio Button,false,,,false
-342,Why do you think the bad did not leak?,Radio Button,false,,,false
-343,What new science concept did you learn today,Text Box,false,,,false
-344, How did the speaker change the sound from your device?,Checkbox,true,,,false
-345, Can you think of any variations of this activity?,Text Box,false,,,false
-346,Would you like to make similar toys with various sizes of paper?,Radio Button,false,,,false
-347,Would you like to teach this activity to younger kids?,Radio Button,false,,,false
-348,Were you able to construct the boat without help?,Radio Button,false,,,false
-349,Would you like to make different boat designs using the same material?,Radio Button,false,,,false
-350,Did you follow all steps of the activity patiently?,Radio Button,false,,,false
-351,Would you be able to demonstrate this activity to  a friend?,Radio Button,false,,,false
-352,Did you follow all steps of the activity patiently?,Radio Button,false,,,false
-353,Would you like to make more such furniture pieces using straws?,Radio Button,false,,,false
-354,Could you solve the puzzles?,Radio Button,false,,,false
-355, Did you think of any puzzles and challenge parent?,Radio Button,false,,,false
-356, Were you interested throughout the process of making the house?,Radio Button,false,,,false
-357,Did you think of any other waste material that can be used to make a house? What was it?,Text Box,false,,,false
-358,Did you understand the reason behind this bubbling volcano?,Radio Button,false,,,false
-359,Would you like to demonstrate this experiment to friends and family?,Radio Button,false,,,false
-360, Did your bridge turn out the way you expected it to?  ,Radio Button,false,,,false
-361,What were some of the challenges you faced while building your bridge?,Checkboxes,false,,,false
-362,How did you feel  during the experiment with the paper clip switch? ,Radio Button,false,,,false
-363,Can you think of other such simple experiments you can try at home?,Text Box,false,,,false
-364,What part of this activity did you enjoy the most?,Radio Button,false,,,false
-365,an you think of other ways to design the catapult?,Radio Button,false,,,false
-366,Were you able to catch the cardboard squares promptly?,Radio Button,false,,,false
-367,Would you like to do similar activities to sharpen their reflexes?,Radio Button,false,,,false
-368,Were you curious to see what happens in this experiment?,Radio Button,false,,,false
-369,What do you think is the reason for the bottle shoot?,Text Box,false,,,false
-370,Did you try out several permutations and combinations to get the experiment right?,Radio Button,false,,,false
-371,Would you like to share your experiences?,Text Box,false,,,false
+0,Did your child learn any new shapes or figures while performing the activity?,Radio Button,False,None,None,False
+1,What was  one specific aspect of the activity that your child found exciting or fun?,Checkbox,True,None,None,False
+2,What did you learn about your child's imagination and 7 through this  activity?,Text Box,False,None,None,False
+3,Did your child react to the different textures of the sponge and the paint on their hands?,Radio Button,False,None,None,False
+4,Did your child use the space well and arrange shapes well on the paper?,Radio Button,False,None,None,False
+5,Were there any specific details or features your child pointed out while showing you their artwork?,Text Box,False,None,None,False
+6, On which line your child movements were the best?,Radio Button,False,None,None,False
+7,Did your child seem engaged and focused during the activity?,Radio Button,False,None,None,False
+8, What did your child enjoy the most about using an old toothbrush and paint?,Checkbox,True,None,None,False
+9,Did child seem interested to do this new painting technique again?,Radio Button,False,None,None,False
+10,What did your child enjoy the most while playing with the dough?,Checkbox,True,None,None,False
+11, How did your child react to the different colours? Did it enhance their interest in the activity?,Radio Button,False,None,None,False
+12, How did you feel about the overall experience of engaging in this activity with your child?,Text Box,False,None,None,False
+13,How did the child feel after taking out the toys out successfully?,Radio Button,False,None,None,False
+14,Did child show any preference of hand while doing this activity?,Radio Button,False,None,None,False
+15,Can you encourage child to do this activity again with non dominant hand?,Text Box,False,None,None,False
+16,Do you feel that this activity contributed to family bonding?,Radio Button,False,None,None,False
+17,How did they explore and experiment with creating bubbles?,Text Box,False,None,None,False
+18,Did they seem engaged and interested in the process?,Radio Button,False,None,None,False
+19,Did your child show excitement or anticipation about using the calming bottle when feeling restless?,Radio Button,False,None,None,False
+20,What colours or types of glitter did your child choose to include in the bottle? ,Text Box,False,None,None,False
+21, Did child come up with any ideas or did they ask you?,Radio Button,False,None,None,False
+22,Would child be interested to make greeting cards using this technique?,Radio Button,False,None,None,False
+23,Did child experiment with different colours?,Radio Button,False,None,None,False
+24, Did they try to make different designs?,Radio Button,False,None,None,False
+25,Did child do this activity with ease?,Radio Button,False,None,None,False
+26,Did child want to do it again after finishing?,Radio Button,False,None,None,False
+27,What part of this activity did child enjoy the most?,Radio Button,False,None,None,False
+28,Have you noticed any change in child's mood after this activity?,Radio Button,False,None,None,False
+29,Would child like to try various other shapes instead of fish? Would you like to share your experience?,Text Box,False,None,None,False
+30,What did child enjoy more?,Radio Button,False,None,None,False
+31,Would child like to make more bookmarks to gift to friends and family?,Radio Button,False,None,None,False
+32,How many animals did child make?,Radio Button,False,None,None,False
+33,Would child like to arrange a puppet show with these animals?,Radio Button,False,None,None,False
+34,Did child think of any other uses like a bookmark?,Text Box,False,None,None,False
+35,Was child focused and patient throughout the activity?,Radio Button,False,None,None,False
+36,Does child show any preference while using hand?,Radio Button,False,None,None,False
+37,How many shapes could child make with the sticks?,Radio Button,False,None,None,False
+38,Did child also try to make any other design with the sticks?,Radio Button,False,None,None,False
+39, Was child able to balance the sticks on a fork?,Radio Button,False,None,None,False
+40,How many times did child drop the sticks?,Radio Button,False,None,None,False
+41, Did child colour the rainbow well? ,Radio Button,False,None,None,False
+42,was child excited to see the rainbow lights?,Radio Button,False,None,None,False
+43,Was child able to fling the ball upwards by punching the bag?,Radio Button,False,None,None,False
+44,Did child play collaboratively or competitively?,Radio Button,False,None,None,False
+45, Was child able to apply fevicol?,Radio Button,False,None,None,False
+46,Was child able to do the sprinkling action for salt?,Radio Button,False,None,None,False
+47,Was child able to trace most, if not all patterns?,Radio Button,False,None,None,False
+48,Do you think child will improve in this activity with regular practice?,Radio Button,False,None,None,False
+49,Did child enjoy collecting leaves for this activity?,Radio Button,False,None,None,False
+50,Did child make any designs that took you by surprise? What were they?,Text Box,False,None,None,False
+51,Was child able to colour most shapes correctly?,Radio Button,False,None,None,False
+52,Was child patient enough to finish the entire sheet?,Radio Button,False,None,None,False
+53,Which part of this activity did child enjoy the most?,Radio Button,False,None,None,False
+54,Do you feel that repeating this activity regularly has helped with your child's grip and 40?,Radio Button,False,None,None,False
+55,Was child able to put the cotton buds in?,Radio Button,False,None,None,False
+56,Would child like to use this as a display art in your home?,Radio Button,False,None,None,False
+57,Did child like to make a variety of shapes for shadow play?,Radio Button,False,None,None,False
+58,Did child understand how the shapes got projected on the wall?,Radio Button,False,None,None,False
+59,Did child help you to make this big bubble wand?,Radio Button,False,None,None,False
+60,Did child like this as compared to regular bubble wands?,Radio Button,False,None,None,False
+61,Was child able to maintain 39 throughout the activity?,Radio Button,False,None,None,False
+62,Did child get irritated if they could not finish the task?,Radio Button,False,None,None,False
+63,Was child able to categorize most food items as per taste?,Radio Button,False,None,None,False
+64,Which out of these tastes does child find easiest to identify?,Radio Button,False,None,None,False
+65,Did child touch and feel most, if not all objects?,Radio Button,False,None,None,False
+66,Was child able to classify?,Radio Button,False,None,None,False
+67,Was child open to mixing paints with their fingers?,Radio Button,False,None,None,False
+68,Did child this way of learning about secondary colours?,Radio Button,False,None,None,False
+69,Was child able to make shapes using the molds?,Radio Button,False,None,None,False
+70,Does child like using molds or do they prefer to make objects by hand?,Radio Button,False,None,None,False
+71,Was child observing carefully and patiently?,Radio Button,False,None,None,False
+72,Would child like to solve more complex shapes and patterns?,Radio Button,False,None,None,False
+73,Was child patient throughout the activity?,Radio Button,False,None,None,False
+74,Does child regularly clean crayons and toys after playtime?,Radio Button,False,None,None,False
+75,Did child feel proud of themselves after finishing the tree?,Radio Button,False,None,None,False
+76,Can child think of other designs to do with this technique?,Text Box,False,None,None,False
+77,Was your child able to come up with different shapes objects?,Radio Button,False,None,None,False
+78,Did your child find it difficult or easy to shape the dough with their fingers?,Radio Button,False,None,None,False
+79,Did the child experiment with different colors and techniques on their own?.,Radio Button,False,None,None,False
+80, Did the child share any stories or ideas about their creations?,Radio Button,False,None,None,False
+81,What types of flowers did you use?,Text Box,False,None,None,False
+82,Did child perform the activity with ease?,Radio Button,False,None,None,False
+83, Would child be interested to do this again?,Radio Button,False,None,None,False
+84,Could child do this activity with both hands simultaneously?,Radio Button,False,None,None,False
+85,How eager is child to do activities like these that require 39 and 5?,Radio Button,False,None,None,False
+86,Was child able to make impressions using crayons?,Radio Button,False,None,None,False
+87,Did child use these imprints for any other art and craft?,Radio Button,False,None,None,False
+88,Did child enjoy making this colourful prints frame?,Radio Button,False,None,None,False
+89,Did child think of any designs or patterns to make while pressing palm on paper?,Radio Button,False,None,None,False
+90,Was child comfortable touching the ice cold balloon?,Radio Button,False,None,None,False
+91,Did child enjoy using water colours in this activity?,Radio Button,False,None,None,False
+92,Was child able to do the colouring and spraying water independently?,Radio Button,False,None,None,False
+93,Did child convert this activity into an art piece like a nameplate/ wall hanging/ poster etc.?,Radio Button,False,None,None,False
+94,Did child use these googly eyes for any art and craft projects?,Radio Button,False,None,None,False
+95,Did child ask to make these in different sizes and shapes?,Radio Button,False,None,None,False
+96,Was child able to do most, if not all exercises?,Radio Button,False,None,None,False
+97,Did child get better with practice?,Radio Button,False,None,None,False
+98,Have you noticed any change in child's grip and 40 after this activity? Would you like to share your experience?,Text Box,False,None,None,False
+99,Was child able to arrange the matchsticks properly?,Radio Button,False,None,None,False
+100,Was child surprised to see what happened when water was added?,Radio Button,False,None,None,False
+101, Did child enjoy playing with cardboard shoes?,Radio Button,False,None,None,False
+102,Could they use both feet effectively?,Radio Button,False,None,None,False
+103,Did child enjoy chiseling the ice away to find the dinosaur?,Radio Button,False,None,None,False
+104,Would child like to do this activity with any variation? What would they like?,Text Box,False,None,None,False
+105,Did child like colouring the eyes and mouth?,Radio Button,False,None,None,False
+106,Would child like to make more such monster hands?,Radio Button,False,None,None,False
+107,Which part of the activity did child like the most?,Radio Button,False,None,None,False
+108,Would child like to make more animals this way?,Radio Button,False,None,None,False
+109,Did child like collecting different types of leaves?,Radio Button,False,None,None,False
+110,Would child like to make more such bookmarks to gift to friends and family?,Radio Button,False,None,None,False
+111,Does child use this board to practice writing?,Radio Button,False,None,None,False
+112,Would child like similar boards for writing small words?,Radio Button,False,None,None,False
+113,did child enjoy collecting the flowers?,Radio Button,False,None,None,False
+114,Would child like to display this creation in your family living room?,Radio Button,False,None,None,False
+115,Did child like crumpling and tearing of paper?,Radio Button,False,None,None,False
+116,Did child learn about the inside of an anthill?,Radio Button,False,None,None,False
+117,Did child like the idea of sensory play to learn letters and numbers?,Radio Button,False,None,None,False
+118,Do you notice any improvements in child's letter, number and colour recognition after doing this activity repeatedly?,Radio Button,False,None,None,False
+119,Did child add any fun elements to the spider like a bow or a hat?,Radio Button,False,None,None,False
+120,Would child like to make other animals using cable ties?,Radio Button,False,None,None,False
+121,Was child consistent and patient with their efforts?,Radio Button,False,None,None,False
+122,Did child get better with practice?,Radio Button,False,None,None,False
+123,Was child able to do the sieving action?,Radio Button,False,None,None,False
+124,Did child patiently sort out all the chana?,Radio Button,False,None,None,False
+125, Did the child enjoyed doing longer phrases?,Radio Button,False,None,None,False
+126, Do you think hands on leaning lets child remember better?,Radio Button,False,None,None,False
+127,How many shapes were built by the child?,Radio Button,False,None,None,False
+128,What theme did you decide on?,Text Box,False,None,None,False
+129, Were they able to make patterns as requested?,Radio Button,False,None,None,False
+130,What did the child enjoy most while playing with the sand?,Text Box,False,None,None,False
+131,Did child like the idea of making newspaper bags at home?,Radio Button,False,None,None,False
+132,Do they like to use these bags?,Radio Button,False,None,None,False
+133,Did child find moving the hands around interesting? ,Radio Button,False,None,None,False
+134,Did they understand the different nomenclatures used to tell time?,Radio Button,False,None,None,False
+135, Did child expect a rainbow to be formed before you started with the activity? ,Radio Button,False,None,None,False
+136,What was child's reaction after seeing the rainbow get formed?,Radio Button,False,None,None,False
+137,Was child able to make the butterfly flap its wings?,Radio Button,False,None,None,False
+138,Did child ask to make more such butterflies?,Radio Button,False,None,None,False
+139,Did child make a creative bracelet or ring?,Radio Button,False,None,None,False
+140,Did child try to make other pieces of jewelry?,Radio Button,False,None,None,False
+141,Was child able to pick up small objects using a stick?,Radio Button,False,None,None,False
+142,Did child's speed increase with practice?,Radio Button,False,None,None,False
+143,Did child additionally decorate the fruit basket?,Radio Button,False,None,None,False
+144,would child like to make similar fruit baskets to gift to friends and family?,Radio Button,False,None,None,False
+145,was child able to focus throughout the game?,Radio Button,False,None,None,False
+146,Is child able to play even after leveling up the game?,Radio Button,False,None,None,False
+147,Was child able to catch most of the balls?,Radio Button,False,None,None,False
+148,Did child get better at activity with practice?,Radio Button,False,None,None,False
+149,Could child replicate your drawing?,Radio Button,False,None,None,False
+150, Did you enjoy doing this activity together?,Radio Button,False,None,None,False
+151,Did child enjoy doing the setup for this experiment? ,Radio Button,False,None,None,False
+152,Did child observe patiently, the changes happening everyday?,Radio Button,False,None,None,False
+153,Was child able to draw vehicles using the template?,Radio Button,False,None,None,False
+154,Did child try to draw anything besides vehicles?,Radio Button,False,None,None,False
+155,Did child enjoy setting up this activity?,Radio Button,False,None,None,False
+156,Did child try to play this game with friends or siblings?,Radio Button,False,None,None,False
+157, was child curious to see the outcome of this activity?,Radio Button,False,None,None,False
+158,Can child think of any variation to this activity besides the gymnast? What is it?,Text Box,False,None,None,False
+159,Was child able to cut the leaves well?,Radio Button,False,None,None,False
+160,Did child get better at activity with practice?,Radio Button,False,None,None,False
+161,Was child able to match the code most, if not all times?,Radio Button,False,None,None,False
+162,Would child like to solve a longer code next time?,Radio Button,False,None,None,False
+163,Did child enjoy making the shoe template?,Radio Button,False,None,None,False
+164,Was child able to weave through the holes in the shoe and make knots?,Radio Button,False,None,None,False
+165,What part of this activity did child enjoy the most?,Radio Button,False,None,None,False
+166,Would child like to make more name plates for extended family?,Radio Button,False,None,None,False
+167,Did child like this different method of blowing bubbles?,Radio Button,False,None,None,False
+168,Would child like to explore coloured water?,Radio Button,False,None,None,False
+169,Did child like making the flowers?,Radio Button,False,None,None,False
+170,Were they surprised to see the flowers bloom in water?,Radio Button,False,None,None,False
+171,Was child able to create designs using a cotton bud?,Radio Button,False,None,None,False
+172,Would child like to make more artwork using this technique?,Radio Button,False,None,None,False
+173,Did child enjoy this technique of painting?,Radio Button,False,None,None,False
+174,Would child like to turn this into an art piece to put up for display?,Radio Button,False,None,None,False
+175,How many cars did child make?,Radio Button,False,None,None,False
+176,Would child like to hang these cars up for display?,Radio Button,False,None,None,False
+177,Was child able to twist the paper strips?,Radio Button,False,None,None,False
+178,Would child like to make more craft using this technique for friends and family?,Radio Button,False,None,None,False
+179, Did they express any sensory difficulties while writing in foam?,Radio Button,False,None,None,False
+180,What did they write or draw?,text Box,False,None,None,False
+181,Did child enjoy this jewelry making process?,Radio Button,False,None,None,False
+182,What all ornaments did they make?,text Box,False,None,None,False
+183,Did child weigh various objects in the house to see which was heavier and lighter?,Radio Button,False,None,None,False
+184,What did child learn from this activity?,text Box,False,None,None,False
+185,Did child keep trying till they could do the exercise well?,Radio Button,False,None,None,False
+186,Did child get better with practice?,Radio Button,False,None,None,False
+187,Did child come up with new and unique animals to make hand shadows?,Radio Button,False,None,None,False
+188,Did child enjoy guessing each other's shadows?,Radio Button,False,None,None,False
+189,Was child able to participate for most tasks in this activity?,Radio Button,False,None,None,False
+190,Does child use these tongs to pick things up?,Radio Button,False,None,None,False
+191,Did child use 7 in colouring the paper strip?,Radio Button,False,None,None,False
+192,Does child try the spinner at various locations and various heights?,Radio Button,False,None,None,False
+193,Did child observe the experiment carefully?,Radio Button,False,None,None,False
+194,Did they enjoy putting the food colour in both liquids?,Radio Button,False,None,None,False
+195,Would child like to carry out the same experiment in other liquids as well?,Text Box,False,None,None,False
+196,Did child stick the sticks on their own or did they require help?,Radio Button,False,None,None,False
+197,Does child fill the feeder and maintain cleanliness?,Radio Button,False,None,None,False
+198,Can child think of any other design for mobile stand using same materials?,Radio Button,False,None,None,False
+199,Does child like to make utility items from things available at home?,Radio Button,False,None,None,False
+200,Did child participate in making the weighing scale?,Radio Button,False,None,None,False
+201,Did child use this to weigh various materials?,Radio Button,False,None,None,False
+202,Was child able to perform this activity? ,Radio Button,False,None,None,False
+203,Did child face any difficulties ?,Radio Button,False,None,None,False
+204, Could child manage to move all balls in one toss?,Radio Button,False,None,None,False
+205,Did child keep trying even if they failed?,Radio Button,False,None,None,False
+206,Does child usually like DIY activities?,Radio Button,False,None,None,False
+207,What did child decide to use the finished jar for?,text Box,False,None,None,False
+208,Was child able to complete the activity?,Radio Button,False,None,None,False
+209,Did child get better with practice?,Radio Button,False,None,None,False
+210,Was child able to make the stress balloon independently?,Radio Button,False,None,None,False
+211,Does child use this balloon in times of stress?,Radio Button,False,None,None,False
+212,Was child patient enough to put the pom pom through the holes in the cardboard?,Radio Button,False,None,None,False
+213,Did child come up with any trick or strategy?,Radio Button,False,None,None,False
+214,Was child keen on winning the game?,Radio Button,False,None,None,False
+215,Does child like to play this game with friends?,Radio Button,False,None,None,False
+216,Was child thrilled to make a rewritable pad at home?,Radio Button,False,None,None,False
+217,Does child use this pad regularly?,Radio Button,False,None,None,False
+218,Did child like this new technique of paper mache?,Radio Button,False,None,None,False
+219,Would child like to make more such art using this technique?,Radio Button,False,None,None,False
+220,Did child like this new style of painting?,Radio Button,False,None,None,False
+221,Would child like to make more such art using this technique?,Radio Button,False,None,None,False
+222,Was child keen on recycling an old box?,Radio Button,False,None,None,False
+223,Would child like to make more things using old boxes?,Radio Button,False,None,None,False
+224,Did child use these butterflies in any art work/ show piece?,Radio Button,False,None,None,False
+225,Can child think of any other things they would like to make using this technique? What are they?,text Box,False,None,None,False
+226,Can child think of any other animals to make using this idea?,Radio Button,False,None,None,False
+227,Would child like to make more octo pops and gift to friends?,Radio Button,False,None,None,False
+228,Did child find this method of learning interesting?,Radio Button,False,None,None,False
+229,Would child like to explore similar grammar activities?,Radio Button,False,None,None,False
+230,Was child excited to make their own stickers?,Radio Button,False,None,None,False
+231,Would child like to make more stickers?,Radio Button,False,None,None,False
+232,Was child able to do the weaving pattern of thread?,Radio Button,False,None,None,False
+233,Did child use this as an art piece to display?,Radio Button,False,None,None,False
+234,Did child assemble everything themselves?,Radio Button,False,None,None,False
+235,Does child play with this DIY toy often?,Radio Button,False,None,None,False
+236, Did they ask for assistance or prefer to work independently?,Radio Button,False,None,None,False
+237,Did they show interest in wearing the jewelry themselves or giving it as a gift?,Radio Button,False,None,None,False
+238,How did your child feel after completing the activity?,Radio Button,False,None,None,False
+239,Did child show interest in making more dolls to gift to friends?,Radio Button,False,None,None,False
+240,What did your child enjoy most about painting the t-shirts together? ,Checkbox,True,None,None,False
+241,Did child find t-shirt painting easy or challenging?,Radio Button,False,None,None,False
+242,Which materials did child like to use?,Checkbox,True,None,None,False
+243,What can you learn from the elements of nature, that you selected for your nature collage?,Text box,False,None,None,False
+244,What part of this activity did child enjoy the most?,Checkbox,True,None,None,False
+245,None,None,False,None,None,False
+246,Was child eager to make festival decorations at home?,Radio Button,False,None,None,False
+247,Would child be able to teach this activity to a younger child independently?,Radio Button,False,None,None,False
+248,Did child understand why oil floats on water?,Radio Button,False,None,None,False
+249,Would child like to try the same activity using different liquids?,Radio Button,False,None,None,False
+250, Was child able to stack and balance the arrangement?,Radio Button,False,None,None,False
+251,Did the stack collapse at any point of time?,Radio Button,False,None,None,False
+252, Did child make more than 1 park bench? ,Radio Button,False,None,None,False
+253,Did child think of any unique design for the bench?,Radio Button,False,None,None,False
+254,Did child follow all the steps to make the cycle patiently?,Radio Button,False,None,None,False
+255,Did child add some unique elements to their cycle?,Radio Button,False,None,None,False
+256,Was child able to figure out the puzzle?,Radio Button,False,None,None,False
+257, How much time and how many attempts did it take?,Text box,False,None,None,False
+258,Did child enjoy making the bees?,Radio Button,False,None,None,False
+259,Does child use this light up activity as  a showpiece or wall art?,Radio Button,False,None,None,False
+260,Did child enjoy setting up this puzzle activity?,Radio Button,False,None,None,False
+261,Was child able to focus the whole time and solve the puzzle?,Radio Button,False,None,None,False
+262,Was child able to set up the activity independently?,Radio Button,False,None,None,False
+263,Was child amazed to see the water dispenser in action?,Radio Button,False,None,None,False
+264,Did child expect the balloon to not pop?,Radio Button,False,None,None,False
+265,Does child enjoy doing science experiments at home?,Radio Button,False,None,None,False
+266,Did child like making patterns with thread?,Radio Button,False,None,None,False
+267,Did child use the big flower to make any wall art or showpiece?,Radio Button,False,None,None,False
+268,Did child enjoy setting up this activity?,Radio Button,False,None,None,False
+269,Can child think of any variations to be added to this activity? What are they?,Text box,False,None,None,False
+270,Did child follow all the steps to make the frog patiently?,Radio Button,False,None,None,False
+271,Would child like to make more such jumping animal toys?,Radio Button,False,None,None,False
+272,Did child observe patiently?,Radio Button,False,None,None,False
+273,Did child understand the reason for colour spreading through different temperature of water at different rates?,Radio Button,False,None,None,False
+274,Was child able to observe the experiment patiently?,Radio Button,False,None,None,False
+275,Did child understand the reason behind the volcanic eruptions?,Radio Button,False,None,None,False
+276,Was child able to fold the paper as shown in the video?,Radio Button,False,None,None,False
+277,Would child like to make more mobile stands to give to family and friends?,Radio Button,False,None,None,False
+278,Was child able to wrap the ribbon around the ruler?,Radio Button,False,None,None,False
+279,Would child like to make more flowers in different colours?,Radio Button,False,None,None,False
+280,Was child able to fold the paper as shown in the video?,Radio Button,False,None,None,False
+281,Would child like to make more tops to share with friends?,Radio Button,False,None,None,False
+282,Was child able to replicate pattern properly?,Radio Button,False,None,None,False
+283,Would child like to explore more patterns?,Radio Button,False,None,None,False
+284,Did child patiently stick all the popsicle sticks ?,Radio Button,False,None,None,False
+285,Does child keep the bird nest clean?,Radio Button,False,None,None,False
+286,Was child interested in constructing the marble track?,Radio Button,False,None,None,False
+287,Does child use marble track while playing with friends?,Radio Button,False,None,None,False
+288,Was child curious to see what happens to the ball?,Radio Button,False,None,None,False
+289,Did child understand the reason of this experiment?,Radio Button,False,None,None,False
+290,How many bookmarks did child make?,Radio Button,False,None,None,False
+291,Would child like to make more bookmarks for friends and family?,Radio Button,False,None,None,False
+292,Did child make more coasters for family to use?,Radio Button,False,None,None,False
+293,What else can child think of to repurpose old lids?,Text Box,False,None,None,False
+294,Did child enjoy this new technique?,Radio Button,False,None,None,False
+295,Would child like to create more art using this technique?,Radio Button,False,None,None,False
+296,Was child interested in making complex geometrical figures?,Radio Button,False,None,None,False
+297,Does child prefer learning geometry by this method?,Radio Button,False,None,None,False
+298,Did child like this new technique of creating art?,Radio Button,False,None,None,False
+299,Would child like to demonstrate this activity to a friend?,Radio Button,False,None,None,False
+300,Did child make more than one nutty hero?,Radio Button,False,None,None,False
+301,Can child think of other things from the kitchen to use ?,Text Box,False,None,None,False
+302, Did your child learn any new skills or gain any insights from this activity?,Radio Button,False,None,None,False
+303, Did your child express interest in exploring other carving/ sculpting activities after completing this one?,Radio Button,False,None,None,False
+304,How many different objects was child able to design using geometrical shapes?,Radio Button,False,None,None,False
+305,Did you come up with new ideas? If yes, what are those objects you thought?,Text Box,False,None,None,False
+306,What part of this activity did child find most interesting?,Checkbox,True,None,None,False
+307,Did child read up some extra information about this topic?,Radio Button,False,None,None,False
+308,Did child try and make different shapes out of tissue paper apart from butterfly?,Radio Button,False,None,None,False
+309,Did child try to do some other activities related to static energy as well?,Radio Button,False,None,None,False
+310,How well do you think your paper plane flew? ,Radio Button,False,None,None,False
+311,What factors do you think affected its flight?,Text Box,False,None,None,False
+312,Would child like to design a different type of vehicle next time?,Radio Button,False,None,None,False
+313,None,None,False,None,None,False
+314,Was child able to repurpose waste material to make a dream catcher?,Radio Button,False,None,None,False
+315,Would child like to make a more decorative dream catcher or add variations to design next time?,Radio Button,False,None,None,False
+316,Did child read extra information to understand this topic better?,Radio Button,False,None,None,False
+317,Would child like to do a similar activity with life stages of different insects?,Radio Button,False,None,None,False
+318,Was child curious while setting up this activity in a Ziploc bag?,Radio Button,False,None,None,False
+319, Did child record their observations?,Radio Button,False,None,None,False
+320,Did child enjoy cutting and shaping the Oreo cream?,Radio Button,False,None,None,False
+321,Could child arrange the moons in correct order?,Radio Button,False,None,None,False
+322,Could child make good impressions by rubbing? ,Radio Button,False,None,None,False
+323,Did child do the calculations well?,Radio Button,False,None,None,False
+324,Was child able to understand why water comes out when cap is loosened?,Radio Button,False,None,None,False
+325,Did child try to use the water fountain for any specific purpose like watering the plants/ giving water to birds and animals?,Radio Button,False,None,None,False
+326,Can child think of any other home applications of this activity like shower? Did you explain the workings behind it?,Text Box,False,None,None,False
+327,Was child involved actively in this activity?,Radio Button,False,None,None,False
+328,Did child use 7 to decorate the stand?,Radio Button,False,None,None,False
+329,What part of this activity did child show interest in?,Radio Button,False,None,None,False
+330,Did child understand why the sun started spinning?,Radio Button,False,None,None,False
+331,Were you expecting water to rise in the jar?,Radio Button,False,None,None,False
+332,What do you think was the reason for water rising in the jar?,Text Box,False,None,None,False
+333,Did you expect the plate to stick to the jar?,Radio Button,False,None,None,False
+334,What do you think is the reason for the plate to stick to the glass jar?,Text Box,False,None,None,False
+335,Was child able to assemble the well together?,Radio Button,False,None,None,False
+336,Was child amazed to learn about the functioning of a well?,Radio Button,False,None,None,False
+337, What was your favourite part of the activity?,Radio Button,False,None,None,False
+338, How did you feel assigning tasks to all the family members? Did you find it to be easy or challenging?,Radio Button,False,None,None,False
+339,Do you feel such projects help to develop personality and how?,Text BoxNone,False,None,None,False
+340, Why do you think the balloon moved across the string?,Radio Button,False,None,None,False
+341,None,None,False,None,None,False
+342, What did you observe during the reaction between the baking soda and vinegar?,Checkbox,True,None,None,False
+343, Why do you think the volcano erupted?,Text Box,False,None,None,False
+344,Why do you think the pepper was attracted to the comb or balloon?,Radio Button,False,None,None,False
+345,Would you like to explore more experiments involving static electricity in the future? ,Radio Button,False,None,None,False
+346,Did you understand the science behind why the balloon inflated?,Radio Button,False,None,None,False
+347,Do you feel confident teaching this experiment to a group of younger kids?,Radio Button,False,None,None,False
+348,Do you feel that such hands on experiments give you  a better understanding of the scientific concept?,Text BoxNone,False,None,None,False
+349,Why do you think the ball was able to float in the air stream?,Radio Button,False,None,None,False
+350, How did changing the angle of the hair dryer affect the ball's behaviour?,Radio Button,False,None,None,False
+351,What did you learn about in this activity?,Checkbox,True,None,None,False
+352,Would you like to demonstrate this activity independently in school or in front of friends?,Radio Button,False,None,None,False
+353, How did the salt affect the ice cube?,Radio Button,False,None,None,False
+354,Did you learn about melting temperature of ice in this experiment?,Radio Button,False,None,None,False
+355,Why do you think the bad did not leak?,Radio Button,False,None,None,False
+356,What new science concept did you learn today,Text Box,False,None,None,False
+357, How did the speaker change the sound from your device?,Checkbox,True,None,None,False
+358, Can you think of any variations of this activity?,Text Box,False,None,None,False
+359,Would you like to make similar toys with various sizes of paper?,Radio Button,False,None,None,False
+360,Would you like to teach this activity to younger kids?,Radio Button,False,None,None,False
+361,Were you able to construct the boat without help?,Radio Button,False,None,None,False
+362,Would you like to make different boat designs using the same material?,Radio Button,False,None,None,False
+363,Did you follow all steps of the activity patiently?,Radio Button,False,None,None,False
+364,Would you be able to demonstrate this activity to  a friend?,Radio Button,False,None,None,False
+365,Did you follow all steps of the activity patiently?,Radio Button,False,None,None,False
+366,Would you like to make more such furniture pieces using straws?,Radio Button,False,None,None,False
+367,Could you solve the puzzles?,Radio Button,False,None,None,False
+368, Did you think of any puzzles and challenge parent?,Radio Button,False,None,None,False
+369, Were you interested throughout the process of making the house?,Radio Button,False,None,None,False
+370,Did you think of any other waste material that can be used to make a house? What was it?,Text Box,False,None,None,False
+371,Did you understand the reason behind this bubbling volcano?,Radio Button,False,None,None,False
+372,Would you like to demonstrate this experiment to friends and family?,Radio Button,False,None,None,False
+373, Did your bridge turn out the way you expected it to?  ,Radio Button,False,None,None,False
+374,What were some of the challenges you faced while building your bridge?,Checkboxes,False,None,None,False
+375,How did you feel  during the experiment with the paper clip switch? ,Radio Button,False,None,None,False
+376,Can you think of other such simple experiments you can try at home?,Text Box,False,None,None,False
+377,What part of this activity did you enjoy the most?,Radio Button,False,None,None,False
+378,an you think of other ways to design the catapult?,Radio Button,False,None,None,False
+379,Were you able to catch the cardboard squares promptly?,Radio Button,False,None,None,False
+380,Would you like to do similar activities to sharpen their reflexes?,Radio Button,False,None,None,False
+381,Were you curious to see what happens in this experiment?,Radio Button,False,None,None,False
+382,What do you think is the reason for the bottle shoot?,Text Box,False,None,None,False
+383,Did you try out several permutations and combinations to get the experiment right?,Radio Button,False,None,None,False
+384,Would you like to share your experiences?,Text Box,False,None,None,False

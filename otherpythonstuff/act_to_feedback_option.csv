@@ -1,878 +1,877 @@
-question_option_id, question_id, name
-0,0,Yes
-1,0,No
-2,1,Selecting the vegetable
-3,1,Dipping paints and printing
-4,1,Creating new designs
-5,2,Yes
-6,2,No
-7,2,Sometimes
-8,3,Yes
-9,3,No
-10,4,Straight line
-11,4,Curve line
-12,4,Zig zag line
-13,4,All of the above
-14,5,Yes
-15,5,No
-16,6,Dipping and sprinkling paint
-17,6,Creating designs
-18,6,Getting messy
-19,7,Yes
-20,7,No
-21,7,Can't Say
-22,8,Rolling the dough
-23,8,Shaping the dough
-24,8,Making a mess
-25,9,Yes
-26,9,No
-27,9,Can't Say
-28,10,Happy and proud
-29,10,Not happy
-30,10,Neutral
-31,11,Yes
-32,11,No
-33,12,Yes
-34,12,No
-35,12,Can't Say
-36,14,Yes
-37,14,No
-38,14,Most of the times
-39,14,Sometimes
-40,15,Excitement
-41,15,Anticipation
-42,16,own ideas
-43,16,asked for help
-44,16,Mix of both
-45,17,Yes
-46,17,No
-47,17,Can't Say
-48,18,Yes
-49,18,No
-50,18,Sometimes
-51,19,Yes
-52,19,No
-53,20,Yes
-54,20,No
-55,20,Can't Say
-56,21,Yes
-57,21,No
-58,22,Making straw rectangle
-59,22,choosing the coloured fish
-60,22,Making soapy solution
-61,22,Watching fish float
-62,23,Yes
-63,23,No
-64,23,Can't Say
-65,24,Collecting leaves and flowers
-66,24,Pasting leaves and flowers on tape
-67,25,Yes
-68,25,No
-69,25,Can't Say
-70,26,1 to 2
-71,26,3 to 5
-72,26,more than 5
-73,26,more than 10
-74,27,Yes
-75,27,No
-76,27,Can't Say
-77,28,Yes
-78,28,No
-79,29,Yes
-80,29,No
-81,30,1 to 2
-82,30,3 to 5
-83,30,more than 5
-84,31,Yes
-85,31,No
-86,32,Yes
-87,32,No
-88,33,Few times
-89,33,Plenty of times
-90,34,Yes
-91,34,No
-92,35,Yes
-93,35,No
-94,36,Yes
-95,36,No
-96,36,Most of the times
-97,36,Sometimes
-98,37,Collaborative play
-99,37,Competitive play
-100,38,Yes
-101,38,No
-102,39,Yes
-103,39,No
-104,40,Yes
-105,40,No
-106,41,Yes
-107,41,No
-108,42,Yes
-109,42,No
-110,44,Yes
-111,44,No
-112,45,Yes
-113,45,No
-114,46,Rolling paper cup in the green gram
-115,46,Removing the green gram from the paper cups
-116,47,Yes
-117,47,No
-118,47,Can't Say
-119,48,Yes
-120,48,No
-121,49,Yes
-122,49,No
-123,49,Can't Say
-124,50,Yes
-125,50,No
-126,51,Yes
-127,51,No
-128,52,Yes
-129,52,No
-130,53,Yes
-131,53,No
-132,53,Can't Say
-133,54,Yes
-134,54,No
-135,54,Most of the times
-136,54,Sometimes
-137,55,Yes
-138,55,No
-139,55,Sometimes
-140,56,Yes
-141,56,No
-142,57,Sweet
-143,57,Salty
-144,57,Spicy
-145,57,Bitter/ Sour
-146,58,Yes
-147,58,No
-148,59,Yes
-149,59,No
-150,59,Most of the times
-151,59,Sometimes
-152,60,Yes
-153,60,No
-154,61,Yes
-155,61,No
-156,61,Can't Say
-157,62,Yes
-158,62,No
-159,63,Mold
-160,63,Using hands
-161,64,Yes
-162,64,No
-163,64,Most of the times
-164,64,Sometimes
-165,65,Yes
-166,65,No
-167,65,Can't Say
-168,66,Yes
-169,66,No
-170,66,Most of the times
-171,66,Sometimes
-172,67,Yes
-173,67,No
-174,67,Most of the times
-175,67,Sometimes
-176,68,Yes
-177,68,No
-178,70,Yes
-179,70,No
-180,71,Easy
-181,71,Difficult
-182,72,Yes
-183,72,No
-184,73,Yes
-185,73,No
-186,73,Sometimes
-187,74,Yes
-188,74,No
-189,74,Most of the times
-190,74,Sometimes
-191,75,Yes
-192,75,No
-193,75,Can't Say
-194,76,Yes
-195,76,No
-196,76,Most of the times
-197,76,Sometimes
-198,77,Very eager
-199,77,Eager
-200,77,Not so eager
-201,77,uninterested
-202,78,Yes
-203,78,No
-204,79,Yes
-205,79,No
-206,80,Yes
-207,80,No
-208,81,Yes
-209,81,No
-210,82,Yes
-211,82,No
-212,83,Yes
-213,83,No
-214,84,Yes
-215,84,No
-216,85,Yes
-217,85,No
-218,86,Yes
-219,86,No
-220,87,Yes
-221,87,No
-222,88,Yes
-223,88,No
-224,89,Yes
-225,89,No
-226,90,Yes
-227,90,No
-228,91,Yes
-229,91,No
-230,92,Yes
-231,92,No
-232,93,Yes
-233,93,No
-234,93,Sometimes
-235,94,Yes
-236,94,No
-237,96,Yes
-238,96,No
-239,97,Yes
-240,97,No
-241,97,Can't Say
-242,98,Drawing the sheep
-243,98,Putting the tape
-244,98,Sticking cotton
-245,99,Yes
-246,99,No
-247,99,Can't Say
-248,100,Yes
-249,100,No
-250,101,Yes
-251,101,No
-252,101,Can't Say
-253,102,Yes
-254,102,No
-255,103,Yes
-256,103,No
-257,103,Can't Say
-258,104,Yes
-259,104,No
-260,104,Can't Say
-261,105,Yes
-262,105,No
-263,105,Can't Say
-264,106,Yes
-265,106,No
-266,107,Yes
-267,107,No
-268,107,Can't Say
-269,108,Yes
-270,108,No
-271,108,Can't Say
-272,109,Yes
-273,109,No
-274,109,Can't Say
-275,110,Yes
-276,110,No
-277,111,Yes
-278,111,No
-279,111,Can't Say
-280,112,Yes
-281,112,No
-282,112,Most of the times
-283,112,Sometimes
-284,113,Yes
-285,113,No
-286,113,Can't Say
-287,114,Yes
-288,114,No
-289,115,Yes
-290,115,No
-291,116,Yes
-292,116,No
-293,117,Yes
-294,117,No
-295,117,Can't Say
-296,118,1 to 2
-297,118,3 to 5
-298,118,more than 5
-299,120,Yes
-300,120,No
-301,122,Yes
-302,122,No
-303,122,Can't Say
-304,123,Yes
-305,123,No
-306,123,Sometimes
-307,124,Yes
-308,124,No
-309,124,Can't Say
-310,125,Yes
-311,125,No
-312,125,Can't Say
-313,126,Yes
-314,126,No
-315,126,Can't Say
-316,127,Excited
-317,127,Happy
-318,127,Satisfied
-319,127,Neutral
-320,128,Yes
-321,128,No
-322,129,Yes
-323,129,No
-324,130,Yes
-325,130,No
-326,131,Yes
-327,131,No
-328,132,Yes
-329,132,No
-330,133,Yes
-331,133,No
-332,134,Yes
-333,134,No
-334,135,Yes
-335,135,No
-336,135,Can't Say
-337,136,Yes
-338,136,No
-339,137,Yes
-340,137,No
-341,137,Sometimes
-342,138,Yes
-343,138,No
-344,139,Yes
-345,139,No
-346,140,Yes
-347,140,No
-348,140,Most of the times
-349,140,Sometimes
-350,141,Yes
-351,141,No
-352,142,Yes
-353,142,No
-354,143,Yes
-355,143,No
-356,143,Can't Say
-357,144,Yes
-358,144,No
-359,145,Yes
-360,145,No
-361,146,Yes
-362,146,No
-363,147,Yes
-364,147,No
-365,148,Yes
-366,148,No
-367,150,Yes
-368,150,No
-369,150,Most of the times
-370,150,Sometimes
-371,151,Yes
-372,151,No
-373,151,Can't Say
-374,152,Yes
-375,152,No
-376,153,Yes
-377,153,No
-378,153,Can't Say
-379,154,Yes
-380,154,No
-381,154,Can't Say
-382,155,Yes
-383,155,No
-384,156,making the name post
-385,156,Painting
-386,156,Writing names
-387,156,Displaying the art
-388,157,Yes
-389,157,No
-390,157,Can't Say
-391,158,Yes
-392,158,No
-393,159,Yes
-394,159,No
-395,159,Can't Say
-396,160,Yes
-397,160,No
-398,160,Can't Say
-399,161,Yes
-400,161,No
-401,161,Can't Say
-402,162,Yes
-403,162,No
-404,163,Yes
-405,163,No
-406,163,Can't Say
-407,164,Yes
-408,164,No
-409,165,Yes
-410,165,No
-411,165,Can't Say
-412,166,just 1
-413,166,2 to 3
-414,166,more than 5
-415,167,Yes
-416,167,No
-417,167,Can't Say
-418,168,Yes
-419,168,No
-420,168,Sometimes
-421,169,Yes
-422,169,No
-423,169,Can't Say
-424,170,Yes
-425,170,No
-426,172,Yes
-427,172,No
-428,172,Can't Say
-429,174,Yes
-430,174,No
-431,176,Yes
-432,176,No
-433,177,Yes
-434,177,No
-435,177,Can't Say
-436,178,Yes
-437,178,No
-438,179,Yes
-439,179,No
-440,179,Can't Say
-441,180,Yes
-442,180,No
-443,181,Yes
-444,181,No
-445,181,Sometimes
-446,182,Yes
-447,182,No
-448,183,Yes
-449,183,No
-450,184,Yes
-451,184,No
-452,184,Most of the times
-453,184,Sometimes
-454,185,Yes
-455,185,No
-456,186,On their own
-457,186,Required help
-458,186,Mix of both
-459,187,Yes
-460,187,No
-461,187,Most of the times
-462,187,Sometimes
-463,188,Yes
-464,188,No
-465,189,Yes
-466,189,No
-467,189,Sometimes
-468,190,Yes
-469,190,No
-470,191,Yes
-471,191,No
-472,192,Yes
-473,192,No
-474,193,Yes
-475,193,No
-476,194,Yes
-477,194,No
-478,194,Sometimes
-479,195,Yes
-480,195,No
-481,195,Most of the times
-482,195,Sometimes
-483,196,Yes
-484,196,No
-485,198,Yes
-486,198,No
-487,199,Yes
-488,199,No
-489,199,Can't Say
-490,200,Yes
-491,200,No
-492,201,Yes
-493,201,No
-494,201,Most of the times
-495,201,Sometimes
-496,202,Yes
-497,202,No
-498,202,Most of the times
-499,202,Sometimes
-500,203,Yes
-501,203,No
-502,204,Yes
-503,204,No
-504,204,Can't Say
-505,205,Yes
-506,205,No
-507,206,Yes
-508,206,No
-509,206,Can't Say
-510,207,yes
-511,207,No
-512,208,Yes
-513,208,No
-514,208,Can't Say
-515,209,Yes
-516,209,No
-517,210,Yes
-518,210,No
-519,211,Yes
-520,211,No
-521,211,Can't Say
-522,212,Yes
-523,212,No
-524,213,Yes
-525,213,No
-526,214,Yes
-527,214,No
-528,216,Yes
-529,216,No
-530,216,Can't Say
-531,217,Yes
-532,217,No
-533,217,Can't Say
-534,218,Yes
-535,218,No
-536,219,Yes
-537,219,No
-538,220,Yes
-539,220,No
-540,220,Can't Say
-541,221,Yes
-542,221,No
-543,221,Can't Say
-544,222,Yes
-545,222,No
-546,222,Most of the times
-547,222,Sometimes
-548,223,Yes
-549,223,No
-550,224,Yes
-551,224,No
-552,225,Yes
-553,225,No
-554,226,Ask for help
-555,226,Work independently
-556,226,Mix of both
-557,227,Wearing themselves
-558,227,Giving as a gift
-559,227,Both
-560,228,Happy
-561,228,Content
-562,228,Satisfied
-563,228,Neutral
-564,229,Yes
-565,229,No
-566,230,Thinking of ideas
-567,230,Painting the t-shirt
-568,230,Family Bonding
-569,231,Easy
-570,231,Challenging
-571,231,Can't Say
-572,232,Leaves and flowers
-573,232,stones
-574,232,twigs, stems
-575,232,feathers
-576,234,Arranging the crayons
-577,234,Using the hairdryer
-578,234,Swirling around the melted crayons
-579,236,Yes
-580,236,No
-581,236,Can't Say
-582,237,Yes
-583,237,No
-584,237,Can't Say
-585,238,Yes
-586,238,No
-587,238,Can't Say
-588,239,Yes
-589,239,No
-590,240,Yes
-591,240,No
-592,240,Most of the times
-593,240,Sometimes
-594,241,Yes
-595,241,No
-596,242,Yes
-597,242,No
-598,243,Yes
-599,243,No
-600,244,Yes
-601,244,No
-602,245,Yes
-603,245,No
-604,246,Yes
-605,246,No
-606,248,Yes
-607,248,No
-608,249,Wall art
-609,249,Showpiece
-610,249,as gift for friend
-611,250,Yes
-612,250,No
-613,251,Yes
-614,251,No
-615,252,Yes
-616,252,No
-617,253,Yes
-618,253,No
-619,254,Yes
-620,254,No
-621,254,Can't Say
-622,255,Yes
-623,255,No
-624,256,Yes
-625,256,No
-626,257,Yes
-627,257,No
-628,258,Yes
-629,258,No
-630,260,Yes
-631,260,No
-632,261,Yes
-633,261,no
-634,261,Can't say
-635,262,Yes
-636,262,No
-637,263,Yes
-638,263,No
-639,263,Can't say
-640,264,Yes
-641,264,No
-642,265,Yes
-643,265,No
-644,266,Yes
-645,266,No
-646,267,Yes
-647,267,No
-648,268,Yes
-649,268,No
-650,269,Yes
-651,269,No
-652,269,Can't say
-653,270,Yes
-654,270,No
-655,271,Yes
-656,271,No
-657,271,Can't say
-658,272,Yes
-659,272,No
-660,272,Sometimes
-661,273,Yes
-662,273,No
-663,273,Can't say
-664,274,Yes
-665,274,No
-666,275,Yes
-667,275,No
-668,276,Yes
-669,276,No
-670,277,Yes
-671,277,No
-672,277,Sometimes
-673,278,Yes
-674,278,No
-675,279,Yes
-676,279,No
-677,279,Can't Say
-678,280,1 to 2
-679,280,3 to 5
-680,280,more than 5
-681,280,more than 10
-682,281,Yes
-683,281,No
-684,281,Can't Say
-685,282,Yes
-686,282,No
-687,284,Yes
-688,284,No
-689,285,Yes
-690,285,No
-691,285,Can't Say
-692,286,Yes
-693,286,No
-694,287,Yes
-695,287,No
-696,287,Can't Say
-697,288,Yes
-698,288,No
-699,289,Yes
-700,289,No
-701,290,Yes
-702,290,No
-703,292,Yes
-704,292,No
-705,292,Can't Say
-706,293,Yes
-707,293,No
-708,294,1 to 2
-709,294,3 to 5
-710,294,more than 5
-711,296,Arranging to form solar system
-712,296,Gathering all required material
-713,296,Research
-714,297,Yes
-715,297,No
-716,298,Yes
-717,298,No
-718,299,Yes
-719,299,No
-720,300,Very well
-721,300,Well
-722,300,Satisfied
-723,302,Yes
-724,302,No
-725,302,Can't Say
-726,304,Yes
-727,304,No
-728,304,Mostly
-729,305,Yes
-730,305,No
-731,305,Can't Say
-732,306,Yes
-733,306,No
-734,307,Yes
-735,307,No
-736,307,Can't Say
-737,308,Yes
-738,308,No
-739,309,Yes
-740,309,No
-741,309,Sometimes
-742,310,Yes
-743,310,No
-744,310,Sometimes
-745,311,Yes
-746,311,No
-747,312,Yes
-748,312,No
-749,313,Yes
-750,313,No
-751,314,Yes
-752,314,No
-753,314,Maybe
-754,315,Yes
-755,315,No
-756,316,Yes
-757,316,No
-758,317,Yes
-759,317,No
-760,318,Making the sun
-761,318,attaching to cardboard
-762,318,blowing through straw
-763,319,Yes
-764,319,No
-765,320,Yes
-766,320,No
-767,320,Can't Say
-768,322,No
-769,322,Yes
-770,324,Yes
-771,324,No
-772,325,Yes
-773,325,No
-774,325,Can't Say
-775,326,Making and designing the bird feeder
-776,326,Leading the project
-777,326,Selecting the seeds
-778,326,Watching the birds use the feeder
-779,327,Easy
-780,327,Challenging
-781,328,Air escaping the balloon 
-782,328,Force of attraction
-783,328,Gravity
-784,330,Fizzing and bubbling reaction
-785,330,Fizzing sound and gushing of air
-786,330,Foam eruption
-787,332,Static electricity
-788,332,Gravitational attraction
-789,332,Adhesive force
-790,333,Yes
-791,333,No
-792,333,Maybe
-793,334,Yes
-794,334,No
-795,334,Maybe
-796,335,Yes
-797,335,No
-798,335,Can't Say
-799,336,Air pressure
-800,336,Resistance force
-801,336,Heat
-802,337,Ball continued to float
-803,337,Ball dropped down
-804,338,Density of materials
-805,338,Properties of water
-806,338,Properties of oil
-807,338,All of the above
-808,339,Yes
-809,339,No
-810,339,Can't Say
-811,340,Helps to melt the ice
-812,340,Helps to heat the ice
-813,340,Lowers melting temperature of ice
-814,340,Acts like an adhesive
-815,341,Yes
-816,341,No
-817,341,Can't Say
-818,342,Magic
-819,342,Water Pressure
-820,342,Leak proof bag
-821,344,Change in volume and amplification
-822,344,Change in quality of sound
-823,344,Change in clarity
-824,346,Yes
-825,346,No
-826,346,Maybe
-827,347,Yes
-828,347,No
-829,347,Can't Say
-830,348,Yes
-831,348,No
-832,348,Required help in between
-833,349,Yes
-834,349,No
-835,349,Can't Say
-836,350,Yes
-837,350,No
-838,350,Mostly
-839,351,Yes
-840,351,No
-841,351,Can't Say
-842,352,Yes
-843,352,No
-844,353,Yes
-845,353,No
-846,353,Maybe
-847,354,Yes
-848,354,No
-849,355,Yes
-850,355,No
-851,356,Yes
-852,356,No
-853,358,Yes
-854,358,No
-855,359,Yes
-856,359,No
-857,360,Yes
-858,360,No
-859,362,Excited
-860,362,Curious
-861,362,Anxious
-862,362,Unsure
-863,364,Setting up the catapult
-864,364,Using the catapult
-865,365,Yes
-866,365,No
-867,366,Yes
-868,366,No
-869,366,Sometimes
-870,367,Yes
-871,367,No
-872,367,Can't Say
-873,368,Yes
-874,368,No
-875,370,Yes
-876,370,No
+0,0,Yes,Null
+1,0,No,Null
+2,1,Selecting the vegetable,Null
+3,1,Dipping paints and printing,Null
+4,1,Creating new designs,Null
+5,3,Yes,Null
+6,3,No,Null
+7,3,Sometimes,Null
+8,4,Yes,Null
+9,4,No,Null
+10,6,Straight line,Null
+11,6,Curve line,Null
+12,6,Zig zag line,Null
+13,6,All of the above,Null
+14,7,Yes,Null
+15,7,No,Null
+16,8,Dipping and sprinkling paint,Null
+17,8,Creating designs,Null
+18,8,Getting messy,Null
+19,9,Yes,Null
+20,9,No,Null
+21,9,Can't Say,Null
+22,10,Rolling the dough,Null
+23,10,Shaping the dough,Null
+24,10,Making a mess,Null
+25,11,Yes,Null
+26,11,No,Null
+27,11,Can't Say,Null
+28,13,Happy and proud,Null
+29,13,Not happy,Null
+30,13,Neutral,Null
+31,14,Yes,Null
+32,14,No,Null
+33,16,Yes,Null
+34,16,No,Null
+35,16,Can't Say,Null
+36,18,Yes,Null
+37,18,No,Null
+38,18,Most of the times,Null
+39,18,Sometimes,Null
+40,19,Excitement,Null
+41,19,Anticipation,Null
+42,21,own ideas,Null
+43,21,asked for help,Null
+44,21,Mix of both,Null
+45,22,Yes,Null
+46,22,No,Null
+47,22,Can't Say,Null
+48,23,Yes,Null
+49,23,No,Null
+50,23,Sometimes,Null
+51,24,Yes,Null
+52,24,No,Null
+53,25,Yes,Null
+54,25,No,Null
+55,25,Can't Say,Null
+56,26,Yes,Null
+57,26,No,Null
+58,27,Making straw rectangle,Null
+59,27,choosing the coloured fish,Null
+60,27,Making soapy solution,Null
+61,27,Watching fish float,Null
+62,28,Yes,Null
+63,28,No,Null
+64,28,Can't Say,Null
+65,30,Collecting leaves and flowers,Null
+66,30,Pasting leaves and flowers on tape,Null
+67,31,Yes,Null
+68,31,No,Null
+69,31,Can't Say,Null
+70,32,1 to 2,Null
+71,32,3 to 5,Null
+72,32,more than 5,Null
+73,32,more than 10,Null
+74,33,Yes,Null
+75,33,No,Null
+76,33,Can't Say,Null
+77,35,Yes,Null
+78,35,No,Null
+79,36,Yes,Null
+80,36,No,Null
+81,37,1 to 2,Null
+82,37,3 to 5,Null
+83,37,more than 5,Null
+84,38,Yes,Null
+85,38,No,Null
+86,39,Yes,Null
+87,39,No,Null
+88,40,Few times,Null
+89,40,Plenty of times,Null
+90,41,Yes,Null
+91,41,No,Null
+92,42,Yes,Null
+93,42,No,Null
+94,43,Yes,Null
+95,43,No,Null
+96,43,Most of the times,Null
+97,43,Sometimes,Null
+98,44,Collaborative play,Null
+99,44,Competitive play,Null
+100,45,Yes,Null
+101,45,No,Null
+102,46,Yes,Null
+103,46,No,Null
+104,47,Yes,Null
+105,47,No,Null
+106,48,Yes,Null
+107,48,No,Null
+108,49,Yes,Null
+109,49,No,Null
+110,51,Yes,Null
+111,51,No,Null
+112,52,Yes,Null
+113,52,No,Null
+114,53,Rolling paper cup in the green gram,Null
+115,53,Removing the green gram from the paper cups,Null
+116,54,Yes,Null
+117,54,No,Null
+118,54,Can't Say,Null
+119,55,Yes,Null
+120,55,No,Null
+121,56,Yes,Null
+122,56,No,Null
+123,56,Can't Say,Null
+124,57,Yes,Null
+125,57,No,Null
+126,58,Yes,Null
+127,58,No,Null
+128,59,Yes,Null
+129,59,No,Null
+130,60,Yes,Null
+131,60,No,Null
+132,60,Can't Say,Null
+133,61,Yes,Null
+134,61,No,Null
+135,61,Most of the times,Null
+136,61,Sometimes,Null
+137,62,Yes,Null
+138,62,No,Null
+139,62,Sometimes,Null
+140,63,Yes,Null
+141,63,No,Null
+142,64,Sweet,Null
+143,64,Salty,Null
+144,64,Spicy,Null
+145,64,Bitter/ Sour,Null
+146,65,Yes,Null
+147,65,No,Null
+148,66,Yes,Null
+149,66,No,Null
+150,66,Most of the times,Null
+151,66,Sometimes,Null
+152,67,Yes,Null
+153,67,No,Null
+154,68,Yes,Null
+155,68,No,Null
+156,68,Can't Say,Null
+157,69,Yes,Null
+158,69,No,Null
+159,70,Mold,Null
+160,70,Using hands,Null
+161,71,Yes,Null
+162,71,No,Null
+163,71,Most of the times,Null
+164,71,Sometimes,Null
+165,72,Yes,Null
+166,72,No,Null
+167,72,Can't Say,Null
+168,73,Yes,Null
+169,73,No,Null
+170,73,Most of the times,Null
+171,73,Sometimes,Null
+172,74,Yes,Null
+173,74,No,Null
+174,74,Most of the times,Null
+175,74,Sometimes,Null
+176,75,Yes,Null
+177,75,No,Null
+178,77,Yes,Null
+179,77,No,Null
+180,78,Easy,Null
+181,78,Difficult,Null
+182,79,Yes,Null
+183,79,No,Null
+184,80,Yes,Null
+185,80,No,Null
+186,80,Sometimes,Null
+187,82,Yes,Null
+188,82,No,Null
+189,82,Most of the times,Null
+190,82,Sometimes,Null
+191,83,Yes,Null
+192,83,No,Null
+193,83,Can't Say,Null
+194,84,Yes,Null
+195,84,No,Null
+196,84,Most of the times,Null
+197,84,Sometimes,Null
+198,85,Very eager,Null
+199,85,Eager,Null
+200,85,Not so eager,Null
+201,85,uninterested,Null
+202,86,Yes,Null
+203,86,No,Null
+204,87,Yes,Null
+205,87,No,Null
+206,88,Yes,Null
+207,88,No,Null
+208,89,Yes,Null
+209,89,No,Null
+210,90,Yes,Null
+211,90,No,Null
+212,91,Yes,Null
+213,91,No,Null
+214,92,Yes,Null
+215,92,No,Null
+216,93,Yes,Null
+217,93,No,Null
+218,94,Yes,Null
+219,94,No,Null
+220,95,Yes,Null
+221,95,No,Null
+222,96,Yes,Null
+223,96,No,Null
+224,97,Yes,Null
+225,97,No,Null
+226,99,Yes,Null
+227,99,No,Null
+228,100,Yes,Null
+229,100,No,Null
+230,101,Yes,Null
+231,101,No,Null
+232,102,Yes,Null
+233,102,No,Null
+234,102,Sometimes,Null
+235,103,Yes,Null
+236,103,No,Null
+237,105,Yes,Null
+238,105,No,Null
+239,106,Yes,Null
+240,106,No,Null
+241,106,Can't Say,Null
+242,107,Drawing the sheep,Null
+243,107,Putting the tape,Null
+244,107,Sticking cotton,Null
+245,108,Yes,Null
+246,108,No,Null
+247,108,Can't Say,Null
+248,109,Yes,Null
+249,109,No,Null
+250,110,Yes,Null
+251,110,No,Null
+252,110,Can't Say,Null
+253,111,Yes,Null
+254,111,No,Null
+255,112,Yes,Null
+256,112,No,Null
+257,112,Can't Say,Null
+258,113,Yes,Null
+259,113,No,Null
+260,113,Can't Say,Null
+261,114,Yes,Null
+262,114,No,Null
+263,114,Can't Say,Null
+264,115,Yes,Null
+265,115,No,Null
+266,116,Yes,Null
+267,116,No,Null
+268,116,Can't Say,Null
+269,117,Yes,Null
+270,117,No,Null
+271,117,Can't Say,Null
+272,118,Yes,Null
+273,118,No,Null
+274,118,Can't Say,Null
+275,119,Yes,Null
+276,119,No,Null
+277,120,Yes,Null
+278,120,No,Null
+279,120,Can't Say,Null
+280,121,Yes,Null
+281,121,No,Null
+282,121,Most of the times,Null
+283,121,Sometimes,Null
+284,122,Yes,Null
+285,122,No,Null
+286,122,Can't Say,Null
+287,123,Yes,Null
+288,123,No,Null
+289,124,Yes,Null
+290,124,No,Null
+291,125,Yes,Null
+292,125,No,Null
+293,126,Yes,Null
+294,126,No,Null
+295,126,Can't Say,Null
+296,127,1 to 2,Null
+297,127,3 to 5,Null
+298,127,more than 5,Null
+299,129,Yes,Null
+300,129,No,Null
+301,131,Yes,Null
+302,131,No,Null
+303,131,Can't Say,Null
+304,132,Yes,Null
+305,132,No,Null
+306,132,Sometimes,Null
+307,133,Yes,Null
+308,133,No,Null
+309,133,Can't Say,Null
+310,134,Yes,Null
+311,134,No,Null
+312,134,Can't Say,Null
+313,135,Yes,Null
+314,135,No,Null
+315,135,Can't Say,Null
+316,136,Excited,Null
+317,136,Happy,Null
+318,136,Satisfied,Null
+319,136,Neutral,Null
+320,137,Yes,Null
+321,137,No,Null
+322,138,Yes,Null
+323,138,No,Null
+324,139,Yes,Null
+325,139,No,Null
+326,140,Yes,Null
+327,140,No,Null
+328,141,Yes,Null
+329,141,No,Null
+330,142,Yes,Null
+331,142,No,Null
+332,143,Yes,Null
+333,143,No,Null
+334,144,Yes,Null
+335,144,No,Null
+336,144,Can't Say,Null
+337,145,Yes,Null
+338,145,No,Null
+339,146,Yes,Null
+340,146,No,Null
+341,146,Sometimes,Null
+342,147,Yes,Null
+343,147,No,Null
+344,148,Yes,Null
+345,148,No,Null
+346,149,Yes,Null
+347,149,No,Null
+348,149,Most of the times,Null
+349,149,Sometimes,Null
+350,150,Yes,Null
+351,150,No,Null
+352,151,Yes,Null
+353,151,No,Null
+354,152,Yes,Null
+355,152,No,Null
+356,152,Can't Say,Null
+357,153,Yes,Null
+358,153,No,Null
+359,154,Yes,Null
+360,154,No,Null
+361,155,Yes,Null
+362,155,No,Null
+363,156,Yes,Null
+364,156,No,Null
+365,157,Yes,Null
+366,157,No,Null
+367,159,Yes,Null
+368,159,No,Null
+369,159,Most of the times,Null
+370,159,Sometimes,Null
+371,160,Yes,Null
+372,160,No,Null
+373,160,Can't Say,Null
+374,161,Yes,Null
+375,161,No,Null
+376,162,Yes,Null
+377,162,No,Null
+378,162,Can't Say,Null
+379,163,Yes,Null
+380,163,No,Null
+381,163,Can't Say,Null
+382,164,Yes,Null
+383,164,No,Null
+384,165,making the name post,Null
+385,165,Painting,Null
+386,165,Writing names,Null
+387,165,Displaying the art,Null
+388,166,Yes,Null
+389,166,No,Null
+390,166,Can't Say,Null
+391,167,Yes,Null
+392,167,No,Null
+393,168,Yes,Null
+394,168,No,Null
+395,168,Can't Say,Null
+396,169,Yes,Null
+397,169,No,Null
+398,169,Can't Say,Null
+399,170,Yes,Null
+400,170,No,Null
+401,170,Can't Say,Null
+402,171,Yes,Null
+403,171,No,Null
+404,172,Yes,Null
+405,172,No,Null
+406,172,Can't Say,Null
+407,173,Yes,Null
+408,173,No,Null
+409,174,Yes,Null
+410,174,No,Null
+411,174,Can't Say,Null
+412,175,just 1,Null
+413,175,2 to 3,Null
+414,175,more than 5,Null
+415,176,Yes,Null
+416,176,No,Null
+417,176,Can't Say,Null
+418,177,Yes,Null
+419,177,No,Null
+420,177,Sometimes,Null
+421,178,Yes,Null
+422,178,No,Null
+423,178,Can't Say,Null
+424,179,Yes,Null
+425,179,No,Null
+426,181,Yes,Null
+427,181,No,Null
+428,181,Can't Say,Null
+429,183,Yes,Null
+430,183,No,Null
+431,185,Yes,Null
+432,185,No,Null
+433,186,Yes,Null
+434,186,No,Null
+435,186,Can't Say,Null
+436,187,Yes,Null
+437,187,No,Null
+438,188,Yes,Null
+439,188,No,Null
+440,188,Can't Say,Null
+441,189,Yes,Null
+442,189,No,Null
+443,190,Yes,Null
+444,190,No,Null
+445,190,Sometimes,Null
+446,191,Yes,Null
+447,191,No,Null
+448,192,Yes,Null
+449,192,No,Null
+450,193,Yes,Null
+451,193,No,Null
+452,193,Most of the times,Null
+453,193,Sometimes,Null
+454,194,Yes,Null
+455,194,No,Null
+456,196,On their own,Null
+457,196,Required help,Null
+458,196,Mix of both,Null
+459,197,Yes,Null
+460,197,No,Null
+461,197,Most of the times,Null
+462,197,Sometimes,Null
+463,198,Yes,Null
+464,198,No,Null
+465,199,Yes,Null
+466,199,No,Null
+467,199,Sometimes,Null
+468,200,Yes,Null
+469,200,No,Null
+470,201,Yes,Null
+471,201,No,Null
+472,202,Yes,Null
+473,202,No,Null
+474,203,Yes,Null
+475,203,No,Null
+476,204,Yes,Null
+477,204,No,Null
+478,204,Sometimes,Null
+479,205,Yes,Null
+480,205,No,Null
+481,205,Most of the times,Null
+482,205,Sometimes,Null
+483,206,Yes,Null
+484,206,No,Null
+485,208,Yes,Null
+486,208,No,Null
+487,209,Yes,Null
+488,209,No,Null
+489,209,Can't Say,Null
+490,210,Yes,Null
+491,210,No,Null
+492,211,Yes,Null
+493,211,No,Null
+494,211,Most of the times,Null
+495,211,Sometimes,Null
+496,212,Yes,Null
+497,212,No,Null
+498,212,Most of the times,Null
+499,212,Sometimes,Null
+500,213,Yes,Null
+501,213,No,Null
+502,214,Yes,Null
+503,214,No,Null
+504,214,Can't Say,Null
+505,215,Yes,Null
+506,215,No,Null
+507,216,Yes,Null
+508,216,No,Null
+509,216,Can't Say,Null
+510,217,yes,Null
+511,217,No,Null
+512,218,Yes,Null
+513,218,No,Null
+514,218,Can't Say,Null
+515,219,Yes,Null
+516,219,No,Null
+517,220,Yes,Null
+518,220,No,Null
+519,221,Yes,Null
+520,221,No,Null
+521,221,Can't Say,Null
+522,222,Yes,Null
+523,222,No,Null
+524,223,Yes,Null
+525,223,No,Null
+526,224,Yes,Null
+527,224,No,Null
+528,226,Yes,Null
+529,226,No,Null
+530,226,Can't Say,Null
+531,227,Yes,Null
+532,227,No,Null
+533,227,Can't Say,Null
+534,228,Yes,Null
+535,228,No,Null
+536,229,Yes,Null
+537,229,No,Null
+538,230,Yes,Null
+539,230,No,Null
+540,230,Can't Say,Null
+541,231,Yes,Null
+542,231,No,Null
+543,231,Can't Say,Null
+544,232,Yes,Null
+545,232,No,Null
+546,232,Most of the times,Null
+547,232,Sometimes,Null
+548,233,Yes,Null
+549,233,No,Null
+550,234,Yes,Null
+551,234,No,Null
+552,235,Yes,Null
+553,235,No,Null
+554,236,Ask for help,Null
+555,236,Work independently,Null
+556,236,Mix of both,Null
+557,237,Wearing themselves,Null
+558,237,Giving as a gift,Null
+559,237,Both,Null
+560,238,Happy,Null
+561,238,Content,Null
+562,238,Satisfied,Null
+563,238,Neutral,Null
+564,239,Yes,Null
+565,239,No,Null
+566,240,Thinking of ideas,Null
+567,240,Painting the t-shirt,Null
+568,240,Family Bonding,Null
+569,241,Easy,Null
+570,241,Challenging,Null
+571,241,Can't Say,Null
+572,242,Leaves and flowers,Null
+573,242,stones,Null
+574,242,twigs, stems,Null
+575,242,feathers,Null
+576,244,Arranging the crayons,Null
+577,244,Using the hairdryer,Null
+578,244,Swirling around the melted crayons,Null
+579,246,Yes,Null
+580,246,No,Null
+581,246,Can't Say,Null
+582,247,Yes,Null
+583,247,No,Null
+584,247,Can't Say,Null
+585,248,Yes,Null
+586,248,No,Null
+587,248,Can't Say,Null
+588,249,Yes,Null
+589,249,No,Null
+590,250,Yes,Null
+591,250,No,Null
+592,250,Most of the times,Null
+593,250,Sometimes,Null
+594,251,Yes,Null
+595,251,No,Null
+596,252,Yes,Null
+597,252,No,Null
+598,253,Yes,Null
+599,253,No,Null
+600,254,Yes,Null
+601,254,No,Null
+602,255,Yes,Null
+603,255,No,Null
+604,256,Yes,Null
+605,256,No,Null
+606,258,Yes,Null
+607,258,No,Null
+608,259,Wall art,Null
+609,259,Showpiece,Null
+610,259,as gift for friend,Null
+611,260,Yes,Null
+612,260,No,Null
+613,261,Yes,Null
+614,261,No,Null
+615,262,Yes,Null
+616,262,No,Null
+617,263,Yes,Null
+618,263,No,Null
+619,264,Yes,Null
+620,264,No,Null
+621,264,Can't Say,Null
+622,265,Yes,Null
+623,265,No,Null
+624,266,Yes,Null
+625,266,No,Null
+626,267,Yes,Null
+627,267,No,Null
+628,268,Yes,Null
+629,268,No,Null
+630,270,Yes,Null
+631,270,No,Null
+632,271,Yes,Null
+633,271,no,Null
+634,271,Can't say,Null
+635,272,Yes,Null
+636,272,No,Null
+637,273,Yes,Null
+638,273,No,Null
+639,273,Can't say,Null
+640,274,Yes,Null
+641,274,No,Null
+642,275,Yes,Null
+643,275,No,Null
+644,276,Yes,Null
+645,276,No,Null
+646,277,Yes,Null
+647,277,No,Null
+648,278,Yes,Null
+649,278,No,Null
+650,279,Yes,Null
+651,279,No,Null
+652,279,Can't say,Null
+653,280,Yes,Null
+654,280,No,Null
+655,281,Yes,Null
+656,281,No,Null
+657,281,Can't say,Null
+658,282,Yes,Null
+659,282,No,Null
+660,282,Sometimes,Null
+661,283,Yes,Null
+662,283,No,Null
+663,283,Can't say,Null
+664,284,Yes,Null
+665,284,No,Null
+666,285,Yes,Null
+667,285,No,Null
+668,286,Yes,Null
+669,286,No,Null
+670,287,Yes,Null
+671,287,No,Null
+672,287,Sometimes,Null
+673,288,Yes,Null
+674,288,No,Null
+675,289,Yes,Null
+676,289,No,Null
+677,289,Can't Say,Null
+678,290,1 to 2,Null
+679,290,3 to 5,Null
+680,290,more than 5,Null
+681,290,more than 10,Null
+682,291,Yes,Null
+683,291,No,Null
+684,291,Can't Say,Null
+685,292,Yes,Null
+686,292,No,Null
+687,294,Yes,Null
+688,294,No,Null
+689,295,Yes,Null
+690,295,No,Null
+691,295,Can't Say,Null
+692,296,Yes,Null
+693,296,No,Null
+694,297,Yes,Null
+695,297,No,Null
+696,297,Can't Say,Null
+697,298,Yes,Null
+698,298,No,Null
+699,299,Yes,Null
+700,299,No,Null
+701,300,Yes,Null
+702,300,No,Null
+703,302,Yes,Null
+704,302,No,Null
+705,302,Can't Say,Null
+706,303,Yes,Null
+707,303,No,Null
+708,304,1 to 2,Null
+709,304,3 to 5,Null
+710,304,more than 5,Null
+711,306,Arranging to form solar system,Null
+712,306,Gathering all required material,Null
+713,306,Research,Null
+714,307,Yes,Null
+715,307,No,Null
+716,308,Yes,Null
+717,308,No,Null
+718,309,Yes,Null
+719,309,No,Null
+720,310,Very well,Null
+721,310,Well,Null
+722,310,Satisfied,Null
+723,312,Yes,Null
+724,312,No,Null
+725,312,Can't Say,Null
+726,314,Yes,Null
+727,314,No,Null
+728,314,Mostly,Null
+729,315,Yes,Null
+730,315,No,Null
+731,315,Can't Say,Null
+732,316,Yes,Null
+733,316,No,Null
+734,317,Yes,Null
+735,317,No,Null
+736,317,Can't Say,Null
+737,318,Yes,Null
+738,318,No,Null
+739,319,Yes,Null
+740,319,No,Null
+741,319,Sometimes,Null
+742,320,Yes,Null
+743,320,No,Null
+744,320,Sometimes,Null
+745,321,Yes,Null
+746,321,No,Null
+747,322,Yes,Null
+748,322,No,Null
+749,323,Yes,Null
+750,323,No,Null
+751,324,Yes,Null
+752,324,No,Null
+753,324,Maybe,Null
+754,325,Yes,Null
+755,325,No,Null
+756,327,Yes,Null
+757,327,No,Null
+758,328,Yes,Null
+759,328,No,Null
+760,329,Making the sun,Null
+761,329,attaching to cardboard,Null
+762,329,blowing through straw,Null
+763,330,Yes,Null
+764,330,No,Null
+765,331,Yes,Null
+766,331,No,Null
+767,331,Can't Say,Null
+768,333,No,Null
+769,333,Yes,Null
+770,335,Yes,Null
+771,335,No,Null
+772,336,Yes,Null
+773,336,No,Null
+774,336,Can't Say,Null
+775,337,Making and designing the bird feeder,Null
+776,337,Leading the project,Null
+777,337,Selecting the seeds,Null
+778,337,Watching the birds use the feeder,Null
+779,338,Easy,Null
+780,338,Challenging,Null
+781,340,Air escaping the balloon ,Null
+782,340,Force of attraction,Null
+783,340,Gravity,Null
+784,342,Fizzing and bubbling reaction,Null
+785,342,Fizzing sound and gushing of air,Null
+786,342,Foam eruption,Null
+787,344,Static electricity,Null
+788,344,Gravitational attraction,Null
+789,344,Adhesive force,Null
+790,345,Yes,Null
+791,345,No,Null
+792,345,Maybe,Null
+793,346,Yes,Null
+794,346,No,Null
+795,346,Maybe,Null
+796,347,Yes,Null
+797,347,No,Null
+798,347,Can't Say,Null
+799,349,Air pressure,Null
+800,349,Resistance force,Null
+801,349,Heat,Null
+802,350,Ball continued to float,Null
+803,350,Ball dropped down,Null
+804,351,Density of materials,Null
+805,351,Properties of water,Null
+806,351,Properties of oil,Null
+807,351,All of the above,Null
+808,352,Yes,Null
+809,352,No,Null
+810,352,Can't Say,Null
+811,353,Helps to melt the ice,Null
+812,353,Helps to heat the ice,Null
+813,353,Lowers melting temperature of ice,Null
+814,353,Acts like an adhesive,Null
+815,354,Yes,Null
+816,354,No,Null
+817,354,Can't Say,Null
+818,355,Magic,Null
+819,355,Water Pressure,Null
+820,355,Leak proof bag,Null
+821,357,Change in volume and amplification,Null
+822,357,Change in quality of sound,Null
+823,357,Change in clarity,Null
+824,359,Yes,Null
+825,359,No,Null
+826,359,Maybe,Null
+827,360,Yes,Null
+828,360,No,Null
+829,360,Can't Say,Null
+830,361,Yes,Null
+831,361,No,Null
+832,361,Required help in between,Null
+833,362,Yes,Null
+834,362,No,Null
+835,362,Can't Say,Null
+836,363,Yes,Null
+837,363,No,Null
+838,363,Mostly,Null
+839,364,Yes,Null
+840,364,No,Null
+841,364,Can't Say,Null
+842,365,Yes,Null
+843,365,No,Null
+844,366,Yes,Null
+845,366,No,Null
+846,366,Maybe,Null
+847,367,Yes,Null
+848,367,No,Null
+849,368,Yes,Null
+850,368,No,Null
+851,369,Yes,Null
+852,369,No,Null
+853,371,Yes,Null
+854,371,No,Null
+855,372,Yes,Null
+856,372,No,Null
+857,373,Yes,Null
+858,373,No,Null
+859,375,Excited,Null
+860,375,Curious,Null
+861,375,Anxious,Null
+862,375,Unsure,Null
+863,377,Setting up the catapult,Null
+864,377,Using the catapult,Null
+865,378,Yes,Null
+866,378,No,Null
+867,379,Yes,Null
+868,379,No,Null
+869,379,Sometimes,Null
+870,380,Yes,Null
+871,380,No,Null
+872,380,Can't Say,Null
+873,381,Yes,Null
+874,381,No,Null
+875,383,Yes,Null
+876,383,No,Null
